@@ -1,0 +1,33 @@
+----------------------------------------
+Begin PBS Prologue Wed Sep 16 10:10:50 CEST 2015 1442391050
+Job ID:		   10093122.dccn-l029.dccn.nl
+Username:	   honlee
+Group:		   tg
+Asked resources:   mem=1gb,ncpus=1,neednodes=matlab,walltime=00:10:00
+Queue:		   matlab
+Nodes:		   dccn-c006.dccn.nl
+End PBS Prologue Wed Sep 16 10:10:50 CEST 2015 1442391050
+----------------------------------------
+
+                            < M A T L A B (R) >
+                  Copyright 1984-2014 The MathWorks, Inc.
+                    R2014a (8.3.0.532) 64-bit (glnxa64)
+                             February 11, 2014
+
+ 
+To get started, type one of these: helpwin, helpdesk, or demo.
+For product information, visit www.mathworks.com.
+ 
+>> ----------------------------------------
+Begin PBS Epilogue Wed Sep 16 10:11:02 CEST 2015 1442391062
+Job ID:		   10093122.dccn-l029.dccn.nl
+Username:	   honlee
+Group:		   tg
+Job Name:	   STDIN
+Session:	   52279
+Asked resources:   mem=1gb,ncpus=1,neednodes=matlab,walltime=00:10:00
+Used resources:	   cput=00:00:00,mem=0kb,vmem=0kb,walltime=00:00:02
+Queue:		   matlab
+Nodes:		   dccn-c006.dccn.nl
+End PBS Epilogue Wed Sep 16 10:11:02 CEST 2015 1442391062
+----------------------------------------
