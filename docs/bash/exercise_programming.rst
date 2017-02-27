@@ -178,7 +178,7 @@ Task 3 demonstrated how ``if``-statements work, but their main use in scripting 
 For comparisons, you need to use a separate command called ``test``. In BASH, the most commonly seen form of ``test`` is ``[[ things-to-compare ]]``.
 
 .. tip::
-    You will also see the form ``[ things-to-compare ]``, which is simply a less featured version of ``[[ ]]``. They are both versions of the command ``test``. In general, you should always use the ``[[ ]]`` form. You can look to [this guide](http://mywiki.wooledge.org/BashFAQ/031) for the a good explanation of test ``[ ]`` and ``[[ ]]``.
+    You will also see the form ``[ things-to-compare ]``, which is simply a less featured version of ``[[ ]]``. They are both versions of the command ``test``. In general, you should always use the ``[[ ]]`` form. You can look to `this guide <http://mywiki.wooledge.org/BashFAQ/031>`_ for the a good explanation of test ``[ ]`` and ``[[ ]]``.
 
 Your Task
 ---------
@@ -269,7 +269,7 @@ Your Task
 
 2. Restrict this output to ONLY numbers less than 10. In other words, find a search pattern that is only sensitive to one digit followed by a decimal. Then find a way to restrict the output further so that only the whole number remains, i.e 8.45 becomes simply 8.
 
-    If you spend more than 10 minutes on this, look to the :doc:`solution <SolutionToExerciseQuestion2>` and move on to 3!. This is a hard one, so I provide lots of hints.
+    If you spend more than 10 minutes on this, look to the :ref:`solution <bash_exercise_programming_t5_q2>` and move on to 3!. This is a hard one, so I provide lots of hints.
 
     .. tip::
         1. You only need ``grep`` for this, not ``if``. Think about piping multiple grep commands together and of using regexes.
@@ -301,7 +301,7 @@ Your Task
             fi
         done
 
-    If you've done this correctly, you may notice an odd result. Even if ``$var`` is empty, your comparison will always evaluate to less than 9?! If this odd outcome is the same as yours, check the :doc:`solution <SolutionToExerciseQuestion4>` and then move onto subtask 5!
+    If you've done this correctly, you may notice an odd result. Even if ``$var`` is empty, your comparison will always evaluate to less than 9?! If this odd outcome is the same as yours, check the :ref:`solution <bash_exercise_programming_t5_q4>` and then move onto subtask 5!
 
     .. tip::
         An excellent trick is to ``echo`` the commands you will run before you run them. If, for example, you are (as you should be) worried that your search patterns are a bit too liberal, you can see what the loop will actually do by putting it in double-quotes and adding echo before it. Observe:
@@ -334,3 +334,8 @@ Your Task
 
     .. note::
         For an even better solution, you can use what are called **unary operators**.  These are detailed among the `agonies <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html>`_ of this fairly exhasutive treatment. They test if variables are empty strings, if files exist, etc. Note that this guide uses the ``[ ]`` form of ``test``, but you can use everything described there with the ``[[ ]]`` form as well.
+
+Solutions
+=========
+
+.. include:: exercise_programming_solutions.rst
