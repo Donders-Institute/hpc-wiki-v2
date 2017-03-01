@@ -6,7 +6,7 @@ High Performance Computing for Neuroimaging Research
     :alt: DCCN HPC environment
     :align: center
 
-    The architecture of the HPC environment.
+    Figure: the HPC environment at DCCN.
 
 Computing Cluster
 =================
