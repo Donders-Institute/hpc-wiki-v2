@@ -28,8 +28,27 @@ Using the cluster
 
     Mentat compute nodes <compute_mentat.rst>
     Torque cluster <compute_torque.rst>
-    Supported software <software.rst>
+    Software <software.rst>
     Best practices <best_practices.rst>
 
-Exercises
-=========
+Exercises: cluster
+==================
+
+.. toctree::
+    :maxdepth: 1
+
+    Interactive job <exercise_interactive/exercise.rst>
+    Batch job <exercise_simple/exercise.rst>
+    Resource estimation <exercise_resource/exercise.rst>
+    Analyzing data in parallel <exercise_da/exercise.rst>
+    Using environment modules <exercise_env_modules/exercise.rst>
+
+Exercises: application software
+===============================
+
+.. toctree::
+    :maxdepth: 1
+
+    Matlab <exercise_matlab/exercise.rst>
+    R <exercise_R/exercise.rst>
+    Freesurfer <exercise_freesurfer/exercise.rst>
