@@ -1,7 +1,15 @@
 Using the supported software via utility scripts
 ************************************************
 
-For mostly used applications in the cluster (e.g. Matlab, R), utility scripts are provide to integrate with job submission to the torque cluster.  Those scripts are built on top of the :doc:`software modules <software-modules>`.
+For mostly used applications in the cluster (e.g. Matlab, R), utility scripts are provided to integrate with job submission to the torque cluster.  Those scripts are built on top of the :doc:`software modules <software-modules>`.
+
+Available software
+==================
+
+* :ref:`utility_script_matlab`
+* :ref:`utility_script_rstudio`
+
+.. _utility_script_matlab:
 
 Matlab
 ======
@@ -15,6 +23,8 @@ To start, for example, Matlab version 2014b, simply run the following command.
     % matlab2014b
 
 The wrapper script uses internally the environment modules to configure the shell environment. It also decides the way of launching the Matlab program based on the function of the node on which the command is executed.  For instance, if the command is executed on an access node, an interactive torque job will be submitted to the cluster to start the Matlab program on one of the computer nodes.
+
+.. _utility_script_rstudio:
 
 RStudio
 =======

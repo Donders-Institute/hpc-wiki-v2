@@ -5,24 +5,22 @@ Running a software or application in Linux requires certain changes on the envir
 
 In order to help configure the shell environment for running the supported software, a tool called `Environment Modules <http://modules.sourceforge.net/>`_ is used in the cluster.  Hereafter, we introduce few mostly used ``module`` commands for using the supported software in the cluster.
 
-Pre-configuration
-=================
+.. note::
+    You should have the ``module`` command available if you login to one of the mentat access node using a SSH client (e.g. putty). In the virtual terminal (i.e. GNOME Terminal or Konsole) of a VNC session, the ``module`` command may not be available immediately. If it happens to you, make sure the following lines are presented in the ``~/.bashrc`` file.
 
-You should have the ``module`` command available if you login to one of the mentat access node using a SSH client (e.g. putty). In the virtual terminal (i.e. GNOME Terminal or Konsole) of a VNC session, the ``module`` command may not be available immediately. If it happens to you, make sure the following lines are presented in the ``~/.bashrc`` file.
+    .. code-block:: bash
 
-.. code-block:: bash
+        if [ -f /etc/bashrc ]; then
+            source /etc/bashrc
+        fi
 
-    if [ -f /etc/bashrc ]; then
-        source /etc/bashrc
-    fi
+    For example, run the following command in a terminal:
 
-For example, run the following command in a terminal:
+    .. code-block:: bash
 
-.. code-block:: bash
+        $ echo 'if [ -f /etc/bashrc ]; then source /etc/bashrc; fi' >> ~/.bashrc
 
-    $ echo 'if [ -f /etc/bashrc ]; then source /etc/bashrc; fi' >> ~/.bashrc
-
-Please note that you should close all existing terminals in the VNC session and start from a new terminal. In the new terminal, you should have the ``module`` command available.
+    Please note that you should close all existing terminals in the VNC session and start from a new terminal. In the new terminal, you should have the ``module`` command available.
 
 Showing available software
 ==========================

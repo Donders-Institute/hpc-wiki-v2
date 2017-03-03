@@ -76,11 +76,11 @@ We will extend the functionality of our current script with the ``for``-loop. Fo
 Preparation
 -----------
 
-Start by downloading the :download:`log files <../linux/exercise/logs.tgz>` we'll be using. Move into a directory you'd like to work in and run this command to download and `untar <https://xkcd.com/1168/>`_ the logfiles.
+Start by downloading the :download:`log files <logs.tgz>` we'll be using. Move into a directory you'd like to work in and run this command to download and `untar <https://xkcd.com/1168/>`_ the logfiles.
 
 .. code-block:: bash
 
-    $ wget http://donders-institute.github.io/hpc-wiki/en/linux/exercise/logs.tgz
+    $ wget http://dccn-hpc-wiki.rtfd.io/en/latest/_downloads/logs.tgz
     $ tar xvf logs.tgz
 
 Now open ``script.sh`` and change your ``grep`` command to the one you see below. The ``-o`` option tells grep to print ONLY the matching pattern, and not the rest of the line around it. This will be useful later in the task and in general.

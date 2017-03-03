@@ -45,7 +45,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'HPC wiki'
+project = u'DCCN HPC wiki'
 copyright = u'2017, Donders Centre for Cognitive Neuroimaging'
 author = u'Hurng-Chun Lee, Daniel Sharoh, Edward Gerrits, Marek Tyc, Mike van Engelenburg'
 

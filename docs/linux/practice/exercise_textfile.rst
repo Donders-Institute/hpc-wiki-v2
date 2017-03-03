@@ -11,7 +11,7 @@ Download :download:`this data file <../exercise/gcutError_recon-all.log>` using 
 
 .. code-block:: bash
 
-    $ wget http://donders-institute.github.io/hpc-wiki/en/linux/exercise/gcutError_recon-all.log
+    $ wget http://dccn-hpc-wiki.rtfd.io/en/latest/_downloads/gcutError_recon-all.log
 
 This data file is an example output file from a freesurfer command submitted to the cluster using qsub. In this simple task we are going to try to extract some information from it using a few commands.
 

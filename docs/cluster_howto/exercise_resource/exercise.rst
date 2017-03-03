@@ -14,7 +14,7 @@ Follow the commands below to download the fake application and run it locally:
 
 .. code-block:: bash
 
-    $ wget http://donders-institute.github.io/hpc-wiki/en/cluster_howto/exercise_resource/fake_app
+    $ wget http://dccn-hpc-wiki.rtfd.io/en/latest/_downloads/fake_app
     $ chmod +x fake_app
     $ ./fake_app 3 1
 
@@ -59,7 +59,7 @@ In this task, you will be confronted with an issue that the computer resource (i
 
     .. code-block:: bash
 
-        $ wget http://donders-institute.github.io/hpc-wiki/en/cluster_howto/exercise_resource/fake_app_2
+        $ wget http://dccn-hpc-wiki.rtfd.io/en/latest/_downloads/fake_app_2
         $ chmod +x fake_app_2
 
 3. Try to submit a job to the cluster using the following command.

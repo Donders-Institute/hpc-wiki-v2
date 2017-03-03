@@ -10,7 +10,7 @@ Using the commands below to download :download:`the exercise package <torque_exe
 
 .. code-block:: bash
 
-    $ wget http://donders-institute.github.io/hpc-wiki/en/cluster_howto/exercise_da/torque_exercise.tgz
+    $ wget http://dccn-hpc-wiki.rtfd.io/en/latest/_downloads/torque_exercise.tgz
     $ tar xvzf torque_exercise.tgz
     $ cd torque_exercise
     $ ls
