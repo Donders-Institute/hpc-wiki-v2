@@ -70,7 +70,7 @@ In this example, we choose ``Source port`` to be ``8022``.  The ``Destination`` 
 .. figure:: figures/putty_login_success.png
     :figwidth: 60%
 
-    step 4: get the test-based virtual terminal with a shell prompt
+    step 4: get the virtual terminal with a shell prompt
 
 VNC via SSH tunnel
 ==================
