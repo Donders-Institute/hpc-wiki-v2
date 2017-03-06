@@ -305,8 +305,13 @@ Cluster tools
 
 A set of auxiliary scripts is developed to ease the job management works on the cluster.  Those tools are listed below with brief description about their functionalities.  To use them, simply type the command in the terminal.  You could try to apply the ``-h`` or ``--help`` option to check if there are more options available.
 
-* ``checkjob`` - shows job status from the scheduler's perspective. It is useful for knowing why a job is not started.
-* ``pbsnode`` - lists the compute nodes in the cluster. It is one of the Torque client tools.
+====================  ========
+command               function
+====================  ========
+``checkjob``          shows job status from the scheduler's perspective. It is useful for knowing why a job is not started.
+``pbsnode``           lists the compute nodes in the cluster. It is one of the Torque client tools.
+====================  ========
+
 * ``cluster-qstat`` - lists recently submitted jobs from all system users.
 * ``cluster-info`` - lists system utilisation metrics of the access nodes and the mentat compute nodes.
 * ``cluster-status`` - lists system utilisation metrics of the exectue hosts in the Torque cluster.
