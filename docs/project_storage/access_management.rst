@@ -14,7 +14,7 @@ role             permissions
 **Viewer**       User in this role has read-only permission.
 **Contributor**  User in this role has read and write permission.
 **Manager**      User in this role has read, write permission and rights to grant/revoke roles of other users.
-**Traverse**     User in this role has permission to "pass through" a directory. This role is only relevent for a directory. It is similar to the ``x``-bit of the linux filesystem permission. See :ref:`the usage of the traverse role <project_storage_traverse_role>`.
+**Traverse**     User in this role has permission to "pass through" a directory. This role is only relevent to a directory. It is similar to the ``x``-bit of the linux filesystem permission. See :ref:`the usage of the traverse role <project_storage_traverse_role>`.
 ===============  ================
 
 Any user who wants to access data in a project directory must acquire one of the roles on the project. Users in the **Manager** role have rights to grant/revoke additional user roles.
