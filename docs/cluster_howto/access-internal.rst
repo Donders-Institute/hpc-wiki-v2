@@ -10,25 +10,25 @@ Follow the steps below to connect to one of the cluster's access nodes, using th
 
 Screenshots of the four steps are shown below:
 
-.. figure:: figures/start_putty.png
-    :figwidth: 60%
+#. start putty on on the Windows desktop
 
-    step 1: start putty on the Windows desktop
+   .. figure:: figures/start_putty.png
+      :figwidth: 60%
 
-.. figure:: figures/putty_load_session.png
-    :figwidth: 60%
+#. configure putty for connecting to, e.g., ``mentat001.dccn.nl``
 
-    step 2: configure putty for connecting to, e.g., ``mentat001.dccn.nl``
+   .. figure:: figures/putty_load_session.png
+      :figwidth: 60%
 
-.. figure:: figures/putty_login_username_password.png
-    :figwidth: 60%
+#. login with your username and password
 
-    step 3: login with your username and password
+   .. figure:: figures/putty_login_username_password.png
+      :figwidth: 60%
 
-.. figure:: figures/putty_login_success.png
-    :figwidth: 60%
-
-    step 4: get a test-based virtual terminal with a shell prompt
+#. get a test-based virtual terminal with a shell prompt
+   
+   .. figure:: figures/putty_login_success.png
+      :figwidth: 60%
 
 SSH logout
 ==========
