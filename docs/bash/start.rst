@@ -10,36 +10,36 @@ Follow the steps below to write our first bash script, and put it in action.
 
 * Change present working directory to ``$HOME/tutorial/libs``
 
-.. code-block:: bash
+  .. code-block:: bash
 
-    $ cd $HOME/tutorial/libs
+      $ cd $HOME/tutorial/libs
 
 * Create a new text file called ``hello_me.sh``
 
-.. code-block:: bash
+  .. code-block:: bash
 
-    $ nano hello_me.sh
+      $ nano hello_me.sh
 
 * Save the following texts into the file
 
-.. literalinclude:: snippets/hello_me.sh
-    :linenos:
-    :language: bash
+  .. literalinclude:: snippets/hello_me.sh
+     :linenos:
+     :language: bash
 
 * Change the file permission to executable
 
-.. code-block:: bash
+  .. code-block:: bash
 
-    $ chmod a+x hello_me.sh
+      $ chmod a+x hello_me.sh
 
 * Run the script as a command-line tool
 
-.. code-block:: bash
+  .. code-block:: bash
 
-  $ ./hello_me.sh
+      $ ./hello_me.sh
 
-.. note::
-    In addtion to just typing the script name in the terminal, we add ``./`` in front.  This enforces the system to load the executable (i.e. the script) right from the present working directory.
+  .. note::
+      In addtion to just typing the script name in the terminal, we add ``./`` in front.  This enforces the system to load the executable (i.e. the script) right from the present working directory.
 
 Interpreter directive
 =====================
