@@ -28,17 +28,17 @@ The algorithm has been given as a function in the BASH script ``run_analysis.sh`
 Tasks
 =====
 
-1. (optional) read the script ``run_analysis.sh`` and try to get an idea how to use it. Don't spend too much time in understanding every detail.
+#. (optional) read the script ``run_analysis.sh`` and try to get an idea how to use it. Don't spend too much time in understanding every detail.
 
-    .. tip::
+   .. tip::
         The script consists of a BASH **function** (``analyze_subject_data``) encapsulating the data-analysis algorithm. The function takes one input argument, the subject id. In the main program (the last line), the function is called with an input ``$1``. In BASH, variable ``$1`` is used to refer to the first argument of a shell command.
 
-2. run the analysis by submitting 5 parallel jobs; each runs on a dataset.
+#. run the analysis by submitting 5 parallel jobs; each runs on a dataset.
 
-    .. tip::
+   .. tip::
         The command ``seq 1 N`` is useful for generating a list of integers between ``1`` and ``N``. You could also use ``{1..N}`` as an alternative.
 
-3. wait until the jobs finish and check out who our subjects are. You should see a file ``photo.*`` in each subject's folder.
+#. wait until the jobs finish and check out who our subjects are. You should see a file ``photo.*`` in each subject's folder.
 
 Solution
 ========
