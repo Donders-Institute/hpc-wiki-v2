@@ -27,66 +27,66 @@ When you have a MATLAB script file (i.e. the M-file) which **takes no input argu
 
 In this task, you are given a M-file which generates a 8x8 magic matrix, makes a sum of the diagonal elements, and finally saves the sum to a file. Follow the steps below for the exercise:
 
-1. Switch the working directory in which the M-file is provided
+#. Switch the working directory in which the M-file is provided
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ cd matlab_sub
         $ ls
         magic_cal.m
 
-2. Read and understand the ``magic_cal.m`` script
+#. Read and understand the ``magic_cal.m`` script
 
-3. (Optional) Choose a desired MATLAB version, e.g. ``R2014b``
+#. (Optional) Choose a desired MATLAB version, e.g. ``R2014b``
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ module unload matlab
         $ module load matlab/R2014b
 
-    As long as you are fine with the default version of MATLAB, you can leave this step out.  The default version of MATLAB can be checked with:
+   As long as you are fine with the default version of MATLAB, you can leave this step out.  The default version of MATLAB can be checked with:
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ module avail matlab
 
-4. Submit a job to run the script
+#. Submit a job to run the script
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ matlab_sub magic_cal.m
 
-    You will be asked to provide the walltime and memory requirements of the job.
+   You will be asked to provide the walltime and memory requirements of the job.
 
-5. Monitor the job until it is finished. You will see the output file ``magic_cal_output.mat`` containing the result.
+#. Monitor the job until it is finished. You will see the output file ``magic_cal_output.mat`` containing the result.
 
 
 Task 2: qsubcellfun
 ===================
 
-1. Start matlab interactive session with the command
+#. Start matlab interactive session with the command
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ matlab2014a
 
-2. In the matlab graphical interface, type the following commands to load the MATLAB functions for submitting jobs to the cluster.  Those functions are part of `the FieldTrip toolbox <http://www.fieldtriptoolbox.org/>`_.
+#. In the matlab graphical interface, type the following commands to load the MATLAB functions for submitting jobs to the cluster.  Those functions are part of `the FieldTrip toolbox <http://www.fieldtriptoolbox.org/>`_.
 
-    .. code-block:: matlab
+   .. code-block:: matlab
 
         >> addpath '/home/common/matlab/fieldtrip/qsub'
 
-3. Switch the working directory to which the prepared MATLAB functions are located. For example,
+#. Switch the working directory to which the prepared MATLAB functions are located. For example,
 
-    .. code-block:: matlab
+   .. code-block:: matlab
 
         >> cd qsub_toolbox
         >> ls
         qsubcellfun_demo.m  qsubfeval_demo.m  qsubget_demo.m  randn_aft_t.m
 
-4. Open the file ``randn_aft_t.m``.  This matlab function keeps refreshing a n-dimentional array for a duration.  It takes two arguments: ``n`` for the array dimention, and ``t`` for duration. You could try to run it interactively using the MATLAB command below:
+#. Open the file ``randn_aft_t.m``.  This matlab function keeps refreshing a n-dimentional array for a duration.  It takes two arguments: ``n`` for the array dimention, and ``t`` for duration. You could try to run it interactively using the MATLAB command below:
 
-    .. code-block:: matlab
+   .. code-block:: matlab
 
         >> n_array = {10,10,10,10,10};
         >> t_array = {30,30,30,30,30};
@@ -103,13 +103,13 @@ Task 2: qsubcellfun
 
             [10x10 double]
 
-5. The ``cellfun`` function above makes five iterations sequencially over the ``randn_aft_t`` function.  For every iteration, it fill in the function with ``n=10`` and ``t=30``.  Using the cluster, the iterations can be made in parallel via the `qsubcellfun` function. For example,
+#. The ``cellfun`` function above makes five iterations sequencially over the ``randn_aft_t`` function.  For every iteration, it fill in the function with ``n=10`` and ``t=30``.  Using the cluster, the iterations can be made in parallel via the `qsubcellfun` function. For example,
 
-    .. code-block:: matlab
+   .. code-block:: matlab
 
         >> out = qsubcellfun(@randn_aft_t, n_array, t_array, 'memreq', 10*10*8, 'timreq', 30, 'stack', 1);
 
-    .. note::
+   .. note::
         The ``qsubcellfun`` will block the MATLAB console until all submitted jobs are finished.
 
 Task 3: qsubfeval
@@ -119,29 +119,29 @@ An alternative way of running MATLAB functions in batch is to use the ``qsubfeva
 
 Following the steps below to run the same ``randn_aft_t`` function using ``qsubfeval``.
 
-1. Start matlab interactive session with the command
+#. Start matlab interactive session with the command
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ matlab2014a
 
-2. In MATLAB, load the ``qsub`` toolbox from `FieldTrip <http://www.fieldtrip.org>`_.
+#. In MATLAB, load the ``qsub`` toolbox from `FieldTrip <http://www.fieldtrip.org>`_.
 
-    .. code-block:: matlab
+   .. code-block:: matlab
 
         >> addpath '/home/common/matlab/fieldtrip/qsub'
 
-3. Switch the working directory to which the prepared MATLAB functions are located. For example,
+#. Switch the working directory to which the prepared MATLAB functions are located. For example,
 
-    .. code-block:: matlab
+   .. code-block:: matlab
 
         >> cd qsub_toolbox
         >> ls
         jobmon_demo.m  qsubcellfun_demo.m  qsubfeval_demo.m  qsubget_demo.m  randn_aft_t.m
 
-4. Submit batch jobs to run on ``randn_aft_t`` function, using ``qsubfeval``.
+#. Submit batch jobs to run on ``randn_aft_t`` function, using ``qsubfeval``.
 
-    .. code-block:: matlab
+   .. code-block:: matlab
 
         >> n_array = {2, 4, 6, 8, 10};
         >> t_array = {20, 40, 60, 80, 100};
@@ -155,13 +155,13 @@ Following the steps below to run the same ``randn_aft_t`` function using ``qsubf
         >>
         >> save 'jobs.mat' jobs
 
-    Each call of ``qsubfeval`` submits a job to run on a pair of ``n`` (array dimention) and ``t`` (duration). For this reason, we should make iteration ourselves using the ``for`` loop.  This is different to using the ``qsubcellfun``.
+   Each call of ``qsubfeval`` submits a job to run on a pair of ``n`` (array dimention) and ``t`` (duration). For this reason, we should make iteration ourselves using the ``for`` loop.  This is different to using the ``qsubcellfun``.
 
-    Another difference is that the MATLAB prompt is not blocked after job submission. One benefit here is that we can continue with other MATLAB commands without the need to wait for jobs to finish. However, we need to save references to the submitted jobs in order to retrieve the results later.  In the example above, references of jobs are stored in the array of ``jobs``. You may also save to the reference to a file and leave MATLAB completely.
+   Another difference is that the MATLAB prompt is not blocked after job submission. One benefit here is that we can continue with other MATLAB commands without the need to wait for jobs to finish. However, we need to save references to the submitted jobs in order to retrieve the results later.  In the example above, references of jobs are stored in the array of ``jobs``. You may also save to the reference to a file and leave MATLAB completely.
 
-5. You probably noticed that the job reference returned from ``qsubfeval`` is not the torque job id. The ``qsublist`` function is provided to map the job reference to the torque job id. We could combine this function to query the job status, using a system call to the ``qstat`` command.  For example:
+#. You probably noticed that the job reference returned from ``qsubfeval`` is not the torque job id. The ``qsublist`` function is provided to map the job reference to the torque job id. We could combine this function to query the job status, using a system call to the ``qstat`` command.  For example:
 
-    .. code-block:: matlab
+   .. code-block:: matlab
 
         >> load 'jobs.mat'
         >>
@@ -171,9 +171,9 @@ Following the steps below to run the same ``randn_aft_t`` function using ``qsubf
         unix(cmd);
         end
 
-6. When all jobs are finished, one could retrive the output using ``qsubget``. For example,
+#. When all jobs are finished, one could retrive the output using ``qsubget``. For example,
 
-    .. code-block:: matlab
+   .. code-block:: matlab
 
         >> load 'jobs.mat'
         >>
