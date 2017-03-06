@@ -41,7 +41,6 @@ Exercises: cluster
     Batch job <exercise_simple/exercise.rst>
     Resource estimation <exercise_resource/exercise.rst>
     Analyzing data in parallel <exercise_da/exercise.rst>
-    Using environment modules <exercise_env_modules/exercise.rst>
 
 Exercises: application software
 ===============================
@@ -49,6 +48,7 @@ Exercises: application software
 .. toctree::
     :maxdepth: 1
 
+    Environment modules <exercise_env_modules/exercise.rst>
     Matlab <exercise_matlab/exercise.rst>
     R <exercise_R/exercise.rst>
     Freesurfer <exercise_freesurfer/exercise.rst>
