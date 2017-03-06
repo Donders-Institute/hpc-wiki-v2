@@ -56,13 +56,13 @@ Your Task
 
    The main things to remember are that the variable name, list and commands are totally arbitrary and can be whatever you like as long as you keep the correct syntax. Also note that you can have any number of items in the list as you want, you can set the variable name to whatever you want, and you can use any commands you want. You don't even need to reference the variable in the body. For example, try running
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         for i in {01..05}; do
             echo 'hello world!'
         done
 
-    .. Hint::
+   .. Hint::
         Notice the syntax. The first line ends in ``do``, the next commands are indented, and ``done``, the keyword which ends the loop, is at the same indentation level as the keyword ``for``, which begins the loop. This is how all your for loops should look.
 
 Task 2: Use the ``for`` loop in a BASH script
@@ -115,8 +115,8 @@ To accomplish this goal you will need to do the following:
            grep -o search-term file-to-search | head -1
        done
 
-  .. note::
-      Always remember to include all the special keywords: ``for`` , ``in`` , ``;`` , ``do`` , and ``done``. If you don't remember these, you might not get an error, but your loop definitely won't run.
+   .. note::
+       Always remember to include all the special keywords: ``for`` , ``in`` , ``;`` , ``do`` , and ``done``. If you don't remember these, you might not get an error, but your loop definitely won't run.
 
 Task 3: simple ``if`` statement
 ===============================
