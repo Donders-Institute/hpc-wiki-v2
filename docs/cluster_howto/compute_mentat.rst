@@ -20,29 +20,29 @@ Choosing a mentat compute node is a manual step.  `This page <http://torquemon.d
 Computation in text mode
 ========================
 
-1. login to the chosen mentat compute node (e.g. ``mentat203``) with SSH
+#. login to the chosen mentat compute node (e.g. ``mentat203``) with SSH
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ ssh mentat203
 
-2. run a program interactively, e.g.
+#. run a program interactively, e.g.
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ matlab
 
 Computation in graphic mode
 ===========================
 
-1. accept X-window applications on any host to display graphic interface on the access node
+#. accept X-window applications on any host to display graphic interface on the access node
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ xhost +
 
-2. use SSH X11Forwarding to launch a X-window application on the mentat compute node.  The following command launches Matlab with the graphic desktop on ``mentat203``:
+#. use SSH X11Forwarding to launch a X-window application on the mentat compute node.  The following command launches Matlab with the graphic desktop on ``mentat203``:
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ ssh -Y mentat203 'source /etc/bashrc; matlab -desktop'
