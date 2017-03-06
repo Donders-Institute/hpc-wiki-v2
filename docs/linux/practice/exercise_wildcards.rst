@@ -95,10 +95,10 @@ The ``[ ]`` wildcard has the most complex syntax because it is more flexible. Wh
 Your Task
 =========
 
- 1. Find a search pattern that will return all files ending in ``.txt``
- 2. Find a search pattern that will return all files starting in ``s`` and ending in ``.log``
- 3. Find a search pattern that will return all files starting ``s`` followed by two numbers
- 4. Find a search pattern that will return all files only starting ``s`` followed by one number
+#. Find a search pattern that will return all files ending in ``.txt``
+#. Find a search pattern that will return all files starting in ``s`` and ending in ``.log``
+#. Find a search pattern that will return all files starting ``s`` followed by two numbers
+#. Find a search pattern that will return all files only starting ``s`` followed by one number
 
 Solution
 ========
