@@ -37,9 +37,9 @@ Task 1: simple job
 
 In this task, we use the script ``magic_cal.R``. This script uses the ``magic`` library to genera a magic matrix of a given dimension, and calculate the sum of its diagonal elements.  The matrix and the sum are both printed to the standard output.
 
-1. run the script interactively, for a matrix of dimention 8
+#. run the script interactively, for a matrix of dimention 8
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ Rscript magic_cal.R 5
         WARNING: ignoring environment value of R_HOME
@@ -52,20 +52,20 @@ In this task, we use the script ``magic_cal.R``. This script uses the ``magic`` 
         [5,]   15    8    1   24   17
         [1] 65
 
-2. read and understand the ``magic_cal.R`` script
+#. read and understand the ``magic_cal.R`` script
 
-3. run the script to the cluster as a batch job
+#. run the script to the cluster as a batch job
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ echo "Rscript $PWD/magic_cal.R 5" | qsub -N "magic_cal" -l walltime=00:10:00,mem=256mb
         11082769.dccn-l029.dccn.nl
 
-4. wait the job to finish, and check the output of the job. Do you get same results as running interactively?
+#. wait the job to finish, and check the output of the job. Do you get same results as running interactively?
 
-5. run five batch jobs in parallel to run the ``magic_cal.R`` with matrices in dimention 5,6,7,8,9.
+#. run five batch jobs in parallel to run the ``magic_cal.R`` with matrices in dimention 5,6,7,8,9.
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ for d in {5 .. 9}; do
             echo "Rscript $PWD/magic_cal.R $d" | qsub -N "magic_cal_$d" -l walltime=00:10:00,mem=256mb;
@@ -85,18 +85,18 @@ In this exercise, we are going to use the script ``magic_cal_2.R`` in which func
 
 Follow the steps below:
 
-1. run the script interactively
+#. run the script interactively
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ Rscript magic_cal_2.R 5
         WARNING: ignoring environment value of R_HOME
         Loading required package: abind
         saving objects  magic_matrix,sum_diagonal  to  magic_cal_2.out.RData  ...done
 
-    From the terminal output, you see two objects are saved into a **RData** file called ``magic_cal_2.out.RData``.  Later on, you can load the object from this file into R or a R script.  For example,
+   From the terminal output, you see two objects are saved into a **RData** file called ``magic_cal_2.out.RData``.  Later on, you can load the object from this file into R or a R script.  For example,
 
-    .. code-block:: r
+   .. code-block:: r
 
         > load("magic_cal_2.out.RData")
         > ls()
@@ -110,11 +110,11 @@ Follow the steps below:
         [5,]   15    8    1   24   17
         > q(save="no")
 
-2. read and understand the ``magic_cal_2.R`` script, especially the functions at the top of the script.
+#. read and understand the ``magic_cal_2.R`` script, especially the functions at the top of the script.
 
-3. try to run ``magic_cal_2.R`` as batch jobs as we did in the previous task.
+#. try to run ``magic_cal_2.R`` as batch jobs as we did in the previous task.
 
-    .. tip::
+   .. tip::
         You probably noticed that the functions defined in ``magic_cal_2.R`` are so generic that they can be reused for different scripts.
 
         That is right!  In fact, we have factored out those functions into ``/opt/cluster/share/R`` so that you could easily make use of those functions in the future.
