@@ -40,10 +40,10 @@ The following ``cd`` commands help you to move around in the Linux filesystem:
 ====================  ========
 command               function
 ====================  ========
-:bash:`cd -`          change dir to the previous directory you were just in
-:bash:`cd ../`        change dir to one directory back, you can move as many directories back with this syntax as you like
-:bash:`cd ../../Dir`  change dir to two directories back and one directory forward into the directory `Dir` (should be on one line)
-:bash:`cd ~`          change dir to the home directory
+:code:`cd -`          change dir to the previous directory you were just in
+:code:`cd ../`        change dir to one directory back, you can move as many directories back with this syntax as you like
+:code:`cd ../../Dir`  change dir to two directories back and one directory forward into the directory `Dir` (should be on one line)
+:code:`cd ~`          change dir to the home directory
 ====================  ========
 
 .. _change-the-path-variable:
