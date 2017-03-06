@@ -30,52 +30,52 @@ Task 1: with the JOBinfo monitor
 
 In the first task, you will estimate the amount of memory required by the fake application, using a resource-utilisation monitor.
 
-1. Start a VNC session (skip this step if you are already in a VNC session)
+#. Start a VNC session (skip this step if you are already in a VNC session)
 
-2. Submit an interactive job with the following command
+#. Submit an interactive job with the following command
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ qsub -I -l walltime=00:30:00,mem=1gb
 
-    When the job starts, a small **JOBinfo** window pops up at the top-right corner.
+   When the job starts, a small **JOBinfo** window pops up at the top-right corner.
 
-3. Run the fake application under the shell prompt initiated by the interactive job
+#. Run the fake application under the shell prompt initiated by the interactive job
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ ./fake_app 3 60
 
-    Keep your eyes on the **JOBinfo** window and see how the memory usage evolves. The **Max memory usage** indicates the amount of memory needed for the fake application.
+   Keep your eyes on the **JOBinfo** window and see how the memory usage evolves. The **Max memory usage** indicates the amount of memory needed for the fake application.
 
-4. Terminate the interactive job
+#. Terminate the interactive job
 
 Task 2: with job's STDOUT/ERR file
 ==================================
 
 In this task, you will be confronted with an issue that the computer resource (in this case, the memory) allocated for your job is not sufficient to complete the computation. With few trials, you will find out a sufficient (but not overestimated) memory requirement to finish the job.
 
-1. Download :download:`another fake application <fake_app_2>`
+#. Download :download:`another fake application <fake_app_2>`
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ wget http://dccn-hpc-wiki.rtfd.io/en/latest/_downloads/fake_app_2
         $ chmod +x fake_app_2
 
-3. Try to submit a job to the cluster using the following command.
+#. Try to submit a job to the cluster using the following command.
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ echo "$PWD/fake_app_2 3 300" | qsub -N fake_app_2 -M <your_email> -l walltime=600,mem=128mb
 
-    .. warning::
+   .. warning::
         Remember to replace ``<your_email>`` with your actual email address.
 
-2. Wait for the job to finish, and check the ``STDOUT`` and ``STDERR`` files of the job. Do you get the expected result in the ``STDOUT`` file?
+#. Wait for the job to finish, and check the ``STDOUT`` and ``STDERR`` files of the job. Do you get the expected result in the ``STDOUT`` file?
 
-3. Check your e-mail box for a notification about the job.  The content of it should looks similar to the following snippet.
+#. Check your e-mail box for a notification about the job.  The content of it should looks similar to the following snippet.
 
-    .. code-block:: bash
+   .. code-block:: bash
         :emphasize-lines: 6
 
         PBS Job Id: 10086535.dccn-l029.dccn.nl
@@ -85,11 +85,11 @@ In this task, you will be confronted with an issue that the computer resource (i
         Job deleted at request of root@dccn-l029.dccn.nl
         job 10086535 exceeded MEM usage hard limit (516 > 140)
 
-4. Now check the job's ``STDOUT`` file again and find out the actual memory usage of the computation.
+#. Now check the job's ``STDOUT`` file again and find out the actual memory usage of the computation.
 
-5. Try to submit the job again with the memory requirement increased sufficiently for the actual usage.
+#. Try to submit the job again with the memory requirement increased sufficiently for the actual usage.
 
-    .. tip::
+   .. tip::
         Specify the requirement higher, but as close as possible to the actual usage.
 
         Unnecessary high requirement results in inefficient usage of resources, and consequently blocks other jobs (including yours) from having sufficient resources to start.
