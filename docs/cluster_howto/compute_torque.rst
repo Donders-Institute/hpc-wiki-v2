@@ -305,18 +305,18 @@ Cluster tools
 
 A set of auxiliary scripts is developed to ease the job management works on the cluster.  Those tools are listed below with brief description about their functionalities.  To use them, simply type the command in the terminal.  You could try to apply the ``-h`` or ``--help`` option to check if there are more options available.
 
-========================  ========
-command                   function
-========================  ========
-``checkjob``              shows job status from the scheduler's perspective. It is useful for knowing why a job is not started.
-``pbsnode``               lists the compute nodes in the cluster. It is one of the Torque client tools.
-``cluster-qstat``         lists recently submitted jobs from all system users.
-``cluster-info``          lists system utilisation metrics of the access nodes and the mentat compute nodes.
-``cluster-status``        lists system utilisation metrics of the exectue hosts in the Torque cluster.
-``cluster-torqueconfig``  displays the cluster's settings.
-``cluster-meminfo``       monitors the amount of memory has been consumed by the job.
-``cluster-walltimeinfo``  monitors the remaining walltime the job can still run.
-``cluster-yadjobinfo``    graphical monitor of resource utilisation for interactive job.
-``cluster-matlab``        displays the matlab license useage.
-``cluster-vncserver``     lists all VNC servers running on the access nodes and the mentat compute nodes.
-========================  ========
+============================  ========
+command                       function
+============================  ========
+:code:`checkjob`              shows job status from the scheduler's perspective. It is useful for knowing why a job is not started.
+:code:`pbsnode`               lists the compute nodes in the cluster. It is one of the Torque client tools.
+:code:`cluster-qstat`         lists recently submitted jobs from all system users.
+:code:`cluster-info`          lists system utilisation metrics of the access nodes and the mentat compute nodes.
+:code:`cluster-status`        lists system utilisation metrics of the exectue hosts in the Torque cluster.
+:code:`cluster-torqueconfig`  displays the cluster's settings.
+:code:`cluster-meminfo`       monitors the amount of memory has been consumed by the job.
+:code:`cluster-walltimeinfo`  monitors the remaining walltime the job can still run.
+:code:`cluster-yadjobinfo`    graphical monitor of resource utilisation for interactive job.
+:code:`cluster-matlab`        displays the matlab license useage.
+:code:`cluster-vncserver`     lists all VNC servers running on the access nodes and the mentat compute nodes.
+============================  ========
