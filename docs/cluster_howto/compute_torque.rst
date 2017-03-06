@@ -51,50 +51,50 @@ Throtteling policies for resource usage
 
 In the Torque cluster at DCCN, throttle policies are applied to limit the amount of resources an user can allocate at the same time.  It is to avoid resources of the entire cluster being occupied by a single user.  The policies are defined in two scopes:
 
-1. Queue-wise policies
+#. Queue-wise policies
 
-For every job queue, the total number of **runnable** and **queue-able** jobs per user are throttled.  In the table below, the *max. runnable jobs* specifies the maximum number of running jobs a user is allowed to have in a queue at a given time; while the *max. queueable jobs* restricts the total number of jobs (including idle, running and blocked jobs) a user is allowed to have.
+   For every job queue, the total number of **runnable** and **queue-able** jobs per user are throttled.  In the table below, the *max. runnable jobs* specifies the maximum number of running jobs a user is allowed to have in a queue at a given time; while the *max. queueable jobs* restricts the total number of jobs (including idle, running and blocked jobs) a user is allowed to have.
 
-+------------+--------------------+----------------------+
-| queue name | max. runnable jobs | max. queue-able jobs |
-+============+====================+======================+
-| matlab     | 300                | 2000                 |
-+------------+--------------------+----------------------+
-| short      | 300                | 2000                 |
-+------------+--------------------+----------------------+
-| veryshort  | 300                | 2000                 |
-+------------+--------------------+----------------------+
-| long       | 300                | 2000                 |
-+------------+--------------------+----------------------+
-| batch      | 300                | 2000                 |
-+------------+--------------------+----------------------+
-| verylong   | 300                | 2000                 |
-+------------+--------------------+----------------------+
-| vgl        |   2                |    5                 |
-+------------+--------------------+----------------------+
-| interactive|   2                |    4                 |
-+------------+--------------------+----------------------+
+   +------------+--------------------+----------------------+
+   | queue name | max. runnable jobs | max. queue-able jobs |
+   +============+====================+======================+
+   | matlab     | 300                | 2000                 |
+   +------------+--------------------+----------------------+
+   | short      | 300                | 2000                 |
+   +------------+--------------------+----------------------+
+   | veryshort  | 300                | 2000                 |
+   +------------+--------------------+----------------------+
+   | long       | 300                | 2000                 |
+   +------------+--------------------+----------------------+
+   | batch      | 300                | 2000                 |
+   +------------+--------------------+----------------------+
+   | verylong   | 300                | 2000                 |
+   +------------+--------------------+----------------------+
+   | vgl        |   2                |    5                 |
+   +------------+--------------------+----------------------+
+   | interactive|   2                |    4                 |
+   +------------+--------------------+----------------------+
 
-For most of queues, the number of runnable and queue-able jobs are set to 300 and 2000, respectively. However, more restricted policies are applied to jobs in the *vgl* and *interactive* queues. For jobs in the *vgl* queue, the maximum runnable and queue-able jobs are set to 2 and 5, respectively; while they are 2 and 4 for jobs in the *interactive* queue.  This is to compensate for the facts that *vgl* jobs consume lots of the network bandwidth; and *interactive* jobs always have the highest priority to start.
+   For most of queues, the number of runnable and queue-able jobs are set to 300 and 2000, respectively. However, more restricted policies are applied to jobs in the *vgl* and *interactive* queues. For jobs in the *vgl* queue, the maximum runnable and queue-able jobs are set to 2 and 5, respectively; while they are 2 and 4 for jobs in the *interactive* queue.  This is to compensate for the facts that *vgl* jobs consume lots of the network bandwidth; and *interactive* jobs always have the highest priority to start.
 
-2. Cluster-wise policies
+#. Cluster-wise policies
 
-The cluster-wise throttling is to limit the total amount of resources a single user can occupy at the same time in the cluster. The three upper-bound (cluster-wise) limitations are:
+   The cluster-wise throttling is to limit the total amount of resources a single user can occupy at the same time in the cluster. The three upper-bound (cluster-wise) limitations are:
 
-* 300 jobs
-* 660 days processing (wall)time
-* 1 TB memory
+   * 300 jobs
+   * 660 days processing (wall)time
+   * 1 TB memory
 
-It implies that if the resource utilisation of your current running jobs reaches one of the above limitations, your additional jobs have to wait in the queue regardless whether there are still available resources in the cluster.
+   It implies that if the resource utilisation of your current running jobs reaches one of the above limitations, your additional jobs have to wait in the queue regardless whether there are still available resources in the cluster.
 
 Job prioritisation
 ------------------
 
 Job priority determines the order of waiting jobs to start in the cluster. Job priority is calculated by the Moab scheduler taking into account various factors.  In the cluster at DCCN, mainly the following three factors are considered.
 
-1. **The waiting time a job has spent in the queue**: this factor will add one additional priority point to jobs waiting for one additional minute in the queue.
+#. **The waiting time a job has spent in the queue**: this factor will add one additional priority point to jobs waiting for one additional minute in the queue.
 
-2. **Queue priority**: this factor is mainly used for boosting jobs in the *interactive* queue with an outstanding priority offset so that they will be started sooner than other types of jobs.
+#. **Queue priority**: this factor is mainly used for boosting jobs in the *interactive* queue with an outstanding priority offset so that they will be started sooner than other types of jobs.
 
 The final job priority combining the three factors is used by the scheduler to order the waiting jobs accordingly. The first job in the order is the next to start in the cluster.
 
@@ -256,49 +256,49 @@ The **walltime** and **memory** requirements are the most essential ones amongst
 .. note::
     Computing resources in the cluster are reserved for jobs in terms of size (e.g. amount of requested memory and CPU cores) and duration (e.g. the requested walltime). Under-estimating the requirement causes job to be killed before completion and thus the resources have been consumed by the job were wasted; while over-estimating blocks resources from being used efficiently.
 
-1. Consult your colleages
+#. Consult your colleages
 
-If your analysis tool (or script) is commonly used in your research field, consulting with your colleagues might be just an efficient way to get a general idea about the resource requirement of the tool.
+   If your analysis tool (or script) is commonly used in your research field, consulting with your colleagues might be just an efficient way to get a general idea about the resource requirement of the tool.
 
-2. Monitor the resource consumption (with an interactive test job)
+#. Monitor the resource consumption (with an interactive test job)
 
-A good way of estimating the wall time and memory requirement is through monitoring the usage of them at run time. This approach is only feasible if you run the job interactively through a graphical interface. Nevertheless, it's encouraged to test your data analysis computation interactively once before submitting it to the cluster with a large amount of batch jobs. Through the interactive test, one could easily debug issues and measure the resource usage.
+   A good way of estimating the wall time and memory requirement is through monitoring the usage of them at run time. This approach is only feasible if you run the job interactively through a graphical interface. Nevertheless, it's encouraged to test your data analysis computation interactively once before submitting it to the cluster with a large amount of batch jobs. Through the interactive test, one could easily debug issues and measure the resource usage.
 
-Upon the start of an interactive job, a resource comsumption monitor is shown on the top-right corner of your VNC desktop.  An example is shown in the following screenshot:
+   Upon the start of an interactive job, a resource comsumption monitor is shown on the top-right corner of your VNC desktop.  An example is shown in the following screenshot:
 
-.. figure:: figures/torque_interactive_jobinfo.png
-    :figwidth: 90%
-    :align: center
+   .. figure:: figures/torque_interactive_jobinfo.png
+      :figwidth: 90%
+      :align: center
 
-The resource monitor consists of three bars.  From top to bottom, they are:
+   The resource monitor consists of three bars.  From top to bottom, they are:
 
-* Elapsed walltime: the bar indicates the elasped walltime consumed by the job.  It also shows the remaining walltime.  The walltime is adjusted accordingly to the CPU speed.
-* Memory usage: the bar indicates the current memory usage of the job.
-* Max memory usage: the bar indicates the peak memory usage of the job.
+   * Elapsed walltime: the bar indicates the elasped walltime consumed by the job.  It also shows the remaining walltime.  The walltime is adjusted accordingly to the CPU speed.
+   * Memory usage: the bar indicates the current memory usage of the job.
+   * Max memory usage: the bar indicates the peak memory usage of the job.
 
-3. Use the job's epilogue message (a trial-and-error approach)
+#. Use the job's epilogue message (a trial-and-error approach)
 
-The wall time and memory requirements can also be determined with a trial procedure in which the user submits a test job to the cluster with a rough requirement.  If the rough requirement is not sufficient to allow the job to finish, the job will get killed with an e-mail notification.  In the job's ``STDOUT`` file (i.e. ``<job_name>.o<job_id_digits>``), you will see an **Epilogue** message stating the amount of resources being used by the job.  In the snippet below, this is shown on line 9.
+   The wall time and memory requirements can also be determined with a trial procedure in which the user submits a test job to the cluster with a rough requirement.  If the rough requirement is not sufficient to allow the job to finish, the job will get killed with an e-mail notification.  In the job's ``STDOUT`` file (i.e. ``<job_name>.o<job_id_digits>``), you will see an **Epilogue** message stating the amount of resources being used by the job.  In the snippet below, this is shown on line 9.
 
-.. code-block:: bash
-    :linenos:
-    :emphasize-lines: 9
+   .. code-block:: bash
+      :linenos:
+      :emphasize-lines: 9
 
-    ----------------------------------------
-    Begin PBS Epilogue Tue Aug 12 13:32:59 CEST 2014 1407843179
-    Job ID:            6365357.dccn-l029.dccn.nl
-    Username:          honlee
-    Group:             tg
-    Job Name:          STDIN
-    Session:           11639
-    Asked resources:   mem=2gb,walltime=01:00:00
-    Used resources:    cput=00:00:21,mem=441332kb,vmem=3700208kb,walltime=00:14:06
-    Queue:             interactive
-    Nodes:             dccn-c351
-    End PBS Epilogue Tue Aug 12 13:32:59 CEST 2014 1407843179
-    ----------------------------------------
+      ----------------------------------------
+      Begin PBS Epilogue Tue Aug 12 13:32:59 CEST 2014 1407843179
+      Job ID:            6365357.dccn-l029.dccn.nl
+      Username:          honlee
+      Group:             tg
+      Job Name:          STDIN
+      Session:           11639
+      Asked resources:   mem=2gb,walltime=01:00:00
+      Used resources:    cput=00:00:21,mem=441332kb,vmem=3700208kb,walltime=00:14:06
+      Queue:             interactive
+      Nodes:             dccn-c351
+      End PBS Epilogue Tue Aug 12 13:32:59 CEST 2014 1407843179
+      ----------------------------------------
 
-Adjust the rough requirement gradually based on the usage information and resubmit the test job with the new requirement.  In few iterations, you will be able to determine the actual usage of your analysis job.  A rule of thumb for specifying the resource requirement for the production jobs is to add on top of the actual usage a 10~20% buffer as a safety margin.
+   Adjust the rough requirement gradually based on the usage information and resubmit the test job with the new requirement.  In few iterations, you will be able to determine the actual usage of your analysis job.  A rule of thumb for specifying the resource requirement for the production jobs is to add on top of the actual usage a 10~20% buffer as a safety margin.
 
 Cluster tools
 =============
