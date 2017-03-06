@@ -17,33 +17,33 @@ Move into the directory you'd like to work in and download :download:`the files 
 Task 1: create the script
 =========================
 
-1. Open a text editor and create the script runFreesurfer.sh
+#. Open a text editor and create the script runFreesurfer.sh
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         #!/bin/bash
         export SUBJECTS_DIR=$(pwd)
         recon-all -subjid FreeSurfer -i MP2RAGE.nii -all
 
-2. Set the script to be executable
+#. Set the script to be executable
 
-3. Submit the script to the cluster
+#. Submit the script to the cluster
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ echo "cd $PWD; ./runFreesurfer.sh" | qsub walltime=00:10:00,mem=1GB
 
-4. Verify the job is running with ``qstat``. You should see something like:
+#. Verify the job is running with ``qstat``. You should see something like:
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ qstat 11173851
         Job ID                    Name             User            Time Use S Queue
         +----------------------- ---------------- --------------- -------- - -----
         11173851.dccn-l029         STDIN            dansha                 0 Q long
 
-5. Because we don't really want to run the analysis but rather test a script, kill the job with ``qdel``.  For example:
+#. Because we don't really want to run the analysis but rather test a script, kill the job with ``qdel``.  For example:
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ qdel 11173851
