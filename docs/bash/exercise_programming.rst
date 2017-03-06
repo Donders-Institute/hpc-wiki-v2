@@ -32,29 +32,29 @@ You can add as many commands as you like. BASH will loop through the commands in
 Your Task
 ---------
 
-1. Add a list of items to this `for`-loop and see what happens. A list can be a list of files, strings, numbers, anything.
+#. Add a list of items to this `for`-loop and see what happens. A list can be a list of files, strings, numbers, anything.
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         for i in INSERT-LIST-HERE; do
             echo $i
         done
 
-    Replace the ``INSERT-LIST-HERE`` with ``$(ls ${HOME})`` and see how it changes ``i`` to the next item on the list each time it iterates.
+   Replace the ``INSERT-LIST-HERE`` with ``$(ls ${HOME})`` and see how it changes ``i`` to the next item on the list each time it iterates.
 
-2. In this next one, try to add any command you want to the body of the ``for``-loop
+#. In this next one, try to add any command you want to the body of the ``for``-loop
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         for i in {01..10}; do
             INSERT-COMMANDS-HERE
             INSERT-MORE-COMMANDS-HERE-IF-YOU-LIKE
         done
 
-    .. Tip::
+   .. Tip::
         Bash takes a range of items within ``{}`` and expands it before running any commands. For example, ``{01..05}`` will expand to ``01 02 03 04 05``. You can use letters or numbers. See `this link <http://www.linuxjournal.com/content/bash-brace-expansion>`_ for more information.
 
-    The main things to remember are that the variable name, list and commands are totally arbitrary and can be whatever you like as long as you keep the correct syntax. Also note that you can have any number of items in the list as you want, you can set the variable name to whatever you want, and you can use any commands you want. You don't even need to reference the variable in the body. For example, try running
+   The main things to remember are that the variable name, list and commands are totally arbitrary and can be whatever you like as long as you keep the correct syntax. Also note that you can have any number of items in the list as you want, you can set the variable name to whatever you want, and you can use any commands you want. You don't even need to reference the variable in the body. For example, try running
 
     .. code-block:: bash
 
@@ -101,22 +101,22 @@ Using this command as a starting point, create a ``for``-loop to grep the Subjec
 
 To accomplish this goal you will need to do the following:
 
-1. Create a for loop which iterates over a list consisting of the log files.
+#. Create a for loop which iterates over a list consisting of the log files.
 
-2. Modify the grep command to search through the current log file and not "gcutError_recon-all.log".
+#. Modify the grep command to search through the current log file and not "gcutError_recon-all.log".
 
-3. Run your script.
+#. Run your script.
 
-The structure will be something like this:
+   The structure will be something like this:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    for var in list-of-logs; do
-        grep -o search-term file-to-search | head -1
-    done
+       for var in list-of-logs; do
+           grep -o search-term file-to-search | head -1
+       done
 
-.. note::
-    Always remember to include all the special keywords: ``for`` , ``in`` , ``;`` , ``do`` , and ``done``. If you don't remember these, you might not get an error, but your loop definitely won't run.
+  .. note::
+      Always remember to include all the special keywords: ``for`` , ``in`` , ``;`` , ``do`` , and ``done``. If you don't remember these, you might not get an error, but your loop definitely won't run.
 
 Task 3: simple ``if`` statement
 ===============================
@@ -146,9 +146,9 @@ Note: For the gory details, refer back to the slides, the wiki, or suffer the `a
 Your task
 ---------
 
-1. Modify the following ``if``-statement code using the command ``true``.
+#. Modify the following ``if``-statement code using the command ``true``.
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         if INSERT-COMMAND-TO-EVALUATE; then
             INSERT-COMMANDS-TO-RUN-IF-TRUE
@@ -157,12 +157,12 @@ Your task
             INSERT-MORE-COMMANDS-TO-RUN-IF-FALSE
         fi
 
-    .. tip::
+   .. tip::
         ``true`` is a command which does nothing except return exit status 0, thus it always evaluates to true! The description in the man page is good for a chuckle. You'll want to make sure you put ``true`` as the **command to evaluate**. Remember to fill in the other commands too. The other commands can be whatever you like.
 
-2. Now try using the command ``false`` instead of ``true``.
+#. Now try using the command ``false`` instead of ``true``.
 
-    .. note::
+   .. note::
         Now the else portion of the code will be evaluated while the part before the else keyword will not be evaluated. Use the same template ``if``-statement as you did in subtask 1.
 
 Task 4: Comparitive statements
@@ -183,9 +183,9 @@ For comparisons, you need to use a separate command called ``test``. In BASH, th
 Your Task
 ---------
 
-1. Modify the following ``if``-statement structure to test if the number on the left is less-than the number on the right.
+#. Modify the following ``if``-statement structure to test if the number on the left is less-than the number on the right.
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         if [[ 3 INSERT-OPERATOR 4 ]]; then
             echo "3 is less than 4"
@@ -193,14 +193,14 @@ Your Task
             echo "4 is not greater than 3"
         fi
 
-    .. tip::
+   .. tip::
         Numerical comparison operators to use with ``[[ ]]`` are ``-lt``, ``-gt``, ``-ge``, ``-le``, ``-eq``, and ``-ne``. They mean, less-than, greater-than, greater-or-equal, etc.
 
-    Now test if 3 is greater than 4 by using a different comparison operator.
+   Now test if 3 is greater than 4 by using a different comparison operator.
 
-2. Try the same command but with variables now instead of numbers. Modify this code, remembering to set values for variables ``num1`` and ``num2``.
+#. Try the same command but with variables now instead of numbers. Modify this code, remembering to set values for variables ``num1`` and ``num2``.
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         num1=
         num2=
@@ -210,14 +210,14 @@ Your Task
             INSERT-COMMANDS
         fi
 
-    .. note::
+   .. note::
         BASH only understands integers. Floating point arithmetic requires external programs (like ``bc``).
 
-3. Now we will perform string comparisons.
+#. Now we will perform string comparisons.
 
-    The main purpose of this is to see if some variable is set to a certain value. Strings use different comparison operators than integers. For strings we use ``==``, ``>``, ``<``, and ``!=``. By far the most common operators are ``==`` and ``!=`` meaning respectively equal and not equal.
+   The main purpose of this is to see if some variable is set to a certain value. Strings use different comparison operators than integers. For strings we use ``==``, ``>``, ``<``, and ``!=``. By far the most common operators are ``==`` and ``!=`` meaning respectively equal and not equal.
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         string=
 
@@ -227,10 +227,10 @@ Your Task
             echo "strings are not the same"
         fi
 
-    .. note::
+   .. note::
         This one place where the difference between ``[[ ]]`` and ``[ ]`` becomes evident. With ``[ ]`` you will have to escape the ``<`` and ``>`` characters because they are special characters to the shell. With ``[[ ]]`` you don't have to worry about escaping anything. Recall in BASH that we use ``\`` to tell BASH to process the next character literally.
 
-    .. note::
+   .. note::
         If a string has a space in it the space has to be escaped somehow. One way of doing this is by using either single or double quotes.
 
 Task 5: Put ``if`` and ``for`` together
@@ -246,53 +246,53 @@ In this task, we will find the amount of time each script which generated each l
 Your Task
 ---------
 
-1. In each logfile the "run-time" is recorded. It is the amount of time the freesurfer script which generated the logfile ran.
+#. In each logfile the "run-time" is recorded. It is the amount of time the freesurfer script which generated the logfile ran.
 
-    Open your script and modify the grep command to search for the "run-time" instead of the subject ID. You'll need to remove the ``-o`` flag now because we'll need the full line.
+   Open your script and modify the grep command to search for the "run-time" instead of the subject ID. You'll need to remove the ``-o`` flag now because we'll need the full line.
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         #an example
         for file in list; do
             grep SEARCH-PATTERN $file
         done
 
-    After correctly modifying grep and running the script,  you should have a bunch of lines output to the screen. They'll all be of the form:
+   After correctly modifying grep and running the script,  you should have a bunch of lines output to the screen. They'll all be of the form:
 
-    .. code-block:: none
+   .. code-block:: none
 
         #@#%# recon-all-run-time-hours 5.525
         #@#%# recon-all-run-time-hours 10.225
         ...
 
-    If you get output like this, move on to 2.
+   If you get output like this, move on to 2.
 
-2. Restrict this output to ONLY numbers less than 10. In other words, find a search pattern that is only sensitive to one digit followed by a decimal. Then find a way to restrict the output further so that only the whole number remains, i.e 8.45 becomes simply 8.
+#. Restrict this output to ONLY numbers less than 10. In other words, find a search pattern that is only sensitive to one digit followed by a decimal. Then find a way to restrict the output further so that only the whole number remains, i.e 8.45 becomes simply 8.
 
-    If you spend more than 10 minutes on this, look to the :ref:`solution <bash_exercise_programming_t5_q2>` and move on to 3!. This is a hard one, so I provide lots of hints.
+   If you spend more than 10 minutes on this, look to the :ref:`solution <bash_exercise_programming_t5_q2>` and move on to 3!. This is a hard one, so I provide lots of hints.
 
-    .. tip::
-        1. You only need ``grep`` for this, not ``if``. Think about piping multiple grep commands together and of using regexes.
-        2. The key to this question is getting the right regexp. There are a few ways you could do this.
-        3. Remember that "space" is a character.
-        4. If you want to search for a literal ``.`` character, you'll have to escape it with ``grep``, i.e ``\.`` and not ``.``.
-        5. Be careful not to accidentally return only the second digit of a two digit number.
-        6. In ``grep`` you don't negate the items inside ``[]`` with ``!`` as you do with wildcards, instead you use ``^``, i.e ``[^0-9]``, to mean **NOT** a number from 0 to 9 instead of ``[!0-9]``
-        7. Finally, it's good practice in grep to put your search term in single or double quotes.
+   .. tip::
+        #. You only need ``grep`` for this, not ``if``. Think about piping multiple grep commands together and of using regexes.
+        #. The key to this question is getting the right regexp. There are a few ways you could do this.
+        #. Remember that "space" is a character.
+        #. If you want to search for a literal ``.`` character, you'll have to escape it with ``grep``, i.e ``\.`` and not ``.``.
+        #. Be careful not to accidentally return only the second digit of a two digit number.
+        #. In ``grep`` you don't negate the items inside ``[]`` with ``!`` as you do with wildcards, instead you use ``^``, i.e ``[^0-9]``, to mean **NOT** a number from 0 to 9 instead of ``[!0-9]``
+        #. Finally, it's good practice in grep to put your search term in single or double quotes.
 
-3. ``grep`` should be returning one digit numbers or nothing at all. This is what we want!
+#. ``grep`` should be returning one digit numbers or nothing at all. This is what we want!
 
-    In step 3, we will capture the output and save it to a variable. We will use this variable later for a numerical comparison involving ``if``. Recall command substitution. If you want to save the output of a command as a variable, use the syntax:
+   In step 3, we will capture the output and save it to a variable. We will use this variable later for a numerical comparison involving ``if``. Recall command substitution. If you want to save the output of a command as a variable, use the syntax:
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         var=$(MY-COMMANDS-HERE)
 
-    Insert your command into the parentheses and then insert that line in place of your current ``grep`` pipeline.
+   Insert your command into the parentheses and then insert that line in place of your current ``grep`` pipeline.
 
-4. Now add an ``if``-statement to the body of the ``for``-loop and create a comparison, testing if the value ``grep`` returned is less than 9. If the value is less than 9, we want to print the name of the logfile and the variable value to the screen.
+#. Now add an ``if``-statement to the body of the ``for``-loop and create a comparison, testing if the value ``grep`` returned is less than 9. If the value is less than 9, we want to print the name of the logfile and the variable value to the screen.
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         for file in list; do
             var=$(MY-GREP-PIPELINE)
@@ -301,9 +301,9 @@ Your Task
             fi
         done
 
-    If you've done this correctly, you may notice an odd result. Even if ``$var`` is empty, your comparison will always evaluate to less than 9?! If this odd outcome is the same as yours, check the :ref:`solution <bash_exercise_programming_t5_q4>` and then move onto subtask 5!
+   If you've done this correctly, you may notice an odd result. Even if ``$var`` is empty, your comparison will always evaluate to less than 9?! If this odd outcome is the same as yours, check the :ref:`solution <bash_exercise_programming_t5_q4>` and then move onto subtask 5!
 
-    .. tip::
+   .. tip::
         An excellent trick is to ``echo`` the commands you will run before you run them. If, for example, you are (as you should be) worried that your search patterns are a bit too liberal, you can see what the loop will actually do by putting it in double-quotes and adding echo before it. Observe:
 
         .. code-block:: bash
@@ -317,9 +317,9 @@ Your Task
 
         Instead of running the commands, you've now told the ``for``-loop to echo what will actually be run to the screen. This is an important step in checking your own code for errors **before** you run it.
 
-5. The reason ``$var`` is always less than 9, even when nothing is assigned to it is because empty strings evaluate to 0! To get around this you can add extra conditions to your ``if``-statement. Add an extra comparison that will test if ``$var`` is greater than zero. The syntax is like so:
+#. The reason ``$var`` is always less than 9, even when nothing is assigned to it is because empty strings evaluate to 0! To get around this you can add extra conditions to your ``if``-statement. Add an extra comparison that will test if ``$var`` is greater than zero. The syntax is like so:
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         for file in list; do
             var=$(MY-GREP-PIPELINE)
@@ -328,11 +328,11 @@ Your Task
             fi
         done
 
-    This will test if *both* conditions evaluate to true, and then run the command if both are true. You could also create a comparison using logical or with ``||``.
+   This will test if *both* conditions evaluate to true, and then run the command if both are true. You could also create a comparison using logical or with ``||``.
 
-    As a result, if the run time is less than 9 hours and greater than 0 hours, we will print the log and the run time to the screen. Good work!
+   As a result, if the run time is less than 9 hours and greater than 0 hours, we will print the log and the run time to the screen. Good work!
 
-    .. note::
+   .. note::
         For an even better solution, you can use what are called **unary operators**.  These are detailed among the `agonies <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html>`_ of this fairly exhasutive treatment. They test if variables are empty strings, if files exist, etc. Note that this guide uses the ``[ ]`` form of ``test``, but you can use everything described there with the ``[[ ]]`` form as well.
 
 Solutions
