@@ -11,7 +11,7 @@ Tasks
 
 #. submit an interactive job with the following command and wait for the job to start.
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ qsub -I -N 'MyFirstJob' -l 'walltime=00:30:00,mem=128mb'
 
@@ -19,20 +19,20 @@ Tasks
 
 #. check the hostname of the compute node with the command below:
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ hostname -f
         dccn-c012.dccn.nl
 
 #. try few linux commands in this shell, e.g. ``ls``, ``cd``, etc.
 
-    .. tip::
+   .. tip::
         In the interactive session, it is just like working in a Linux shell.
 
 #. terminate the job by the ``exit`` command
 
-    .. code-block:: bash
+   .. code-block:: bash
 
         $ exit
 
-    After that, you should get back to the Linux shell on the access node where your job was submitted.
+   After that, you should get back to the Linux shell on the access node where your job was submitted.
