@@ -98,11 +98,11 @@ todo_include_todos = False
 html_static_path = ['_static']
 
 # override wide tables in RTD theme
-#html_context = {
-#    'css_files': [
-#        '_static/theme_overrides.css'
-#    ]
-#}
+html_context = {
+    'css_files': [
+        '_static/theme_overrides.css'
+    ]
+}
 
 # -- Options for HTMLHelp output ------------------------------------------
 
