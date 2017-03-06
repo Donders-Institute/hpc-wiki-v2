@@ -7,7 +7,7 @@ key-combinations in terminal
 .. Note::
     These key combinations will not work with all terminal applications (i.e nano, etc) because specific programs may have the key combinations already assigned to another purpose. In other cases, the terminal program itself may not interpret these characters in a typical way.
 
-The ``^`` character indicates the :kbd:`Control` button.  When you see it next to another character, it means to hold down the Ctrl button while you push that character. For example, ``^c`` means to hold down Ctrl and then press the :kbd:`c` button while you are holding down :kbd:`Control`. In the case of ``^shift+c`` it means to hold down :kbd:`Control` AND :kbd:`Shift` buttons while pushing the :kbd:`c` button.
+The ``^`` character indicates the :kbd:`Control` button.  When you see it next to another character, it means to hold down the Ctrl button while you push that character. For example, :kbd:`^c` means to hold down Ctrl and then press the :kbd:`c` button while you are holding down :kbd:`Control`. In the case of :kbd:`^shift+c` it means to hold down :kbd:`Control` AND :kbd:`Shift` buttons while pushing the :kbd:`c` button.
 
 ===============  ========
 key-combination  function
