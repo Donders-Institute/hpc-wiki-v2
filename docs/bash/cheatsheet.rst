@@ -192,8 +192,9 @@ These are some little things that have come up with users in the past. I may add
 
 2. Sometimes terminal formatting can get messed up. You may notice that when you type long lines, new characters overwrite characters at the beginning of the line. Also, if you accidentally run cat on a binary file, you may notice your terminal may start displaying nonsense characters when you type. In both of these cases, you might try to run the command:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    $ reset
+       $ reset
 
-You may not be able to see what you type, but if you hit enter, type the command, and then hit enter again you might get your terminal back to normal. If that doesn't work, restart the terminal application.
+   .. tip::
+       You may not be able to see what you type, but if you hit enter, type the command, and then hit enter again you might get your terminal back to normal. If that doesn't work, restart the terminal application.
