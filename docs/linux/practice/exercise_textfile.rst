@@ -25,13 +25,13 @@ Your Task
 
        * Think back on :doc:`the exercise about wildcards <exercise_wildcards>`. ``grep`` uses something called **regular expressions** that are similar to wildcards, but much more extensive. For ``grep`` regexps, ``*`` and ``[]`` work the same way as they do in wildcards. For a fuller treatment of regexps, click `here <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_04_01.html>`_. For a quick example see below. You can ``grep`` for a search term in a file with something like the following:
 
-       .. code-block:: bash
+         .. code-block:: bash
 
-           #example grep command
-           $ cat file.txt | grep SEARCHTERM
-           # where searchterm can be something like
-           $ cat file.txt | grep "[0-9][0-9]*"
-           # this search term would find matches in strings that start with two numbers followed by anything
+             #example grep command
+             $ cat file.txt | grep SEARCHTERM
+             # where searchterm can be something like
+             $ cat file.txt | grep "[0-9][0-9]*"
+             # this search term would find matches in strings that start with two numbers followed by anything
 
 #. If you completed Task 1, you were able to find the output you wanted, but there was much more output sent to the screen than you needed. Construct another pipeline to limit the output of `grep` to only the first line.
 
