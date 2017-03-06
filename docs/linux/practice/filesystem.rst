@@ -100,6 +100,8 @@ File information are provided in columes.  They are summarised in the following 
 | 9      | ``Desktop``      | name of the file                              |
 +--------+------------------+-----------------------------------------------+
 
+.. _linux_file_permission:
+
 File type and permission
 ========================
 
