@@ -67,30 +67,30 @@ The ``[ ]`` wildcard has the most complex syntax because it is more flexible. Wh
 
 * matching all strings starting with ``s1`` followed by any of numbers from ``0`` to ``9``, followed then by anything.
 
-.. code-block:: bash
+  .. code-block:: bash
 
-    $ ls s1[0-9]*
-    s10_recon-all.log
+      $ ls s1[0-9]*
+      s10_recon-all.log
 
 * matching all strings starting with any of a range of letters from ``a`` to ``Z``
 
-.. code-block:: bash
+  .. code-block:: bash
 
-    $ ls [a-Z]*
-    gcutError_recon-all.log  s10_recon-all.log  s1_recon-all.log  s6_recon-all.log s8_recon-all.log
+      $ ls [a-Z]*
+      gcutError_recon-all.log  s10_recon-all.log  s1_recon-all.log  s6_recon-all.log s8_recon-all.log
 
 * matching all strings starting with ``s``, ``g``, or ``0``.
 
-.. code-block:: bash
+  .. code-block:: bash
 
-    $ ls [sg0]*
+      $ ls [sg0]*
 
 * matching all strings that do not start with ``s``
 
-.. code-block:: bash
+  .. code-block:: bash
 
-    $ ls [!s]*
-    gcutError_recon-all.log
+      $ ls [!s]*
+      gcutError_recon-all.log
 
 Your Task
 =========
