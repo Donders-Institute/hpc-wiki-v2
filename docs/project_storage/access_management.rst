@@ -8,11 +8,14 @@ User roles
 
 In the project storage, access permission of an user is governed by the user's **role** in the project. Hereafter are the four **roles** defined for the access control.
 
-
-* **Viewer** - Users in this role have read-only permission.
-* **Contributor** - Users in this role have read and write permission.
-* **Manager** - Users in this role have read, write permission and rights to grant/revoke roles of other users.
-* **Traverse** - Users in this role have permission to "pass through" a directory. This role is only relevent for a directory. This role is only relevent for a directory. It is similar to the ``x``-bit of the linux filesystem permission. See :ref:`the usage of the traverse role <project_storage_traverse_role>`.
+===============  ================
+role             permissions
+===============  ================
+**Viewer**       User in this role has read-only permission.
+**Contributor**  User in this role has read and write permission.
+**Manager**      User in this role has read, write permission and rights to grant/revoke roles of other users.
+**Traverse**     User in this role has permission to "pass through" a directory. This role is only relevent for a directory. It is similar to the ``x``-bit of the linux filesystem permission. See :ref:`the usage of the traverse role <project_storage_traverse_role>`.
+===============  ================
 
 Any user who wants to access data in a project directory must acquire one of the roles on the project. Users in the **Manager** role have rights to grant/revoke additional user roles.
 
