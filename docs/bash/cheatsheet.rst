@@ -9,30 +9,42 @@ key-combinations in terminal
 
 The ``^`` character indicates the :kbd:`Control` button.  When you see it next to another character, it means to hold down the Ctrl button while you push that character. For example, ``^c`` means to hold down Ctrl and then press the :kbd:`c` button while you are holding down :kbd:`Control`. In the case of ``^shift+c`` it means to hold down :kbd:`Control` AND :kbd:`Shift` buttons while pushing the :kbd:`c` button.
 
-* :kbd:`^shift+c` - copy highlighted text in terminal. Highlight text by clicking and dragging, just like in any application.
-* :kbd:`^shift+v` - paste text into terminal. Text copied from the terminal will be available in other applications using the typical :kbd:`^v` key combination.
-* :kbd:`^c` - send the ``SIGINT`` signal to a program. Will usually quit any process currently running in the terminal. It will not quit certain programs, like nano, but it will by default terminate a running script.
-* :kbd:`^a` - move the cursor to the beginning of the line in the terminal
-* :kbd:`^e` - move the cursor to the end of the line in the terminal
-* :kbd:`^k` - delete everything after the cursor on one line
+===============  ========
+key-combination  function
+===============  ========
+:kbd:`^shift+c`  copy highlighted text in terminal. Highlight text by clicking and dragging, just like in any application.
+:kbd:`^shift+v`  paste text into terminal. Text copied from the terminal will be available in other applications using the typical :kbd:`^v` key combination.
+:kbd:`^c`        send the ``SIGINT`` signal to a program. Will usually quit any process currently running in the terminal. It will not quit certain programs, like nano, but it will by default terminate a running script.
+:kbd:`^a`        move the cursor to the beginning of the line in the terminal
+:kbd:`^e`        move the cursor to the end of the line in the terminal
+:kbd:`^k`        delete everything after the cursor on one line
+===============  ========
 
 The rest of these aren't as important, but may still be useful to you:
 
-* :kbd:`^w` - delete one word backward from the cursor
-* :kbd:`^b` - move the cursor one character backward
-* :kbd:`^f` - move the cursor one character forward
-* :kbd:`Alt-f` - (hold down the :kbd:`Alt` button and then press :kbd:`f`) will move the cursor one word forward
-* :kbd:`Alt-b` - move the cursor one word backward
+===============  ========
+key-combination  function
+===============  ========
+:kbd:`^w`        delete one word backward from the cursor
+:kbd:`^b`        move the cursor one character backward
+:kbd:`^f`        move the cursor one character forward
+:kbd:`Alt-f`     (hold down the :kbd:`Alt` button and then press :kbd:`f`) will move the cursor one word forward
+:kbd:`Alt-b`     move the cursor one word backward
+===============  ========
 
 Handy commands
 ==============
 
 The following ``cd`` commands help you to move around in the Linux filesystem:
 
-* ``$ cd -`` - change dir to the previous directory you were just in
-* ``$ cd ../`` - change dir to one directory back, you can move as many directories back with this syntax as you like
-* ``$ cd ../../Dir`` - change dir to two directories back and one directory forward into the directory `Dir` (should be on one line)
-* ``$ cd ~`` - change dir to the home directory
+====================  ========
+command               function
+====================  ========
+:bash:`cd -`          change dir to the previous directory you were just in
+:bash:`cd ../`        change dir to one directory back, you can move as many directories back with this syntax as you like
+:bash:`cd ../../Dir`  change dir to two directories back and one directory forward into the directory `Dir` (should be on one line)
+:bash:`cd ~`          change dir to the home directory
+====================  ========
 
 .. _change-the-path-variable:
 
