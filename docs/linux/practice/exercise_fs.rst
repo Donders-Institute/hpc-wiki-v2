@@ -17,67 +17,67 @@ You will also learn few useful wildcard syntax to make things done quicker and e
 Tasks
 =====
 
-1. Change the present working directory to your personal directory
+#. Change the present working directory to your personal directory
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    $ cd $HOME
+       $ cd $HOME
 
-2. Create a new directory called ``tutorial``
+#. Create a new directory called ``tutorial``
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    $ mkdir tutorial
+       $ mkdir tutorial
 
-3. Change the present working directory to the ``tutorial`` directory
+#. Change the present working directory to the ``tutorial`` directory
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    $ cd tutorial
+       $ cd tutorial
 
-4. Create two new directories called ``labs`` and ``exercises``
+#. Create two new directories called ``labs`` and ``exercises``
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    $ mkdir labs
-    $ mkdir exercises
+       $ mkdir labs
+       $ mkdir exercises
 
-5. Remove all access permissions of ``others`` from the ``exercises`` directory
+#. Remove all access permissions of ``others`` from the ``exercises`` directory
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    $ chmod o-rwx exercises
+       $ chmod o-rwx exercises
 
-6. Set ``groups`` to have read and execute permissions on the ``exercises`` directory
+#. Set ``groups`` to have read and execute permissions on the ``exercises`` directory
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    $ chmod g=rx exercises
+       $ chmod g=rx exercises
 
-7. Change the present working directory to ``$HOME/tutorial/labs``
+#. Change the present working directory to ``$HOME/tutorial/labs``
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    $ cd $HOME/tutorial/labs
+       $ cd $HOME/tutorial/labs
 
-8. Create multiple empty files (and list them) using wildcards.  Note the syntax ``{1..5}`` in the first command below. It is taken by the Linux shell as a serious of sequencial integers from ``1`` to ``5``.
+#. Create multiple empty files (and list them) using wildcards.  Note the syntax ``{1..5}`` in the first command below. It is taken by the Linux shell as a serious of sequencial integers from ``1`` to ``5``.
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    $ touch subject_{1..5}.dat
+       $ touch subject_{1..5}.dat
 
-    $ ls -l subject_*
-    -rw-r--r-- 1 honlee tg 0 Sep 30 16:24 subject_1.dat
-    -rw-r--r-- 1 honlee tg 0 Sep 30 16:24 subject_2.dat
-    -rw-r--r-- 1 honlee tg 0 Sep 30 16:24 subject_3.dat
-    -rw-r--r-- 1 honlee tg 0 Sep 30 16:24 subject_4.dat
-    -rw-r--r-- 1 honlee tg 0 Sep 30 16:24 subject_5.dat
+       $ ls -l subject_*
+       -rw-r--r-- 1 honlee tg 0 Sep 30 16:24 subject_1.dat
+       -rw-r--r-- 1 honlee tg 0 Sep 30 16:24 subject_2.dat
+       -rw-r--r-- 1 honlee tg 0 Sep 30 16:24 subject_3.dat
+       -rw-r--r-- 1 honlee tg 0 Sep 30 16:24 subject_4.dat
+       -rw-r--r-- 1 honlee tg 0 Sep 30 16:24 subject_5.dat
 
-.. Tip::
-    The ``touch`` command is used for creating empty files.
+   .. Tip::
+       The ``touch`` command is used for creating empty files.
 
-9. Remove multiple files using wildcards.  Note the syntax ``*``.  It is taken as "any characters" by the Linux shell.
+#. Remove multiple files using wildcards.  Note the syntax ``*``.  It is taken as "any characters" by the Linux shell.
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    $ rm subject_*.dat
+       $ rm subject_*.dat
