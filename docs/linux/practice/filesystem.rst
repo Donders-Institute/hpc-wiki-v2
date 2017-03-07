@@ -82,6 +82,8 @@ The option ``-l`` is frequently used to get more information about the files/dir
 
 File information are provided in columes.  They are summarised in the following table:
 
+.. _table_linux_file_information:
+
 +--------+------------------+-----------------------------------------------+
 | Column |  Example         | Information                                   |
 +========+==================+===============================================+
@@ -113,7 +115,7 @@ The indicator for file type and access permission requires an interpretation, sh
 
 The first character presents the type of the file.  In most of cases, you will see the character of ``d``, ``-``, or ``l`` corresponding to directory, regular or link file respectively.
 
-The file-type character is followed by 9 additional characters organised in three sets, each consists of three characters representing the read (``r``), write (``w``) and execute (``x``) permissions of the file.  If certain permission is disabled, a ``-`` is shown instead.  The three sets, from left to right, indicate permissions for the user, the group (i.e. all users in the group), and others (i.e. all other users in the system). The user and group considered here are the user and group ownership (i.e. the third and fourth columns of the table above).
+The file-type character is followed by 9 additional characters organised in three sets, each consists of three characters representing the read (``r``), write (``w``) and execute (``x``) permissions of the file.  If certain permission is disabled, a ``-`` is shown instead.  The three sets, from left to right, indicate permissions for the user, the group (i.e. all users in the group), and others (i.e. all other users in the system). The user and group considered here are the user and group ownership (see the third and fourth columns of :ref:`the table <table_linux_file_information>`).
 
 Changing file permission
 ========================
