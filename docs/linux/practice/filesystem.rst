@@ -186,4 +186,4 @@ In the example below, the wildcard is used to remove files with prefix ``subject
     subject_1.dat  subject_2.dat  subject_3.dat  subject_4.dat  subject_5.dat
 
 .. Tip::
-    More wildcard syntax can be found `here <http://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm>`.
+    More wildcard syntax can be found `here <http://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm>`_.
