@@ -17,7 +17,7 @@ Right after you login to a Linux system, you are in certain working directory in
 
 The system responses to this command with a string representing the present working directory in a special notation. This string is referred to as the **path** to the present working directory. The string ``/home/tg/honlee`` from the above example is interpreted as follows:
 
-In the Linux filesystem, directories and files are organised in a tree structure. The root of the tree is denoted by the ``/`` symbol as shown at the beginning of the string.  Following that is the first-level child directory called ``home``.  It is then separated from the second-level child ``tg`` by an additional ``/``` symbol. This notation convention repeats while moving down the child-directory levels, until the present working directory is reached. For instance, the present working directory in this example is the third-level child from the root, and it's called ``honlee``.  The hierarchy is also illustrated in the diagram below:
+In the Linux filesystem, directories and files are organised in a tree structure. The root of the tree is denoted by the ``/`` symbol as shown at the beginning of the string.  Following that is the first-level child directory called ``home``.  It is then separated from the second-level child ``tg`` by an additional ``/`` symbol. This notation convention repeats while moving down the child-directory levels, until the present working directory is reached. For instance, the present working directory in this example is the third-level child from the root, and it's called ``honlee``.  The hierarchy is also illustrated in the diagram below:
 
 .. code-block:: bash
 
