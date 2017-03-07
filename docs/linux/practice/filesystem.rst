@@ -35,7 +35,7 @@ With the file path notation, one changes the present working directory in the sy
 
     $ cd /home/tg
 
-Since the directory ``tg`` is one level up with respect to the present working directory, it can also be referred by the ``..``` symbol.  Therefore, an alternative to the previous command is:
+Since the directory ``tg`` is one level up with respect to the present working directory, it can also be referred by the ``..`` symbol.  Therefore, an alternative to the previous command is:
 
 .. code-block:: bash
 
@@ -111,8 +111,6 @@ The indicator for file type and access permission requires an interpretation, sh
     :figwidth: 90%
     :align: center
 
-    The linux file permission.
-
 The first character presents the type of the file.  In most of cases, you will see the character of ``d``, ``-``, or ``l`` corresponding to directory, regular or link file respectively.  The file-type character is followed by 9 additional characters organised in three sets, each consists of three characters representing the read (``r``), write (``w``) and execute (``x``) permissions of the file.  If certain permission is disabled, a ``-`` is shown instead.  The three sets, from left to right, indicate permissions for the user, the group (i.e. all users in the group), and others (i.e. all other users in the system). The user and group considered here are the user and group ownership (i.e. the third and fourth columns of the table above).
 
 Changing file permission
@@ -136,7 +134,6 @@ For copying a file, one uses the ``cp`` command.  Assuming there is a file at pa
 .. code-block:: bash
 
     $ cp /home/tg/test /home/tg/test.copy
-
 
 It requires the ``-R`` option to copy a directory.  For example, to copy a directory at path ``/home/tg/test_dir`` to ``/home/tg/test_dir.copy``, one does
 
@@ -189,4 +186,4 @@ In the example below, the wildcard is used to remove files with prefix ``subject
     subject_1.dat  subject_2.dat  subject_3.dat  subject_4.dat  subject_5.dat
 
 .. Tip::
-    More wildcard syntax can be found `here <http://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm>`_.
+    More wildcard syntax can be found `here <http://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm>`.
