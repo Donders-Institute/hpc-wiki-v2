@@ -23,7 +23,9 @@ After you login to the access node, the first thing you see is a welcome message
     honlee@mentat001:~
     999 $
 
-Every logged-in users is given a **shell** to interact with the system.  The example above is technically called the **prompt** of the Linux shell, waiting for your commands to the system. Following the prompt, you will type in commands to run programs.  Running programs are referred to as **processes**, and their access to computing resources (CPU, memory, disk and network I/O, etc.) are managed internally by the system.
+Every logged-in users is given a **shell** to interact with the system.  The example above is technically called the **prompt** of the Linux shell.  It waits for your commands to the system.
+
+Following the prompt, you will type in commands to run programs.
 
 .. note::
     For the simplicity, we will use the symbol ``$`` to denote the prompt of the shell.
