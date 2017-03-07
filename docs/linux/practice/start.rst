@@ -45,7 +45,7 @@ Every Linux shell comes with a set of variables that can affect the way running 
 
 Generally speaking, user needs to set or modify some default environment variables to get a particular program running properly. A very common case is to adjust the ``PATH`` variable to allow the system to find the location of the program's executable when the program is launched by the user.  Another example is to extend the ``LD_LIBRARY_PATH`` to include the directory where the dynamic libraries needed for running a program can be found.
 
-In the HPC cluster, a set of environment variables has been prepared for the data analysis software supported in the cluster.  Loading (or unloading) these variables in a shell is also made easy using the `Environment Modules <http://modules.sourceforge.net>`_.  For average users, it's not even necessary to load the variables explicitly as a default set of variables corresponding to commonly used neuroimaging software are loaded automatically upon the user login.  More details about loading software in the HPC cluster is found :doc:`here <../../cluster_howto/software>`).
+In the HPC cluster, a set of environment variables has been prepared for the data analysis software supported in the cluster.  Loading (or unloading) these variables in a shell is also made easy using the `Environment Modules <http://modules.sourceforge.net>`_.  For average users, it's not even necessary to load the variables explicitly as a default set of variables corresponding to commonly used neuroimaging software are loaded automatically upon the user login.  More details about using software in the HPC cluster is found :doc:`here <../../cluster_howto/software>`).
 
 Knowing who you are in the system
 =================================
