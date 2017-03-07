@@ -52,7 +52,7 @@ Knowing who you are in the system
 
 The Linux system is designed to support multiple concurrent users.  Every user has an account (i.e. user id) that is the one you used to login to the access node.  Every user account is associated with at-least one group in the system.  In the HPC cluster at DCCN, the system groups are created in response of the research (i.e. PI) groups. User accounts are associated with groups according to the registration during the check-in procedure.
 
-To know about your user id and the system group you are associated with, simply type ``id`` followed by pressing the *Return* key to issue the command on the prompt. For example:
+To know about your user id and the system group you are associated with, simply type ``id`` followed by pressing the :kbd:`Enter` key to issue the command on the prompt. For example:
 
 .. code-block:: bash
 
