@@ -41,7 +41,7 @@ Every Linux shell comes with a set of variables that can affect the way running 
 
     $ env
     
-.. tip:: To run the above command, type ``env`` after the shell prompt; and press the :kbd:`Enter` key the run the command.
+.. tip:: The practical action of running the above command is to type ``env`` after the shell prompt followed by pressing the :kbd:`Enter` key.
 
 Generally speaking, user needs to set or modify some default environment variables to get a particular program running properly. A very common case is to adjust the ``PATH`` variable to allow the system to find the location of the program's executable when the program is launched by the user.  Another example is to extend the ``LD_LIBRARY_PATH`` to include the directory where the dynamic libraries needed for running a program can be found.
 
