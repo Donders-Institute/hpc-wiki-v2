@@ -39,7 +39,7 @@ You will be entering an empty editing area provided by ``nano``. Copy or type th
     Emily 75
     James 55
 
-Press :kbd:`Control-o` followed by the :kbd:`Return` key to save the file.  Press :kbd:`Control+x` to quit the editing environment and return to the prompt.
+Press :kbd:`Control+o` followed by the :kbd:`Enter` key to save the file.  Press :kbd:`Control+x` to quit the editing environment and return to the prompt.
 
 Now repeat the steps above to create another file called ``score_lang.dat``, and paste the data below into it.
 
