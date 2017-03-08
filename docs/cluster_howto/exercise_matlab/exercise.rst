@@ -57,6 +57,15 @@ In this task, you are given a M-file which generates a 8x8 magic matrix, makes a
         $ matlab_sub magic_cal.m
 
    You will be asked to provide the walltime and memory requirements of the job.
+   
+   .. tip::
+       You can bypass the interaction of providing memory and walltime requirements by using the ``--mem`` and ``--walltime`` options of the ``matlab_sub`` script.
+       
+       The example below submits a job requesting resource of 4 GB memory and 1 hour walltime. 
+       
+       .. code-block:: bash
+       
+           $ matlab_sub --walltime 01:00:00 --mem 4gb magic_cal.m
 
 #. Monitor the job until it is finished. You will see the output file ``magic_cal_output.mat`` containing the result.
 
