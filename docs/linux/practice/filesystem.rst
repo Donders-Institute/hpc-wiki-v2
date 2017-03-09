@@ -43,7 +43,8 @@ Since the directory ``tg`` is one level up with respect to the present working d
 
 The difference in between is that in the first command the directory ``tg`` is referred from the root directory using the so-called **absolute path**; while in the second it is referred relatively from the present working directory with the **relative path**.
 
-Tip: the relative path to the present working directory is denoted by the symbol ``.``
+.. Tip::
+    The relative path to the present working directory is denoted by the symbol ``.``
 
 The personal directory
 ======================
