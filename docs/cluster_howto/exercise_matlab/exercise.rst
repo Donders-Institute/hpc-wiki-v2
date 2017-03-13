@@ -134,7 +134,7 @@ Following the steps below to run the same ``randn_aft_t`` function using ``qsubf
 
         $ matlab2014a
 
-#. In MATLAB, load the ``qsub`` toolbox from `FieldTrip <http://www.fieldtrip.org>`_.
+#. In MATLAB, load the ``qsub`` toolbox from `FieldTrip <http://www.fieldtriptoolbox.org>`_.
 
    .. code-block:: matlab
 
