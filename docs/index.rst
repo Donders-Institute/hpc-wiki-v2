@@ -13,9 +13,9 @@ Computing Cluster
 
 The HPC cluster at DCCN consists of three groups of computer nodes, they are:
 
-* **access nodes**: ``mentat001`` ~ ``mentat003`` as login nodes.
+* **access nodes**: ``mentat001`` ~ ``mentat004`` as login nodes.
 * **mentat compute nodes**: ``mentat203`` ~ ``mentat208`` used for long term (i.e. > 72 hours) computations.
-* **Torque/Maui cluster**: a pool of powerful computers with more than 600 CPU cores, managed by the `Torque <http://www.adaptivecomputing.com/products/open-source/torque>`_ job manager and the `Maui <http://www.adaptivecomputing.com/products/open-source/maui/>`_ job scheduler.
+* **Torque/Maui cluster**: a pool of powerful computers with more than 800 CPU cores, managed by the `Torque <http://www.adaptivecomputing.com/products/open-source/torque>`_ job manager and the `Moab <http://www.adaptivecomputing.com/products/open-source/maui/>`_ job scheduler.
 
 Central Storage
 ===============
