@@ -41,7 +41,7 @@ Your Task
 Solution
 ========
 
-.. .. include:: exercise_textfile_solution.rst
+.. include:: exercise_textfile_solution.rst
 
 Closing Remarks
 ===============
