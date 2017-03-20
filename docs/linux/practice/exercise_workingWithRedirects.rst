@@ -10,6 +10,8 @@ Your Task
 
 .. Hint::
 Try some commands like these. Experiment with other commands you learned about in the slides this morning, or come of the commands on your cheat sheet. Notice that you can stack redirects multiple times, as in the first example. 
-ls /home | sort > file.txt
-echo hello > file.txt
-echo hello >> file.txt
+
+.. codeblock:: bash 
+$ ls /home | sort > file.txt
+$ echo hello > file.txt
+$ echo hello >> file.txt
