@@ -68,4 +68,4 @@
 
    .. code-block:: bash
 
-       $ for id in $( seq 1 5 ); do echo "$PWD/run_analysis.sh $id" | qsub -N "subject_$id" -q veryshort; done
+       $ for id in $( seq 1 5 ); do echo "$PWD/run_analysis.sh $id" | qsub -N "subject_$id" -l walltime=00:20:00,mem=1gb; done
