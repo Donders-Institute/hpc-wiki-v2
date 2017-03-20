@@ -15,8 +15,6 @@ Try some commands like these. Experiment with other commands you learned about i
   
 .. code-block:: bash
 
-    $ ls gcut*
-    gcutError_recon-all.log
     $ ls /home | sort > file.txt
     $ echo hello > file.txt
     $ echo hello >> file.txt
