@@ -1,4 +1,3 @@
-
 Exercise: play with text-based data file
 ****************************************
 
