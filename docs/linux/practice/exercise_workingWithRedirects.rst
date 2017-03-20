@@ -11,6 +11,8 @@ Your Task
 .. Hint::
     Try some commands like these. Experiment with other commands you learned about in the slides this morning, or come of the commands on your cheat sheet. Notice that you can stack redirects multiple times, as in the first example. 
 
+.. note::
+    Please try not just copy-n-pasting the commands provided in the hands-on exercises!! Typing (and eventually making typos) is an essential part of the learning process.
     
   
 .. code-block:: bash
