@@ -30,7 +30,7 @@ Your Task
              #example grep command
              $ cat file.txt | grep SEARCHTERM
              # where searchterm can be something like
-             $ cat file.txt | grep "[0-9][0-9]*"
+             $ cat file.txt | grep "[0-9][0-9].*"
              # this search term would find matches in strings that start with two numbers followed by anything
 
 #. If you completed Task 1, you were able to find the output you wanted, but there was much more output sent to the screen than you needed. Construct another pipeline to limit the output of `grep` to only the first line.
