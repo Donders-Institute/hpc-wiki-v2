@@ -1,7 +1,7 @@
 Exercise: Familiarize Yourselves with Redirects
 ****************************************
 
-The typical shells used in Linux environments allow for redirecting input and output to other different commands. The basic redirects you will use today are > >> and |
+The typical shells used in Linux environments allow for redirecting input and output to additional commands. The basic redirects you will use today are > >> and |
 You can generally use these redirects with any standard command line utility.
 
 Your Task
