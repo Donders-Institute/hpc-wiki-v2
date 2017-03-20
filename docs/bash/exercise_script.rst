@@ -84,12 +84,12 @@ In This task, we're going to create a script, set it as executable (make it so w
 
    When an executable file is on your path, you can just type its name without giving any information about its location in the file system. If you specify the path of a file in the command, i.e by prepending a ``./`` or ``/the/path/to/file`` to the file name, BASH will ignore your path variable and look in the location you specify.
 
-   The take away from all this is that instead of typing
+The take away from all this is that instead of typing
 
-   .. code-block:: bash
+.. code-block:: bash
 
-        $ cat gcutError_recon-all.log | grep "Subject[0-9][0-9]" | head -1
+   $ cat gcutError_recon-all.log | grep "Subject[0-9][0-9]" | head -1
 
-   Every time you want to run this command, you can just run the script you made in this exercise.
+Every time you want to run this command, you can just run the script you made in this exercise.
 
-   As you might be thinking already, you can add as many lines as you want to a script. If you open the script back up with your favorite text editor, you can add anything you want to extend its functionality.
+As you might be thinking already, you can add as many lines as you want to a script. If you open the script back up with your favorite text editor, you can add anything you want to extend its functionality.
