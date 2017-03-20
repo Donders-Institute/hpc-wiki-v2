@@ -10,8 +10,9 @@ Linux tutorial
     Working with (text) data <practice/textdata.rst>
     Text data processing <practice/analysis.rst>
     Exercise 1: filesystem <practice/exercise_fs.rst>
-    Exercise 2: wildcards <practice/exercise_wildcards.rst>
-    Exercise 3: textfile <practice/exercise_textfile.rst> 
+    Exercise 2: redirects <practice/exercise_workingWithRedirects.rst>
+    Exercise 3: wildcards <practice/exercise_wildcards.rst>
+    Exercise 4: textfile <practice/exercise_textfile.rst> 
 
 ..
     The BASH shell
