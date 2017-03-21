@@ -195,4 +195,4 @@ Following the steps below to run the same ``randn_aft_t`` function using ``qsubf
         >> out
         
    .. note::
-       After the output is loaded into Matlab with `qsubget` function, the output file is removed from the file system.  If you need to reuse the output data in the future, better save it to a `.mat` file before you close the Matlab.
+       After the output is loaded into Matlab with ``qsubget`` function, the output file is removed from the file system.  If you need to reuse the output data in the future, better save it to a ``.mat`` file before you close the Matlab.
