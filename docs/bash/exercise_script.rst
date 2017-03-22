@@ -3,6 +3,17 @@ Exercise: Putting Commands into a Script, and Setting the Script as Executable
 
 .. Note::
     DO NOT just copy-and-paste the commands for the hands-on exercises!! Typing (and eventually making typos) is an essential part of the learning process.
+    
+Preparation
+===========
+
+Download a text file using the following command:
+
+.. code-block:: bash
+
+    $ wget http://dccn-hpc-wiki.rtfd.io/en/latest/_downloads/gcutError_recon-all.log
+
+This data file is an example output file from a freesurfer command submitted to the cluster using qsub. In this simple task we are going to try to extract some information from it using a few commands.
 
 Task
 ====
