@@ -27,7 +27,7 @@ In the cluster, several job queues are made available in order to arrange jobs b
 +------------+---------------+-----------------------+---------------------+----------------------+--------------+
 | queue name | routing queue | max. walltime per job | max. memory per job | special feature      | job priority |
 +============+===============+=======================+=====================+======================+==============+
-| matlab     | N/A           | 24 hours              | 256 GB              | matlab license       | normal       |
+| matlab     | N/A           | 48 hours              | 256 GB              | matlab license       | normal       |
 +------------+---------------+-----------------------+---------------------+----------------------+--------------+
 | vgl        | N/A           |  8 hours              |  10 GB              | VirtualGL capability | normal       |
 +------------+---------------+-----------------------+---------------------+----------------------+--------------+
