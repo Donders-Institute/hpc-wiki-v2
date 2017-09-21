@@ -43,6 +43,8 @@ In the cluster, several job queues are made available in order to arrange jobs b
 +------------+---------------+-----------------------+---------------------+----------------------+--------------+
 | interactive| automatic     | 72 hours              |  64 GB              | user interaction     | high         |
 +------------+---------------+-----------------------+---------------------+----------------------+--------------+
+| lcmgui     | N/A           | 72 hours              |  64 GB              | interactive LCModel  | high         |
++------------+---------------+-----------------------+---------------------+----------------------+--------------+
 
 At the job submission time, user can specify to which queue the job should be placed in the system. Alternatively, one could simply specify the wall time and memory required by the job and let the system pick up a most proper queue automatically for the job.  The second approach is implemented by the *automatic* queue behaving as a router to a destination queue.
 
@@ -74,8 +76,10 @@ In the Torque cluster at DCCN, throttle policies are applied to limit the amount
    +------------+--------------------+----------------------+
    | interactive|   2                |    4                 |
    +------------+--------------------+----------------------+
+   | lcmgui     |   2                |    4                 |
+   +------------+--------------------+----------------------+
 
-   For most of queues, the number of runnable and queue-able jobs are set to 300 and 2000, respectively. However, more restricted policies are applied to jobs in the *vgl* and *interactive* queues. For jobs in the *vgl* queue, the maximum runnable and queue-able jobs are set to 2 and 5, respectively; while they are 2 and 4 for jobs in the *interactive* queue.  This is to compensate for the facts that *vgl* jobs consume lots of the network bandwidth; and *interactive* jobs always have the highest priority to start.
+   For most of queues, the number of runnable and queue-able jobs are set to 300 and 2000, respectively. However, more restricted policies are applied to jobs in the *vgl*, *interactive* and *lcmgui* queues. For jobs in the *vgl* queue, the maximum runnable and queue-able jobs are set to 2 and 5, respectively; while they are 2 and 4 for jobs in the *interactive* and the *lcmgui* queues.  This is to compensate for the facts that *vgl* jobs consume lots of the network bandwidth; and *interactive* and *lcmgui* jobs always have the highest priority to start.  Furthermore, the *lcmgui* jobs are always assigned to the node on which the `LCModel license <http://s-provencher.com/lcm-license.shtml>`_ is installed.
 
 #. Cluster-wise policies
 
@@ -85,7 +89,7 @@ In the Torque cluster at DCCN, throttle policies are applied to limit the amount
    * 660 days processing (wall)time
    * 1 TB memory
 
-   It implies that if the resource utilisation of your current running jobs reaches one of the above limitations, your additional jobs have to wait in the queue regardless whether there are still available resources in the cluster.
+   The cluster-wise policies overrule the queue-wise policies. It implies that if the resource utilisation of your current running jobs reaches one of the cluster-wise limitations, your additional jobs have to wait in the queue even there are still available resources in the cluster and you are not rearching the queue-wise limitations.
 
 Job prioritisation
 ------------------
