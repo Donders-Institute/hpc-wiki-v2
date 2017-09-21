@@ -53,7 +53,8 @@ Throtteling policies for resource usage
 
 In the Torque cluster at DCCN, throttle policies are applied to limit the amount of resources an user can allocate at the same time.  It is to avoid resources of the entire cluster being occupied by a single user.  The policies are defined in two scopes:
 
-#. Queue-wise policies
+Queue-wise policies
+~~~~~~~~~~~~~~~~~~~
 
    For every job queue, the total number of **runnable** and **queue-able** jobs per user are throttled.  In the table below, the *max. runnable jobs* specifies the maximum number of running jobs a user is allowed to have in a queue at a given time; while the *max. queueable jobs* restricts the total number of jobs (including idle, running and blocked jobs) a user is allowed to have.
 
@@ -81,7 +82,8 @@ In the Torque cluster at DCCN, throttle policies are applied to limit the amount
 
    For most of queues, the number of runnable and queue-able jobs are set to 300 and 2000, respectively. However, more restricted policies are applied to jobs in the *vgl*, *interactive* and *lcmgui* queues. For jobs in the *vgl* queue, the maximum runnable and queue-able jobs are set to 2 and 5, respectively; while they are 2 and 4 for jobs in the *interactive* and the *lcmgui* queues.  This is to compensate for the facts that *vgl* jobs consume lots of the network bandwidth; and *interactive* and *lcmgui* jobs always have the highest priority to start.  Furthermore, the *lcmgui* jobs are always assigned to the node on which the `LCModel license <http://s-provencher.com/lcm-license.shtml>`_ is installed.
 
-#. Cluster-wise policies
+Cluster-wise policies
+~~~~~~~~~~~~~~~~~~~~~
 
    The cluster-wise throttling is to limit the total amount of resources a single user can occupy at the same time in the cluster. The three upper-bound (cluster-wise) limitations are:
 
