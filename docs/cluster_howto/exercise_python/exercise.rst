@@ -1,0 +1,127 @@
+Exercise: running python in the cluster 
+***************************************
+
+In this exercise, you will learn how to run Python script in the cluster, using `Anaconda <https://anaconda.org>`_ and the `conda environment <https://conda.io/docs/user-guide/tasks/manage-environments.html>`_.
+
+Preparation
+===========
+
+Follow the steps below to download :download:`the prepared Python scripts <python_exercise.tgz>`.
+
+.. code-block:: bash
+
+    $ wget http://dccn-hpc-wiki.rtfd.io/en/latest/_downloads/python_exercise.tgz
+    $ tar xvzf python_exercise.tgz
+    $ ls
+    example4d.nii.gz  nibabel_example.py
+
+Let's run the python script, and you should expect some errors as this script requires a python module called `nibabel <http://nipy.org/packages/nibabel/index.html>`_.
+    
+.. code-block:: bash
+    
+    $ python nibabel_example.py
+    Traceback (most recent call last):
+      File "nibabel_example.py", line 3, in <module>
+        import nibabel as nib
+    ImportError: No module named nibabel
+
+The environment module
+======================
+
+Load the anaconda module using the command below:
+
+.. code-block:: bash
+
+    $ module load anaconda2/4.3.0
+
+, and check which python executable is used, e.g.
+
+.. code-block:: bash
+
+    $ which python
+    /opt/anaconda2/4.3.0/bin/python
+
+The conda environment
+=====================
+
+While Anaconda provides a bundle of ready-to-use python packages for data analysis, the conda environment is useful in two perspectives:
+
+#. It creates isolations between python projects so that requirements and package dependancies in one enviroment do not spoil other environments.
+
+#. It allows uses to install packages without administrative permission.
+
+After the anaconda module is loaded, use the command below to create a conda enviromnet called ``demo``, and have the ``pip``, ``jupyter`` and ``numpy`` packages installed rightaway.
+
+.. code-block:: bash
+
+    $ conda create --name demo pip jupyter numpy
+
+At the end of the creation, example commands for activating and deactivating the environment will be given on the terminal.  To activate the enviromnet we just created, do:
+
+.. code-block:: bash
+
+    $ source anaconda2/4.3.0
+    $ source activate demo
+
+After that you will see changes on the shell prompt.  For example, the name ``demo`` will be shown on the terminal prompt.
+
+.. Note::
+    The conda environment is created and installed in your home directory under the path ``$HOME/.conda/envs``.  Environments are organised in different subfolders.  When you install new packages in an environment, relevant files will also be created in its own subfolder.  Be aware of the fact that conda environments do take space from the quota of your home directory.
+
+Python packages installation
+============================
+
+When you are in a conda environment, you may install your own packages in your environment if the ``pip`` package is available in the environment.  Using the following command to check wether the ``pip`` is available in the environment:
+
+.. code-block:: bash
+
+    $ which pip
+    ~/.conda/envs/demo/bin/pip
+
+The output of the command above should be a path started with ``~/.conda``.
+
+Try to install a package called `nibabel <http://nipy.org/packages/nibabel/index.html>`_ in your conda environment, using the command below:
+
+.. code-block:: bash
+
+    $ pip install nibabel
+
+Once the installation is done, let's run the python script in the downloaded tarball again, and it should work.
+
+.. code-block:: bash
+
+    $ python nibabel_example.py
+    (128, 96, 24, 2)
+    
+Using Jupyter notebook
+======================
+
+In order to run Jupyter notebook within a conda environment, you need the jupyter package installed in the conda environment.  Use the following methods to check it.
+
+.. code-block:: bash
+
+    $ conda list | grep jupyter
+    jupyter                   1.0.0                    py27_3  
+    jupyter_client            5.1.0                    py27_0  
+    jupyter_console           5.2.0                    py27_0  
+    jupyter_core              4.3.0                    py27_0  
+
+
+If you don't see jupyter related packages in your conda environment, run the following command to install it
+
+.. code-block:: bash
+
+    $ conda install jupyter
+
+Simply run ``jupyter-notebook`` to submit a job to the cluster, and start the Jupyter notebook.     
+    
+Deactivating the conda environment
+==================================
+
+To deactive the enviromnet, do:
+
+.. code-block:: bash
+
+    $ source deactivate demo
+
+You may simply close the terminal in which the conda environment is loaded.

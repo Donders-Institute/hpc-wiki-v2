@@ -50,5 +50,6 @@ Exercises: application software
 
     Environment modules <exercise_env_modules/exercise.rst>
     Matlab <exercise_matlab/exercise.rst>
-    R <exercise_R/exercise.rst>
     Freesurfer <exercise_freesurfer/exercise.rst>
+    Python <exercise_python/exercise.rst>
+    R <exercise_R/exercise.rst>
