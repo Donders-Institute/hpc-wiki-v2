@@ -25,8 +25,8 @@ Let's run the python script, and you should expect some errors as this script re
         import nibabel as nib
     ImportError: No module named nibabel
 
-The environment module
-======================
+Task 1: Conda environment 
+=========================
 
 Load the anaconda module using the command below:
 
@@ -40,9 +40,6 @@ Load the anaconda module using the command below:
 
     $ which python
     /opt/anaconda2/4.3.0/bin/python
-
-The conda environment
-=====================
 
 While Anaconda provides a bundle of ready-to-use python packages for data analysis, the conda environment is useful in two perspectives:
 
@@ -60,16 +57,23 @@ At the end of the creation, example commands for activating and deactivating the
 
 .. code-block:: bash
 
-    $ source anaconda2/4.3.0
     $ source activate demo
 
 After that you will see changes on the shell prompt.  For example, the name ``demo`` will be shown on the terminal prompt.
 
+To deactive the enviromnet, do:
+
+.. code-block:: bash
+
+    $ source deactivate demo
+
+You may simply close the terminal in which the conda environment is loaded.
+
 .. Note::
     The conda environment is created and installed in your home directory under the path ``$HOME/.conda/envs``.  Environments are organised in different subfolders.  When you install new packages in an environment, relevant files will also be created in its own subfolder.  Be aware of the fact that conda environments do take space from the quota of your home directory.
 
-Python packages installation
-============================
+Task 2: Python packages 
+=======================
 
 When you are in a conda environment, you may install your own packages in your environment if the ``pip`` package is available in the environment.  Using the following command to check wether the ``pip`` is available in the environment:
 
@@ -93,8 +97,8 @@ Once the installation is done, let's run the python script in the downloaded tar
     $ python nibabel_example.py
     (128, 96, 24, 2)
     
-Using Jupyter notebook
-======================
+Task 3: Jupyter notebook
+========================
 
 In order to run Jupyter notebook within a conda environment, you need the jupyter package installed in the conda environment.  Use the following methods to check it.
 
@@ -113,15 +117,4 @@ If you don't see jupyter related packages in your conda environment, run the fol
 
     $ conda install jupyter
 
-Simply run ``jupyter-notebook`` to submit a job to the cluster, and start the Jupyter notebook.     
-    
-Deactivating the conda environment
-==================================
-
-To deactive the enviromnet, do:
-
-.. code-block:: bash
-
-    $ source deactivate demo
-
-You may simply close the terminal in which the conda environment is loaded.
+Simply run ``jupyter-notebook`` to submit a job to the cluster, and start the Jupyter notebook.  Try to run the python script ``nibabel_example.py`` again in the notebook. It should just work.    
