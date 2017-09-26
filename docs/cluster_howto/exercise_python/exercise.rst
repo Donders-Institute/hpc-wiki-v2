@@ -101,7 +101,9 @@ Once the installation is done, let's run the python script in the downloaded tar
 Task 3: Jupyter notebook
 ========================
 
-In order to run Jupyter notebook within a conda environment, you need the jupyter package installed in the conda environment.  Use the following methods to check it.
+`Jupyter notebook <http://jupyter.org>`_ is a web application for creating and sharing documents containing live (Python) codes.
+
+In order to run the live python codes within a conda environment, the package ``jupyter`` should be installed in the conda environment.  Use the following methods to check it.
 
 .. code-block:: bash
 
@@ -118,4 +120,6 @@ If you don't see jupyter related packages in your conda environment, run the fol
 
     $ conda install jupyter
 
-Simply run ``jupyter-notebook`` to submit a job to the cluster, and start the Jupyter notebook.  Try to run the python script ``nibabel_example.py`` again in the notebook. It should just work.    
+Within the conda environment, simply run the command ``jupyter-notebook`` to start the Jupyter notebook.
+
+Try to run the python script ``nibabel_example.py`` again in the notebook. It should just work.
