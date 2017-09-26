@@ -81,7 +81,7 @@ Jupyter notebook provides a web-based python environment for data analysis. To s
 For the moment, only the Jupyter Notebook from Anaconda 3 is supported as it provides token-based protection on the notebook.
 
 .. note::
-    When using jupyter-notebook with the `conda environment <>`_.  One should also install jupyter package when creating the enviromnet so that your conda environment will be used within the notebook. For example,
+    When using jupyter-notebook with the `conda environment <https://conda.io/docs/user-guide/tasks/manage-environments.html>`_.  One should also install jupyter package when creating the enviromnet so that your conda environment will be used within the notebook. For example,
 
     .. code-block:: bash
 		    
