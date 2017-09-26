@@ -67,8 +67,8 @@ To deactive the enviromnet, do:
 
     $ source deactivate demo
 
-    .. tip::
-        To deactivate the conda environment, you may also close the terminal in which the conda environment is loaded.
+.. tip::
+    To deactivate the conda environment, you may also close the terminal in which the conda environment is loaded.
 
 Task 2: Python packages 
 =======================
