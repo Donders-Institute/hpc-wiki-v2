@@ -67,10 +67,8 @@ To deactive the enviromnet, do:
 
     $ source deactivate demo
 
-You may simply close the terminal in which the conda environment is loaded.
-
-.. Note::
-    The conda environment is created and installed in your home directory under the path ``$HOME/.conda/envs``.  Environments are organised in different subfolders.  When you install new packages in an environment, relevant files will also be created in its own subfolder.  Be aware of the fact that conda environments do take space from the quota of your home directory.
+    .. tip::
+        To deactivate the conda environment, you may also close the terminal in which the conda environment is loaded.
 
 Task 2: Python packages 
 =======================
@@ -89,6 +87,9 @@ Try to install a package called `nibabel <http://nipy.org/packages/nibabel/index
 .. code-block:: bash
 
     $ pip install nibabel
+
+.. Note::
+    The conda environment is created and installed in your home directory under the path ``$HOME/.conda/envs``.  Environments are organised in different subfolders.  When you install new packages in an environment, relevant files will also be created in its own subfolder.  Be aware of the fact that conda environments do take space from the quota of your home directory.
 
 Once the installation is done, let's run the python script in the downloaded tarball again, and it should work.
 
