@@ -59,7 +59,7 @@ At the end of the creation, example commands for activating and deactivating the
 
     $ source activate demo
 
-After that you will see changes on the shell prompt.  For example, the name ``demo`` will be shown on the terminal prompt.
+After that you will see changes on the shell prompt.  For example, the name ``demo`` is shown on the terminal prompt.
 
 To deactive the enviromnet, do:
 
