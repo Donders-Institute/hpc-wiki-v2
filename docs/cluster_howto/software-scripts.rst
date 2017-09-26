@@ -8,6 +8,7 @@ Available software
 
 * :ref:`utility_script_matlab`
 * :ref:`utility_script_rstudio`
+* :ref:`utility_script_jupyter`
 
 .. _utility_script_matlab:
 
@@ -65,3 +66,23 @@ The selected combination of R/RStudio starts, along with the graphical walltime/
 
 .. figure:: figures/rstudio_running.png
     :figwidth: 60%
+
+.. _utility_script_jupyter:
+
+Jupyter Notebook
+================
+
+Jupyter notebook provides a web-based python environment for data analysis. To star it on the cluster, simply run the following command in the terminal within a VNC session.
+
+.. code-block:: bash
+
+    % jupyter-notebook
+
+For the moment, only the Jupyter Notebook from Anaconda 3 is supported as it provides token-based protection on the notebook.
+
+.. note::
+    When using jupyter-notebook with the `conda environment <>`_.  One should also install jupyter package when creating the enviromnet so that your conda environment will be used within the notebook. For example,
+
+    .. code-block:: bash
+		    
+	% conda create --name env jupyter
