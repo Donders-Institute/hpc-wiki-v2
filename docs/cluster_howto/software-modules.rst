@@ -29,7 +29,7 @@ Firstly, one uses the ``module`` command to list the supported software in the c
 
 .. code-block:: bash
 
-    % module avail
+    $ module avail
     ----------------------------- /opt/_modules --------------------------------------------
     32bit/brainvoyagerqx/1.10.4   cluster/1.0(default)   matlab/7.0.4    mcr/R2011b
     32bit/brainvoyagerqx/1.3.8    cuda/5.0               matlab/7.1.0    mcr/R2012a
@@ -50,13 +50,13 @@ After chosing a module, the next step is to ``load`` it to configure the shell e
 
 .. code-block:: bash
 
-    % module load fsl/5.0.6
+    $ module load fsl/5.0.6
 
 After that, one can check if a right version of the FSL executable is available.  For example,
 
 .. code-block:: bash
 
-    % which fsl
+    $ which fsl
     /opt/fsl/5.0.6/bin/fsl
 
 .. tip::
@@ -69,7 +69,7 @@ When a loaded software is no longer needed, one can easily rollback the shell en
 
 .. code-block:: bash
 
-    % module unload fsl/5.0.6
+    $ module unload fsl/5.0.6
 
 As the configuration for running FSL version 5.0.6 is removed, the FSL executable becomes unavailable.  It makes sure that the environment is clean for running other software.
 
