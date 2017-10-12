@@ -103,7 +103,7 @@ Task 3: Jupyter notebook
 
 `Jupyter notebook <http://jupyter.org>`_ is a web application for creating and sharing documents containing live (Python) codes.
 
-In order to run the live python codes within a conda environment (so that you can access to all python libraries installed in your conda environment), the package ``jupyter`` should be installed in the conda environment.  Use the following methods to check it.
+In order to run the live python codes within a conda environment (so that you can access to all python libraries installed in your conda environment), the package ``jupyter`` should also be installed in the conda environment.  Use the following methods to check it.
 
 .. code-block:: bash
 
