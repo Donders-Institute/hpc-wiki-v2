@@ -6,6 +6,7 @@ An regular tutorial is held by the TG.  Hereafter are agenda and presentations o
 .. toctree::
     :maxdepth: 1
 
+    2017, October <http://indico.dccn.nl/event/19>
     2017, March <http://indico.dccn.nl/event/18>
     2016, October <http://indico.dccn.nl/event/16>
     2016, March <http://indico.dccn.nl/event/13>
