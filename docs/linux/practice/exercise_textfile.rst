@@ -41,9 +41,9 @@ Your Task
 Solution
 ========
 
-.. .. include:: exercise_textfile_solution.rst
+.. include:: exercise_textfile_solution.rst
 
-.. Closing Remarks
-.. ===============
+Closing Remarks
+===============
 
-.. These are just simple examples. You see the real power of the unix command line tools when you add a little, soon to come, scripting know-how. A simple example of a more powerful way to use grep is in a case where you have 543 subject logs (not impossible!), and you need to search through all of them for subjects who participated in a version of your experiment with a bad stimuli list. grep is an excellent tool for this!
+These are just simple examples. You see the real power of the unix command line tools when you add a little, soon to come, scripting know-how. A simple example of a more powerful way to use grep is in a case where you have 543 subject logs (not impossible!), and you need to search through all of them for subjects who participated in a version of your experiment with a bad stimuli list. grep is an excellent tool for this!
