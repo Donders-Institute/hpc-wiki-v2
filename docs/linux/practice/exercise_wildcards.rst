@@ -103,13 +103,13 @@ Your Task
 Solution
 ========
 
-.. include:: exercise_wildcards_solution.rst
+.. .. include:: exercise_wildcards_solution.rst
 
-Clean up
-========
+.. Clean up
+.. ========
 
-When your finished and have checked the solution, run the command below to remove the files we were working with. If you don't do this, the next exercise will give you trouble.
+.. When your finished and have checked the solution, run the command below to remove the files we were working with. If you don't do this, the next exercise will give you trouble.
 
-.. code-block:: bash
+.. .. code-block:: bash
 
     $ rm gcutError_recon-all.log s10_recon-all.log s1_recon-all.log s6_recon-all.log s8_recon-all.log
