@@ -89,7 +89,7 @@ To do this, you just add something like the following to the bottom. Note that y
 
 .. code-block:: bash
 
-    PATH=$PATH:/usr/local/abin/:/usr/local/bin/mricron_lx/:/sbin/:/usr/local/bin/:/usr/local/Scripts/
+    $ PATH=$PATH:/usr/local/abin/:/usr/local/bin/mricron_lx/:/sbin/:/usr/local/bin/:/usr/local/Scripts/
 
 Of course, you'll have to enter in your own directories for the PATH to make sense for you. There is no sense in copying and pasting these example PATHS.
 
@@ -99,13 +99,38 @@ When you are finished modifying the file. Press :kbd:`^x` to exit, and nano will
 
 .. code-block:: bash
 
-    source ~/.bashrc
+    $ source ~/.bashrc
 
 The source command just means to run the file as though you were typing in each command yourself, and not in a new bash instance (the behavior for scripts)
 
 If we were to run the bashrc like a script, any variables we set in bashrc would not affect the parent environment.
 
 Note: bashrc is a hidden file. It has a . character in front of it. This means that it will not be visible normally. You would need to run the command ``ls -a`` to see it in the output.
+
+.. _how-to-use-quotes:
+
+When to Use Quotes and Which Quotes to Use
+==========================================
+
+Quoting in bash is used to force bash to interpret characters inside the quotes literally.
+Often, quotes are used to avoid bash treating spaces as delimiting characters. 
+There are two types of quotes in bash. Double quotes escape spaces, globbing characters, single quotes, and blocks the expansion of the tilde and {}. Double quotes to not escape the :code:`$` character, so variable names are expanded normally.
+
+For example, if you need to escape spaces but still want bash to expand variable names, you should use double quotes:
+:code:`$ file="a file with spaces.txt"; cp "$file" aFileWithoutSpaces.txt`
+
+Single quotes escape everything. Use these if you want bash to ignore all special characters. In single quotes, variables won't be expanded. Single quotes are commonly used when quoting search patters used for grep or awk. This can be because some bash special characters overlap with the grep regular expression characters and cause problems or because you want to grep for a pattern that double quotes would expand. Consider the following:
+
+:code:`$ echo 'Users should set their $PATH variable' >> README; cat $file | grep '$PATH'`
+
+If we want to grep for the string $PATH, then we are forced to use single quotes to stop the shell from treating the $ character as special. There are many other use cases for both single and double quotes.
+
+You can escape individual characters with the \\ character. This works within double quotes as well. If for example, you wanted to have a string with two :code:`$` characters where one :code:`$` is escaped, and one :code:`$` is interpreted normally, then you can use double quotes with a \\ preceding the :code:`$` you would like to escape.
+
+:code:`echo "$PATH \$PATH" > file.txt`
+
+This code will echo both an expanded $PATH variable and the string $PATH to a file called file.txt
+
 
 Process control (killing hung jobs)
 ===================================
