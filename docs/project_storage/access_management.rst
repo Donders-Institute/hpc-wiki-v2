@@ -22,7 +22,7 @@ Any user who wants to access data in a project directory must acquire one of the
 Tool for viewing access permission
 ==================================
 
-For general end-users, a tool called ``prj_getacl`` is used to show user roles of a given project.  For example, to list the user roles on project ``3010000.01``, one does
+For general end-users, a tool called ``prj_getacl`` (as "Project Get ACL") is used to show user roles of a given project.  For example, to list the user roles on project ``3010000.01``, one does
 
 .. code-block:: bash
 
@@ -32,6 +32,9 @@ For general end-users, a tool called ``prj_getacl`` is used to show user roles o
     +------------+---------------------+---------+-------------+---------+----------+
     | 3010000.01 | /project/3010000.01 | honlee  |    martyc   | edwger  | rendbru  |
     +------------+---------------------+---------+-------------+---------+----------+
+
+.. note::
+    The name ``prj_getacl`` should be taken as "Project Get ACL"; thus the last character of it should be the lower-case of the letter ``L``.
 
 The script support few optional arguments. Some usefule ones are listed in the following table.
 
@@ -50,11 +53,14 @@ The script support few optional arguments. Some usefule ones are listed in the f
 Tool for managing access permission
 ===================================
 
-For the project manager, the tool called ``prj_setacl`` is used for altering user roles on a given project.  For example, to change the role of user ``rendbru`` from **Contributor** to **User** on project ``3010000.01``.  One does
+For the project manager, the tool called ``prj_setacl`` (as "Project Set ACL") is used for altering user roles on a given project.  For example, to change the role of user ``rendbru`` from **Contributor** to **User** on project ``3010000.01``.  One does
 
 .. code-block:: bash
 
     $ prj_setacl -u rendbru 3010000.01
+
+.. note::
+    The name ``prj_setacl`` should be taken as "Project Set ACL"; thus the last character of it should be the lower-case of the letter ``L``.
 
 Similarly, setting ``rendbru`` back to the **Contributor** role, one does the following command:
 
@@ -68,11 +74,14 @@ To promote ``rendbru`` to the **Manager** role, one uses the ``-m`` option then,
 
     $ prj_setacl -m rendbru 3010000.01
 
-For removing an user from accessing a project, another tool called ``prj_delacl`` is used.  For example, if we want to remove the access right of ``rendbru`` from project ``3010000.01``, one does
+For removing an user from accessing a project, another tool called ``prj_delacl`` (as "Project Delete ACL") is used.  For example, if we want to remove the access right of ``rendbru`` from project ``3010000.01``, one does
 
 .. code-block:: bash
 
     $ prj_delacl rendbru 3010000.01
+    
+.. note::
+    The name ``prj_delacl`` should be taken as "Project Delete ACL"; thus the last character of it should be the lower-case of the letter ``L``.
 
 Recursive or non-recursive
 --------------------------
