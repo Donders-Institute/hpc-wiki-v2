@@ -22,7 +22,7 @@ Any user who wants to access data in a project directory must acquire one of the
 Tool for viewing access permission
 ==================================
 
-For general end-users, a tool called ``prj_getacl`` (as "Project Get ACL") is used to show user roles of a given project.  For example, to list the user roles on project ``3010000.01``, one does
+For general end-users, a tool called ``prj_getacl`` (as **Project Get ACL**) is used to show user roles of a given project.  For example, to list the user roles on project ``3010000.01``, one does
 
 .. code-block:: bash
 
@@ -53,7 +53,7 @@ The script support few optional arguments. Some usefule ones are listed in the f
 Tool for managing access permission
 ===================================
 
-For the project manager, the tool called ``prj_setacl`` (as "Project Set ACL") is used for altering user roles on a given project.  For example, to change the role of user ``rendbru`` from **Contributor** to **User** on project ``3010000.01``.  One does
+For the project manager, the tool called ``prj_setacl`` (as **Project Set ACL**) is used for altering user roles on a given project.  For example, to change the role of user ``rendbru`` from **Contributor** to **User** on project ``3010000.01``.  One does
 
 .. code-block:: bash
 
@@ -74,7 +74,7 @@ To promote ``rendbru`` to the **Manager** role, one uses the ``-m`` option then,
 
     $ prj_setacl -m rendbru 3010000.01
 
-For removing an user from accessing a project, another tool called ``prj_delacl`` (as "Project Delete ACL") is used.  For example, if we want to remove the access right of ``rendbru`` from project ``3010000.01``, one does
+For removing an user from accessing a project, another tool called ``prj_delacl`` (as **Project Delete ACL**) is used.  For example, if we want to remove the access right of ``rendbru`` from project ``3010000.01``, one does
 
 .. code-block:: bash
 
