@@ -15,7 +15,7 @@ Examples below assume that you are connected to one of the cluster's access node
 Choosing a node
 ===============
 
-Choosing a mentat compute node is a manual step.  `The "Headnode status" tab on this page <http://torquemon.dccn.nl/>`_ helps you to find a lessly loaded node at the time you start the computation.  However, due to the freedom that user can start new computations at any time, load on the chosen node can change largly during your computation.
+Choosing a mentat compute node is a manual step.  The "Headnode status" tab on _`this page <http://torquemon.dccn.nl/>`_ helps you to find a lessly loaded node at the time you start the computation.  However, due to the freedom that user can start new computations at any time, load on the chosen node can change largly during your computation.
 
 Computation in text mode
 ========================
