@@ -257,51 +257,56 @@ Specifying resource requirement
 
 Each job submitted to the cluster comes with a resource requirement. The job scheduler and resource manager of the cluster make sure that the needed resources are allocated for the job. To allow the job to complete successfully, it is important that a right and sufficient amount of resources are specified at the job submission time.
 
-When submitting jobs with the ``qsub`` command, one uses the ``-l`` option to specify required resources. The value of the ``-l`` option follows certain syntax. Detail of the syntax can be found on `the Torque documentation <http://docs.adaptivecomputing.com/torque/6-1-2/adminGuide/torque.htm#topics/torque/2-jobs/requestingRes.htm?Highlight=resource%20specification>`_. Hereafter are few useful, and mostly used examples:
+When submitting jobs with the ``qsub`` command, one uses the ``-l`` option to specify required resources. The value of the ``-l`` option follows certain syntax. Detail of the syntax can be found on `the Torque documentation <http://docs.adaptivecomputing.com/torque/6-1-2/adminGuide/torque.htm#topics/torque/2-jobs/requestingRes.htm?Highlight=resource%20specification>`_. Hereafter are few useful, and mostly used examples for jobs requiring:
 
-* submit a job requiring 1 CPU core, 4 gigabytes memory and 12 hours wallclock time:
+1 CPU core, 4 gigabytes memory and 12 hours wallclock time
+----------------------------------------------------------
 
-    .. code-block:: bash
+.. code-block:: bash
     
-        $ qsub -l 'walltime=12:00:00,mem=4gb' job.sh
+    $ qsub -l 'walltime=12:00:00,mem=4gb' job.sh
         
-    The requirement of 1 CPU is skipped as it is by default to be 1.
+The requirement of 1 CPU is skipped as it is by default to be 1.
 
-* submit a job requiring 4 CPU cores on a single node, 12 hours wallclock time, and 4 gb memory:
+4 CPU cores on a single node, 12 hours wallclock time, and 4 gb memory
+----------------------------------------------------------------------
 
-    .. code-block:: bash
+.. code-block:: bash
     
-        $ qsub -l 'nodes=1:ppn=4,walltime=12:00:00,mem=4gb' job.sh
+    $ qsub -l 'nodes=1:ppn=4,walltime=12:00:00,mem=4gb' job.sh
         
-    Here we explicitly ask 4 CPU cores to be on the same compute node. This is usually a case that the application (such as multithreading of MATLAB) can benefit from multiple cores on a (SMP) node to speed up the computation.
+Here we explicitly ask 4 CPU cores to be on the same compute node. This is usually a case that the application (such as multithreading of MATLAB) can benefit from multiple cores on a (SMP) node to speed up the computation.
 
-* submit a job requireing 1 **Intel** CPU core, 4 gigabytes memory and 12 hours wallclcok time, on a node with 10 Gb network connectivity:
+1 **Intel** CPU core, 4 gigabytes memory and 12 hours wallclcok time, on a node with 10 Gb network connectivity
+---------------------------------------------------------------------------------------------------------------
 
-    .. code-block:: bash
+.. code-block:: bash
 
-        $ qsub -l 'nodes=1:intel:network10GigE,walltime=12:00:00,mem=4gb' job.sh
+    $ qsub -l 'nodes=1:intel:network10GigE,walltime=12:00:00,mem=4gb' job.sh
     
 Here we ask the allocated CPU core to be on a node with properties ``intel`` and ``network10GigE``.
 
-* submit a job requiring 4 CPU cores, 12 hours wallclock time, and 4 gb memory.  The 4 CPU cores may come from different nodes:
+4 CPU cores, 12 hours wallclock time, and 4 gb memory.  The 4 CPU cores may come from different nodes
+-----------------------------------------------------------------------------------------------------
 
-    .. code-block:: bash
+.. code-block:: bash
     
-        $ qsub -l 'procs=4,walltime=12:00:00,mem=4gb' job.sh
+    $ qsub -l 'procs=4,walltime=12:00:00,mem=4gb' job.sh
         
-    Here we use ``procs`` to specify the amount of CPU cores we need, but not restricting to a single node.  In this scenario, the job (or the application the job runs) should take care of the communication between the processors distributed on many nodes.  This is typically for the `MPI <https://en.wikipedia.org/wiki/Message_Passing_Interface>`_-like applications.
+Here we use ``procs`` to specify the amount of CPU cores we need, but not restricting to a single node.  In this scenario, the job (or the application the job runs) should take care of the communication between the processors distributed on many nodes.  This is typically for the `MPI <https://en.wikipedia.org/wiki/Message_Passing_Interface>`_-like applications.
         
 .. Hereafter are GPU requirement, we should hide it until the GPU pilot is ready for production.
-* submit a job requireing 1 GPU with minimal `cuda capability <https://developer.nvidia.com/cuda-gpus>`_ 5.0, 12 hours wallclock time, and 4 gb memory
+1 GPU with minimal `cuda capability <https://developer.nvidia.com/cuda-gpus>`_ 5.0, 12 hours wallclock time, and 4 gb memory
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-    .. code-block:: bash
+.. code-block:: bash
 
-        $ qsub -l 'nodes=1:gpus=1,walltime=12:00:00,mem=4gb,reqattr=cudacap>=5.0'
+    $ qsub -l 'nodes=1:gpus=1,walltime=12:00:00,mem=4gb,reqattr=cudacap>=5.0'
         
-    Here we ask for a 1 GPU on a node with the (dynamic) attribute ``cudacap`` set to larger or equal to 5.0.
+Here we ask for a 1 GPU on a node with the (dynamic) attribute ``cudacap`` set to larger or equal to 5.0.
     
-    .. note::
-        The GPU support in the cluster is still in the pilot phase. Currently there is only 1 GPU available in the entire cluster. More GPUs will be added to the cluster in the future.
+.. note::
+    The GPU support in the cluster is still in the pilot phase. Currently there is only 1 GPU available in the entire cluster. More GPUs will be added to the cluster in the future.
 
 Estimating resource requirement
 ===============================
