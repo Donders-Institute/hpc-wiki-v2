@@ -277,9 +277,9 @@ When submitting jobs with the ``qsub`` command, one uses the ``-l`` option to sp
 
 * submit a job requireing 1 **Intel** CPU core, 4 gigabytes memory and 12 hours wallclcok time, on a node with 10 Gb network connectivity:
 
-.. code-block:: bash
+    .. code-block:: bash
 
-    $ qsub -l 'nodes=1:intel:network10GigE,walltime=12:00:00,mem=4gb' job.sh
+        $ qsub -l 'nodes=1:intel:network10GigE,walltime=12:00:00,mem=4gb' job.sh
     
 Here we ask the allocated CPU core to be on a node with properties ``intel`` and ``network10GigE``.
 
@@ -292,7 +292,7 @@ Here we ask the allocated CPU core to be on a node with properties ``intel`` and
     Here we use ``procs`` to specify the amount of CPU cores we need, but not restricting to a single node.  In this scenario, the job (or the application the job runs) should take care of the communication between the processors distributed on many nodes.  This is typically for the `MPI <https://en.wikipedia.org/wiki/Message_Passing_Interface>`_-like applications.
         
 .. Hereafter are GPU requirement, we should hide it until the GPU pilot is ready for production.
-* submit a job requireing 1 GPU with **`cuda capability <https://developer.nvidia.com/cuda-gpus>`_ >= 5.0**, 12 hours wallclock time, and 4 gb memory
+* submit a job requireing 1 GPU with minimal `cuda capability <https://developer.nvidia.com/cuda-gpus>`_ 5.0, 12 hours wallclock time, and 4 gb memory
 
     .. code-block:: bash
 
