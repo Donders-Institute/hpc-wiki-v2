@@ -260,7 +260,7 @@ Each job submitted to the cluster comes with a resource requirement. The job sch
 When submitting jobs with the ``qsub`` command, one uses the ``-l`` option to specify required resources. The value of the ``-l`` option follows certain syntax. Detail of the syntax can be found on `the Torque documentation <http://docs.adaptivecomputing.com/torque/6-1-2/adminGuide/torque.htm#topics/torque/2-jobs/requestingRes.htm?Highlight=resource%20specification>`_. Hereafter are few useful, and mostly used examples for jobs requiring:
 
 1 CPU core, 4 gigabytes memory and 12 hours wallclock time
-----------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
     
@@ -269,7 +269,7 @@ When submitting jobs with the ``qsub`` command, one uses the ``-l`` option to sp
 The requirement of 1 CPU is skipped as it is by default to be 1.
 
 4 CPU cores on a single node, 12 hours wallclock time, and 4 gb memory
-----------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
     
@@ -278,7 +278,7 @@ The requirement of 1 CPU is skipped as it is by default to be 1.
 Here we explicitly ask 4 CPU cores to be on the same compute node. This is usually a case that the application (such as multithreading of MATLAB) can benefit from multiple cores on a (SMP) node to speed up the computation.
 
 1 **Intel** CPU core, 4 gigabytes memory and 12 hours wallclcok time, on a node with 10 Gb network connectivity
----------------------------------------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
 
@@ -287,7 +287,7 @@ Here we explicitly ask 4 CPU cores to be on the same compute node. This is usual
 Here we ask the allocated CPU core to be on a node with properties ``intel`` and ``network10GigE``.
 
 4 CPU cores, 12 hours wallclock time, and 4 gb memory.  The 4 CPU cores may come from different nodes
------------------------------------------------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. code-block:: bash
     
