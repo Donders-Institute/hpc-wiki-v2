@@ -27,6 +27,16 @@ Task 1: create the script
 
 #. Set the script to be executable
 
+#. Load the freesurfer module (an example of version 5.3)
+
+   .. code-block:: bash
+   
+        $ module unload freesurfer
+        $ module load freesurfer/5.3
+        
+   .. tip:
+        You could try to load a different version of freesurfer, using the ``module`` command.
+
 #. Submit the script to the cluster
 
    .. code-block:: bash
