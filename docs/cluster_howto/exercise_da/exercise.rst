@@ -39,10 +39,10 @@ Tasks
    
        $ ./run_analysis.sh 0
       
-   After that, you should be able to see a downloaded photo in the folder ``subject_0``.
+   The command doesn't return any output to the terminal.  If it is successfully executed, you should see a photo in the folder ``subject_0``.
    
    .. tip::
-        The script ``run_analysis.sh`` is writen to take one argument as the subject id.  Thus the command above will perform the data analysis algorithm on the dataset of ``subject_0``.
+        The script ``run_analysis.sh`` is writen to take one argument as the subject id.  Thus the command above will perform the data analysis algorithm on the dataset of ``subject_0`` interactively.
 
 #. run the analysis by submitting 5 parallel jobs; each runs on a dataset.
 
