@@ -33,6 +33,15 @@ Tasks
    .. tip::
         The script consists of a BASH **function** (``analyze_subject_data``) encapsulating the data-analysis algorithm. The function takes one input argument, the subject id. In the main program (the last line), the function is called with an input ``$1``. In BASH, variable ``$1`` is used to refer to the first argument of a shell command.
 
+#. run the analysis interactively on the dataset of ``subject_0``
+
+   .. code-block:: bash
+   
+       $ ./run_analysis.sh 0
+      
+   .. tip::
+        The script ``run_analysis.sh`` is writen to take one argument as the subject id.  Thus the command above will perform the data analysis algorithm on the dataset of ``subject_0``.
+
 #. run the analysis by submitting 5 parallel jobs; each runs on a dataset.
 
    .. tip::
