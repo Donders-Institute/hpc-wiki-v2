@@ -17,7 +17,7 @@ Move into the directory you'd like to work in and download :download:`the files 
 Task 1: create the script
 =========================
 
-#. Open a text editor and create the script runFreesurfer.sh
+#. Open a text editor and create the script called ``runFreesurfer.sh``
 
    .. code-block:: bash
 
