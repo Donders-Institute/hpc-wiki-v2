@@ -18,7 +18,7 @@ Using the commands below to download :download:`the exercise package <torque_exe
 
 In the package, there are folders for subject data (i.e. ``subject_{0..5}``).  In each subject folder, there is a data file containing an encrypted string (URL) pointing to the subject's photo.
 
-In this fake analysis, we are going to find out who our subjects are, using a analysis algorithm that does the following two steps in each subject folder:
+In this fake analysis, we are going to find out who our subjects are, using an trivial "analysis algorithm" that does the following two steps in each subject folder:
 
 1. decrypting the URL string, and
 2. downloading the photo into the folder.
@@ -39,6 +39,8 @@ Tasks
    
        $ ./run_analysis.sh 0
       
+   After that, you should be able to see a downloaded photo in the folder ``subject_0``.
+   
    .. tip::
         The script ``run_analysis.sh`` is writen to take one argument as the subject id.  Thus the command above will perform the data analysis algorithm on the dataset of ``subject_0``.
 
