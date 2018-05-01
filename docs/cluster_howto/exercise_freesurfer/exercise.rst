@@ -41,7 +41,7 @@ Task 1: create the script
 
    .. code-block:: bash
 
-        $ echo "cd $PWD; ./runFreesurfer.sh" | qsub walltime=00:10:00,mem=1GB
+        $ echo "cd $PWD; ./runFreesurfer.sh" | qsub -l walltime=00:10:00,mem=1GB
 
 #. Verify the job is running with ``qstat``. You should see something like:
 
