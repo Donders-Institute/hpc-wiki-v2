@@ -61,6 +61,33 @@ At the end of the creation, example commands for activating and deactivating the
 
 After that you will see changes on the shell prompt.  For example, the name ``demo`` is shown on the terminal prompt.
 
+Now check which ``python`` or ``pip`` program you will be using:
+
+.. code-block:: bash
+
+    $ which python
+    ~/.conda/envs/demo/bin/python
+    
+    $ which pip
+    ~/.conda/envs/demo/bin/pip
+    
+You see that the location of the ``python`` and ``pip`` program is now under your home directory under a conda environment directory we have created.
+
+The setting in the shell for the conda environment will be trasnferred with the job you submitted to the cluster.  You could check that by starting an interactive job, and checking the locations of the ``python`` and ``pip`` programs.  They should still be pointed to your home directory under the conda environment.
+
+.. code-block:: bash
+
+    $ qsub -I -l 'walltime=00:20:00,mem=1gb'
+    
+    $ which python
+    ~/.conda/envs/demo/bin/python
+    
+    $ which pip
+    ~/.conda/envs/demo/bin/pip
+    
+.. tip::
+    You may also firstly submit a job then enter the conda environment after the job start.  This may be handy when the conda environment is only needed within the scope of the job, or you want to switch between conda environment for different jobs.
+
 To deactive the enviromnet, do:
 
 .. code-block:: bash
@@ -72,6 +99,12 @@ To deactive the enviromnet, do:
 
 Task 2: Python packages 
 =======================
+
+Let's activate the conda environment we just created in Task 1.
+
+.. code-block:: bash
+
+    $ source activate demo
 
 When you are in a conda environment, you may install your own packages in your environment if the ``pip`` package is available in the environment.  Using the following command to check wether the ``pip`` is available in the environment:
 
@@ -100,6 +133,12 @@ Once the installation is done, let's run the python script in the downloaded tar
     
 Task 3: Jupyter notebook
 ========================
+
+Make sure you are in the conda environment we created in task 1; otherwise, do the following commands:
+
+.. code-block:: bash
+
+    $ source activate demo
 
 `Jupyter notebook <http://jupyter.org>`_ is a web application for creating and sharing documents containing live (Python) codes.
 
