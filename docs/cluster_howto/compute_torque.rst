@@ -303,6 +303,15 @@ Here we use ``procs`` to specify the amount of CPU cores we need, but not restri
     $ qsub -l 'nodes=1:gpus=1,walltime=12:00:00,mem=4gb,reqattr=cudacap>=5.0'
         
 Here we ask for a 1 GPU on a node with the (dynamic) attribute ``cudacap`` set to larger or equal to 5.0.
+
+.. For short interactive GPU computation, one could also specify the ``qos`` (i.e. Quality-of-Service) flag to make use the slot reserved for GPU computation.  For instance:
+
+.. .. code-block:: bash
+
+..    $ qsub -I -l 'nodes=1:gpus=1,qos=cuda,walltime=1:00:00,mem=4gb,reqattr=cudacap>=5.0'
+    
+..    .. note::
+        This ``qos`` reservation is only for accessible for interactive jobs with requirement of one CPU core and less than 1 hour walltime.
     
 .. note::
     The GPU support in the cluster is still in the pilot phase. Currently there is only 1 GPU available in the entire cluster. More GPUs will be added to the cluster in the future.
