@@ -300,9 +300,9 @@ Here we use ``procs`` to specify the amount of CPU cores we need, but not restri
 
 .. code-block:: bash
 
-    $ qsub -l 'nodes=1:gpus=1,walltime=12:00:00,mem=4gb,reqattr=cudacap>=5.0'
+    $ qsub -l 'nodes=1:gpus=1,feature=cuda,walltime=1:00:00,mem=4gb,reqattr=cudacap>=5.0'
         
-Here we ask for a 1 GPU on a node with the (dynamic) attribute ``cudacap`` set to larger or equal to 5.0.
+Here we ask for a 1 GPU on a node with the (dynamic) attribute ``cudacap`` set to larger or equal to 5.0. The ``feature=cuda`` requirement allows the system to make use of a standing reservation if there is still space available in the reservation.
 
 .. For short interactive GPU computation, one could also specify the ``qos`` (i.e. Quality-of-Service) flag to make use the slot reserved for GPU computation.  For instance:
 
