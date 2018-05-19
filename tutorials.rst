@@ -1,7 +1,10 @@
 Linux & HPC tutorials
 *********************
 
-An regular tutorial is held by the TG.  Hereafter are agenda and presentations of the past tutorials. They are only accessible within the DCCN network.
+An regular tutorial is held by the TG.  Hereafter are agenda and presentations of the past tutorials.
+
+.. Note::
+    Tutorial agenda and slides are only accessible within the DCCN network.
 
 .. toctree::
     :maxdepth: 1
