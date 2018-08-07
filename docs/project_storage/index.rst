@@ -8,4 +8,4 @@ Each project receives a specific directory on the project storage, and it is acc
 .. toctree::
     :maxdepth: 1
 
-        Managing data access <access_management.rst>
+        Managing data access <access_management.new.rst>
