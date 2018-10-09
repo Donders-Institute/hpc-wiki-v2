@@ -27,28 +27,25 @@ For general end-users, a tool called ``prj_getacl`` (as **Project Get ACL**) is 
 .. code-block:: bash
 
     $ prj_getacl 3010000.01
-    +------------+---------------------+---------+-------------+---------+----------+
-    |  project   |         path        | manager | contributor |  viewer | traverse |
-    +------------+---------------------+---------+-------------+---------+----------+
-    | 3010000.01 | /project/3010000.01 | honlee  |    martyc   | edwger  | rendbru  |
-    +------------+---------------------+---------+-------------+---------+----------+
+    /project/3010000.01/:
+         manager: honlee
+     contributor: martyc
+          viewer: edwger
+        traverse: mikveng
+
+One could also use the ``prj_getacl`` program on a path (file or directory) in the project storage.  For example,
+
+.. code-block:: bash
+
+    $ prj_getacl /project/3010000.01/rdm-test
+    /project/3010000.01/rdm-test/:
+         manager: honlee
+     contributor: martyc
+          viewer: mikveng,edwger
 
 .. note::
-    The name ``prj_getacl`` should be taken as "Project Get ACL"; thus the last character of it should be the lower-case of the letter ``L``.
-
-The script support few optional arguments. Some usefule ones are listed in the following table.
-
-+----------------+-------------------------------------------------------------------------+
-| Option         | Purpose                                                                 |
-+================+=========================================================================+
-| ``-h``         | print the help message with a full list of the command-line options     |
-+----------------+-------------------------------------------------------------------------+
-| ``-l LOGLEVEL``| set the verbosity of the log message in a level between ``0`` and ``3`` |
-+----------------+-------------------------------------------------------------------------+
-| ``-p SUBDIR``  | retrieve the access right on a ``SUBDIR`` within the project directory  |
-+----------------+-------------------------------------------------------------------------+
-| ``-b``         | run the access-right setting in batch mode, as a Torque cluster job     |
-+----------------+-------------------------------------------------------------------------+
+    * The name ``prj_getacl`` should be taken as "Project Get ACL"; thus the last character of it should be the lower-case of the letter ``L``.
+    * Use the ``-h`` option to see additional options supported by ``prj_getacl``.
 
 Tool for managing access permission
 ===================================
@@ -83,22 +80,6 @@ For removing an user from accessing a project, another tool called ``prj_delacl`
 .. note::
     The name ``prj_delacl`` should be taken as "Project Delete ACL"; thus the last character of it should be the lower-case of the letter ``L``.
 
-Recursive or non-recursive
---------------------------
-
-By default, the ``prj_setacl`` and ``prj_delacl`` only modify the access permission on the top-level directory (e.g. the root of the project directory).  Therefore only the newly created files/directories within the project will adopt the new access permission.
-
-In order to apply the modification on the existing files/directories under the top-level directory, one needs to use the ``-r`` and ``-f`` options.  For example, the following command makes user ``rendbru`` as manager of all existing files/directories in the project ``3010000.01``:
-
-.. code-block:: bash
-
-    $ prj_setacl -r -f -m rendbru 3010000.01
-
-.. warning::
-    When changing the access permission recursively, one important behaviour to keep in mind is that the new permission setting of the top-level directory (e.g. the root of the project directory) will **overwrite** the existing settings of all the files/sub-directories.
-
-    This feature is to ensure access permissions are set consistently across all sub-directories. **If you are managing different access permissions in sub-directories, you should be careful on this "overwriting" feature.**
-
 Changing access permission for multiple users
 ---------------------------------------------
 
@@ -119,30 +100,27 @@ The following single command will remove both ``honlee`` and ``edwger`` from pro
 Controlling access permission on sub-directories
 ------------------------------------------------
 
-.. warning::
-    Using this feature can significantly complicate the access-control management. Therefore the usage of it is not encouraged unless there is a good reason (and you are fully aware of the consequences).
+It is possible to set/delete user role on sub-directory within a project directory. It is done by using either the ``-p`` option, or specifying directly the absolute path of the directory.  Both ``prj_setacl`` and ``prj_delacl`` programs support it.
 
-    Given this reason, the feature is locked by default. If you want to use this feature for your project, please contact the TG helpdesk.
+When doing so, the user will be automatically granted with (or revoked from) the ``traverse`` role on the parent directories if the user haven't had a roles on them.
 
-It is possible to set/delete user role on sub-directory within a project directory, using the ``-p`` option of the ``prj_setacl`` and ``prj_delacl`` scripts.
-
-For example, granting user ``edwger`` with the contributor role in the subdirectory ``subject_001`` in project ``3010000.01`` can be done as follows:
+For example, granting user ``edwger`` with the contributor role in the subdirectory ``subject_001`` in project ``3010000.01`` can be done as below:
 
 .. code-block:: bash
 
     $ prj_setacl -p subject_001 -c edwger 3010000.01
+
+Alternatively, one could also do:
+
+.. code-block:: bash
+
+    $ prj_setacl -c edwger /project/3010000.01/subject_001
 
 .. _project_storage_traverse_role:
 
 The **Traverse** role
 ^^^^^^^^^^^^^^^^^^^^^
 
-When granting user a role in a sub-directory, a minimum permission in upper-level directories should also be given to the user to "pass through" the directory tree.  This minimum permission is given by assiging the user to the **Traverse** role.
+When granting user a role in a sub-directory, a minimum permission in upper-level directories should also be given to the user to "pass through" the directory tree.  This minimum permission is referred as the **Traverse** role.
 
-In practice, the assignment is more meaningful when it takes place at the time the user is given a role to a sub-directory, therefore, it is done via the ``-t`` option of the ``prj_setacl`` command.
-
-For example, the following command gives user ``rendbru`` the **Contributor** role in the subdirectory ``subject_001``, as well as the minimum permission (i.e. the **Traverse** role) to pass through the top-level directory of project ``3010000.01``.
-
-.. code-block:: bash
-
-    $ prj_setacl -t -p subject_001 -c rendbru 3010000.01
+The traverse role is automatically managed by the ``prj_setacl`` and ``prj_delacl`` programs when managing the access in a sub-directory or a file within a project directory.
