@@ -70,7 +70,7 @@ In this task, you will be confronted with an issue that the computer resource (i
 
 #. Wait for the job to finish, and check the ``STDOUT`` and ``STDERR`` files of the job. Do you get the expected result in the ``STDOUT`` file?
 
-#. Check the job's ``STDOUT`` file and find out the relative information concerning job running out of memory limitation.
+#. Find out relative information concerning job running out of memory limitation in the ``STDOUT`` file.
 
    .. code-block:: bash
         :emphasize-lines: 4,11
