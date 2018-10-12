@@ -66,26 +66,30 @@ In this task, you will be confronted with an issue that the computer resource (i
 
    .. code-block:: bash
 
-        $ echo "$PWD/fake_app_2 3 300" | qsub -N fake_app_2 -M <your_email> -l walltime=600,mem=128mb
-
-   .. warning::
-        Remember to replace ``<your_email>`` with your actual email address.
+        $ echo "$PWD/fake_app_2 3 300" | qsub -N fake_app_2 -l walltime=600,mem=128mb
 
 #. Wait for the job to finish, and check the ``STDOUT`` and ``STDERR`` files of the job. Do you get the expected result in the ``STDOUT`` file?
 
-#. Check your e-mail box for a notification about the job.  The content of it should looks similar to the following snippet.
+#. Check the job's ``STDOUT`` file and find out the relative information concerning job running out of memory limitation.
 
    .. code-block:: bash
-        :emphasize-lines: 6
-
-        PBS Job Id: 10086535.dccn-l029.dccn.nl
-        Job Name:   fake_app_2
-        Exec host:  dccn-c365.dccn.nl/0
-        job deleted
-        Job deleted at request of root@dccn-l029.dccn.nl
-        job 10086535 exceeded MEM usage hard limit (516 > 140)
-
-#. Now check the job's ``STDOUT`` file again and find out the actual memory usage of the computation.
+        :emphasize-lines: 4,11
+        
+        ----------------------------------------
+        Begin PBS Epilogue Fri Oct 12 14:54:42 CEST 2018 1539348882
+        Job ID:		   17586872.dccn-l029.dccn.nl
+        Job Exit Code:     137
+        Username:	   honlee
+        Group:		   tg
+        Job Name:	   fake_app_2
+        Session:	   28288
+        Asked resources:   walltime=00:10:00,mem=128mb
+        Used resources:	   cput=00:00:04,vmem=0kb,walltime=00:00:18,mem=0kb,energy_used=0
+        Max. memory usage: 134217728 bytes
+        Queue:		   veryshort
+        Nodes:		   dccn-c365.dccn.nl
+        End PBS Epilogue Fri Oct 12 14:54:42 CEST 2018 1539348882
+        ----------------------------------------
 
 #. Try to submit the job again with the memory requirement increased sufficiently for the actual usage.
 
