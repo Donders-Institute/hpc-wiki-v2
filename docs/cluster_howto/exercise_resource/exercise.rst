@@ -70,10 +70,13 @@ In this task, you will be confronted with an issue that the computer resource (i
 
 #. Wait for the job to finish, and check the ``STDOUT`` and ``STDERR`` files of the job. Do you get the expected result in the ``STDOUT`` file?
 
-#. Find out relative information concerning job running out of memory limitation in the ``STDOUT`` file.
+#. Find out relative information concerning job running out of memory limitation in the ``STDOUT`` file.  In the example below, those are lines 4,9,11.
+
+   On line 4, you see the job's exit code is _137_.  This is the first hint that the job might be killed by the system kernel due to memory over usage.  On line 9, you see the memory requirement specified at the job submission time; while on line 11, it shows that the maximum memory used by the job is 134217728 bytes, which is very close to the 128mb in the requirement.
 
    .. code-block:: bash
-        :emphasize-lines: 4,11
+        :linenos:
+        :emphasize-lines: 4,9,11
         
         ----------------------------------------
         Begin PBS Epilogue Fri Oct 12 14:54:42 CEST 2018 1539348882
