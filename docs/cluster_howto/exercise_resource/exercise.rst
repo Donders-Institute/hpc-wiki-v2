@@ -70,29 +70,29 @@ In this task, you will be confronted with an issue that the computer resource (i
 
 #. Wait for the job to finish, and check the ``STDOUT`` and ``STDERR`` files of the job. Do you get the expected result in the ``STDOUT`` file?
 
-#. Find out relative information concerning job running out of memory limitation in the ``STDOUT`` file.  In the example below, those are lines 4,9,11.
+#. In the ``STDOUT`` file, find out relative information concerning job running out of memory limitation in the *Epilogue* section.  In the example below, the information are presented on lines 4,9 and 10.
 
-   On line 4, you see the job's exit code is 137.  This is the first hint that the job might be killed by the system kernel due to memory over usage.  On line 9, you see the memory requirement specified at the job submission time; while on line 11, it shows that the maximum memory used by the job is 134217728 bytes, which is very close to the 128mb in the requirement.
+   On line 4, it shows that the job's exit code is 137.  This is the first hint that the job might be killed by the system kernel due to memory over usage.  On line 9, you see the memory requirement specified at the job submission time; while on line 10, it shows that the maximum memory used by the job is 134217728 bytes, which is very close to the 128mb in the requirement (i.e. the "asked resources").
 
    .. code-block:: bash
         :linenos:
-        :emphasize-lines: 4,9,11
-        
+        :emphasize-lines: 4,9,10
+
         ----------------------------------------
-        Begin PBS Epilogue Fri Oct 12 14:54:42 CEST 2018 1539348882
-        Job ID:		   17586872.dccn-l029.dccn.nl
+        Begin PBS Epilogue Wed Oct 17 10:18:53 CEST 2018 1539764333
+        Job ID:		   17635280.dccn-l029.dccn.nl
         Job Exit Code:     137
         Username:	   honlee
         Group:		   tg
         Job Name:	   fake_app_2
-        Session:	   28288
+        Session:	   15668
         Asked resources:   walltime=00:10:00,mem=128mb
-        Used resources:	   cput=00:00:04,vmem=0kb,walltime=00:00:18,mem=0kb,energy_used=0
-        Max. memory usage: 134217728 bytes
+        Used resources:	   cput=00:00:04,walltime=00:00:19,mem=134217728b
         Queue:		   veryshort
         Nodes:		   dccn-c365.dccn.nl
-        End PBS Epilogue Fri Oct 12 14:54:42 CEST 2018 1539348882
+        End PBS Epilogue Wed Oct 17 10:18:53 CEST 2018 1539764333
         ----------------------------------------
+
 
 #. Try to submit the job again with the memory requirement increased sufficiently for the actual usage.
 
