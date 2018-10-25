@@ -381,6 +381,8 @@ command                       function
 :code:`checkjob`              shows job status from the scheduler's perspective. It is useful for knowing why a job is not started.
 :code:`pbsnode`               lists the compute nodes in the cluster. It is one of the Torque client tools.
 :code:`cluster-qstat`         lists recently submitted jobs from all system users.
+:code:`cluster-jobmeminfo`    shows current memory usage of a job.  It provides more precise information on memory used by a running job.
+:code:`cluster-tracejob`      lists steps a job is being processed by the scheduler.
 :code:`cluster-info`          lists system utilisation metrics of the access nodes and the mentat compute nodes.
 :code:`cluster-status`        lists system utilisation metrics of the exectue hosts in the Torque cluster.
 :code:`cluster-torqueconfig`  displays the cluster's settings.
