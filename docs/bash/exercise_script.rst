@@ -11,7 +11,8 @@ Download a text file using the following command:
 
 .. code-block:: bash
 
-    $ wget https://github.com/Donders-Institute/hpc-wiki-v2/edit/master/docs/linux/exercise/gcutError_recon-all.log
+    $ rm -f gcutError_recon-all.log
+    $ wget https://github.com/Donders-Institute/hpc-wiki-v2/raw/master/docs/linux/exercise/gcutError_recon-all.log
 
 This data file is an example output file from a freesurfer command submitted to the cluster using qsub. In this simple task we are going to try to extract some information from it using a few commands.
 
