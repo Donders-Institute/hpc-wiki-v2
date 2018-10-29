@@ -38,7 +38,7 @@ Tasks
 
    .. code-block:: bash
 
-        $ echo "$PWD/run_sleep.sh 60" | qsub -N 'sleep_1m' -l 'procs=1,mem=10mb,walltime=00:01:30'
+        $ echo "$PWD/run_sleep.sh 60" | qsub -N 'sleep_1m' -l 'nodes=1:ppn=1,mem=10mb,walltime=00:01:30'
         6928945.dccn-l029.dccn.nl
 
 #. check the job status.  For example,
@@ -70,7 +70,7 @@ Tasks
 
    .. code-block:: bash
 
-        $ echo "$PWD/run_sleep.sh 3600" | qsub -N 'sleep_1h' -l 'procs=1,mem=10mb,walltime=01:10:00'
+        $ echo "$PWD/run_sleep.sh 3600" | qsub -N 'sleep_1h' -l 'nodes=1:ppn=1,mem=10mb,walltime=01:10:00'
         6928946.dccn-l029.dccn.nl
 
    .. note::
