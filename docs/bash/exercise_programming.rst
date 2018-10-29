@@ -80,7 +80,7 @@ Start by downloading the :download:`log files <logs.tgz>` we'll be using. Move i
 
 .. code-block:: bash
 
-    $ wget http://dccn-hpc-wiki.rtfd.io/en/latest/_downloads/logs.tgz
+    $ wget https://github.com/Donders-Institute/hpc-wiki-v2/raw/master/docs/bash/logs.tgz
     $ tar xvf logs.tgz
 
 Now open ``script.sh`` and change your ``grep`` command to the one you see below. The ``-o`` option tells grep to print ONLY the matching pattern, and not the rest of the line around it. This will be useful later in the task and in general.
