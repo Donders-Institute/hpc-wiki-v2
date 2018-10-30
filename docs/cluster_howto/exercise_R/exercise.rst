@@ -41,6 +41,7 @@ In this task, we use the script ``magic_cal.R``. This script uses the ``magic`` 
 
    .. code-block:: bash
 
+        $ export R_LIBS=/opt/R/packages
         $ Rscript magic_cal.R 5
         WARNING: ignoring environment value of R_HOME
         Loading required package: abind
