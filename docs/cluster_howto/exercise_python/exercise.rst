@@ -10,7 +10,7 @@ Follow the steps below to download :download:`the prepared Python scripts <pytho
 
 .. code-block:: bash
 
-    $ wget http://dccn-hpc-wiki.rtfd.io/en/latest/_downloads/python_exercise.tgz
+    $ wget https://github.com/Donders-Institute/hpc-wiki-v2/blob/master/docs/cluster_howto/exercise_python/python_exercise.tgz
     $ tar xvzf python_exercise.tgz
     $ ls
     example4d.nii.gz  nibabel_example.py
