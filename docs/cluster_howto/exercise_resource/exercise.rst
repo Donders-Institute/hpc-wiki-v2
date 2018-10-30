@@ -74,7 +74,7 @@ In this task, you will be confronted with an issue that the computer resource (i
 
    On line 4, it shows that the job's exit code is 137.  This is the first hint that the job might be killed by the system kernel due to memory over usage.  On line 9, you see the memory requirement specified at the job submission time; while on line 10, it shows that the maximum memory used by the job is 134217728 bytes, which is very close to the 128mb in the requirement (i.e. the "asked resources").
 
-   Putting these information together, what happend behind the scene was that the job got killed by the kernel when the computational process (the ``fake_app_2`` in this case) tried to allocate memory more than what has been requested by the job.  The killing caused the process to return an exit code 9; and the Torque scheduler translated it to the job's exit code by adding an extra 128 to the process' exit code.
+   Putting these information together, what happend behind the scene was that the job got killed by the kernel when the computational process (the ``fake_app_2`` in this case) tried to allocate memory more than what was requested for the job.  The killing caused the process to return an exit code 9; and the Torque scheduler translated it to the job's exit code by adding an extra 128 to the process' exit code.
 
    .. code-block:: bash
         :linenos:
