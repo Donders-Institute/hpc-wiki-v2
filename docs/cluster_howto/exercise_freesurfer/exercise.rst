@@ -10,7 +10,7 @@ Move into the directory you'd like to work in and download :download:`the files 
 
 .. code-block:: bash
 
-    $ wget http://dccn-hpc-wiki.rtfd.io/en/latest/_downloads/FSdata.tgz
+    $ wget https://github.com/Donders-Institute/hpc-wiki-v2/raw/master/docs/cluster_howto/exercise_freesurfer/FSdata.tgz
     $ tar -xvf FSdata.tgz
     $ cd FSdata
 
