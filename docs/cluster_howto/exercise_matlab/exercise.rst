@@ -15,7 +15,7 @@ Follow the steps below to download :download:`the prepared MATLAB scripts <matla
 
 .. code-block:: bash
 
-    $ wget http://dccn-hpc-wiki.rtfd.io/en/latest/_downloads/matlab_exercise.tgz
+    $ wget https://github.com/Donders-Institute/hpc-wiki-v2/raw/master/docs/cluster_howto/exercise_matlab/matlab_exercise.tgz
     $ tar xvzf matlab_exercise.tgz
     $ ls
     matlab_sub  qsub_toolbox
