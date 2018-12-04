@@ -348,25 +348,26 @@ The **walltime** and **memory** requirements are the most essential ones amongst
 
 #. Use the job's epilogue message (a trial-and-error approach)
 
-   The wall time and memory requirements can also be determined with a trial procedure in which the user submits a test job to the cluster with a rough requirement.  If the rough requirement is not sufficient to allow the job to finish, the job will get killed with an e-mail notification.  In the job's ``STDOUT`` file (i.e. ``<job_name>.o<job_id_digits>``), you will see an **Epilogue** message stating the amount of resources being used by the job.  In the snippet below, this is shown on line 9.
+   The wall time and memory requirements can also be determined with a trial procedure in which the user submits a test job to the cluster with a rough requirement.  In the job's ``STDOUT`` file (i.e. ``<job_name>.o<job_id_digits>``), you will see an **Epilogue** message stating the amount of resources being used by the job.  In the snippet below, this is shown on line 10.  Please also node the job exit code ``137`` on line 4.  It indicates that job was killed by the system, very likely, due to memory overusage if you see the memory usage reported on line 10 is close to the memory requirement on line 9.
 
    .. code-block:: bash
-      :linenos:
-      :emphasize-lines: 9
+        :linenos:
+        :emphasize-lines: 4,9,10
 
-      ----------------------------------------
-      Begin PBS Epilogue Tue Aug 12 13:32:59 CEST 2014 1407843179
-      Job ID:            6365357.dccn-l029.dccn.nl
-      Username:          honlee
-      Group:             tg
-      Job Name:          STDIN
-      Session:           11639
-      Asked resources:   mem=2gb,walltime=01:00:00
-      Used resources:    cput=00:00:21,mem=441332kb,vmem=3700208kb,walltime=00:14:06
-      Queue:             interactive
-      Nodes:             dccn-c351
-      End PBS Epilogue Tue Aug 12 13:32:59 CEST 2014 1407843179
-      ----------------------------------------
+        ----------------------------------------
+        Begin PBS Epilogue Wed Oct 17 10:18:53 CEST 2018 1539764333
+        Job ID:		   17635280.dccn-l029.dccn.nl
+        Job Exit Code:     137
+        Username:	   honlee
+        Group:		   tg
+        Job Name:	   fake_app_2
+        Session:	   15668
+        Asked resources:   walltime=00:10:00,mem=128mb
+        Used resources:	   cput=00:00:04,walltime=00:00:19,mem=134217728b
+        Queue:		   veryshort
+        Nodes:		   dccn-c365.dccn.nl
+        End PBS Epilogue Wed Oct 17 10:18:53 CEST 2018 1539764333
+        ----------------------------------------
 
    Adjust the rough requirement gradually based on the usage information and resubmit the test job with the new requirement.  In few iterations, you will be able to determine the actual usage of your analysis job.  A rule of thumb for specifying the resource requirement for the production jobs is to add on top of the actual usage a 10~20% buffer as a safety margin.
 
