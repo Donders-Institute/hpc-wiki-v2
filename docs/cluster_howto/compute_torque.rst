@@ -368,6 +368,9 @@ The **walltime** and **memory** requirements are the most essential ones amongst
         Nodes:		   dccn-c365.dccn.nl
         End PBS Epilogue Wed Oct 17 10:18:53 CEST 2018 1539764333
         ----------------------------------------
+        
+   .. note::
+       In addtion to checking the job's epilogue file, you will also receive an email notification when the job exceeds the requested walltime.  
 
    Adjust the rough requirement gradually based on the usage information and resubmit the test job with the new requirement.  In few iterations, you will be able to determine the actual usage of your analysis job.  A rule of thumb for specifying the resource requirement for the production jobs is to add on top of the actual usage a 10~20% buffer as a safety margin.
 
