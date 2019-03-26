@@ -46,8 +46,8 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'DCCN HPC wiki'
-copyright = u'2017, Donders Centre for Cognitive Neuroimaging'
-author = u'Hurng-Chun Lee, Daniel Sharoh, Edward Gerrits, Marek Tyc, Mike van Engelenburg'
+copyright = u'2019, Donders Centre for Cognitive Neuroimaging'
+author = u'Hurng-Chun Lee, Daniel Sharoh, Edward Gerrits, Marek Tyc, Mike van Engelenburg, Mariam Zabihi'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -137,7 +137,7 @@ latex_elements = {
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
     (master_doc, 'HPCwiki.tex', u'HPC wiki Documentation',
-     u'Hurng-Chun Lee, Daniel Sharoh, Edward Gerrits, Marek Tyc, Mike van Engelenburg', 'manual'),
+     u'Hurng-Chun Lee, Daniel Sharoh, Edward Gerrits, Marek Tyc, Mike van Engelenburg, Mariam Zabihi', 'manual'),
 ]
 
 
