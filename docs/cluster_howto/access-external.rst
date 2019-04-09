@@ -162,10 +162,10 @@ Follow the steps below to establish the tunnel for VNC connection:
 
 #. enter the authentication password you set via the ``vncpasswd`` command
 
-   .. figure:: figures/tigerVNC_auth_macoxs.png
+   .. figure:: figures/tigerVNC_auth_macosx.png
       :figwidth: 60%
 
 #. get the graphical desktop of the access node
 
-   .. figure:: figures/tigerVNC_success_macosx.pngt
+   .. figure:: figures/tigerVNC_success_macosx.png
       :figwidth: 60%
