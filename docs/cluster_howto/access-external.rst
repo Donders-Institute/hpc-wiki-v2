@@ -143,24 +143,29 @@ Follow the steps below to establish the tunnel for VNC connection:
       
       $ ssh -L 5956:mentat002:5956 xxxyyy@ssh.dccn.nl
       
+   A screenshot below shows an example:
+   
+   .. figure:: figures/terminal_ssh_tunnel.png
+      :figwidth: 60%
+   
    Once the connect is set, you should leave the terminal open.  If you close the terminal, the tunnel is also closed.  You can now make a connection to your VNC session through this SSH tunnel.
    
 #. open the TigerVNC application
 
-   .. figure:: figures/start_tigerVNC.png
+   .. figure:: figures/start_tigerVNC_macosx.png
       :figwidth: 60%
 
 #. enter the display endpoint (``localhost:5956``) as the VNC server
 
-   .. figure:: figures/tigerVNC_via_tunnel.png
+   .. figure:: figures/tigerVNC_via_tunnel_macosx.png
       :figwidth: 60%
 
 #. enter the authentication password you set via the ``vncpasswd`` command
 
-   .. figure:: figures/tigerVNC_auth.png
+   .. figure:: figures/tigerVNC_auth_macoxs.png
       :figwidth: 60%
 
 #. get the graphical desktop of the access node
 
-   .. figure:: figures/tigerVNC_success.png
+   .. figure:: figures/tigerVNC_success_macosx.pngt
       :figwidth: 60%
