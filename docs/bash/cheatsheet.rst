@@ -1,6 +1,11 @@
 Useful information
 ******************
 
+cheat sheet
+===========
+
+A PDF version of the cheatsheet can be downloaded from :download:`here <cheatsheet.pdf>`.
+
 key-combinations in terminal
 ============================
 
