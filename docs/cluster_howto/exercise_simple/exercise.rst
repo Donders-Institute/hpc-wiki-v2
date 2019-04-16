@@ -26,7 +26,7 @@ Tasks
         echo "$time: $my_host wakes up."
         
    .. note::
-       Input argument of a bash script is accessible via variable ``$n`` where ``n`` is the number referring to the n-th variable given the the script.  In the script above, the value ``$1`` on the line ``sleep $1`` refers to the first argument given the the script.  For instance, if you run the script as ``run_sleep.sh 10``, the value of ``$1`` is ``10``. 
+       Input argument of a bash script is accessible via variable ``$n`` where ``n`` is a integer referring to the n-th variable given the the script.  In the script above, the value ``$1`` on the line ``sleep $1`` refers to the first argument given the the script.  For instance, if you run the script as ``run_sleep.sh 10``, the value of ``$1`` is ``10``.
 
 #. make sure the script runs locally
 
