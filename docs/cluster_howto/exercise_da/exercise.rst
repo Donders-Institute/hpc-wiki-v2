@@ -23,7 +23,7 @@ In this fake analysis, we are going to find out who our subjects are, using an t
 1. decrypting the URL string, and
 2. downloading the subject's photo.
 
-The algorithm has been provided as a function in the BASH script ``run_analysis.sh``.
+The analysis algorithm has been provided as a function in the BASH script ``run_analysis.sh``.
 
 Tasks
 =====
