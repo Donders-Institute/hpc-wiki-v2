@@ -21,9 +21,9 @@ In the package, there are folders for subject data (i.e. ``subject_{0..5}``).  I
 In this fake analysis, we are going to find out who our subjects are, using an trivial "analysis algorithm" that does the following two steps in each subject folder:
 
 1. decrypting the URL string, and
-2. downloading the photo into the folder.
+2. downloading the subject's photo.
 
-The algorithm has been given as a function in the BASH script ``run_analysis.sh``.
+The algorithm has been provided as a function in the BASH script ``run_analysis.sh``.
 
 Tasks
 =====
