@@ -19,13 +19,12 @@ Tasks
 
         $ module list
         Currently Loaded Modulefiles:
-        1) cluster/1.0            4) freesurfer/5.3         7) brainvoyagerqx/2.3.1
-        2) matlab/R2012b          5) fsl/5.0.9              8) rsi/idl/7.0
-        3) R/3.1.2                6) mricron/201506
+        1) cluster/1.0      3) matlab/R2018b    5) freesurfer/6.0
+        2) project/1.0      4) R/3.5.1          6) fsl/6.0.0
 
    Configured software is listed in terms of the **loaded modules**.
 
-   You probably notice a message similar to the one above in the terminal after you login to the cluster's access node.  This message informs you about the pre-loaded environment modules.  It implies that you can run those software/version right away after the login.
+   You probably notice a message similar to the one above in the terminal after you login to the cluster's access node.  This message informs you about the pre-loaded environment modules.  It implies that your bash shell has been configured with proper environment variables (e.g. ``PATH``) for running those software/version right away after the login.
 
 #. List available software
 
