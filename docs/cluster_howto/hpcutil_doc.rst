@@ -115,7 +115,9 @@ Assuming a job with ID ``1234567``, the job trace log (in the last 3 days) can b
 The ``webhook`` subcommand
 ==========================
 
-The ``webhook`` subcommand is used to manage the webhook facility of the HPC cluster.  To get the in-terminal help of the ``webhook`` subcommand, one uses the following command in the terminal:
+The ``webhook`` subcommand is used to manage the webhook facility of the HPC cluster.  The webhook facility allows you to setup automatic job submission to the HPC cluster upon events of an external service/application supporting webhooks.
+
+To get the in-terminal help of the ``webhook`` subcommand, one uses the following command in the terminal:
 
 .. code:: bash
 
