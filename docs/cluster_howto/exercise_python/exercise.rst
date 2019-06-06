@@ -162,3 +162,48 @@ If you don't see jupyter related packages in your conda environment, run the fol
 Within the conda environment, simply run the command ``jupyter-notebook`` to start the Jupyter notebook.
 
 Try to run the python script ``nibabel_example.py`` again in the notebook. It should just work.
+
+Task 4: Spyder
+==============
+
+`Spyder <https://www.spyder-ide.org/>`_ is one of the integrated development environment (IDE) for Python projects.  It is part of the Anaconda package.
+
+If you just want to make use of the Spyder IDE without the need of loading specific Python modules from your own conda environment, you could simply run the following command on a cluster access node within a VNC session:
+
+.. code-block:: bash
+
+    $ spyder
+
+You will encounter a graphical dialog through which you can select the Spyder from a specific Anaconda version.  The wrapper then submits a job to the cluster to launch the specific spyder version on a computer node.
+
+If you want to use specific modules installed in a conda environment, you have to install your own Spyder in the same conda environment.  Using the ``demo`` conda environment as an example, here are steps to follow:
+
+Make sure you are in the conda environment we created in task 1; otherwise, do the following commands:
+
+.. code-block:: bash
+
+    $ source activate demo
+
+Install the Spyder package, using the ``conda install`` command:
+
+.. important::
+    **DO NOT** install spyder from ``pip install``.  The spyder installed via ``pip`` doesn't take care of library dependancies and therefore it is very likely to be broken.
+
+.. code-block:: bash
+
+    $ conda install spyder
+
+Submit an interactive job with your required resource, e.g.:
+
+.. code-block:: bash
+
+    $ qsub -I -l walltime=1:00:00,mem=4gb
+
+Under the shell prompt of the interactive job, run the following commands to start Spyder:
+
+.. code-block:: bash
+
+    $ source activate demo
+    $ spyder
+
+You could now check within the Spyder IDE whether the ``nibabel`` Python module we installed earlier is still avaiable. For instance, **Open** the file ``nibabel_example.py`` in Spyder, and press the ``F5`` key on the keyboard (or select the **Run** on the menu). This should give the result in the IPython console (at the right-bottom of the Spyder IDE).
