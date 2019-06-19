@@ -18,7 +18,7 @@ The following screencast will guide you through the steps of accessing the clust
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/mjgDVx_k4dU" frameborder="0" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/07nJ4CN8FoM" frameborder="0" allowfullscreen></iframe>
 
 Putty login via SSH tunnel
 ==========================
