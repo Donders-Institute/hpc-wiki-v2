@@ -5,18 +5,18 @@ If you are at home or on travel, or connecting your personal laptop to the eduro
 
 In this case, you need to make the connection indirectly via one of the following two ways:
 
-#. using the `eduVPN <https://www.surf.nl/en/eduvpn-facilitate-secure-internet-access-everywhere>`_
-#. using the SSH tunnel
+#. using `eduVPN <https://www.surf.nl/en/eduvpn-facilitate-secure-internet-access-everywhere>`_
+#. using SSH tunnel
 
-Using the eduVPN
-================
+Using eduVPN
+============
 
 This approach is the most straight forward way of connecting to a VNC session on the HPC cluster; but it requires a valid RU/RUMC account prefixed with `u` or `e` (a.k.a. the u/e-number). If you do have such type of RU/RUMC account, you can follow the `instruction <https://intranet.donders.ru.nl/index.php?id=eduvpn>`_ to setup the eduVPN.
 
 After you start the eduVPN connection, your computer is "virtually" part of the DCCN network.  With that you can connect directly to the HPC cluster as `ref:accessing from inside of DCCN <getting_access_to_the_hpc_cluster>`_.
 
-The SSH tunnel
-==============
+Using SSH tunnel
+================
 
 A SSH gateway named ``ssh.dccn.nl`` is provided for setting the SSH tunnels. When setting up a tunnel for connecting to a target service behind the firewall, one needs to choose a local network port that is still free for use on your desktop/laptop (i.e. the ``Source port``) and provides the network endpoint (i.e. the ``Destination``) referring to the target service.
 
