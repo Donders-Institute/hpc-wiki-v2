@@ -1,3 +1,5 @@
+.. _getting_access_to_the_hpc_cluster:
+
 Getting access to the HPC cluster
 *********************************
 
