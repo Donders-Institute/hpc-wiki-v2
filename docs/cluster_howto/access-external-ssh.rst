@@ -6,8 +6,8 @@ A SSH gateway named ``ssh.dccn.nl`` is provided for setting the SSH tunnels. Whe
 .. tip::
     This technique can also be applied for accessing different services protected by the DCCN firewall.
 
-.. toctree::
-    :maxdepth: 1
+.. contents:: Contents
+    :local:
 
 Instructions in video
 =====================
