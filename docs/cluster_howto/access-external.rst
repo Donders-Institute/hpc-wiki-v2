@@ -13,7 +13,7 @@ Using eduVPN
 
 This approach is the most straight forward way of connecting to a VNC session on the HPC cluster; but it requires a valid RU/RUMC account prefixed with `u` or `e` (a.k.a. the u/e-number). If you do have such type of RU/RUMC account, you can follow the `instruction <https://intranet.donders.ru.nl/index.php?id=eduvpn>`_ to setup the eduVPN.
 
-After you start the eduVPN connection, your computer is "virtually" part of the DCCN network.  With that you can connect directly to the HPC cluster as `ref:accessing from inside of DCCN <getting_access_to_the_hpc_cluster>`_.
+After you start the eduVPN connection, your computer is "virtually" part of the DCCN network.  With that you can connect directly to the HPC cluster as :ref:`accessing from inside of DCCN <getting_access_to_the_hpc_cluster>`.
 
 Using SSH tunnel
 ================
