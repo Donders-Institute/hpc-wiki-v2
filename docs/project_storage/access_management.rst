@@ -6,7 +6,7 @@ Data sharing within the project directory is controlled by a role-based mechanis
 User roles
 ==========
 
-In the project storage, access permission of an user is governed by the user's **role** in the project. Hereafter are the four **roles** defined for the access control.
+In the project storage, access permission of an user is governed by the user's **role** in the project. There are the four **roles** defined for the access control.  They are listed below:
 
 ===============  ================
 role             permissions
@@ -17,12 +17,12 @@ role             permissions
 **Traverse**     User in this role has permission to "pass through" a directory. This role is only relevent to a directory. It is similar to the ``x``-bit of the :ref:`linux filesystem permission <linux_file_permission>`. See :ref:`the usage of the traverse role <project_storage_traverse_role>`.
 ===============  ================
 
-Any user who wants to access data in a project directory must acquire one of the roles on the project. Users in the **Manager** role have rights to grant/revoke additional user roles.
+Any user who wants to access data in a project directory must acquire one of the roles in the project. Users in the **Manager** role can grant/revoke user roles.
 
 Tool for viewing access permission
 ==================================
 
-For general end-users, a tool called ``prj_getacl`` (as **Project Get ACL**) is used to show user roles of a given project.  For example, to list the user roles on project ``3010000.01``, one does
+For general end-users, a tool called ``prj_getacl`` (as **Project Get ACL**) is used to show user roles of a given project.  For example, to list the user roles of project ``3010000.01``, one does
 
 .. code-block:: bash
 
@@ -33,7 +33,7 @@ For general end-users, a tool called ``prj_getacl`` (as **Project Get ACL**) is 
           viewer: edwger
         traverse: mikveng
 
-One could also use the ``prj_getacl`` program on a path (file or directory) in the project storage.  For example,
+One could also apply the ``prj_getacl`` program on a path (file or directory) in the project storage.  For example,
 
 .. code-block:: bash
 
@@ -50,7 +50,7 @@ One could also use the ``prj_getacl`` program on a path (file or directory) in t
 Tool for managing access permission
 ===================================
 
-For the project manager, the tool called ``prj_setacl`` (as **Project Set ACL**) is used for altering user roles on a given project.  For example, to change the role of user ``rendbru`` from **Contributor** to **User** on project ``3010000.01``.  One does
+For the project manager, the tool called ``prj_setacl`` (as **Project Set ACL**) is used for altering user roles of a project.  For example, to change the role of user ``rendbru`` from **Contributor** to **Viewer** on project ``3010000.01``.  One does
 
 .. code-block:: bash
 
@@ -83,7 +83,7 @@ For removing an user from accessing a project, another tool called ``prj_delacl`
 Changing access permission for multiple users
 ---------------------------------------------
 
-When you have to change access permission for multiple users, it is more efficient to combine the changes into one single ``prj_setacl`` or ``prj_delacl`` command as it requires only one loop over all existing files in the project directories.  The options ``-m`` (for manager), ``-c`` (for contributor) and ``-u`` (for viewer) can be used at the same time in one ``prj_setacl`` call. Furthermore, in ``prj_setacl`` and ``prj_delacl``, users can be specified as a comma(``,``)-separated list.
+When changing/removing roles for multiple users, it is more efficient to combine the changes into one single ``prj_setacl`` or ``prj_delacl`` command as it requires only one loop over all existing files in the project directory.  The options ``-m`` (for manager), ``-c`` (for contributor) and ``-u`` (for viewer) can be used at the same time in one ``prj_setacl`` call. Furthermore, multiple users to be set to (removed from) the same role can be specified as a comma(``,``)-separated list with the ``prj_setacl`` and ``prj_delacl`` tools.
 
 For example, the following single command will set both ``honlee`` and ``rendbru`` as contributor, and ``edwger`` as viewer of project ``3010000.01``:
 
@@ -97,12 +97,13 @@ The following single command will remove both ``honlee`` and ``edwger`` from pro
 
     $ prj_delacl honlee,edwger 3010000.01
 
+.. _project_storage_subdir:
 Controlling access permission on sub-directories
 ------------------------------------------------
 
-It is possible to set/delete user role on sub-directory within a project directory. It is done by using either the ``-p`` option, or specifying directly the absolute path of the directory.  Both ``prj_setacl`` and ``prj_delacl`` programs support it.
+It is possible to set/delete user role on sub-directory within a project directory. It is done by using either the ``-p`` option, or directly specifying the absolute path of the directory.  Both ``prj_setacl`` and ``prj_delacl`` programs support it.
 
-When doing so, the user will be automatically granted with (or revoked from) the ``traverse`` role on the parent directories if the user haven't had a roles on them.
+When doing so, the user will be automatically granted with (or revoked from) the ``traverse`` role on the parent directories if the user hasn't had a role on them.
 
 For example, granting user ``edwger`` with the contributor role in the subdirectory ``subject_001`` in project ``3010000.01`` can be done as below:
 
@@ -116,6 +117,11 @@ Alternatively, one could also do:
 
     $ prj_setacl -c edwger /project/3010000.01/subject_001
 
+If it happens that the user `edwger` doesn't have any role in directory `/project/3010000.01`, `edwger` is also automatically granted with the `traverse` role for `/project/3010000.01`.  This is necessary for `edwger` to "traverse through" it for accessing the `subject_001` sub-directory.
+
+.. note::
+    In this situation, user `edwger` has to specify the directory `/project/3010000.01/subject_001` or `P:\3010000.01\subject_001` manually in the file explorer.  This is due to the fact that the user with traverse role cannot see any content (files or directories, including those the user has access permission) in the directory. 
+
 .. _project_storage_traverse_role:
 
 The **Traverse** role
@@ -123,4 +129,4 @@ The **Traverse** role
 
 When granting user a role in a sub-directory, a minimum permission in upper-level directories should also be given to the user to "pass through" the directory tree.  This minimum permission is referred as the **Traverse** role.
 
-The traverse role is automatically managed by the ``prj_setacl`` and ``prj_delacl`` programs when managing the access in a sub-directory or a file within a project directory.
+The traverse role is automatically managed by the ``prj_setacl`` and ``prj_delacl`` programs when managing the access in a sub-directory or a file within a project directory. See :ref:`Controlling access permission on sub-directories <project_storage_subdir>`.
