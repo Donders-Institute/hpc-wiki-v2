@@ -117,13 +117,12 @@ Alternatively, one could also do:
 
     $ prj_setacl -c edwger /project/3010000.01/subject_001
 
-If it happens that the user `edwger` doesn't have any role in directory `/project/3010000.01`, `edwger` is also automatically granted with the `traverse` role for `/project/3010000.01`.  This is necessary for `edwger` to "traverse through" it for accessing the `subject_001` sub-directory.
+If it happens that the user ``edwger`` doesn't have any role in directory ``/project/3010000.01``, ``edwger`` is also automatically granted with the :ref:`traverse role <project_storage_traverse_role>` for ``/project/3010000.01``.  This is necessary for ``edwger`` to "traverse through" it for accessing the ``subject_001`` sub-directory.
 
 .. note::
-    In this situation, user `edwger` has to specify the directory `/project/3010000.01/subject_001` or `P:\3010000.01\subject_001` manually in the file explorer.  This is due to the fact that the user with traverse role cannot see any content (files or directories, including those the user has access permission) in the directory. 
+    In this situation, user ``edwger`` has to specify the directory ``/project/3010000.01/subject_001`` or ``P:\3010000.01\subject_001`` manually in the file explorer to access the sub-directory.  This is due to the fact that the user with traverse role cannot see any content (files or directories, including those the user has access permission) in the directory. 
 
 .. _project_storage_traverse_role:
-
 The **Traverse** role
 ^^^^^^^^^^^^^^^^^^^^^
 
