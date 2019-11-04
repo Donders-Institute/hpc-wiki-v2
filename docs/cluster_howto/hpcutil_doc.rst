@@ -7,7 +7,30 @@ The HPC utility (or ``hpcutil``) is an CLI tool developed by the Technical Group
 
 The in-terminal help for a subcommand and the supported flags of it are always available via the ``-h`` option.  The CLI also supports tab-completion in `BASH <https://nl.wikipedia.org/wiki/Bash>`_ which means the suggested subcommands or flags is available by pressing the TAB key twice.
 
-Currently, the CLI provides two main subcommands on the first level: ``cluster`` and ``webhook``.
+One can also use the ``avail`` subcommand to show a list of available commands, e.g.
+
+.. code:: bash
+
+  $ hpcutil avail
+  +--------------------------------+--------------------------------+
+  |            COMMAND             |          DESCRIPTION           |
+  +--------------------------------+--------------------------------+
+  |  hpcutil avail                 | Print availab sub-commands.    |
+  +--------------------------------+--------------------------------+
+  |  hpcutil cluster config        | Print Torque and Moab server   |
+  |                                | configurations.                |
+  +--------------------------------+--------------------------------+
+  |  hpcutil cluster job meminfo   | Print memory usage of a        |
+  | [id]                           | running job.                   |
+  +--------------------------------+--------------------------------+
+  |  hpcutil cluster job trace     | Print trace log of a job.      |
+  | [id]                           |                                |
+  +--------------------------------+--------------------------------+
+  | ... ... ...                    | ... ... ...                    |
+  +--------------------------------+--------------------------------+
+
+
+The two major subcommands, ``cluster`` and ``webhook``, are detailed further below:
 
 The ``cluster`` subcommand
 ==========================
