@@ -39,4 +39,4 @@ The identity manager maintains information for authenticating users accessing to
 Supported Software
 ==================
 
-A list of supported software can be found `here <http://intranet.donders.ru.nl/index.php?id=torque_da_software>`_.
+A list of supported software can be found `here <http://intranet.donders.ru.nl/index.php?id=software>`_.
