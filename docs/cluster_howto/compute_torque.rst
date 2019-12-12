@@ -31,6 +31,8 @@ In the cluster, several job queues are made available in order to arrange jobs b
 +------------+---------------+-----------------------+---------------------+----------------------+--------------+
 | vgl        | N/A           |  8 hours              |  10 GB              | VirtualGL capability | normal       |
 +------------+---------------+-----------------------+---------------------+----------------------+--------------+
+| bigscratch | N/A           | 72 hours              | 256 GB              | local disk space     | normal       | 
++------------+---------------+-----------------------+---------------------+----------------------+--------------+
 | short      | N/A           |  2 hours              |   8 GB              |                      | normal       |
 +------------+---------------+-----------------------+---------------------+----------------------+--------------+
 | veryshort  | N/A           | 20 minutes            |   8 GB              |                      | normal       |
@@ -61,17 +63,19 @@ Queue-wise policies
    +------------+--------------------+----------------------+
    | queue name | max. runnable jobs | max. queue-able jobs |
    +============+====================+======================+
-   | matlab     | 300                | 2000                 |
+   | matlab     | 400                | 2000                 |
    +------------+--------------------+----------------------+
-   | short      | 300                | 2000                 |
+   | bigscratch | 400                | 2000                 |
+   +--------------------------------------------------------+
+   | short      | 400                | 2000                 |
    +------------+--------------------+----------------------+
-   | veryshort  | 300                | 2000                 |
+   | veryshort  | 400                | 2000                 |
    +------------+--------------------+----------------------+
-   | long       | 300                | 2000                 |
+   | long       | 400                | 2000                 |
    +------------+--------------------+----------------------+
-   | batch      | 300                | 2000                 |
+   | batch      | 400                | 2000                 |
    +------------+--------------------+----------------------+
-   | verylong   | 300                | 2000                 |
+   | verylong   | 400                | 2000                 |
    +------------+--------------------+----------------------+
    | vgl        |   2                |    5                 |
    +------------+--------------------+----------------------+
@@ -87,7 +91,7 @@ Cluster-wise policies
 
    The cluster-wise throttling is to limit the total amount of resources a single user can occupy at the same time in the cluster. The three upper-bound (cluster-wise) limitations are:
 
-   * 300 jobs
+   * 400 jobs
    * 660 days processing (wall)time
    * 1 TB memory
 
@@ -276,6 +280,15 @@ The requirement of 1 CPU is skipped as it is by default to be 1.
     $ qsub -l 'nodes=1:ppn=4,walltime=12:00:00,mem=4gb' job.sh
         
 Here we explicitly ask 4 CPU cores to be on the same compute node. This is usually a case that the application (such as multithreading of MATLAB) can benefit from multiple cores on a (SMP) node to speed up the computation.
+
+1 CPU core, 500gb of free local "scratch" diskspace in /data, 12 hours wallclock time, and 4 gb memory
+----------------------------------------------------------------------
+
+.. code-block:: bash
+    
+    $ qsub -l 'file=500gb,walltime=12:00:00,mem=4gb' job.sh
+        
+Here we explicitly ask for 500gb of free local diskspace located in /data on the compute node. This could for instance be asked for when submitting an fmriprep job that requires lots of local diskspace for computation. The more jobs are running, the longer it can take for torque to find a node with enough free diskspace to run the job. Max to request for is 1800gb.
 
 1 **Intel** CPU core, 4 gigabytes memory and 12 hours wallclcok time, on a node with 10 Gb network connectivity
 ---------------------------------------------------------------------------------------------------------------
