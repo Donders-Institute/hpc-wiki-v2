@@ -288,7 +288,7 @@ Here we explicitly ask 4 CPU cores to be on the same compute node. This is usual
     
     $ qsub -l 'file=500gb,walltime=12:00:00,mem=4gb' job.sh
         
-Here we explicitly ask for 500gb of free local diskspace located in /data on the compute node. This could for instance be asked for when submitting an fmriprep job that requires lots of local diskspace for computation. The more jobs are running, the longer it can take for torque to find a node with enough free diskspace to run the job. Max to request for is 1800gb.
+Here we explicitly ask for 500gb of free local diskspace located in /data on the compute node. This could for instance be asked for when submitting an fmriprep job that requires lots of local diskspace for computation. The more jobs are running, the longer it can take for torque to find a node with enough free diskspace to run the job. Max to request for is 3600gb.
 
 .. note::
     In case you use more than the requested 500gb there will be no penalty. Diskspace is monitored, but your job won't fail if the requested diskspace is "overused", as long as diskspace is available. Of course if no more diskspace is available your job will fail.
