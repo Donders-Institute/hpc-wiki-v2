@@ -263,6 +263,9 @@ Each job submitted to the cluster comes with a resource requirement. The job sch
 
 When submitting jobs with the ``qsub`` command, one uses the ``-l`` option to specify required resources. The value of the ``-l`` option follows certain syntax. Detail of the syntax can be found on `the Torque documentation <http://docs.adaptivecomputing.com/torque/6-1-2/adminGuide/torque.htm#topics/torque/2-jobs/requestingRes.htm?Highlight=resource%20specification>`_. Hereafter are few useful, and mostly used examples for jobs requiring:
 
+.. warning::
+    The examples below only show the option of the ``qsub`` command for resource specification; therefore they are NOT complete commands.  You need to make the command complete by adding either a ``-I`` option for an interactive job or a script to be run as a batch job.
+
 1 CPU core, 4 gigabytes memory and 12 hours wallclock time
 ----------------------------------------------------------
 
