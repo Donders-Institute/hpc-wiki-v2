@@ -26,7 +26,6 @@ Using the cluster
 .. toctree::
     :maxdepth: 2
 
-    Mentat compute nodes <compute_mentat.rst>
     Torque cluster <compute_torque.rst>
     Application software <software.rst>
     Best practices <best_practices.rst>
