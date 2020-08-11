@@ -11,11 +11,12 @@ High Performance Computing for Neuroimaging Research
 Computing Cluster
 =================
 
-The HPC cluster at DCCN consists of three groups of computer nodes, they are:
+The HPC cluster at DCCN consists of two groups of computers, they are:
 
 * **access nodes**: ``mentat001`` ~ ``mentat005`` as login nodes.
-* **mentat compute nodes**: ``mentat203`` ~ ``mentat208`` used for long term (i.e. > 72 hours) computations.
-* **Torque/Maui cluster**: a pool of powerful computers with more than 800 CPU cores, managed by the `Torque <http://www.adaptivecomputing.com/products/open-source/torque>`_ job manager and the `Moab <http://www.adaptivecomputing.com/products/open-source/maui/>`_ job scheduler.
+* **compute nodes**: a pool of powerful computers with more than 1000 CPU cores.
+
+Computer nodes are managed by the `Torque <http://www.adaptivecomputing.com/products/open-source/torque>`_ job manager and the `Moab <http://www.adaptivecomputing.com/products/open-source/maui/>`_ job scheduler.  While the access nodes can be accessed via either a SSH terminal or a VNC session, compute nodes are only accessible via submiting a computational job via qsub.
 
 Central Storage
 ===============
