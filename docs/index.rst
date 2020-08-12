@@ -8,8 +8,8 @@ High Performance Computing for Neuroimaging Research
 
     Figure: the HPC environment at DCCN.
 
-Computing Cluster
-=================
+HPC Cluster
+===========
 
 The HPC cluster at DCCN consists of two groups of computers, they are:
 
