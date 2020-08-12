@@ -1,8 +1,8 @@
 High Performance Computing for Neuroimaging Research
 ****************************************************
 
-.. figure:: DCCN_HPC_architecture.png
-    :scale: 100% 
+.. figure:: DCCN_HPC_architecture.svg
+    :scale: 80%
     :alt: DCCN HPC environment
     :align: center
 
