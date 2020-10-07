@@ -162,7 +162,7 @@ It is possible to acquire a Linux shell of an compute node for running computati
 
 .. code-block:: bash
 
-    $ qsub -I -l 'procs=1,mem=128mb,walltime=00:10:00,mem=128mb'
+    $ qsub -I -l 'procs=1,mem=128mb,walltime=00:10:00'
 
 In few seconds, a message similar to the one below will show up in the terminal.
 
