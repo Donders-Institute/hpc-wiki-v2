@@ -402,6 +402,6 @@ A set of auxiliary scripts is developed to ease the job management works on the 
 command                       function
 ============================  ========
 :code:`checkjob`              shows job status from the scheduler's perspective. It is useful for knowing why a job is not started.
-:code:`pbsnode`               lists the compute nodes in the cluster. It is one of the Torque client tools.
+:code:`pbsnodes`               lists the compute nodes in the cluster. It is one of the Torque client tools.
 :code:`hpcutil`               retrieve various information about the cluster and jobs. See :ref:`hpcutil-usage` for more detail about the usage.
 ============================  ========
