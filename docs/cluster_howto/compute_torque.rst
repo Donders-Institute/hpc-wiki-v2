@@ -305,6 +305,15 @@ Here we explicitly ask for 500gb of free local diskspace located in /data on the
     
 Here we ask the allocated CPU core to be on a node with properties ``intel`` and ``network10GigE``.
 
+1 **AMD EPYC7351** CPU core, 4 gigabytes memory and 12 hours wallclcok time
+------------------------------------------------------------------
+
+.. code-block:: bash
+
+    $ qsub -l 'nodes=1:amd:epyc7351,walltime=12:00:00,mem=4gb' job.sh
+    
+Here we ask the allocated CPU core to be on a node with properties ``amd`` (CPU vendor) and ``epyc7351`` (CPU model).
+
 4 CPU cores, 12 hours wallclock time, and 4 gb memory.  The 4 CPU cores may come from different nodes
 -----------------------------------------------------------------------------------------------------
 
