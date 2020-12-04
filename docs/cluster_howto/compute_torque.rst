@@ -342,7 +342,7 @@ Here we ask for a 1 GPU on a node with the (dynamic) attribute ``cudacap`` set t
         This ``qos`` reservation is only for accessible for interactive jobs with requirement of one CPU core and less than 1 hour walltime.
     
 .. note::
-    The GPU support in the cluster is still in the pilot phase. Currently there are 6 Nvidia Tesla P100 GPUs available in the entire cluster. More GPUs will be added to the cluster in the future.
+    Currently there are 6 Nvidia Tesla P100 GPUs available in the entire cluster. More GPUs will be added to the cluster in the future.
 
 Estimating resource requirement
 ===============================
