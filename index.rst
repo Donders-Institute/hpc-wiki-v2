@@ -13,8 +13,8 @@ This wiki contains materials used by the :doc:`Linux and HPC workshop <tutorials
 
 There are two major sessions in this wiki. :doc:`The Linux basic <docs/linux/index>` consists of the usage of the Linux operating system and an introduction to the Bash scripting language.  After following the session, you should be able to create text-based data files in a Linux system, and write a bash script to perform simple data analysis on the file.  :doc:`The cluster usage <docs/cluster_howto/index>` focuses on the general approach of running computations on the Torque/Moab cluster.  After learning this session, you should be knowing how to distribute data analysis computations to the Torque/Moab cluster at DCCN.
 
-.. Table of Contents
-.. =================
+Table of Contents
+=================
 
 .. toctree::
    :maxdepth: 2
