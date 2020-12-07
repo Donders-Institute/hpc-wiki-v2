@@ -1,10 +1,22 @@
-Linux & HPC tutorials
+Linux & HPC workshops
 *********************
 
 An regular tutorial is held by the TG.  Hereafter are agenda and presentations of the past tutorials.
 
+2020 - 2021
+===========
+
+* 2020.12.04: Access HPC from home
+    * :download:`slides <materials/20201204_access_hpc_from_home.pdf>`
+    * video recording
+
+* 2020.12.18: Introduction to Linux and BASH shell
+
+Workshops in the past
+=====================
+
 .. Note::
-    Tutorial agenda and slides are only accessible within the DCCN network.
+    Workshop agenda and slides below are only accessible within the DCCN network.
 
 .. toctree::
     :maxdepth: 1

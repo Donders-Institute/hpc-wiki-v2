@@ -24,7 +24,7 @@ Table of Contents
    BASH tutorial <docs/bash/index.rst>
    The HPC cluster <docs/cluster_howto/index.rst>
    The project storage <docs/project_storage/index.rst>
-   Tutorials <tutorials.rst>
+   Tutorials <docs/tutorials/index.rst>
 
 
 .. extra tables and indices
