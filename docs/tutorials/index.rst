@@ -12,7 +12,9 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
   - video recording
   - further reading: :ref:`access-external`
 
-- 2020.12.18: Introduction to Linux and BASH shell
+- 2020.12.18: Linux and BASH shell
+- 2021.01.15:
+- 2021.01.29:
 
 Earlier workshops
 =================
