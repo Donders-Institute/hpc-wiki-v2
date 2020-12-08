@@ -1,7 +1,7 @@
 Linux & HPC workshops
 *********************
 
-An regular tutorial is held by the TG.  Hereafter are agenda and presentations of the past tutorials.
+Regular workshops are held by the TG.  Hereafter are agenda and presentations of the past workshops.
 
 2020 - 2021
 ===========
@@ -14,8 +14,8 @@ An regular tutorial is held by the TG.  Hereafter are agenda and presentations o
 
 - 2020.12.18: Introduction to Linux and BASH shell
 
-Workshops in the past
-=====================
+Earlier workshops
+=================
 
 .. Note::
     Workshop agenda and slides below are only accessible within the DCCN network.
