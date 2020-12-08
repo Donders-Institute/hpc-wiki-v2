@@ -1,3 +1,5 @@
+.. _access-external:
+
 Access from outside of DCCN
 ***************************
 

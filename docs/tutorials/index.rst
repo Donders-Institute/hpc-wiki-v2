@@ -6,11 +6,12 @@ An regular tutorial is held by the TG.  Hereafter are agenda and presentations o
 2020 - 2021
 ===========
 
-* 2020.12.04: Access HPC from home
-    * :download:`slides <materials/20201204_access_hpc_from_home.pdf>`
-    * video recording
+- 2020.12.04: Access HPC from home
+    - :download:`slides <materials/20201204_access_hpc_from_home.pdf>`
+    - video recording
+    - further reading: :ref:`access-external`
 
-* 2020.12.18: Introduction to Linux and BASH shell
+- 2020.12.18: Introduction to Linux and BASH shell
 
 Workshops in the past
 =====================
