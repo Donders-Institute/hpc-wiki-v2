@@ -9,10 +9,8 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
 - [2020.12.04] Access HPC from home
 
   - :download:`slides <materials/20201204_access_hpc_from_home.pdf>`
-  - `video recording <https://www.youtube.com/watch?v=xSjad0kH3w0>`_
+  - `video recording <https://www.youtube.com/watch?v=xSjad0kH3w0>`_ with timestamps of different topics:
   
-    timestamps:
-    
     - `HPC environment at DCCN <https://www.youtube.com/watch?v=xSjad0kH3w0&t=4m37s>`_
     - create new VNC server/session (`Windows <https://www.youtube.com/watch?v=xSjad0kH3w0&t=11m35s>`_, `MacOSX <https://www.youtube.com/watch?v=xSjad0kH3w0&t=25m30s>`_)
     - `request eduVPN Trigon access <https://www.youtube.com/watch?v=xSjad0kH3w0&t=34m12s>`_
