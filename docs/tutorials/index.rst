@@ -20,9 +20,9 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
     - connect to VNC server with eduVPN (`Windows <https://www.youtube.com/watch?v=xSjad0kH3w0&t=62m46s>`_, `MacOSX <https://www.youtube.com/watch?v=xSjad0kH3w0&t=56m20s>`_) 
     - `SSH tunneling <https://www.youtube.com/watch?v=xSjad0kH3w0&t=66m5s>`_
     - connect to VNC server with SSH tunneling (`Windows <https://www.youtube.com/watch?v=xSjad0kH3w0&t=74m38s>`_, `MacOSX <https://www.youtube.com/watch?v=xSjad0kH3w0&t=86m31s>`_)
-  
+    
   - further reading: :ref:`access-external`
-
+  
 - [2020.12.18] Linux and BASH shell
 - [2021.01.15]
 - [2021.01.29]
