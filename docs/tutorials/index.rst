@@ -6,15 +6,15 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
 2020 - 2021
 ===========
 
-- 2020.12.04: Access HPC from home
+- [2020.12.04] Access HPC from home
 
   - :download:`slides <materials/20201204_access_hpc_from_home.pdf>`
   - `video recording <https://www.youtube.com/watch?v=xSjad0kH3w0>`_
   - further reading: :ref:`access-external`
 
-- 2020.12.18: Linux and BASH shell
-- 2021.01.15:
-- 2021.01.29:
+- [2020.12.18] Linux and BASH shell
+- [2021.01.15]
+- [2021.01.29]
 
 Earlier workshops
 =================
