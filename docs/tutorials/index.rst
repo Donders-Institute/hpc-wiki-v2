@@ -25,7 +25,7 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
 
   - slides
 
-    - :download:`general introduction <materials/20201218_intro.pdf>`
+    - :download:`introduction <materials/20201218_intro.pdf>`
     - :download:`Linux basic <materials/20201218_linux.pptx>`
     - :download:`BASH scripting <materials/20201218_bash.pdf>`
 
