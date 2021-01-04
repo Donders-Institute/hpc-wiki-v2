@@ -1,3 +1,5 @@
+.. _bash-tutorial:
+
 Introduction to the Linux BASH shell
 ************************************
 

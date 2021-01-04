@@ -31,6 +31,12 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
 
   - video recording
 
+  - further reading:
+
+    - :ref:`linux-tutorial`
+    - :ref:`bash-tutorial`
+    - :download:`Linux/BASH cheatsheet <../bash/bash_cheat_sheet.pdf>`
+
 - [2021.01.15]
 - [2021.01.29]
 

@@ -1,3 +1,5 @@
+.. _linux-tutorial:
+
 Linux tutorial
 **************
 
