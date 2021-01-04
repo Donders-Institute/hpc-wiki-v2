@@ -37,7 +37,7 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
     - :ref:`bash-tutorial`
     - :download:`Linux/BASH cheatsheet <../bash/bash_cheat_sheet.pdf>`
 
-- [2021.01.15]
+- [2021.01.15] BASH scripting and HPC job management
 - [2021.01.29]
 
 Earlier workshops
