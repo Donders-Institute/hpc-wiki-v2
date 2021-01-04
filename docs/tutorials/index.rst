@@ -21,7 +21,16 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
     
   - further reading: :ref:`access-external`
   
-- [2020.12.18] Linux and BASH shell
+- [2020.12.18] Linux and BASH scripting
+
+  - slides
+
+    - :download:`general introduction <materials/20201218_intro.pdf>`
+    - :download:`Linux basic <materials/20201218_linux.pptx>`
+    - :download:`BASH scripting <materials/20201218_bash.pdf>`
+
+  - video recording
+
 - [2021.01.15]
 - [2021.01.29]
 
