@@ -9,7 +9,7 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
 - [2020.12.04] Access HPC from home
 
   - :download:`slides <materials/20201204_access_hpc_from_home.pdf>`
-  - `video recording <https://www.youtube.com/watch?v=xSjad0kH3w0>`_ with timestamps of different topics:
+  - `video recording <https://www.youtube.com/watch?v=xSjad0kH3w0>`_ with timestamps for different topics:
   
     - `HPC environment at DCCN <https://www.youtube.com/watch?v=xSjad0kH3w0&t=4m37s>`_
     - create new VNC server/session (`Windows <https://www.youtube.com/watch?v=xSjad0kH3w0&t=11m35s>`_, `MacOSX <https://www.youtube.com/watch?v=xSjad0kH3w0&t=25m30s>`_)
@@ -29,7 +29,12 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
     - :download:`Linux basic <materials/20201218_linux.pptx>`
     - :download:`BASH scripting <materials/20201218_bash.pdf>`
 
-  - video recording
+  - `video recording <https://www.youtube.com/watch?v=bMLk25dVgOg>`_ with timestamps for different topics:
+
+    - `Linux basic <https://www.youtube.com/watch?v=bMLk25dVgOg&t=8m>`_
+    - `Data transfer between laptop/desktop at home and the HPC cluster <https://www.youtube.com/watch?v=bMLk25dVgOg&t=1h6m31s>`_
+    - `Bash scripting <https://www.youtube.com/watch?v=bMLk25dVgOg&t=1h17m42s>`_
+    - `Closing remarks <https://www.youtube.com/watch?v=bMLk25dVgOg&t=1h31m50s>`_
 
   - further reading:
 
