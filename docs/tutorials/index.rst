@@ -41,6 +41,7 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
     - :ref:`linux-tutorial`
     - :ref:`bash-tutorial`
     - :download:`Linux/BASH cheatsheet <../bash/bash_cheat_sheet.pdf>`
+    - `Data transfer to/from the HPC cluster with WinSCP <https://intranet.donders.ru.nl/index.php?id=winscp>`_
 
 - [2021.01.15] BASH scripting and HPC job management
 - [2021.01.29]
