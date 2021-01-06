@@ -31,7 +31,7 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
 
   - `video recording <https://www.youtube.com/watch?v=bMLk25dVgOg>`_ with timestamps for different topics:
 
-    - `Linux basic <https://www.youtube.com/watch?v=bMLk25dVgOg&t=8m>`_
+    - `Linux basics <https://www.youtube.com/watch?v=bMLk25dVgOg&t=8m>`_
     - `Data transfer between laptop/desktop at home and the HPC cluster <https://www.youtube.com/watch?v=bMLk25dVgOg&t=1h6m31s>`_
     - `Bash scripting <https://www.youtube.com/watch?v=bMLk25dVgOg&t=1h17m42s>`_
     - `Closing remarks <https://www.youtube.com/watch?v=bMLk25dVgOg&t=1h31m50s>`_
