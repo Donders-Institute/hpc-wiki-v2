@@ -43,7 +43,7 @@ Load the anaconda module using the command below:
 
 While Anaconda provides a bundle of ready-to-use python packages for data analysis, the conda environment is useful in two perspectives:
 
-#. It creates isolations between python projects so that requirements and package dependancies in one enviroment do not spoil other environments.
+#. It creates isolations between python projects so that requirements and package dependencies in one enviroment do not spoil other environments.
 
 #. It allows uses to install packages without administrative permission.
 
@@ -53,7 +53,7 @@ After the anaconda module is loaded, use the command below to create a conda env
 
     $ conda create --name demo pip jupyter numpy
 
-At the end of the creation, example commands for activating and deactivating the environment will be given on the terminal.  To activate the enviromnet we just created, do:
+At the end of the creation, example commands for activating and deactivating the environment will be given on the terminal.  To activate the enviroment we just created, do:
 
 .. code-block:: bash
 
@@ -73,7 +73,7 @@ Now check which ``python`` or ``pip`` program you will be using:
     
 You see that the location of the ``python`` and ``pip`` program is now under your home directory under a conda environment directory we have created.
 
-The setting in the shell for the conda environment will be trasnferred with the job you submitted to the cluster.  You could check that by starting an interactive job, and checking the locations of the ``python`` and ``pip`` programs.  They should still be pointed to your home directory under the conda environment.
+The setting in the shell for the conda environment will be transferred with the job you submitted to the cluster.  You could check that by starting an interactive job, and checking the locations of the ``python`` and ``pip`` programs.  They should still be pointed to your home directory under the conda environment.
 
 .. code-block:: bash
 
@@ -88,7 +88,7 @@ The setting in the shell for the conda environment will be trasnferred with the 
 .. tip::
     You may also firstly submit a job then enter the conda environment after the job start.  This may be handy when the conda environment is only needed within the scope of the job, or you want to switch between conda environment for different jobs.
 
-To deactive the enviromnet, do:
+To deactive the environmet, do:
 
 .. code-block:: bash
 
