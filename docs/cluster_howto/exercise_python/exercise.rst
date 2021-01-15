@@ -73,7 +73,7 @@ Now check which ``python`` or ``pip`` program you will be using:
     
 You see that the location of the ``python`` and ``pip`` program is now under your home directory under a conda environment directory we have created.
 
-The setting in the shell for the conda environment will be trasnferred with the job you submitted to the cluster.  You could check that by starting an interactive job, and checking the locations of the ``python`` and ``pip`` programs.  They should still be pointed to your home directory under the conda environment.
+The setting in the shell for the conda environment will be transferred with the job you submitted to the cluster.  You could check that by starting an interactive job, and checking the locations of the ``python`` and ``pip`` programs.  They should still be pointed to your home directory under the conda environment.
 
 .. code-block:: bash
 
@@ -88,7 +88,7 @@ The setting in the shell for the conda environment will be trasnferred with the 
 .. tip::
     You may also firstly submit a job then enter the conda environment after the job start.  This may be handy when the conda environment is only needed within the scope of the job, or you want to switch between conda environment for different jobs.
 
-To deactive the enviromnet, do:
+To deactive the environmet, do:
 
 .. code-block:: bash
 
