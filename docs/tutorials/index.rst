@@ -6,7 +6,7 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
 2020 - 2021
 ===========
 
-- [2020.12.04] Access HPC from home
+- **[2020.12.04] Access HPC from home**
 
   - :download:`slides <materials/20201204_access_hpc_from_home.pdf>`
   - `video recording <https://www.youtube.com/watch?v=xSjad0kH3w0>`_ with timestamps for different topics:
@@ -21,7 +21,7 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
     
   - further reading: :ref:`access-external`
   
-- [2020.12.18] Linux and BASH scripting
+- **[2020.12.18] Linux and BASH scripting**
 
   - slides
 
@@ -43,7 +43,7 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
     - :download:`Linux/BASH cheatsheet <../bash/bash_cheat_sheet.pdf>`
     - `Data transfer to/from the HPC cluster with WinSCP <https://intranet.donders.ru.nl/index.php?id=winscp>`_
 
-- [2021.01.15] BASH scripting (recap) and HPC job management
+- **[2021.01.15] BASH scripting (recap) and HPC job management**
 
   - slides:
     
@@ -68,7 +68,7 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
     - :download:`Linux/BASH cheatsheet <../bash/bash_cheat_sheet.pdf>`
     - :ref:`run-computations-torque`
 
-- [2021.01.29] Data management and Git/Git-annex
+- **[2021.01.29] Data management and Git/Git-annex**
 
 Earlier workshops
 =================
