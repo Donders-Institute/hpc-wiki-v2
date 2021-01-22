@@ -1,3 +1,5 @@
+.. _run-computations-torque:
+
 Running computations on the Torque cluster
 ******************************************
 

@@ -43,8 +43,32 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
     - :download:`Linux/BASH cheatsheet <../bash/bash_cheat_sheet.pdf>`
     - `Data transfer to/from the HPC cluster with WinSCP <https://intranet.donders.ru.nl/index.php?id=winscp>`_
 
-- [2021.01.15] BASH scripting and HPC job management
-- [2021.01.29]
+- [2021.01.15] BASH scripting (recap) and HPC job management
+
+  - slides:
+    
+    - :download:`BASH scripting <materials/20210115_bash_recap.pdf>`
+    - :download:`HPC job management <materials/20210115_job_management.pptx>`
+
+  - `video recording <https://www.youtube.com/watch?v=urGeB8NmUrw>`_ with timestamps for different topics:
+
+    - `BASH scriptin <https://www.youtube.com/watch?v=urGeB8NmUrw&t=33s>`_
+    - `HPC job management <https://www.youtube.com/watch?v=urGeB8NmUrw&t=32m>`_
+
+      - `demo: interactive job <https://www.youtube.com/watch?v=urGeB8NmUrw&t=43m28s>`_
+      - `demo: batch job <https://www.youtube.com/watch?v=urGeB8NmUrw&t=59m2s>`_
+      - `trouble shooting <https://www.youtube.com/watch?v=urGeB8NmUrw&t=1h10m15s>`_
+      - `Tips for resource estimation <https://www.youtube.com/watch?v=urGeB8NmUrw&t=1h21m36s>`_
+
+    - `Access application with (env) modules <https://www.youtube.com/watch?v=urGeB8NmUrw&t=1h24m41s>`_
+
+  - further reading:
+
+    - :ref:`bash-tutorial`
+    - :download:`Linux/BASH cheatsheet <../bash/bash_cheat_sheet.pdf>`
+    - :ref:`run-computations-torque`
+
+- [2021.01.29] Data management and Git/Git-annex
 
 Earlier workshops
 =================

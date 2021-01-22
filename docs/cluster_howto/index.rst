@@ -4,7 +4,7 @@ The HPC cluster
 .. _obtain_cluster_account:
 
 Obtaining an user account
-======================
+=========================
 
 You should receive a pair of username/password after following the `ICT check-in <https://intranet.donders.ru.nl/index.php?id=checkincheckout>`_ at DCCN. If you do not have a account, ask the `TG helpdesk <mailto:helpdesk@fcdonders.ru.nl>`_.
 
