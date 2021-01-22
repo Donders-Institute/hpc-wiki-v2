@@ -52,7 +52,7 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
 
   - `video recording <https://www.youtube.com/watch?v=urGeB8NmUrw>`_ with timestamps for different topics:
 
-    - `BASH scriptin <https://www.youtube.com/watch?v=urGeB8NmUrw&t=33s>`_
+    - `recap on BASH scripting <https://www.youtube.com/watch?v=urGeB8NmUrw&t=33s>`_
     - `HPC job management <https://www.youtube.com/watch?v=urGeB8NmUrw&t=32m>`_
 
       - `demo: interactive job <https://www.youtube.com/watch?v=urGeB8NmUrw&t=43m28s>`_
