@@ -130,7 +130,7 @@ The ``qsub`` command is used to submit jobs to the Torque job manager.  The firs
 
 .. code-block:: bash
 
-    $ echo '/bin/hostname -f' | qsub -l 'procs=1,mem=128mb,walltime=00:10:00'
+    $ echo '/bin/hostname -f' | qsub -l 'nodes=1:ppn=1,mem=128mb,walltime=00:10:00'
 
 Here we ``echo`` the command we want to run (i.e. ``/bin/hostname -f``) as a string, and pass it to ``qsub`` as the content of our job. In addition, we also request for resources of 1 processor with 128 megabytes RAM for a walltime of 10 minute, using the ``-l`` option.
 
@@ -146,13 +146,13 @@ It is more realistic that our computation involves a set of commands to be execu
 
 .. code-block:: bash
 
-    $ qsub -l 'procs=1,mem=128mb,walltime=00:10:00' ${PWD}/my_analysis.sh
+    $ qsub -l 'nodes=1:ppn=1,mem=128mb,walltime=00:10:00' ${PWD}/my_analysis.sh
 
 It is very often that the same analysis needs to be repeated on many datasets, each corresponds to, for example, a subject.  It would be smart to implement the ``bash`` script with additional arguments to switch between datasets.  Assuming that the ``my_analysis.sh`` is now implemented to take one argument as the subject index, submitting the script to run on the dataset of subject ``001`` would look like the example below:
 
 .. code-block:: bash
 
-    $ echo "${PWD}/my_analysis.sh 001" | qsub -N 's001' -l 'procs=1,mem=128mb,walltime=00:10:00'
+    $ echo "${PWD}/my_analysis.sh 001" | qsub -N 's001' -l 'nodes=1:ppn=1,mem=128mb,walltime=00:10:00'
 
 .. note::
     The command above for passing argument to script is actually a workaround as ``qsub`` (of currently installed version) does not provide options to deal with the command arguments.
@@ -164,7 +164,7 @@ It is possible to acquire a Linux shell of an compute node for running computati
 
 .. code-block:: bash
 
-    $ qsub -I -l 'procs=1,mem=128mb,walltime=00:10:00'
+    $ qsub -I -l 'nodes=1:ppn=1,mem=128mb,walltime=00:10:00'
 
 In few seconds, a message similar to the one below will show up in the terminal.
 
@@ -180,7 +180,7 @@ In few seconds, a message similar to the one below will show up in the terminal.
     Job ID:		   6318221.dccn-l029.dccn.nl
     Username:	   honlee
     Group:		   tg
-    Asked resources:   mem=128mb,procs=1,walltime=00:10:00
+    Asked resources:   nodes=1:ppn=1,mem=128mb,walltime=00:10:00,neednodes=1:ppn=1
     Queue:		   interactive
     Nodes:		   dccn-c351
     End PBS Prologue Tue Aug  5 13:31:05 CEST 2014 1407238265
@@ -201,7 +201,7 @@ Assuming we want to run FSL interactively through its graphical menu, we use the
 .. code-block:: bash
 
     $ xhost +
-    $ echo "export DISPLAY=${HOSTNAME}${DISPLAY}; fsl" | qsub -q interactive -l 'procs=1,mem=128mb,walltime=00:10:00'
+    $ echo "export DISPLAY=${HOSTNAME}${DISPLAY}; fsl" | qsub -q interactive -l 'nodes=1:ppn=1,mem=128mb,walltime=00:10:00'
 
 The first command allows graphic interfaces on any remote host to be displayed on the access node.  The second command submit a job to firstly set the compute node to forward graphic interfaces to the access node before launching the FSL executable.
 
@@ -320,7 +320,7 @@ Here we ask the allocated CPU core to be on a node with properties ``amd`` (CPU 
 -----------------------------------------------------------------------------------------------------
 
 .. code-block:: bash
-    
+
     $ qsub -l 'procs=4,walltime=12:00:00,mem=4gb' job.sh
 
 Here we use ``procs`` to specify the amount of CPU cores we need, but not restricting to a single node.  In this scenario, the job (or the application the job runs) should take care of the communication between the processors distributed on many nodes.  This is typically for the `MPI <https://en.wikipedia.org/wiki/Message_Passing_Interface>`_-like applications.
