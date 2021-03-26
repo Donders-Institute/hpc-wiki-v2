@@ -33,7 +33,7 @@ In the cluster, several job queues are made available in order to arrange jobs b
 +------------+---------------+-----------------------+---------------------+----------------------+--------------+
 | vgl        | N/A           |  8 hours              |  10 GB              | VirtualGL capability | normal       |
 +------------+---------------+-----------------------+---------------------+----------------------+--------------+
-| bigscratch | N/A           | 72 hours              | 256 GB              | local disk space     | normal       | 
+| bigscratch | N/A           | 72 hours              | 256 GB              | local disk space     | normal       |
 +------------+---------------+-----------------------+---------------------+----------------------+--------------+
 | short      | N/A           |  2 hours              |   8 GB              |                      | normal       |
 +------------+---------------+-----------------------+---------------------+----------------------+--------------+
@@ -130,7 +130,7 @@ The ``qsub`` command is used to submit jobs to the Torque job manager.  The firs
 
 .. code-block:: bash
 
-    $ echo '/bin/hostname -f' | qsub -l 'procs=1,mem=128mb,walltime=00:10:00'
+    $ echo '/bin/hostname -f' | qsub -l 'nodes=1:ppn=1,mem=128mb,walltime=00:10:00'
 
 Here we ``echo`` the command we want to run (i.e. ``/bin/hostname -f``) as a string, and pass it to ``qsub`` as the content of our job. In addition, we also request for resources of 1 processor with 128 megabytes RAM for a walltime of 10 minute, using the ``-l`` option.
 
@@ -146,13 +146,13 @@ It is more realistic that our computation involves a set of commands to be execu
 
 .. code-block:: bash
 
-    $ qsub -l 'procs=1,mem=128mb,walltime=00:10:00' ${PWD}/my_analysis.sh
+    $ qsub -l 'nodes=1:ppn=1,mem=128mb,walltime=00:10:00' ${PWD}/my_analysis.sh
 
 It is very often that the same analysis needs to be repeated on many datasets, each corresponds to, for example, a subject.  It would be smart to implement the ``bash`` script with additional arguments to switch between datasets.  Assuming that the ``my_analysis.sh`` is now implemented to take one argument as the subject index, submitting the script to run on the dataset of subject ``001`` would look like the example below:
 
 .. code-block:: bash
 
-    $ echo "${PWD}/my_analysis.sh 001" | qsub -N 's001' -l 'procs=1,mem=128mb,walltime=00:10:00'
+    $ echo "${PWD}/my_analysis.sh 001" | qsub -N 's001' -l 'nodes=1:ppn=1,mem=128mb,walltime=00:10:00'
 
 .. note::
     The command above for passing argument to script is actually a workaround as ``qsub`` (of currently installed version) does not provide options to deal with the command arguments.
@@ -164,7 +164,7 @@ It is possible to acquire a Linux shell of an compute node for running computati
 
 .. code-block:: bash
 
-    $ qsub -I -l 'procs=1,mem=128mb,walltime=00:10:00'
+    $ qsub -I -l 'nodes=1:ppn=1,mem=128mb,walltime=00:10:00'
 
 In few seconds, a message similar to the one below will show up in the terminal.
 
@@ -180,7 +180,7 @@ In few seconds, a message similar to the one below will show up in the terminal.
     Job ID:		   6318221.dccn-l029.dccn.nl
     Username:	   honlee
     Group:		   tg
-    Asked resources:   mem=128mb,procs=1,walltime=00:10:00
+    Asked resources:   nodes=1:ppn=1,mem=128mb,walltime=00:10:00,neednodes=1:ppn=1
     Queue:		   interactive
     Nodes:		   dccn-c351
     End PBS Prologue Tue Aug  5 13:31:05 CEST 2014 1407238265
@@ -201,7 +201,7 @@ Assuming we want to run FSL interactively through its graphical menu, we use the
 .. code-block:: bash
 
     $ xhost +
-    $ echo "export DISPLAY=${HOSTNAME}${DISPLAY}; fsl" | qsub -q interactive -l 'procs=1,mem=128mb,walltime=00:10:00'
+    $ echo "export DISPLAY=${HOSTNAME}${DISPLAY}; fsl" | qsub -q interactive -l 'nodes=1:ppn=1,mem=128mb,walltime=00:10:00'
 
 The first command allows graphic interfaces on any remote host to be displayed on the access node.  The second command submit a job to firstly set the compute node to forward graphic interfaces to the access node before launching the FSL executable.
 
@@ -272,66 +272,66 @@ When submitting jobs with the ``qsub`` command, one uses the ``-l`` option to sp
 ----------------------------------------------------------
 
 .. code-block:: bash
-    
+
     $ qsub -l 'walltime=12:00:00,mem=4gb' job.sh
-        
+
 The requirement of 1 CPU is skipped as it is by default to be 1.
 
 4 CPU cores on a single node, 12 hours wallclock time, and 4 gb memory
 ----------------------------------------------------------------------
 
 .. code-block:: bash
-    
+
     $ qsub -l 'nodes=1:ppn=4,walltime=12:00:00,mem=4gb' job.sh
-        
+
 Here we explicitly ask 4 CPU cores to be on the same compute node. This is usually a case that the application (such as multithreading of MATLAB) can benefit from multiple cores on a (SMP) node to speed up the computation.
 
 1 CPU core, 500gb of free local "scratch" diskspace in /data, 12 hours wallclock time, and 4 gb memory
 ----------------------------------------------------------------------
 
 .. code-block:: bash
-    
+
     $ qsub -l 'file=500gb,walltime=12:00:00,mem=4gb' job.sh
-        
+
 Here we explicitly ask for 500gb of free local diskspace located in /data on the compute node. This could for instance be asked for when submitting an fmriprep job that requires lots of local diskspace for computation. The more jobs are running, the longer it can take for torque to find a node with enough free diskspace to run the job. Max to request for is 3600gb.
 
 .. note::
     In case you use more than the requested 500gb there will be no penalty. Diskspace is monitored, but your job won't fail if the requested diskspace is "overused", as long as diskspace is available. Of course if no more diskspace is available your job will fail.
 
-1 **Intel** CPU core, 4 gigabytes memory and 12 hours wallclcok time, on a node with 10 Gb network connectivity
+1 **Intel** CPU core, 4 gigabytes memory and 12 hours wallclock time, on a node with 10 Gb network connectivity
 ---------------------------------------------------------------------------------------------------------------
 
 .. code-block:: bash
 
     $ qsub -l 'nodes=1:intel:network10GigE,walltime=12:00:00,mem=4gb' job.sh
-    
+
 Here we ask the allocated CPU core to be on a node with properties ``intel`` and ``network10GigE``.
 
-1 **AMD EPYC7351** CPU core, 4 gigabytes memory and 12 hours wallclcok time
+1 **AMD EPYC7351** CPU core, 4 gigabytes memory and 12 hours wallclock time
 ------------------------------------------------------------------
 
 .. code-block:: bash
 
     $ qsub -l 'nodes=1:amd:epyc7351,walltime=12:00:00,mem=4gb' job.sh
-    
+
 Here we ask the allocated CPU core to be on a node with properties ``amd`` (CPU vendor) and ``epyc7351`` (CPU model).
 
 4 CPU cores, 12 hours wallclock time, and 4 gb memory.  The 4 CPU cores may come from different nodes
 -----------------------------------------------------------------------------------------------------
 
 .. code-block:: bash
-    
+
     $ qsub -l 'procs=4,walltime=12:00:00,mem=4gb' job.sh
-        
+
 Here we use ``procs`` to specify the amount of CPU cores we need, but not restricting to a single node.  In this scenario, the job (or the application the job runs) should take care of the communication between the processors distributed on many nodes.  This is typically for the `MPI <https://en.wikipedia.org/wiki/Message_Passing_Interface>`_-like applications.
-        
+
 1 GPU with minimal `cuda capability <https://developer.nvidia.com/cuda-gpus>`_ 5.0, 12 hours wallclock time, and 4 gb memory
 ----------------------------------------------------------------------------------------------------------------------------
 
 .. code-block:: bash
 
     $ qsub -l 'nodes=1:gpus=1,feature=cuda,walltime=1:00:00,mem=4gb,reqattr=cudacap>=5.0'
-        
+
 Here we ask for a 1 GPU on a node with the (dynamic) attribute ``cudacap`` set to larger or equal to 5.0. The ``feature=cuda`` requirement allows the system to make use of a standing reservation if there is still space available in the reservation.
 
 .. For short interactive GPU computation, one could also specify the ``qos`` (i.e. Quality-of-Service) flag to make use the slot reserved for GPU computation.  For instance:
@@ -339,10 +339,10 @@ Here we ask for a 1 GPU on a node with the (dynamic) attribute ``cudacap`` set t
 .. .. code-block:: bash
 
 ..    $ qsub -I -l 'nodes=1:gpus=1,qos=cuda,walltime=1:00:00,mem=4gb,reqattr=cudacap>=5.0'
-    
+
 ..    .. note::
         This ``qos`` reservation is only for accessible for interactive jobs with requirement of one CPU core and less than 1 hour walltime.
-    
+
 .. note::
     Currently there are 9 Nvidia Tesla P100 GPUs available in the entire cluster. More GPUs will be added to the cluster in the future.
 
@@ -398,9 +398,9 @@ The **walltime** and **memory** requirements are the most essential ones amongst
         Nodes:		   dccn-c365.dccn.nl
         End PBS Epilogue Wed Oct 17 10:18:53 CEST 2018 1539764333
         ----------------------------------------
-        
+
    .. note::
-       In addtion to checking the job's epilogue file, you will also receive an email notification when the job exceeds the requested walltime.  
+       In addtion to checking the job's epilogue file, you will also receive an email notification when the job exceeds the requested walltime.
 
    Adjust the rough requirement gradually based on the usage information and resubmit the test job with the new requirement.  In few iterations, you will be able to determine the actual usage of your analysis job.  A rule of thumb for specifying the resource requirement for the production jobs is to add on top of the actual usage a 10~20% buffer as a safety margin.
 
