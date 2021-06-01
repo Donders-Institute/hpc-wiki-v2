@@ -102,13 +102,13 @@ Cluster-wise policies
 Job prioritisation
 ------------------
 
-Job priority determines the order of waiting jobs to start in the cluster. Job priority is calculated by the Moab scheduler taking into account various factors.  In the cluster at DCCN, mainly the following three factors are considered.
+Job priority determines the order of waiting jobs to start in the cluster. Job priority is calculated by the Moab scheduler taking into account various factors.  In the cluster at DCCN, mainly the following two factors are considered.
 
 #. **The waiting time a job has spent in the queue**: this factor will add one additional priority point to jobs waiting for one additional minute in the queue.
 
 #. **Queue priority**: this factor is mainly used for boosting jobs in the *interactive* queue with an outstanding priority offset so that they will be started sooner than other types of jobs.
 
-The final job priority combining the three factors is used by the scheduler to order the waiting jobs accordingly. The first job in the order is the next to start in the cluster.
+The final job priority combining the two factors is used by the scheduler to order the waiting jobs accordingly. The first job on the ordered list is the next to start in the cluster.
 
 Note: Job priority calculation is dynamic and not complete transparent to users.  One should keep in mind that the cluster does not treat the jobs as "first-come first-serve".
 
