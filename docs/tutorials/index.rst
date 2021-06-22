@@ -70,6 +70,11 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
 
 - **[2021.01.29] Data management and Git/Git-annex**
 
+  - slides:
+
+    - :download:`Data storage and management <materials/20210129_data_management.pdf>`
+    - :download:`Git tutorial <materials/20210129_git_tutorial.pptx>`
+
 Earlier workshops
 =================
 
