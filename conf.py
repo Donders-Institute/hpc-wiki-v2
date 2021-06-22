@@ -46,7 +46,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'DCCN HPC wiki'
-copyright = date.today().year + ', Donders Centre for Cognitive Neuroimaging'
+copyright = str(date.today().year) + ', Donders Centre for Cognitive Neuroimaging'
 author = u'Hurng-Chun Lee, Daniel Sharoh, Edward Gerrits, Marek Tyc, Mike van Engelenburg, Mariam Zabihi'
 
 # The version info for the project you're documenting, acts as replacement for
