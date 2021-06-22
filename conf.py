@@ -19,7 +19,7 @@
 # import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
-
+from datetime import date
 
 # -- General configuration ------------------------------------------------
 
@@ -46,7 +46,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'DCCN HPC wiki'
-copyright = u'2020, Donders Centre for Cognitive Neuroimaging'
+copyright = date.today().year + ', Donders Centre for Cognitive Neuroimaging'
 author = u'Hurng-Chun Lee, Daniel Sharoh, Edward Gerrits, Marek Tyc, Mike van Engelenburg, Mariam Zabihi'
 
 # The version info for the project you're documenting, acts as replacement for
