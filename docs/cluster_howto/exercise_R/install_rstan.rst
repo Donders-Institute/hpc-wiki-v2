@@ -15,6 +15,13 @@ Within a terminal in a VNC session, do
     $ module load R/4.0.1
     $ module load jdk
 
+Check if the ``gcc`` compiler is pointed to ``/opt/gcc/7.2.0/bin/gcc``:
+
+.. code-block:: bash
+
+    $ which gcc
+    /opt/gcc/7.2.0/bin/gcc
+
 If you prefer using R in a text console, submit an interactive job with more than 4GB memory, e.g.
 
 .. code-block:: bash
