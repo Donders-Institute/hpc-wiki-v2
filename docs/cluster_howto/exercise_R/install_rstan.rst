@@ -5,8 +5,8 @@ Installation of brms/stan packages
 
 This installation instruction shows you how to install brms/stan packages in R version 4.0.1.
 
-Start R with needed dependencies
-*********************************
+Start R with required dependencies
+***********************************
 
 Within a terminal in a VNC session, do
 
@@ -15,7 +15,7 @@ Within a terminal in a VNC session, do
     $ module load R/4.0.1
     $ module load jdk
 
-If you prefer using R in a text console, submit an interactive job with at-least 4GB memory, e.g.
+If you prefer using R in a text console, submit an interactive job with more than 4GB memory, e.g.
 
 .. code-block:: bash
 
@@ -23,7 +23,7 @@ If you prefer using R in a text console, submit an interactive job with at-least
 
 once the job is started, run ``R`` in the terminal.
 
-If you prefer using rstudio, simply type ``rstudio`` in the terminal and use the dialog to set the job requirement, submit the job and wait for the rstudio window.
+If you prefer using rstudio, simply type ``rstudio`` in the terminal and use the dialog to set the job requirement, submit the job and wait for the rstudio window to pop up.
 
 Install rstan/brms
 *******************

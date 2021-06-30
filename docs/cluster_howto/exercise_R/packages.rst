@@ -3,21 +3,23 @@
 R packages
 **********
 
-R users are encouraged to install their favorite R packages within the ``R_LIBS_USER`` directory which is by default in the user's home directory, using the following command, for example:
+R users are encouraged to install their favorite R packages within the ``R_LIBS_USER`` directory which is by default in the user's home directory.  For exampl, you could using the following command to install a R package:
 
-.. code-block:: R
+.. code-block:: r
 
     > install.packages("package name")
 
-Nevertheless, having commonly used packages installed centrally is beneficial for saving user's effort (and storage space) in managing the dependencies.  In the cluster, several R packages are installed and maintained by the TG in the directory of ``/opt/R-packages``.  Under this directory, packages are built for different R versions.
+Since it can save users' effort (and storage space) in managing the dependencies, commonly used R packages are installed and maintained centrally by the TG in the directory of ``/opt/R-packages``.  Centrally installed R packages are built for different R versions.
 
 .. note::
-    Centally installed R packages are version dependent.  They are only introduced for R versions >= 4.0.1. 
+    Centally installed R packages only available for R version >= 4.0.1.
 
-Using centrally installed R packages
-=====================================
+Using the centrally installed R packages
+=========================================
 
-The centrally installed R packages can be loaded by using the ``R-packages`` module.  For example, if you want to make use of a centrally installed package in your R session with version 4.1.0, you could do:
+The centrally installed R packages are made available via the ``R-packages`` environment module with the version number matching the version of R.
+
+For instance, to access the packages built for R version 4.1.0, one does:
 
 .. code-block:: bash
 
@@ -26,9 +28,9 @@ The centrally installed R packages can be loaded by using the ``R-packages`` mod
 before starting the R session.
 
 .. note::
-    Under the hood, the ``R-packages`` module simply set the variable ``R_LIBS_SITE`` to the path where the packages are installed.
+    Under the hood, the ``R-packages`` module simply sets the variable ``R_LIBS_SITE`` to the path where the packages are installed.
 
-With that you have access to all centrally installed packages.  You can then load the package you want by
+You can then load the package you want by
 
 .. code-block:: r
 
@@ -43,7 +45,7 @@ Installing your own packages
 When installing your own packages, you could define the installation location by setting the variable ``R_LIBS_USER`` before you start R.  The default value defined by R is ``$HOME/R/x86_64-pc-linux-gnu-library/{version}`` where ``{version}`` is the R version.
 
 .. note::
-    Please be noted that the R packages are sometimes compiled against their dependent libraries and the R version you use to install them.  You might need to re-install them for a different R version or after upgrade of system libraries and the operating system.
+    R packages are sometimes compiled against their dependent libraries and the R version you use to install them.  You might need to re-install them for a different R version or after the dependent libraries are upgraded in the cluster.
 
 Hereafter are instructions for installing specific packages:
 
