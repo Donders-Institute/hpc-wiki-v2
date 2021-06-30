@@ -44,3 +44,22 @@ With a successful installation, you should be able to load the rstan package by 
 .. code-block:: r
 
     > library(rstan)
+
+It is recommended that you also test with the simple *Eight Schools* example from the rstan wiki. You could follow the instruction on this [link](https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started#example-1-eight-schools), or use the simplified instruction below:
+
+#. In a VNC session, open a terminal and run the commands below to download the R script and data:
+
+    .. code-block:: bash
+
+        $ cd
+        $ wget https://github.com/Donders-Institute/hpc-wiki-v2/raw/master/docs/cluster_howto/exercise_R/rstan_eightschools.tgz
+        $ tar xvzf rstan_eightschools.tgz
+        $ ls rstan_workspace
+        rstan_test_eightschools.R  schools.stan
+
+#. Run ``rstudio`` in the terminal with more than 4 GB memory; wait for the rstudio to start.
+
+#. Within the rstudio, open the R script ``~/rstan_workspace/rstan_test_eightschools.R`` and run it interactively.  You sould see the resulting plot in the *plots* panel of rstudio, like the one below:
+
+    .. figure:: ../figures/rstudio_rstan_eightschools_plot.png
+        :figwidth: 75%
