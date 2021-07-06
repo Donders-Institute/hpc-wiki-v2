@@ -12,3 +12,4 @@ Commonly used data analysis/process software are centrally managed and supported
 
         Using environment modules <software-modules.rst>
         Using utility scripts <software-scripts.rst>
+        Maintaining software <software-maintainer-responsibility.rst>
