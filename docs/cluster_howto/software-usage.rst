@@ -12,12 +12,3 @@ Commonly used data analysis/process software are centrally managed and supported
 
         Using environment modules <software-modules.rst>
         Using utility scripts <software-scripts.rst>
-
-Maintaining supported software
-******************************
-
-.. toctree::
-    :maxdepth: 1
-
-        Software maintainer <software-maintainer-responsibility.rst>
-        Software modules How-to <software-maintainer-module-howto.rst>

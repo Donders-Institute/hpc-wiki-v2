@@ -27,7 +27,8 @@ Using the cluster
     :maxdepth: 2
 
     Torque cluster <compute_torque.rst>
-    Application software <software.rst>
+    Using supported software <software-usage.rst>
+    Maintaining supported software <software-maintenance.rst>
     Best practices <best_practices.rst>
 
 Exercises: cluster
