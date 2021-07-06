@@ -5,7 +5,7 @@ Commonly used data analysis/process software are centrally managed and supported
 
 .. tip::
 
-    You are welcomed to take initiative for a new software in the repository if you think the software is/will be beneficial to most of the HPC users.  See :ref:`software-maintainer` for more detail.
+    You are welcomed to take initiative for introducing a new software in the repository, with the awareness of the maintainer's responsibility. See :ref:`software-maintainer` for more detail.
 
 .. toctree::
     :maxdepth: 1
