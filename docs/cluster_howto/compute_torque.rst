@@ -52,7 +52,7 @@ In the cluster, several job queues are made available in order to arrange jobs b
 
 At the job submission time, user can specify to which queue the job should be placed in the system. Alternatively, one could simply specify the wall time and memory required by the job and let the system pick up a most proper queue automatically for the job.  The second approach is implemented by the *automatic* queue behaving as a router to a destination queue.
 
-Throtteling policies for resource usage
+Throttling policies for resource usage
 ---------------------------------------
 
 In the Torque cluster at DCCN, throttle policies are applied to limit the amount of resources an user can allocate at the same time.  It is to avoid resources of the entire cluster being occupied by a single user.  The policies are defined in two scopes:
