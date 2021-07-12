@@ -43,17 +43,17 @@ Load the anaconda module using the command below:
 
 While Anaconda provides a bundle of ready-to-use python packages for data analysis, the conda environment is useful in two perspectives:
 
-#. It creates isolations between python projects so that requirements and package dependencies in one enviroment do not spoil other environments.
+#. It creates isolations between python projects so that requirements and package dependencies in one environment do not spoil other environments.
 
 #. It allows uses to install packages without administrative permission.
 
-After the anaconda module is loaded, use the command below to create a conda enviromnet called ``demo``, and have the ``pip``, ``jupyter`` and ``numpy`` packages installed rightaway.
+After the anaconda module is loaded, use the command below to create a conda environment called ``demo``, and have the ``pip``, ``jupyter`` and ``numpy`` packages installed rightaway.
 
 .. code-block:: bash
 
     $ conda create --name demo pip jupyter numpy
 
-At the end of the creation, example commands for activating and deactivating the environment will be given on the terminal.  To activate the enviroment we just created, do:
+At the end of the creation, example commands for activating and deactivating the environment will be given on the terminal.  To activate the environment we just created, do:
 
 .. code-block:: bash
 
@@ -88,7 +88,7 @@ The setting in the shell for the conda environment will be transferred with the 
 .. tip::
     You may also firstly submit a job then enter the conda environment after the job start.  This may be handy when the conda environment is only needed within the scope of the job, or you want to switch between conda environment for different jobs.
 
-To deactive the environmet, do:
+To deactive the environment, do:
 
 .. code-block:: bash
 
