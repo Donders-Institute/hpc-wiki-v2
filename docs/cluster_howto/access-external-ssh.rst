@@ -122,10 +122,19 @@ Once you have logged in the gateway, you should keep the login window open; and 
 VNC via SSH tunnel (Linux/Mac OSX)
 ==================================
 
+.. note::
+   A simple script wrapping up the steps below can be found `here <_static/tunnel2vnc/tunnel2vnc.sh>`_.  Use the command below to download and run the script to setup the SSH tunnel:
+
+   .. code:: bash
+
+      $ 
+      $ chmod +x /usr/local/bin/tunnel2vnc
+      $ tunnel2vnc
+
 In this example, we choose ``Source port`` to be ``5956``.  We also assume that a VNC server has been started on ``mentat002`` with the display number ``56``. The ``Destination`` referring to the VNC server should be ``mentat002:5956``.
 
 .. note::
-    The display number ``56`` is just an example.  In reality, you should replace it with a different number assigned by the *vncmanager*.  Nevertheless, the network port number is always the display number plus ``5900``.
+   The display number ``56`` is just an example.  In reality, you should replace it with a different number assigned by the *vncmanager*.  Nevertheless, the network port number is always the display number plus ``5900``.
 
 Follow the steps below to establish the tunnel for VNC connection:
 
