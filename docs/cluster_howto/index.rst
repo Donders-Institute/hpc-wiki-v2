@@ -31,19 +31,8 @@ Using the cluster
     Maintaining supported software <software-maintenance.rst>
     Best practices <best_practices.rst>
 
-Exercises: cluster
-==================
-
-.. toctree::
-    :maxdepth: 1
-
-    Interactive job <exercise_interactive/exercise.rst>
-    Batch job <exercise_simple/exercise.rst>
-    Resource estimation <exercise_resource/exercise.rst>
-    Analyzing data in parallel <exercise_da/exercise.rst>
-
-Exercises: application software
-===============================
+Application software
+====================
 
 .. toctree::
     :maxdepth: 1
@@ -53,3 +42,14 @@ Exercises: application software
     Freesurfer <exercise_freesurfer/exercise.rst>
     Python <exercise_python/exercise.rst>
     R <exercise_R/exercise.rst>
+
+Exercises
+=========
+
+.. toctree::
+    :maxdepth: 1
+
+    Interactive job <exercise_interactive/exercise.rst>
+    Batch job <exercise_simple/exercise.rst>
+    Resource estimation <exercise_resource/exercise.rst>
+    Analyzing data in parallel <exercise_da/exercise.rst>
