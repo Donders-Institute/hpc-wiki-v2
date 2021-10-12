@@ -15,7 +15,7 @@ read -p  "VNC server: " vncserver
 vnchost=$(echo $vncserver | awk -F ':' '{print $1}')
 vncport=$(echo $vncserver | awk -F ':' '{print $2}')
 
-[ $vncport -lt 99 ] && vncport=$((5900 + $vncport))
+[ $vncport -le 99 ] && vncport=$((5900 + $vncport))
 
 ftpport=$(($vncport + 1000))
 
