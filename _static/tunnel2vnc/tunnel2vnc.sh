@@ -2,8 +2,7 @@
 
 function stop() {
     echo 
-    echo -n "closing tunnel ${socket} ..."
-    ssh -S ${socket} -O exit $username@ssh.dccn.nl
+    ssh -S ${socket} -O exit ${username}@ssh.dccn.nl
     exit 0
 }
 
@@ -17,6 +16,9 @@ vncport=$(echo $vncserver | awk -F ':' '{print $2}')
 
 [ $vncport -lt 100 ] && vncport=$((5900 + $vncport))
 
+# vncport at this point should be between 5901 and 5999
+[[ $vncport -lt 5901 || $vncport -gt 5999 ]] && echo "invalid VNC server" >&2 && exit 1
+
 ftpport=$(($vncport + 1000))
 
 socket=${vncport}
@@ -24,14 +26,18 @@ socket=${vncport}
 read -p  "DCCN username: " username
 
 # create SSH tunnel in background with a control socket
-ssh -M -S ${socket} -fNT -L $vncport:$vnchost:$vncport -L ${ftpport}:$vnchost:22 $username@ssh.dccn.nl
+ssh -M -S ${socket} -fNT -o ExitOnForwardFailure=yes -L $vncport:$vnchost:$vncport -L ${ftpport}:$vnchost:22 ${username}@ssh.dccn.nl
+
+if [ $? -ne 0 ]; then
+    echo "fail to setup tunnel" >&2
+    exit 1
+fi
 
 export socket
 export username
 trap stop SIGTERM SIGINT
 
 cat << EOF
-tunnel ${socket} created.
 
 !! Keep this terminal open !!
 

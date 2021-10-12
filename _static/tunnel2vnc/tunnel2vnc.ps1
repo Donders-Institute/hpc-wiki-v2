@@ -24,6 +24,12 @@ $vncport = [int]$vncserver.split(":")[1]
 if ($vncport -lt 100) {
     $vncport = $vncport + 5900
 }
+
+# vncport at this point should be between 5901 and 5999
+if ( $vncport -lt 5901 || $vncport -gt 5999 ) {
+    Write-Error "invalid VNC server" -ErrorAction stop
+}
+
 $ftpport = $vncport + 1000
 
 # set current terminal title
@@ -41,7 +47,10 @@ if ( Get-command plink.exe ) { # default option: Putty
     Write-Connection-Info -VncPort ${vncport} -FtpPort ${ftpport}
     # create SSH tunnel in background with a control socket (not sure if socket works on Windows??)
     $socket = $vncport
-    ssh -M -S $socket -fNT -L ${vncport}:${vnchost}:${vncport} -L ${ftpport}:${vnchost}:22 ${username}@ssh.dccn.nl
+    ssh -M -S $socket -fNT -o ExitOnForwardFailure=yes -L ${vncport}:${vnchost}:${vncport} -L ${ftpport}:${vnchost}:22 ${username}@ssh.dccn.nl
+    if ( ${LastExitCode} -ne 0 ) {
+        Write-Error "fail to setup tunnel" -ErrorAction stop
+    }
     try {
         while($true) {}
     } finally {
