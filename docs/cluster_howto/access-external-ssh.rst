@@ -18,6 +18,15 @@ The following screencast will guide you through the steps of accessing the clust
 
    <iframe width="560" height="315" src="https://www.youtube.com/embed/mdEnaDrpux8" frameborder="0" allowfullscreen></iframe>
 
+Utility script
+==============
+
+For your convenience, we made an utility script to simplfy the setup of a SSH tunnel (for both VNC and data transfer).  Nevertheless, we recommend to understand the mechanism by going through the steps once.
+
+- tunnel2vnc script [`Windows <_static/tunnel2vnc/tunnel2vnc.ps1>`_] [`Linux/MacOS <_static/tunnel2vnc/tunnel2vnc.sh>`_]
+
+For the usage of the script, see the tips in :ref:`vnc_ssh_tunnel_windows` and :ref:`vnc_ssh_tunnel_linux_mac`.
+
 Putty login via SSH tunnel
 ==========================
 
@@ -67,9 +76,14 @@ Once you have logged in the gateway, you should keep the login window open; and 
    .. figure:: figures/putty_login_success.png
       :figwidth: 60%
 
+.. _vnc_ssh_tunnel_windows
+
 VNC via SSH tunnel (Windows)
 ============================
 
+.. tip::
+   A simple script wrapping up the steps below can be found `here </_static/tunnel2vnc/tunnel2vnc.ps1>`_.  After downloading the file, right-click the file to run with Powershell and follow the instruction to setup the tunnel.
+   
 In this example, we choose ``Source port`` to be ``5956``.  We also assume that a VNC server has been started on ``mentat002`` with the display number ``56``. The ``Destination`` referring to the VNC server should be ``mentat002:5956``.
 
 .. note::
@@ -119,6 +133,8 @@ Once you have logged in the gateway, you should keep the login window open; and 
    .. figure:: figures/tigerVNC_success.png
       :figwidth: 60%
 
+.. _vnc_ssh_tunnel_linux_mac
+
 VNC via SSH tunnel (Linux/Mac OSX)
 ==================================
 
@@ -135,6 +151,8 @@ VNC via SSH tunnel (Linux/Mac OSX)
    .. code:: bash
 
       $ $HOME/tunnel2vnc
+      
+   and follow the instruction to setup the tunnel.
 
 In this example, we choose ``Source port`` to be ``5956``.  We also assume that a VNC server has been started on ``mentat002`` with the display number ``56``. The ``Destination`` referring to the VNC server should be ``mentat002:5956``.
 
