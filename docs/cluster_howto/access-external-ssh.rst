@@ -149,7 +149,7 @@ VNC via SSH tunnel (Linux/Mac OSX)
 
    .. code:: bash
 
-      $ curl -o $HOME/tunnel2vnc https://dccn-hpc-wiki.readthedocs.io/en/latest/_static/tunnel2vnc/tunnel2vnc.sh
+      $ curl -o $HOME/tunnel2vnc https://hpc.dccn.nl/_static/tunnel2vnc/tunnel2vnc.sh
       $ chmod +x $HOME/tunnel2vnc
 
    Run the command below in a terminal to start a SSH tunnel for VNC:
