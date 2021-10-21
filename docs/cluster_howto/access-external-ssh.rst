@@ -83,6 +83,12 @@ VNC via SSH tunnel (Windows)
 
 .. tip::
    A simple script wrapping up the steps below can be found `here </_static/tunnel2vnc/tunnel2vnc.ps1>`_.  After downloading the file, right-click the file to run with Powershell and follow the instruction to setup the tunnel.
+
+   If the Powershell program closed immediately after you run the script, you might need to set the Powershell execution policy.  Open the Powershell as the Administrator and run
+
+   .. code:: powershell
+
+      > Set-ExecutionPolicy -ExecutionPolicy Unrestricted
    
 In this example, we choose ``Source port`` to be ``5956``.  We also assume that a VNC server has been started on ``mentat002`` with the display number ``56``. The ``Destination`` referring to the VNC server should be ``mentat002:5956``.
 
