@@ -64,7 +64,7 @@ $ftpport = $vncport + 1000
 $host.ui.RawUI.WindowTitle = "tunnel2vnc [${vncport}]"
 
 # input for ssh gateway username
-$username = Read-Host -Prompt "username"
+$username = Read-Host -Prompt "DCCN username"
 
 if ( Get-command plink.exe ) { # default option: Putty
     Write-Connection-Info -VncPort ${vncport} -FtpPort ${ftpport}
