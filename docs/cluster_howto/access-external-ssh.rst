@@ -76,7 +76,7 @@ Once you have logged in the gateway, you should keep the login window open; and 
    .. figure:: figures/putty_login_success.png
       :figwidth: 60%
 
-.. _vnc_ssh_tunnel_windows
+.. _vnc_ssh_tunnel_windows:
 
 VNC via SSH tunnel (Windows)
 ============================
@@ -133,7 +133,7 @@ Once you have logged in the gateway, you should keep the login window open; and 
    .. figure:: figures/tigerVNC_success.png
       :figwidth: 60%
 
-.. _vnc_ssh_tunnel_linux_mac
+.. _vnc_ssh_tunnel_linux_mac:
 
 VNC via SSH tunnel (Linux/Mac OSX)
 ==================================
