@@ -9,7 +9,7 @@ function stop() {
 unset vncserver
 unset username
 
-read -p  "VNC server: " vncserver
+read -p  "VNC server (hostname:displaynumber): " vncserver
 
 vnchost=$(echo $vncserver | awk -F ':' '{print $1}')
 vncport=$(echo $vncserver | awk -F ':' '{print $2}')

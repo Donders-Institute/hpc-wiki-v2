@@ -15,8 +15,34 @@ function Write-Connection-Info {
     Write-Host ""    
 }
 
+Function Write-ErrorMessage {
+      [CmdletBinding(DefaultParameterSetName='ErrorMessage')]
+      param(
+           [Parameter(Position=0,ParameterSetName='ErrorMessage',ValueFromPipeline,Mandatory)][string]$errorMessage
+           ,[Parameter(ParameterSetName='ErrorRecord',ValueFromPipeline)][System.Management.Automation.ErrorRecord]$errorRecord
+           ,[Parameter(ParameterSetName='Exception',ValueFromPipeline)][Exception]$exception
+      )
+
+      switch($PsCmdlet.ParameterSetName) {
+      'ErrorMessage' {
+           $err = $errorMessage
+      }
+      'ErrorRecord' {
+           $errorMessage = @($error)[0]
+           $err = $errorRecord
+      }
+      'Exception'   {
+           $errorMessage = $exception.Message
+           $err = $exception
+      }
+      }
+
+      Write-Error -Message $err -ErrorAction SilentlyContinue
+      $Host.UI.WriteErrorLine($errorMessage)
+};
+
 # input for vncserver endpoint (host:display or host:port)
-$vncserver = Read-Host -Prompt "vncserver"
+$vncserver = Read-Host -Prompt "vncserver (hostname:displaynumber)"
 
 # resolve host and port of the vncserver
 $vnchost = $vncserver.split(":")[0]
@@ -26,8 +52,10 @@ if ($vncport -lt 100) {
 }
 
 # vncport at this point should be between 5901 and 5999
-if ( $vncport -lt 5901 || $vncport -gt 5999 ) {
-    Write-Error "invalid VNC server" -ErrorAction stop
+if ( $vncport -lt 5901 -Or $vncport -gt 5999 ) {
+    Write-ErrorMessage "invalid VNC server"
+    Read-Host -Prompt "press any key to close"
+    Exit
 }
 
 $ftpport = $vncport + 1000
@@ -41,7 +69,7 @@ $username = Read-Host -Prompt "username"
 if ( Get-command plink.exe ) { # default option: Putty
     Write-Connection-Info -VncPort ${vncport} -FtpPort ${ftpport}
     # start plink, commandline putty
-    Start-Process -FilePath plink.exe -ArgumentList "-ssh ${username}@ssh.dccn.nl -L ${vncport}:${vnchost}:${vncport} -L ${ftpport}:${vnchost}:22" -NoNewWindow -Wait
+    Start-Process -FilePath plink.exe -ArgumentList "-ssh ${username}@ssh.dccn.nl -t -N -L ${vncport}:${vnchost}:${vncport} -L ${ftpport}:${vnchost}:22" -NoNewWindow -Wait
 
 } elseif ( Get-command ssh) { # second option: OpenSSH (To be tested)
     Write-Connection-Info -VncPort ${vncport} -FtpPort ${ftpport}
@@ -49,7 +77,9 @@ if ( Get-command plink.exe ) { # default option: Putty
     $socket = $vncport
     ssh -M -S $socket -fNT -o ExitOnForwardFailure=yes -L ${vncport}:${vnchost}:${vncport} -L ${ftpport}:${vnchost}:22 ${username}@ssh.dccn.nl
     if ( ${LastExitCode} -ne 0 ) {
-        Write-Error "fail to setup tunnel" -ErrorAction stop
+        Write-ErrorMessage "fail to setup tunnel"
+        Read-Host -Prompt "press any key to close"
+        Exit
     }
     try {
         while($true) {}
@@ -58,5 +88,7 @@ if ( Get-command plink.exe ) { # default option: Putty
         ssh -S $socket -O exit ${username}@ssh.dccn.nl
     }
 } else {
-    Write-Error "no ssh client found"
+    Write-ErrorMessage "no ssh client found"
+    Read-Host -Prompt "press any key to close"
+    Exit
 }
