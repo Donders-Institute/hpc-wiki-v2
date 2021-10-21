@@ -66,6 +66,9 @@ $host.ui.RawUI.WindowTitle = "tunnel2vnc [${vncport}]"
 # input for ssh gateway username
 $username = Read-Host -Prompt "DCCN username"
 
+# try to include Paths where the PuTTY or OpenSSH are possibility installed
+$Env:Path += ";${Env:ProgramFiles}\PuTTY;${Env:ProgramFiles(x86)}\PuTTY;${Env:ProgramFiles}\OpenSSH"
+
 if ( Get-command plink.exe ) { # default option: Putty
     Write-Connection-Info -VncPort ${vncport} -FtpPort ${ftpport}
     # start plink, commandline putty
