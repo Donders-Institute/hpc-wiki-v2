@@ -23,7 +23,7 @@ Utility script
 
 For your convenience, we made an utility script to simplfy the setup of a SSH tunnel (for both VNC and data transfer).  Nevertheless, we recommend to understand the mechanism by going through the steps once.
 
-- tunnel2vnc script [`Windows <_static/tunnel2vnc/tunnel2vnc.ps1>`_] [`Linux/MacOS <_static/tunnel2vnc/tunnel2vnc.sh>`_]
+- tunnel2vnc script [`Windows <_static/tunnel2vnc/tunnel2vnc.ps1>`_] [`Linux/MacOSX <_static/tunnel2vnc/tunnel2vnc.sh>`_]
 
 For the usage of the script, see the tips in :ref:`vnc_ssh_tunnel_windows` and :ref:`vnc_ssh_tunnel_linux_mac`.
 
