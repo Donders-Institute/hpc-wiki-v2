@@ -1,3 +1,3 @@
 # hpc-wiki-v2
 
-DCCN HPC wiki written in reStructuredText and built with [Sphinx](http://www.sphinx-doc.org).
+DCCN HPC wiki written in reStructuredText and built with [Sphinx](http://www.sphinx-doc.org). It is v2 (version 2) because there was the first version written in Markdown.
