@@ -56,4 +56,5 @@ Tasks
 Solution
 ========
 
-.. .. include:: solution.rst
+..
+   include:: solution.rst
