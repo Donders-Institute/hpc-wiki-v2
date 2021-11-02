@@ -104,7 +104,7 @@ Solution
 ========
 
 .. 
-.. include:: exercise_wildcards_solution.rst
+  include:: exercise_wildcards_solution.rst
 
 Clean up
 ========
