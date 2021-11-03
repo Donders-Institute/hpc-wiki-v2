@@ -339,5 +339,4 @@ Your Task
 Solutions
 =========
 
-..
-   include:: exercise_programming_solutions.rst
+.. include:: exercise_programming_solutions.rst
