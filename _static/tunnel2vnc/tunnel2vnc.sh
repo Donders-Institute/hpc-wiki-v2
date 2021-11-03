@@ -1,7 +1,7 @@
 #!/bin/bash
 
 function stop() {
-    echo 
+    echo "shutting donw SSH tunnel ..."
     ssh -S ${socket} -O exit ${username}@ssh.dccn.nl
     exit 0
 }
@@ -42,7 +42,7 @@ cat << EOF
 !! Keep this terminal open !!
 
 - for VNC, connect VNC client to localhost:${vncport}
-- for data transfer, connect SFTP client to localhost:{ftpport}
+- for data transfer, connect SFTP client to localhost:${ftpport}
 - use Ctrl-C to close the tunnel.
 
 EOF
