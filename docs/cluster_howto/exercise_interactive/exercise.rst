@@ -13,7 +13,7 @@ Tasks
 
    .. code-block:: bash
    
-       $ qsub -I -N 'MyFirstJob' -l 'walltime=00:30:00,mem=128mb'
+       $ qsub -I -N 'MyFirstJob' -l 'walltime=00:30:00,mem=256mb'
 
 #. note the prologue message when the job starts.
 
