@@ -1,0 +1,25 @@
+#!/bin/bash
+#PBS -N <%= job.name %>
+#PBS -o <%= log.file %>
+#PBS -l walltime=<%= resources$walltime %>,mem=<%= resources$memory %>M
+#PBS -q batch
+#PBS -j oe
+
+## setup modules
+
+## create our own temp dir (and clean it up later)
+#mkdir /data/${USER}/${USER}-${PBS_JOBID}
+#export TMPDIR=/data/${USER}/${USER}-${PBS_JOBID}
+
+<%= sprintf("export OMP_NUM_THREADS=%i", resources$omp.threads) -%>
+<%= sprintf("export OPENBLAS_NUM_THREADS=%i", resources$blas.threads) -%>
+<%= sprintf("export MKL_NUM_THREADS=%i", resources$blas.threads) -%>
+
+## export value of DEBUGME environemnt var to slave
+#export DEBUGME=<%= Sys.getenv("DEBUGME") %>
+
+## run R
+Rscript -e 'batchtools::doJobCollection("<%= uri %>")'
+
+## Cleanup
+#rm -rf /data/${USER}/${USER}-${PBS_JOBID}
