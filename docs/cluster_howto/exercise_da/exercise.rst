@@ -1,7 +1,9 @@
 Exercise: distribute data analysis in the Torque cluster
 ********************************************************
 
-This exercise mimics a distributed data analysis assuming that we have to apply the same data analysis algorithm independently on the datasets collected from 6 subjects.  We will use the torque cluster to run the analysis in parallel.
+This exercise mimics a distributed data analysis assuming that we want to apply the same data analysis algorithm independently on a dataset acquired from 6 subjects.
+
+You will be given the dataset (with fake data) and the analysis program implemented in a BASH script.  Your task is to run the analysis over the dataset in parallel using the torque cluster.
 
 Preparation
 ===========
@@ -16,14 +18,14 @@ Using the commands below to download :download:`the exercise package <torque_exe
     $ ls
     run_analysis.sh  subject_0  subject_1  subject_2  subject_3  subject_4  subject_5
 
-In the package, there are folders for subject data (i.e. ``subject_{0..5}``).  In each subject folder, there is a data file containing an encrypted string (URL) pointing to the subject's photo.
+In the package, there are folders for subject data (i.e. ``subject_{0..5}``).  In each subject folder, there is a data file containing an encrypted string (URL) pointing to the subject's photo on the Internet.
 
 In this fake analysis, we are going to find out who our subjects are, using an trivial "analysis algorithm" that does the following two steps in each subject folder:
 
 1. decrypting the URL string, and
 2. downloading the subject's photo.
 
-The analysis algorithm has been provided as a function in the BASH script ``run_analysis.sh``.
+The analysis algorithm has been provided in the BASH script ``run_analysis.sh``.
 
 Tasks
 =====

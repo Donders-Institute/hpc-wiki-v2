@@ -335,6 +335,7 @@ Your Task
    .. note::
         For an even better solution, you can use what are called **unary operators**.  These are detailed among the `agonies <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_07_01.html>`_ of this fairly exhasutive treatment. They test if variables are empty strings, if files exist, etc. Note that this guide uses the ``[ ]`` form of ``test``, but you can use everything described there with the ``[[ ]]`` form as well.
 
+
 Solutions
 =========
 

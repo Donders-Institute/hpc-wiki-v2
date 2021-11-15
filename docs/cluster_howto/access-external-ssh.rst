@@ -4,10 +4,10 @@ Using SSH tunnel
 A SSH gateway named ``ssh.dccn.nl`` is provided for setting the SSH tunnels. When setting up a tunnel for connecting to a target service behind the firewall, one needs to choose a local network port that is still free for use on your desktop/laptop (i.e. the ``Source port``) and provides the network endpoint (i.e. the ``Destination``) referring to the target service.
 
 .. tip::
-    This technique can also be applied for accessing different services protected by the DCCN firewall.
+   This technique can also be applied for accessing different services protected by the DCCN firewall.
 
 .. contents:: Contents
-    :local:
+   :local:
 
 Instructions in video
 =====================
@@ -16,7 +16,16 @@ The following screencast will guide you through the steps of accessing the clust
 
 .. raw:: html
 
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/mdEnaDrpux8" frameborder="0" allowfullscreen></iframe>
+   <iframe width="560" height="315" src="https://www.youtube.com/embed/mdEnaDrpux8" frameborder="0" allowfullscreen></iframe>
+
+Utility script
+==============
+
+For your convenience, we made an utility script to simplfy the setup of a SSH tunnel (for both VNC and data transfer).  Nevertheless, we recommend to understand the mechanism by going through the steps once.
+
+- tunnel2vnc script [`Windows </_static/tunnel2vnc/tunnel2vnc.ps1>`_] [`Linux/MacOSX </_static/tunnel2vnc/tunnel2vnc.sh>`_]
+
+For the usage of the script, see the tips in :ref:`vnc_ssh_tunnel_windows` and :ref:`vnc_ssh_tunnel_linux_mac`.
 
 Putty login via SSH tunnel
 ==========================
@@ -50,7 +59,7 @@ Once you have logged in the gateway, you should keep the login window open; and 
 #. start another putty on the Windows desktop
 
    .. figure:: figures/start_putty.png
-       :figwidth: 60%
+      :figwidth: 60%
 
 #. configure putty for connecting to ``localhost`` on port ``8022``.  This is the port we initiated when establishing the tunnel.
 
@@ -60,16 +69,27 @@ Once you have logged in the gateway, you should keep the login window open; and 
 #. login with your username and password
 
    .. figure:: figures/putty_login_username_password.png
-       :figwidth: 60%
+      :figwidth: 60%
 
 #. get the virtual terminal with a shell prompt.  You should see the hostname ``mentat001`` showing on the prompt.
 
    .. figure:: figures/putty_login_success.png
       :figwidth: 60%
 
+.. _vnc_ssh_tunnel_windows:
+
 VNC via SSH tunnel (Windows)
 ============================
 
+.. tip::
+   A simple script wrapping up the steps below can be found `here </_static/tunnel2vnc/tunnel2vnc.ps1>`_.  After downloading the file, right-click the file to run with Powershell and follow the instruction to setup the tunnel.
+
+   If the Powershell program closed immediately after you run the script, you might need to set the Powershell execution policy.  Open the Powershell as the Administrator and run
+
+   .. code:: powershell
+
+      > Set-ExecutionPolicy -ExecutionPolicy Unrestricted
+   
 In this example, we choose ``Source port`` to be ``5956``.  We also assume that a VNC server has been started on ``mentat002`` with the display number ``56``. The ``Destination`` referring to the VNC server should be ``mentat002:5956``.
 
 .. note::
@@ -119,13 +139,31 @@ Once you have logged in the gateway, you should keep the login window open; and 
    .. figure:: figures/tigerVNC_success.png
       :figwidth: 60%
 
+.. _vnc_ssh_tunnel_linux_mac:
+
 VNC via SSH tunnel (Linux/Mac OSX)
 ==================================
+
+.. tip::
+   A simple script wrapping up the steps below can be found `here </_static/tunnel2vnc/tunnel2vnc.sh>`_.  Open a terminal and use the command below to download the script to setup the SSH tunnel:
+
+   .. code:: bash
+
+      $ curl -o $HOME/tunnel2vnc https://hpc.dccn.nl/_static/tunnel2vnc/tunnel2vnc.sh
+      $ chmod +x $HOME/tunnel2vnc
+
+   Run the command below in a terminal to start a SSH tunnel for VNC:
+
+   .. code:: bash
+
+      $ $HOME/tunnel2vnc
+      
+   and follow the instruction to setup the tunnel.
 
 In this example, we choose ``Source port`` to be ``5956``.  We also assume that a VNC server has been started on ``mentat002`` with the display number ``56``. The ``Destination`` referring to the VNC server should be ``mentat002:5956``.
 
 .. note::
-    The display number ``56`` is just an example.  In reality, you should replace it with a different number assigned by the *vncmanager*.  Nevertheless, the network port number is always the display number plus ``5900``.
+   The display number ``56`` is just an example.  In reality, you should replace it with a different number assigned by the *vncmanager*.  Nevertheless, the network port number is always the display number plus ``5900``.
 
 Follow the steps below to establish the tunnel for VNC connection:
 
