@@ -1,3 +1,5 @@
+.. _r-exercise-future:
+
 Exercise: distributed data analysis in R with `future` and `batchtools`
 **************************************************************************
 

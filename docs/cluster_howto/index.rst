@@ -41,7 +41,7 @@ Application software
     Matlab <exercise_matlab/exercise.rst>
     Freesurfer <exercise_freesurfer/exercise.rst>
     Python <exercise_python/exercise.rst>
-    R <exercise_R/exercise.rst>
+    R <exercise_R/index.rst>
 
 Exercises
 =========

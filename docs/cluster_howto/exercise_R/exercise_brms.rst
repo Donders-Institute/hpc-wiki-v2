@@ -1,3 +1,5 @@
+.. _r-exercise-brms:
+
 Exercise: distributed Bayesian regression modelling in R with `future` and `brms`
 ************************************************************************************
 
