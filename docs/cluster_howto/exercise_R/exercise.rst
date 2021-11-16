@@ -126,3 +126,7 @@ Follow the steps below:
         That is right!  In fact, we have factored out those functions into ``/opt/cluster/share/R`` so that you could easily make use of those functions in the future.
 
         In the script ``magic_cal_3.R``, it shows you how to load those functions in your R scripts.  It also shows you how to construct the name of the RData file using the job information.
+
+.. include:: exercise_future.rst
+
+.. include:: exercise_brms.rst
