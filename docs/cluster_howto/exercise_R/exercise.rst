@@ -10,11 +10,6 @@ This exercise is divided into two tasks. The first task is to get you familiar w
 .. note::
     In this exercise, we will use commands in R and in Linux shell. When you see the commands started with a prompt ``$``, it means a command in Linux shell.  If you see ``>``, it implies a command to be typed in a R console.
 
-R packages
-==========
-
-See :ref:`r-packages`.
-
 Preparation
 ===========
 
