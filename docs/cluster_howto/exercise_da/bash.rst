@@ -1,7 +1,7 @@
 The analysis program is provided as a bash script named ``run_analysis.sh``.
 
 Tasks
-=====
+-----
 
 #. (optional) read the script ``run_analysis.sh`` and try to get an idea how to use it. Don't spend too much time in understanding every detail.
 
@@ -27,6 +27,6 @@ Tasks
 #. wait until the jobs finish and check out who our subjects are. You should see a file ``photo.*`` in each subject's folder.
 
 Solution
-========
+--------
 
 .. include:: bash_solution.rst
