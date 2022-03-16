@@ -23,6 +23,7 @@ In the package, there are folders for subject data (i.e. ``subject_{0..5}``).  I
 In this fake analysis, we are going to find out who our subjects are, using an trivial "analysis algorithm" that does the following two steps in each subject folder:
 
 #. decrypting the URL string, and
+
 #. downloading the subject's photo.
 
 Using bash script
