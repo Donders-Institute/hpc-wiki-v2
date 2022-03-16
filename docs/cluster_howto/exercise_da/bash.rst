@@ -5,11 +5,11 @@ Tasks
 
 #. before you start, go into the directory of the ``torque_exercise`` and run
 
-    .. code-block:: bash
+   .. code-block:: bash
 
-        $ ./clean.sh
+       $ ./clean.sh
 
-    to remove previously produced results.
+   to remove previously produced results.
 
 #. (optional) read the script ``run_analysis.sh`` and try to get an idea how to use it. Don't spend too much time in understanding every detail.
 
