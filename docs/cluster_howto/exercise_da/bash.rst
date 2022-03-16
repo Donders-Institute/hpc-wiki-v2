@@ -1,7 +1,10 @@
+Using Bash script
+*****************
+
 The analysis program is provided as a bash script named ``run_analysis.sh``.
 
 Tasks
------
+=====
 
 #. before you start, go into the directory of the ``torque_exercise`` and run
 
@@ -35,6 +38,6 @@ Tasks
 #. wait until the jobs finish and check out who our subjects are. You should see a file ``photo.*`` in each subject's folder.
 
 Solution
---------
+========
 
 .. include:: bash_solution.rst
