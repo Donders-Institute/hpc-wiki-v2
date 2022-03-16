@@ -1,12 +1,15 @@
-Using Bash script
-*****************
+Distributed data analysis with bash script
+******************************************
 
-The analysis program is provided as a bash script named ``run_analysis.sh``.
+.. note::
+    If you are missing the context of this exercise, please refer to :ref:`exercise_da`.
+
+.. include:: preparation.rst
 
 Tasks
 =====
 
-#. before you start, go into the directory of the ``torque_exercise`` and run
+#. before you start, get into the directory of the ``torque_exercise`` and run
 
    .. code-block:: bash
 
