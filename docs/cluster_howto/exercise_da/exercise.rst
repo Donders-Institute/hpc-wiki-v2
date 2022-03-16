@@ -26,22 +26,10 @@ In this fake analysis, we are going to find out who our subjects are, using an t
 
 #. downloading the subject's photo.
 
-Using bash script
-=================
+.. toctree::
+    :maxdepth: 1
 
-.. include:: bash.rst
-
-Using Python
-============
-
-.. include:: python.rst
-
-Using R
-=======
-
-.. include:: r.rst
-
-Using Matlab
-============
-
-.. include:: matlab.rst
+    Bash script <bash.rst>
+    Python <python.rst>
+    R <r.rst>
+    Matlab <matlab.rst>
