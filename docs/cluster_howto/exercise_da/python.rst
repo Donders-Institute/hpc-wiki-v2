@@ -20,7 +20,7 @@ Tasks
 #.  (optional) read the script ``run_analysis.py`` and try to get an idea how to use it. Don't spend too much time in understanding every detail.
 
     .. tip::
-        The script consists of a Python **function** (``analyze_subject_data``) encapsulating the data-analysis algorithm. The function takes one input argument, the subject id.
+        The script consists of a Python function ``analyze_subject_data`` encapsulating the data-analysis algorithm. The function takes one input argument, the subject id.
 
 #.  The ``run_analysis.py`` script makes use of a Python library called ``requests`` which needs to be installed.  We make use of Anaconda and conda environment to install the library in the home directory.
 

@@ -20,7 +20,7 @@ Tasks
 #. (optional) read the script ``run_analysis.sh`` and try to get an idea how to use it. Don't spend too much time in understanding every detail.
 
    .. tip::
-        The script consists of a BASH **function** (``analyze_subject_data``) encapsulating the data-analysis algorithm. The function takes one input argument, the subject id. In the main program (the last line), the function is called with an input ``$1``. In BASH, variable ``$1`` is used to refer to the first argument of a shell command.
+        The script consists of a BASH function ``analyze_subject_data`` encapsulating the data-analysis algorithm. The function takes one input argument, the subject id. In the main program (the last line), the function is called with an input ``$1``. In BASH, variable ``$1`` is used to refer to the first argument of a shell command.
 
 #. run the analysis interactively on the dataset of ``subject_0``
 
