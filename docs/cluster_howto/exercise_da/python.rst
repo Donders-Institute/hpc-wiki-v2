@@ -41,11 +41,14 @@ Tasks
         [exercise] $ conda install requests
         ...
 
+    .. tip::
+        You will see the bash prompt is populated with the conda environment name.  It indicates that you are currently in the conda environment.  Only within the conda environment have you access to the ``requests`` library that we just installed.
+
 #.  At this point, you can test run the ``run_analysis.py`` script with one subject.  Let's test the analysis on subject ``0`` by doing:
 
     .. code-block:: bash
 
-        $ ./run_analysis.py 0
+        [exercise] $ ./run_analysis.py 0
 
     You should see the output file ``subject_0/photo.jpg`` when the analysis is done.
 
@@ -55,7 +58,7 @@ Tasks
 
     .. code-block:: bash
 
-        $ echo "$PWD/run_analysis.py 1" | qsub -l walltime=10:00,mem=1gb -N subject_1
+        [exercise] $ echo "$PWD/run_analysis.py 1" | qsub -l walltime=10:00,mem=1gb -N subject_1
 
     You should see the output file ``subject_1/photo.jpg`` when the analysis is done.  At this time, you also see the stdout/stderr files produced by the job.
 
@@ -63,10 +66,10 @@ Tasks
 
     .. code-block:: bash
 
-        $ ./clean.sh
+        [exercise] $ ./clean.sh
 
 #.  In order to run the analysis on all the 6 subjects in parallel, we use a bash for loop:
 
     .. code-block:: bash
 
-        $ for id in {0..6}; do echo "$PWD/run_analysis.py ${id}" | qsub -l walltime=10:00,mem=1gb -N subject_${id}; done
+        [exercise] $ for id in {0..6}; do echo "$PWD/run_analysis.py $id" | qsub -l walltime=10:00,mem=1gb -N subject_$id; done
