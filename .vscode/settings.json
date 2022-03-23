@@ -1,6 +1,7 @@
 {
     "editor.wordWrap": "wordWrapColumn",
     "editor.wordWrapColumn": 100,
-    "restructuredtext.confPath": "${workspaceFolder}",
-    "restructuredtext.languageServer.disabled": true
+    "esbonio.server.enabled": true,
+    "esbonio.server.pythonPath": "/usr/bin/python",
+    "esbonio.sphinx.confDir": "${workspaceFolder}"
 }
