@@ -131,7 +131,7 @@ Task 2: Using ``qsubcellfun``
 
         >> system('./clean.sh')    
 
-Task 2: Using ``qsubfeval`` and ``qsubget``
+Task 3: Using ``qsubfeval`` and ``qsubget``
 ===========================================
 
 Instead of using ``qsubcellfun`` shown in Task 1.  We could also use the combination of ``qsubfeval`` and ``qsubget``.  This approach puts submitted jobs in the background without blocking the command window.
