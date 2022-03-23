@@ -60,6 +60,12 @@ Tasks
 
         [exercise] $ echo "$PWD/run_analysis.py 1" | qsub -l walltime=10:00,mem=1gb -N subject_1
 
+    .. note::
+        Think a bit the construction of the shell command above:
+
+        - what is the idea behind the command-line pipe (``|``)? 
+        - why prepending ``$PWD/`` in front of the script?
+
     You should see the output file ``subject_1/photo.jpg`` when the analysis is done.  At this time, you also see the stdout/stderr files produced by the job.
 
 #.  Run the clean up before we start the analysis in parallel.
@@ -72,4 +78,6 @@ Tasks
 
     .. code-block:: bash
 
-        [exercise] $ for id in {0..6}; do echo "$PWD/run_analysis.py $id" | qsub -l walltime=10:00,mem=1gb -N subject_$id; done
+        [exercise] $ for id in {0..5}; do echo "$PWD/run_analysis.py $id" | qsub -l walltime=10:00,mem=1gb -N subject_$id; done
+
+    and check if you get outputs (photos) of all 6 subjects.
