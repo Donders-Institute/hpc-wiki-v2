@@ -31,8 +31,26 @@ Tasks
         $ module load anaconda3
         $ conda create --name exercise
         ...
+
+    .. note::
+        You might see a warning like the one below:
+
+        .. code-block::
+
+            ==> WARNING: A newer version of conda exists. <==
+              current version: 4.9.0
+              latest version: 4.12.0
+
+            Please update conda by running
+
+              $ conda update -n base -c defaults conda
+            ...
+
+            Proceed ([y]/n)?
+
+        You can ignore it and simply proceed with ``y``.
     
-    Activating the conda environment, and install the library ``requests``:
+    Activate the conda environment, and install the library ``requests``:
 
     .. code-block:: bash
 
