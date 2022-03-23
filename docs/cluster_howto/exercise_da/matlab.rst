@@ -6,21 +6,18 @@ Distributed data analysis with Matlab
 
 .. include:: preparation.rst
 
-Tasks
-=====
+Before you start, get into the directory of the ``torque_exercise`` and run
 
-#.  before you start, get into the directory of the ``torque_exercise`` and run
+.. code-block:: bash
 
-    .. code-block:: bash
+    $ ./clean.sh
 
-        $ ./clean.sh
+to remove previously produced results.
 
-    to remove previously produced results.
+Optionally, read the Matlab program ``run_analysis.m`` and try to get an idea how to use it. Don't spend too much time in understanding every detail.
 
-#.  (optional) read the Matlab program ``run_analysis.m`` and try to get an idea how to use it. Don't spend too much time in understanding every detail.
-
-    .. tip::
-        The script consists of a Matlab function ``run_analysis`` encapsulating the data-analysis algorithm. The function takes one input argument, the subject id.
+.. tip::
+    The script consists of a Matlab function ``run_analysis`` encapsulating the data-analysis algorithm. The function takes one input argument, the subject id.
 
 Task 1: Using ``matlab_sub`` 
 ============================
