@@ -133,6 +133,13 @@ Task 3: Using ``qsubfeval`` and ``qsubget``
 
 Instead of using ``qsubcellfun`` shown in Task 1.  We could also use the combination of ``qsubfeval`` and ``qsubget``.  This approach puts submitted jobs in the background without blocking the command window.
 
+#.  Make sure you are in the right working directory, and having the qsubtoolbox loaded in Matlab:
+
+    .. code-block:: matlab
+    
+        >> cd ~/torque_exercise
+        >> addpath '/home/common/matlab/fieldtrip/qsub/'
+
 #.  Submit jobs to run the 6 subjects in parallel using ``qsubfeval``
 
     .. code-block:: matlab
