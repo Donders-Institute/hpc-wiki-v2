@@ -26,7 +26,7 @@ socket=${vncport}
 read -p  "DCCN username: " username
 
 # create SSH tunnel in background with a control socket
-ssh -M -S ${socket} -fNT -o ExitOnForwardFailure=yes -L $vncport:$vnchost:$vncport -L ${ftpport}:$vnchost:22 ${username}@ssh.dccn.nl
+ssh -M -S ${socket} -fNT -o ExitOnForwardFailure=yes -L $vncport:$vnchost:$vncport -L ${ftpport}:$vnchost:22 -p 10990 ${username}@ssh.dccn.nl
 
 if [ $? -ne 0 ]; then
     echo "fail to setup tunnel" >&2

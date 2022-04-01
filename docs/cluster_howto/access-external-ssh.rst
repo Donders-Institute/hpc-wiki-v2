@@ -39,7 +39,7 @@ Follow the steps below to establish the tunnel for SSH connection:
    .. figure:: figures/start_putty.png
       :figwidth: 60%
 
-#. configure putty for connecting to the SSH gateway ``ssh.fcdonders.nl``
+#. configure putty for connecting to the SSH gateway ``ssh.dccn.nl``
 
    .. figure:: figures/putty_ssh_tunnel_gateway_setup.png
       :figwidth: 60%
@@ -102,7 +102,7 @@ Follow the steps below to establish the tunnel for VNC connection:
    .. figure:: figures/start_putty.png
       :figwidth: 60%
 
-#. configure putty for connecting to the SSH gateway ``ssh.fcdonders.nl``
+#. configure putty for connecting to the SSH gateway ``ssh.dccn.nl``
 
    .. figure:: figures/putty_ssh_tunnel_gateway_setup.png
       :figwidth: 60% 
