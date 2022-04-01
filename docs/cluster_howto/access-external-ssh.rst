@@ -177,7 +177,7 @@ Follow the steps below to establish the tunnel for VNC connection:
    
    .. code:: bash
       
-      $ ssh -L 5956:mentat002:5956 xxxyyy@ssh.dccn.nl
+      $ ssh -L 5956:mentat002:5956 -p 10990 xxxyyy@ssh.dccn.nl
       
    A screenshot below shows an example:
    
