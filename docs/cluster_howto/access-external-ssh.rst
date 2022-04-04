@@ -61,7 +61,7 @@ Follow the steps below to establish the tunnel for SSH connection:
    .. figure:: figures/putty_ssh_tunnel_gateway_login.png
       :figwidth: 60%
 
-Once you have logged in the gateway, you should keep the login window open; and make another SSH connection to the local port as follows:
+   Once you have logged in the gateway, you should keep the login window open. If you close the terminal, the tunnel is also closed.  You can now make a SSH connection to the mentat node (``mentat001`` in this case).
 
 #. start another putty on the Windows desktop
 
@@ -127,7 +127,7 @@ Follow the steps below to establish the tunnel for VNC connection:
    .. figure:: figures/putty_ssh_tunnel_gateway_login.png
       :figwidth: 60%
 
-Once you have logged in the gateway, you should keep the login window open; and maken a VNC client connection to the local port as follows:
+   Once you have logged in the gateway, you should keep the login window open. If you close the terminal, the tunnel is also closed.  You can now make a connection to your VNC session through this SSH tunnel.
 
 #. open the TigerVNC application
 
