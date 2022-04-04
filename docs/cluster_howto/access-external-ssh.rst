@@ -1,6 +1,10 @@
 Using SSH tunnel
 ****************
 
+.. note::
+   Using the SSH tunnel requires a vetting process to enable MFA (Multi-Factor Authentication). 
+   Please check `the intranet page <https://intranet.donders.ru.nl/index.php?id=sshmfa>`_ to complet the vetting before following the instructions below.
+
 A SSH gateway named ``ssh.dccn.nl`` is provided for setting the SSH tunnels. When setting up a tunnel for connecting to a target service behind the firewall, one needs to choose a local network port that is still free for use on your desktop/laptop (i.e. the ``Source port``) and provides the network endpoint (i.e. the ``Destination``) referring to the target service.
 
 .. tip::
@@ -49,7 +53,10 @@ Follow the steps below to establish the tunnel for SSH connection:
    .. figure:: figures/putty_ssh_tunnel_for_ssh.png
       :figwidth: 60%
 
-#. login the gateway with your username and password to establish the tunnel
+#. login the gateway with your DCCN credential (username, password) and a valid OTP (one-time password) to establish the tunnel
+
+   .. note::
+      A `vetting process <https://intranet.donders.ru.nl/index.php?id=sshmfa>`_ is required for getting a valid one-time password.
 
    .. figure:: figures/putty_ssh_tunnel_gateway_login.png
       :figwidth: 60%
@@ -66,7 +73,7 @@ Once you have logged in the gateway, you should keep the login window open; and 
    .. figure:: figures/putty_ssh_login_via_tunnel.png
       :figwidth: 60%
 
-#. login with your username and password
+#. login with your DCCN credential (username, password)
 
    .. figure:: figures/putty_login_username_password.png
       :figwidth: 60%
@@ -112,7 +119,10 @@ Follow the steps below to establish the tunnel for VNC connection:
    .. figure:: figures/putty_ssh_tunnel_for_vnc.png
       :figwidth: 60%
 
-#. login the gateway with your username and password to establish the tunnel
+#. login the gateway with your DCCN credential (username, password) and a valid OTP (one-time password) to establish the tunnel
+
+   .. note::
+      A `vetting process <https://intranet.donders.ru.nl/index.php?id=sshmfa>`_ is required for getting a valid one-time password.
 
    .. figure:: figures/putty_ssh_tunnel_gateway_login.png
       :figwidth: 60%
