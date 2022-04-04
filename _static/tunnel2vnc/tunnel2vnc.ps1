@@ -72,7 +72,7 @@ $Env:Path += ";${Env:ProgramFiles}\PuTTY;${Env:ProgramFiles(x86)}\PuTTY;${Env:Pr
 if ( Get-command plink.exe ) { # default option: Putty
     Write-Connection-Info -VncPort ${vncport} -FtpPort ${ftpport}
     # start plink, commandline putty
-    Start-Process -FilePath plink.exe -ArgumentList "-ssh ${username}@ssh.dccn.nl -t -N -L ${vncport}:${vnchost}:${vncport} -L ${ftpport}:${vnchost}:22" -NoNewWindow -Wait
+    Start-Process -FilePath plink.exe -ArgumentList "-ssh ${username}@ssh.dccn.nl -t -N -L ${vncport}:${vnchost}:${vncport} -L ${ftpport}:${vnchost}:22 -P 10990" -NoNewWindow -Wait
 
 } elseif ( Get-command ssh) { # second option: OpenSSH (To be tested)
     Write-Connection-Info -VncPort ${vncport} -FtpPort ${ftpport}
