@@ -43,4 +43,4 @@ Tasks
 Solution
 ========
 
-.. include:: bash_solution.rst
+.. .. include:: bash_solution.rst
