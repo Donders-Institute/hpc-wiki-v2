@@ -19,30 +19,17 @@ Utilise the scratch drive on the compute node
 
 If your compute jobs on the cluster produce intermediate data during the process, using the scratch drive locally on the compute node has two benefits:
 
-* Data I/O on local drive is faster than on the home and project directory provided by a network-attached storage.
 * It saves storage space in your home or project directory.
+* For some usecases, data I/O on local drive can be faster than on the home and project directory provided by a network-attached storage.
 
-The scratch drive on the compute node is mounted on the path of ``/data``.  A general approach of storing data on it is to create a subdirectory under the ``/data`` path, and make the name specific to your job.  For exampl, you could introduce a new environment variable in the BASH shell called ``LOCAL_SCATCH_DIR`` in the following way:
-
-.. code-block:: bash
-
-    export LOCAL_SCRATCH_DIR=/data/${USER}/${PBS_JOBID}/$$
-    mkdir -p ${LOCAL_SCRATCH_DIR}
-
-Whenever you want to store intermediate data to the directory, use the absolute path with prefix ``${LOCAL_SCRATCH_DIR}``. For example,
+The scratch drive is job specific (i.e. each job has its own scratch drive).  Within the context of the job, the path of the scratch drive is available via one of the following environment variables: ``$TMP``, ``$TEMP``, ``$TMPDIR`` and ``$TEMPDIR``.  With these four variables, it should make most of the applications use the scratch drive for temporary data.  If you are writing your own temporary data, make sure that you use one of the variables to create temporary data files.  For instance, in a bash script:
 
 .. code-block:: bash
 
-    cp /home/tg/honlee/mydataset.txt ${LOCAL_SCRATCH_DIR}/mydataset.txt
-
-It would be nice if your job also takes care of clean up of the data in the `/data` directory.  For example,
-
-.. code-block:: bash
-
-    rm -rf ${LOCAL_SCRATCH_DIR}
-
-Generally speaking, it's not really necessary as data in this directory will be automatically removed after 14 days. However, it may help other users (and yourself) to utilise the local scratch for large datasets if space is not occupied by finished jobs.
-
+    tmpfile=${TMP}/mytmp.data
+    
+Data in the scratch drive will be removed immediately after the job is completed.
+    
 Avoid massive output to STDOUT
 ==============================
 
