@@ -22,7 +22,7 @@ If your compute jobs on the cluster produce intermediate data during the process
 * It saves storage space in your home or project directory.
 * For some usecases, data I/O on local drive can be faster than on the home and project directory provided by a network-attached storage.
 
-The scratch drive is job specific (i.e. each job has its own scratch drive).  Within the context of the job, the path of the scratch drive is available via one of the following environment variables: ``$TMP``, ``$TEMP``, ``$TMPDIR`` and ``$TEMPDIR``.  With these four variables, it should make most of the applications use the scratch drive for temporary data ([why these variables?](https://en.wikipedia.org/wiki/TMPDIR)).  If you are writing your own temporary data, make sure that you use one of the variables to create temporary data files.  For instance, in a bash script:
+The scratch drive is job specific (i.e. each job has its own scratch drive).  Within the context of the job, the path of the scratch drive is available via one of the following environment variables: ``$TMP``, ``$TEMP``, ``$TMPDIR`` and ``$TEMPDIR``.  With these four variables, it should make most of the applications use the scratch drive for temporary data (`why the variables? <https://en.wikipedia.org/wiki/TMPDIR>`_).  If you are writing your own temporary data, make sure that you use one of the variables to create temporary data files.  For instance, in a bash script:
 
 .. code-block:: bash
 
