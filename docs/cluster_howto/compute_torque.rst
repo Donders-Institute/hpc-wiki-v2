@@ -266,7 +266,7 @@ Each job submitted to the cluster comes with a resource requirement. The job sch
 When submitting jobs with the ``qsub`` command, one uses the ``-l`` option to specify required resources. The value of the ``-l`` option follows certain syntax. Detail of the syntax can be found on `the Torque documentation <http://docs.adaptivecomputing.com/torque/6-1-2/adminGuide/torque.htm#topics/torque/2-jobs/requestingRes.htm?Highlight=resource%20specification>`_. Hereafter are few useful, and mostly used examples for jobs requiring:
 
 .. warning::
-    The examples below only show the option of the ``qsub`` command for resource specification (``-l``); therefore they are NOT complete commands.  You need to make the command complete by adding either a ``-I`` option for an interactive job or passing a script to be run as a batch job.
+    The examples below only show the option of the ``qsub`` command for resource specification (``-l``); therefore they are NOT complete commands.  You need to make the command complete by adding either a ``-I`` option for an interactive job or passing a script to be run as a batch job.
 
 1 CPU core, 4 gigabytes memory and 12 hours wallclock time
 ----------------------------------------------------------
@@ -286,14 +286,14 @@ The requirement of 1 CPU is skipped as it is by default to be 1.
 
 Here we explicitly ask 4 CPU cores to be on the same compute node. This is usually a case that the application (such as multithreading of MATLAB) can benefit from multiple cores on a (SMP) node to speed up the computation.
 
-1 CPU core, 500gb of free local "scratch" diskspace in /data, 12 hours wallclock time, and 4 gb memory
-----------------------------------------------------------------------
+1 CPU core, 500gb of free local "scratch" diskspace, 12 hours wallclock time, and 4 gb memory
+---------------------------------------------------------------------------------------------
 
 .. code-block:: bash
 
     $ qsub -l 'file=500gb,walltime=12:00:00,mem=4gb' job.sh
 
-Here we explicitly ask for 500gb of free local diskspace located in /data on the compute node. This could for instance be asked for when submitting an fmriprep job that requires lots of local diskspace for computation. The more jobs are running, the longer it can take for torque to find a node with enough free diskspace to run the job. Max to request for is 3600gb.
+Here we explicitly ask for 500gb of :ref:`job-specific scratch space <best-practice-scratch>` on the compute node. This could for instance be asked for when submitting an fmriprep job that requires lots of local diskspace for computation. The more jobs are running, the longer it can take for torque to find a node with enough free diskspace to run the job. Max to request for is 3600gb.
 
 .. note::
     In case you use more than the requested 500gb there will be no penalty. Diskspace is monitored, but your job won't fail if the requested diskspace is "overused", as long as diskspace is available. Of course if no more diskspace is available your job will fail.

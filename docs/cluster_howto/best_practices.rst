@@ -14,6 +14,8 @@ With the longer job, your whole computation task will also be done faster given 
 
 A trade-off of this approach is that if a job fails, more computing time is wasted. This can be overcome with a good bookeeping in such that results from the finished computations in a job is preserved, and the finished computations do not need to be re-run.
 
+.. _best-practice-scratch:
+
 Utilise the scratch drive on the compute node
 =============================================
 
@@ -26,7 +28,7 @@ The scratch drive is job specific (i.e. each job has its own scratch drive).  Wi
 
 .. code-block:: bash
 
-    tmpfile=${TMP}/mytmp.data
+    tmpfile=${TMP}/mytmp.data
     
 Data in the scratch drive will be removed immediately after the job is completed.
     
