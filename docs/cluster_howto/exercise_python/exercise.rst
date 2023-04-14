@@ -179,5 +179,5 @@ You will encounter a graphical dialog through which you can select the PyCharm v
 Using the ``demo`` conda environment as an example, here are steps to follow:
 
 1. Start a new project, go to PyCharm's ``Settings`` -> ``Project`` -> ``Python Interpreter`` and select your ``demo`` conda environment (you may have to click on ``Show All``). 
-2. Close the settings and open a bash command shell using the ``Terminal`` button in the bottom of the main window. You could now check in the terminal whether the ``nibabel`` Python module we installed earlier is still avaiable by running: ``nibabel_example.py``.
+2. Close the settings and open a bash command shell using the ``Terminal`` button in the bottom of the main window. You could now check in the terminal whether the ``nibabel`` Python module we installed earlier is still avaiable by running: ``$ python nibabel_example.py``.
 3. Alternatively, use the menu to open the file in the editor and then the ``Run`` menu to run or debug the example code. This should give the same results as before.
