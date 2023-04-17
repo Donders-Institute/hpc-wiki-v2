@@ -166,8 +166,8 @@ Try to run the python script ``nibabel_example.py`` again in the notebook. It sh
 Task 4: PyCharm
 ===============
 
-`PyCharm <https://www.jetbrains.com/pycharm/>`_ is one of the most popular integrated development environment (IDE) for Python projects.  PyCharm features a full integration with git(hub) support, and contains a rich project-based editor, as well as integrated python and bash terminals to run your python code or applications.
-If you create an account on the Pycharm website with your university email you can make use of the `PyCharm Pro <https://www.jetbrains.com/shop/eform/students/>`-- version, which supports working with Jupyter notebooks from within the Pycharm IDE (which makes for a much better experience than using the browser as a notebook front-end)
+`PyCharm <https://www.jetbrains.com/pycharm/>`__ is one of the most popular integrated development environment (IDE) for Python projects.  PyCharm features a full integration with git(hub) support, and contains a rich project-based editor, as well as integrated python and bash terminals to run your python code or applications.
+If you create an account on the Pycharm website with your university email you can make use of the `PyCharm Pro <https://www.jetbrains.com/shop/eform/students/>`__ version, which supports working with Jupyter notebooks from within the Pycharm IDE (which makes for a much better experience than using the browser as a notebook front-end)
 
 To run PyCharm on a cluster execution node simply run:
 
