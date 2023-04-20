@@ -163,47 +163,22 @@ Within the conda environment, simply run the command ``jupyter-notebook`` to sta
 
 Try to run the python script ``nibabel_example.py`` again in the notebook. It should just work.
 
-Task 4: Spyder
-==============
+Task 4: PyCharm
+===============
 
-`Spyder <https://www.spyder-ide.org/>`_ is one of the integrated development environment (IDE) for Python projects.  It is part of the Anaconda package.
+`PyCharm <https://www.jetbrains.com/pycharm/>`__ is one of the most popular integrated development environment (IDE) for Python projects.  PyCharm features a full integration with git(hub) support, and contains a rich project-based editor, as well as integrated python and bash terminals to run your python code or applications.
+Moreover, if you `create a free account <https://www.jetbrains.com/shop/eform/students/>`__ on the Pycharm website with your university email, you can make use of the PyCharm Pro version, which supports working with Jupyter notebooks from within the Pycharm IDE (which makes for a much better experience than using the browser as a notebook front-end).
 
-If you just want to make use of the Spyder IDE without the need of loading specific Python modules from your own conda environment, you could simply run the following command on a cluster access node within a VNC session:
-
-.. code-block:: bash
-
-    $ spyder
-
-You will encounter a graphical dialog through which you can select the Spyder from a specific Anaconda version.  The wrapper then submits a job to the cluster to launch the specific spyder version on a computer node.
-
-If you want to use specific modules installed in a conda environment, you have to install your own Spyder in the same conda environment.  Using the ``demo`` conda environment as an example, here are steps to follow:
-
-Make sure you are in the conda environment we created in task 1; otherwise, do the following commands:
+To run PyCharm on a cluster execution node simply run:
 
 .. code-block:: bash
 
-    $ source activate demo
+    $ pycharm
 
-Install the Spyder package, using the ``conda install`` command:
+You will encounter a graphical dialog through which you can select the PyCharm version you like to use (the wrapper then submits a job to the cluster).
 
-.. important::
-    **DO NOT** install spyder from ``pip install``.  The spyder installed via ``pip`` doesn't take care of library dependancies and therefore it is very likely to be broken.
+Using the ``demo`` conda environment as an example, here are steps to follow:
 
-.. code-block:: bash
-
-    $ conda install spyder
-
-Submit an interactive job with your required resource, e.g.:
-
-.. code-block:: bash
-
-    $ qsub -I -l walltime=1:00:00,mem=4gb
-
-Under the shell prompt of the interactive job, run the following commands to start Spyder:
-
-.. code-block:: bash
-
-    $ source activate demo
-    $ spyder
-
-You could now check within the Spyder IDE whether the ``nibabel`` Python module we installed earlier is still avaiable. For instance, **Open** the file ``nibabel_example.py`` in Spyder, and press the ``F5`` key on the keyboard (or select the **Run** on the menu). This should give the result in the IPython console (at the right-bottom of the Spyder IDE).
+1. Start a new project, go to PyCharm's ``Settings`` -> ``Project`` -> ``Python Interpreter`` and select your ``demo`` conda environment (you may have to click on ``Show All``). 
+2. Close the settings and open a bash command shell using the ``Terminal`` button in the bottom of the main window. You could now check in the terminal whether the ``nibabel`` Python module we installed earlier is still available by running: ``$ python nibabel_example.py``.
+3. Alternatively, use the menu to open the file in the editor and then the ``Run`` menu to run or debug the example code. This should give the same results as before.

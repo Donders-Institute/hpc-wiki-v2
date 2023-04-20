@@ -11,4 +11,4 @@ In this case, you need to make the connection indirectly via one of the followin
     :maxdepth: 1
 
     Using eduVPN <access-external-eduvpn.rst>
-    Using SSH tunnel <access-external-ssh.rst>
+..    Using SSH tunnel <access-external-ssh.rst>

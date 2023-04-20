@@ -98,6 +98,7 @@ The following single command will remove both ``honlee`` and ``edwger`` from pro
     $ prj_delacl honlee,edwger 3010000.01
 
 .. _project_storage_subdir:
+
 Controlling access permission on sub-directories
 ------------------------------------------------
 
@@ -123,6 +124,7 @@ If it happens that the user ``edwger`` doesn't have any role in directory ``/pro
     In this situation, user ``edwger`` has to specify the directory ``/project/3010000.01/subject_001`` or ``P:\3010000.01\subject_001`` manually in the file explorer to access the sub-directory.  This is due to the fact that the user with traverse role cannot see any content (files or directories, including those the user has access permission) in the directory. 
 
 .. _project_storage_traverse_role:
+
 The **Traverse** role
 ^^^^^^^^^^^^^^^^^^^^^
 
