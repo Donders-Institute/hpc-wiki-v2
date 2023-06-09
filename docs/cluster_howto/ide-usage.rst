@@ -1,13 +1,9 @@
-Using supported IDE
-************************
+Integrated development environment
+**********************************
 
-Currently we do not have cluster-wide IDE installed. However, in the following section you can find tutorials setting your local IDEs supported by the cluster.
-
-.. tip::
-
-    You are welcomed to take initiative for introducing a new IDE in the repository, with the awareness of the maintainer's responsibility. See :ref:`software-maintainer` for more detail.
+Hereafter are instructions for using different integrated development environments (IDE) on the HPC cluster.
 
 .. toctree::
     :maxdepth: 1
-
+        Using PyCharm <ide-pycharm.rst>
         Using VSCode <ide-vscode.rst>
