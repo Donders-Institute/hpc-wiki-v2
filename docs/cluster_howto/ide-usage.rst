@@ -10,4 +10,4 @@ Currently we do not have cluster-wide IDE installed. However, in the following s
 .. toctree::
     :maxdepth: 1
 
-        Using VScode <ide-vscode.rst>
+        Using VSCode <ide-vscode.rst>

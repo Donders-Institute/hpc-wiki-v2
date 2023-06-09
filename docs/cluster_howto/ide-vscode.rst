@@ -52,7 +52,7 @@ Using the 'code' CLI (On DCCN's server)
 You can also use the code CLI inside the computational node.
 
 1. Start an Interactive job.
-2. Repeat the above steps 2-4. You can now using VScode inside the computational node.
+2. Repeat the above steps 2-4. You can now using VSCode inside the computational node.
 
 
 Using the the VSCode Remote Extension (On 'your' local VSCode)
