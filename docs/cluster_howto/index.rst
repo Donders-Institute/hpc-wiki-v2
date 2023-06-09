@@ -28,7 +28,7 @@ Using the cluster
 
     Torque cluster <compute_torque.rst>
     Using supported software <software-usage.rst>
-    Integrated development environment <ide-usage.rst>
+    Using IDE for coding <ide-usage.rst>
     Maintaining supported software <software-maintenance.rst>
     Best practices <best_practices.rst>
 

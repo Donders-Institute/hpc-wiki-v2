@@ -5,5 +5,6 @@ Hereafter are instructions for using different integrated development environmen
 
 .. toctree::
     :maxdepth: 1
-        Using PyCharm <ide-pycharm.rst>
-        Using VSCode <ide-vscode.rst>
+
+    Using PyCharm <ide-pycharm.rst>
+    Using VSCode <ide-vscode.rst>

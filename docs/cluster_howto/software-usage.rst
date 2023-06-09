@@ -10,5 +10,5 @@ Commonly used data analysis/process software are centrally managed and supported
 .. toctree::
     :maxdepth: 1
 
-        Using environment modules <software-modules.rst>
-        Using utility scripts <software-scripts.rst>
+    Using environment modules <software-modules.rst>
+    Using utility scripts <software-scripts.rst>
