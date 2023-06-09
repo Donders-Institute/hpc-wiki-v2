@@ -21,7 +21,7 @@ Running the 'code' CLI (On DCCN's server)
 
 This step will setup and run the code CLI via an interactive job on the cluster. This CLI will establish a tunnel enabling code changing, testing and debugging on the cluster from a VSCode graphical interface running on your local computer. 
 
-#. Login using VNC and start a Terminal. Download the `standalone CLI <https://code.visualstudio.com/#alt-downloads>`_ in Linux x64. After running the following code you'll get a binary file named 'code' in your home directory.
+1. Login using VNC and start a Terminal. Download the `standalone CLI <https://code.visualstudio.com/#alt-downloads>`_ in Linux x64. After running the following code you'll get a binary file named 'code' in your home directory.
 
   .. code-block:: bash
 
@@ -33,25 +33,25 @@ This step will setup and run the code CLI via an interactive job on the cluster.
       :figwidth: 100%
       :align: center
 
-#. Start an interactive job with required resources, e.g.
+2. Start an interactive job with required resources, e.g.
 
   .. code-block:: bash
 
       $ qsub -I -l walltime=12:00:00,mem=8gb
 
-#. At the prompt of the interactive job, start the VSCode tunnel through following command:
+3. At the prompt of the interactive job, start the VSCode tunnel through following command:
 
   .. code-block:: bash
 
       $ $HOME/code tunnel
 
-#. Login with you github account:
+4. Login with you github account:
 
   .. figure:: figures/vscode_cli_login.png
       :figwidth: 100%
       :align: center
 
-#. If success, you'll see a link. You can now paste the link into your local browser and open VSCode from your laptop. Note that you only have to do this once. Be sure to leave this terminal open to maintain the tunnel forwarding.
+5. If success, you'll see a link. You can now paste the link into your local browser and open VSCode from your laptop. Note that you only have to do this once. Be sure to leave this terminal open to maintain the tunnel forwarding.
 
   .. figure:: figures/vscode_success_login.png
       :figwidth: 100%
@@ -66,15 +66,15 @@ You can install and use the `Remote - Tunnels` extension on your local (e.g. per
 
 To connect to a remote machine using the extension, follow these steps:
 
-#. Install the `Remote - Tunnels extension <https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-server>`_.
+1. Install the `Remote - Tunnels extension <https://marketplace.visualstudio.com/items?itemName=ms-vscode.remote-server>`_.
 
-#. In the VS Code Account menu, select the option to Turn on Remote Tunnel Access, as demonstrated in the image below. You may also open the Command Palette (F1) in VS Code and run the command Remote Tunnels: Turn on Remote Tunnel Access....
+2. In the VS Code Account menu, select the option to Turn on Remote Tunnel Access, as demonstrated in the image below. You may also open the Command Palette (F1) in VS Code and run the command Remote Tunnels: Turn on Remote Tunnel Access....
 
   .. figure:: figures/vscode_turn_on_remote_tunnel.png
       :figwidth: 100%
       :align: center
    
-#. You'll be prompted to log into GitHub. Once you're logged, you'll be able to connect to your remote machine.
+3. You'll be prompted to log into GitHub. Once you're logged, you'll be able to connect to your remote machine.
 
 References
 ----------
