@@ -98,6 +98,8 @@ Batch job
 
         sleep 600
 
+    The script is essentially a bash script with few comment lines right after the script's shebang (i.e. the first line).  Those comment lines are started with ``#SBATCH`` followed by options the same as the options supported by Slurm's job submission program ``sbatch``. 
+
 #. submit the job script to slurm
 
     .. code-block:: bash
