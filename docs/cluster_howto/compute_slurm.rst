@@ -21,13 +21,13 @@ Partition
 
 In the Slurm cluster, compute nodes are divided in partitions.
 
-+------------+-----------------------+---------------------+----------------------+--------------+
-| partition  | max. walltime per job | max. memory per job | special feature      | job priority |
-+============+=======================+=====================+======================+==============+
-| batch      | 72 hours              | 256 GB              |                      | normal       |
-+------------+-----------------------+---------------------+----------------------+--------------+
-| interactive| 72 hours              | 64 GB               |                      | high         |
-+------------+-----------------------+---------------------+----------------------+--------------+
++------------+-----------------------+---------------------+--------------+
+| partition  | max. walltime per job | max. memory per job | job priority |
++============+=======================+=====================+==============+
+| batch      | 72 hours              | 256 GB              | normal       |
++------------+-----------------------+---------------------+--------------+
+| interactive| 72 hours              | 64 GB               | high         |
++------------+-----------------------+---------------------+--------------+
 
 Throttling policies for resource usage
 ---------------------------------------
@@ -105,7 +105,7 @@ Batch job
         $ sbatch slurm_first_job.sh
         Submitted batch job 951
 
-    A job id is returned after job submission. In the example above, the job id is ``951``.
+A job id is returned after job submission. In the example above, the job id is ``951``.
 
 Job status and information
 ==========================
@@ -116,15 +116,7 @@ One can use the ``squeue`` to get an overview of running and pending jobs.
 
     $ squeue
         JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-        951     batch myfirstj   honlee  R       0:05      1 dccn-c079
-
-Or with some format of the output (similar to the output of ``qstat`` of Torque):
-
-.. code-block:: bash
-
-    $ squeue --format="%.9i %22j %8u %8T %.7M %.13l %6D %20R %C"
-        JOBID NAME                   USER     STATE       TIME    TIME_LIMIT NODES  NODELIST(REASON)     CPUS
-        951 myfirstjob             honlee   RUNNING     0:12          5:00 1      dccn-c079            1
+        951   batch     myfirstj   honlee  R       0:05      1 dccn-c079
 
 To get job's detail information, one use the command ``scontrol``:
 
@@ -167,7 +159,7 @@ Job deletion
 
 To delete a running or pending job, one use the ``scancel`` command:
 
-.. code-block::
+.. code-block:: bash
 
     $ scancel 951
 
