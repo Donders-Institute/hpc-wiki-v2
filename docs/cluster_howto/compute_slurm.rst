@@ -239,8 +239,8 @@ The **walltime** and **memory** requirements are the most essential ones amongst
 
    Upon the start of an interactive job, a resource comsumption monitor is shown on the top-right corner of your VNC desktop.  An example is shown in the following screenshot:
 
-   .. figure:: figures/torque_interactive_jobinfo.png
-      :figwidth: 90%
+   .. figure:: figures/slurm_interactive_jobinfo.png
+      :figwidth: 80%
       :align: center
 
    The resource monitor consists of three bars.  From top to bottom, they are:
