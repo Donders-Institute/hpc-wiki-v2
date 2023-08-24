@@ -27,6 +27,7 @@ Using the cluster
     :maxdepth: 2
 
     Torque cluster <compute_torque.rst>
+    Slurm cluster <compute_slurm.rst>
     Using supported software <software-usage.rst>
     Using IDE for coding <ide-usage.rst>
     Maintaining supported software <software-maintenance.rst>
