@@ -4,7 +4,7 @@ Running computations on the Slurm cluster
 *****************************************
 
 .. warning::
-    The DCCN slurm cluster is still in the preview/testing phase.  **DO NOT** rely on it for producing your data analysys results.
+    The DCCN slurm cluster is still in the preview/testing phase.  **DO NOT** rely on it for producing your data analysis results.
 
 What is the Slurm cluster?
 ==========================
@@ -58,7 +58,7 @@ Note: Job priority calculation is dynamic and not complete transparent to users.
 The `slurm` module
 ==================
 
-Wrapper scripts, such as ``vncmanager``, ``matlat``, ``rstudio``, ``pycharm``, etc. are available via environment module ``slurm``.
+Wrapper scripts, such as ``vncmanager``, ``matlab``, ``rstudio``, ``pycharm``, etc. are available via environment module ``slurm``.
 
 .. code-block:: bash
 
@@ -237,7 +237,7 @@ The **walltime** and **memory** requirements are the most essential ones amongst
 
    A good way of estimating the wall time and memory requirement is through monitoring the usage of them at run time. This approach is only feasible if you run the job interactively through a graphical interface. Nevertheless, it's encouraged to test your data analysis computation interactively once before submitting it to the cluster with a large amount of batch jobs. Through the interactive test, one could easily debug issues and measure the resource usage.
 
-   Upon the start of an interactive job, a resource comsumption monitor is shown on the top-right corner of your VNC desktop.  An example is shown in the following screenshot:
+   Upon the start of an interactive job, a resource consumption monitor is shown on the top-right corner of your VNC desktop.  An example is shown in the following screenshot:
 
    .. figure:: figures/slurm_interactive_jobinfo.png
       :figwidth: 80%
@@ -245,6 +245,6 @@ The **walltime** and **memory** requirements are the most essential ones amongst
 
    The resource monitor consists of three bars.  From top to bottom, they are:
 
-   * Elapsed walltime: the bar indicates the elasped walltime consumed by the job.  It also shows the remaining walltime.  The walltime is adjusted accordingly to the CPU speed.
+   * Elapsed walltime: the bar indicates the elapsed walltime consumed by the job.  It also shows the remaining walltime.  The walltime is adjusted accordingly to the CPU speed.
    * Memory usage: the bar indicates the current memory usage of the job.
    * Max memory usage: the bar indicates the peak memory usage of the job.
