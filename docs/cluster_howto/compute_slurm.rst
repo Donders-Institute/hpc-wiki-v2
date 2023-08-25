@@ -89,7 +89,7 @@ Batch job
         #SBATCH --nodes=1
         #SBATCH --time=0-00:05:00
         #SBATCH --mail-type=FAIL
-        #SBATCH --partition batch
+        #SBATCH --partition=batch
         #SBATCH --mem=5GB
 
         hostname
