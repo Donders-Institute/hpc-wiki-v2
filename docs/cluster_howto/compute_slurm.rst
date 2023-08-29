@@ -23,7 +23,7 @@ Migrating from Torque/PBS to SLURM
 +------------------------------+----------------------------------+------------------------------------------+
 | Show job status              | qstat                            | squeue                                   |
 +------------------------------+----------------------------------+------------------------------------------+
-| Show expected job start time | -- (showstart in Maui/Moab)      | squeue --start                           |
+| Show expected job start time | \- (showstart in Maui/Moab)      | squeue --start                           |
 +------------------------------+----------------------------------+------------------------------------------+
 | Show queue info              | qstat -q                         | sinfo                                    |
 +------------------------------+----------------------------------+------------------------------------------+
@@ -33,7 +33,7 @@ Migrating from Torque/PBS to SLURM
 +------------------------------+----------------------------------+------------------------------------------+
 | Show node details            | pbsnode n0000                    | scontrol show node n0000                 |
 +------------------------------+----------------------------------+------------------------------------------+
-| Show QoS details             | -- (mdiag -q <QoS> in Maui/Moab) | sacctmgr show qos <QoS>                  |
+| Show QoS details             | \- (mdiag -q <QoS> in Maui/Moab) | sacctmgr show qos <QoS>                  |
 +------------------------------+----------------------------------+------------------------------------------+
 
 Resource sharing and job prioritisation
