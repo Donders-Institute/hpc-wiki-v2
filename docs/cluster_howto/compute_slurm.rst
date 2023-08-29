@@ -11,6 +11,31 @@ What is the Slurm cluster?
 
 Slurm is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters. More about Slurm on `the official site <https://slurm.schedmd.com/overview.html>`_.
 
+Migrating from Torque/PBS to SLURM
+==================================
+
++------------------------------+---------------------------------+------------------------------------------+
+| Task                         | Torque/PBS                      | SLURM                                    |
++==============================+=================================+==========================================+
+| Submit a job                 | qsub myjob.sh                   | sbatch myjob.sh                          |
++------------------------------+---------------------------------+------------------------------------------+
+| Delete a job                 | qdel 123                        | scancel 123                              |
++------------------------------+---------------------------------+------------------------------------------+
+| Show job status              | qstat                           | squeue                                   |
++------------------------------+---------------------------------+------------------------------------------+
+| Show expected job start time | - (showstart in Maui/Moab)      | squeue --start                           |
++------------------------------+---------------------------------+------------------------------------------+
+| Show queue info              | qstat -q                        | sinfo                                    |
++------------------------------+---------------------------------+------------------------------------------+
+| Show job details             | qstat -f 123                    | scontrol show job 123                    |
++------------------------------+---------------------------------+------------------------------------------+
+| Show queue details           | qstat -Q -f <queue>             | scontrol show partition <partition_name> |
++------------------------------+---------------------------------+------------------------------------------+
+| Show node details            | pbsnode n0000                   | scontrol show node n0000                 |
++------------------------------+---------------------------------+------------------------------------------+
+| Show QoS details             | - (mdiag -q <QoS> in Maui/Moab) | sacctmgr show qos <QoS>                  |
++------------------------------+---------------------------------+------------------------------------------+
+
 Resource sharing and job prioritisation
 =======================================
 
