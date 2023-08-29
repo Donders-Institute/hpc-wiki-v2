@@ -165,6 +165,8 @@ To delete a running or pending job, one use the ``scancel`` command:
 
     $ scancel 951
 
+.. _slurm-job-output-stream:
+
 Output streams of the job
 =========================
 
@@ -248,3 +250,7 @@ The **walltime** and **memory** requirements are the most essential ones amongst
    * Elapsed walltime: the bar indicates the elapsed walltime consumed by the job.  It also shows the remaining walltime.  The walltime is adjusted accordingly to the CPU speed.
    * Memory usage: the bar indicates the current memory usage of the job.
    * Max memory usage: the bar indicates the peak memory usage of the job.
+
+#. Check the epilogue information at the end of the job output stream
+
+    For batch jobs, the epilogue script also writes the accounting information to :ref:`the job's output stream <slurm-job-output-stream>`.  One could also take it as a reference to determine the amount of resources needed for the computation. 
