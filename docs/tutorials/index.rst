@@ -3,8 +3,8 @@ Linux & HPC workshops
 
 Regular workshops are held by the TG.  Hereafter are agenda and presentations of the past workshops.
 
-Online workshop with recording
-==============================
+Online workshops with recording
+===============================
 
 - **[2020.12.04] Access HPC from home**
 
