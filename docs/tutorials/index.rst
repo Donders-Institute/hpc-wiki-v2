@@ -3,8 +3,8 @@ Linux & HPC workshops
 
 Regular workshops are held by the TG.  Hereafter are agenda and presentations of the past workshops.
 
-2020 - 2021
-===========
+Online workshop with recording
+==============================
 
 - **[2020.12.04] Access HPC from home**
 
@@ -75,8 +75,8 @@ Regular workshops are held by the TG.  Hereafter are agenda and presentations of
     - :download:`Data storage and management <materials/20210129_data_management.pdf>`
     - :download:`Git tutorial <materials/20210129_git_tutorial.pptx>`
 
-Earlier workshops
-=================
+Other workshops
+===============
 
 .. Note::
     Workshop agenda and slides below are only accessible within the DCCN network.
@@ -84,6 +84,7 @@ Earlier workshops
 .. toctree::
     :maxdepth: 1
 
+    2023, April <http://indico.dccn.nl/event/31/>
     2022, November <http://indico.dccn.nl/event/29/>
     2022, April <http://indico.dccn.nl/event/28/>
     2021, November <http://indico.dccn.nl/event/27/>
