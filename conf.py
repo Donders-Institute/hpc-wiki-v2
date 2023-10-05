@@ -98,7 +98,8 @@ html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
 
 # override wide tables in RTD theme
-html_css_files = ['https://media.readthedocs.org/css/sphinx_rtd_theme.css','https://media.readthedocs.org/css/readthedocs-doc-embed.css','_static/theme_overrides.css']
+html_css_files = ['_static/theme_overrides.css']
+#html_css_files = ['https://media.readthedocs.org/css/sphinx_rtd_theme.css','https://media.readthedocs.org/css/readthedocs-doc-embed.css','_static/theme_overrides.css']
 #html_context = {
 #    'css_files': [
 #        'https://media.readthedocs.org/css/sphinx_rtd_theme.css',
