@@ -155,7 +155,7 @@ In order to run the live Python codes within a conda environment (so that you ca
     jupyter_core              4.3.0                    py27_0  
 
 
-If you don't see Jupiter-related packages in your conda environment, run the following command to install it
+If you don't see Jupyter-related packages in your conda environment, run the following command to install it
 
 .. code-block:: bash
 
