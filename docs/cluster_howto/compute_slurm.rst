@@ -139,7 +139,7 @@ In the example above, sbatch options were defined in the job script. You can, ho
 .. code-block:: bash
    $ sbatch --mem=1G --time=00:01:00 slurm_first_job.sh
 
-You can even pass your script directly, using a so-called "Here" document (Heredoc, defined by a start `<< EOF`` and end `EOF`)
+You can even pass your script directly, using a so-called "Here" document (Heredoc, defined by a start ``<< EOF`` and end ``EOF``)
 
 .. code-block:: bash
    $ sbatch --mem=1G --time=00:01:00 << EOF
