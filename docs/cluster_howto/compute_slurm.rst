@@ -134,6 +134,19 @@ Batch job
 
 A job id is returned after job submission. In the example above, the job id is ``951``.
 
+In the example above, sbatch options were defined in the job script. You can, however, also pass them directly (overruling the options in the job script), e.g. like this:
+
+`` code-block:: bash
+   $ sbatch --mem=1G --time=00:01:00 slurm_first_job.sh
+
+You can even pass your script directly, using a so-called "Here" document (Heredoc, defined by a start `<< EOF`` and end `EOF`)
+
+`` code-block:: bash
+   $ sbatch --mem=1G --time=00:01:00 << EOF
+   #!/bin/bash
+   echo "Hello world! No script had to be written to disk to run me :-)"
+   EOF
+
 Job status and information
 ==========================
 
