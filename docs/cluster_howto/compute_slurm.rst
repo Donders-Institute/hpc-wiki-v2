@@ -256,10 +256,22 @@ Here we ask the allocated CPU core to be on a node with GRES ``cpu:intel``.
 
 Here we use ``-n`` to specify the amount of CPU cores we need; and ``-N`` to specify from how many compute nodes the CPU cores should be allocated.  In this scenario, the job (or the application the job runs) should take care of the communication between the processors distributed on many nodes.  This is typically for the `MPI <https://en.wikipedia.org/wiki/Message_Passing_Interface>`_-like applications.
 
-1 GPU with minimal `cuda capability <https://developer.nvidia.com/cuda-gpus>`_ 5.0, 12 hours wallclock time, and 4 gb memory
-----------------------------------------------------------------------------------------------------------------------------
+1 GPU interactive with 12 hours wallclock time, and 4 gb memory.
+----------------------------------------------------------------
 
-*TBD*
+.. code-block:: bash
+
+    $ srun --partition=gpu --gres=gpu:1 --mem=4G --time=12:00:00 --pty /bin/bash
+
+Or 1 GPU interactive with specific GPU specification, 12 hours wallclock time, and 4gb memory.
+----------------------------------------------------------------------------------------------
+
+.. code-block:: bash
+
+    $ srun --partition=gpu --gpus=nvidia_rtx_a6000:1 --pty /bin/bash
+
+Currently for now this is the only GPU available in the slurm environment.
+The ``--partition=gpu`` option is needed. Without this option the job will fail.
 
 Estimating resource requirement
 ===============================
