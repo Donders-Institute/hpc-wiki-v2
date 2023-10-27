@@ -268,7 +268,7 @@ Or 1 GPU interactive with specific GPU specification, 12 hours wallclock time, a
 
 .. code-block:: bash
 
-    $ srun --partition=gpu --gpus=nvidia_rtx_a6000:1 --pty /bin/bash
+    $ srun --partition=gpu --gpus=nvidia_rtx_a6000:1 --mem=4G --time=12:00:00 --pty /bin/bash
 
 Currently for now this is the only GPU available in the slurm environment.
 The ``--partition=gpu`` option is needed. Without this option the job will fail.
