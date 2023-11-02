@@ -84,6 +84,7 @@ Other workshops
 .. toctree::
     :maxdepth: 1
 
+    2023, November <https://indico.dccn.nl/event/32/>
     2023, April <http://indico.dccn.nl/event/31/>
     2022, November <http://indico.dccn.nl/event/29/>
     2022, April <http://indico.dccn.nl/event/28/>
