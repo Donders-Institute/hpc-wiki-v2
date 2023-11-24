@@ -263,14 +263,25 @@ Here we use ``-n`` to specify the amount of CPU cores we need; and ``-N`` to spe
 
     $ srun --partition=gpu --gres=gpu:1 --mem=4G --time=12:00:00 --pty /bin/bash
 
-Or 1 GPU interactive with specific GPU specification, 12 hours wallclock time, and 4gb memory.
-----------------------------------------------------------------------------------------------
+1 GPU interactive with specific GPU specification, 12 hours wallclock time, and 4gb memory.
+-------------------------------------------------------------------------------------------
 
 .. code-block:: bash
 
     $ srun --partition=gpu --gpus=nvidia_rtx_a6000:1 --mem=4G --time=12:00:00 --pty /bin/bash
 
-Currently for now this is the only GPU available in the slurm environment.
+2 GPU's interactive with specific GPU specification, 12 hours wallclock time, and 4gb memory.
+---------------------------------------------------------------------------------------------
+
+.. code-block:: bash
+
+    $ srun --partition=gpu --gpus=nvidia_a100-sxm4-40gb:2 --mem=4G --time=12:00:00 --pty /bin/bash
+
+Currently we have two types of GPU's available the slurm environment:
+- One node with 1x NVidia RTX A6000 48GB
+- Two nodes with 4x NVidia A100 40GB each
+This sums up to 9 GPU's in total.
+
 The ``--partition=gpu`` option is needed. Without this option the job will fail.
 
 Estimating resource requirement
