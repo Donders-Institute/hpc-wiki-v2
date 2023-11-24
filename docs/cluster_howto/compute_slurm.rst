@@ -278,8 +278,9 @@ Here we use ``-n`` to specify the amount of CPU cores we need; and ``-N`` to spe
     $ srun --partition=gpu --gpus=nvidia_a100-sxm4-40gb:2 --mem=4G --time=12:00:00 --pty /bin/bash
 
 Currently we have two types of GPU's available the slurm environment:
-- One node with 1x NVidia RTX A6000 48GB
-- Two nodes with 4x NVidia A100 40GB each
+
+   * One node with 1x NVidia RTX A6000 48GB
+   * Two nodes with 4x NVidia A100 40GB each
 This sums up to 9 GPU's in total.
 
 The ``--partition=gpu`` option is needed. Without this option the job will fail.
