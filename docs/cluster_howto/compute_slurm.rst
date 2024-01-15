@@ -4,7 +4,7 @@ Running computations on the Slurm cluster
 *****************************************
 
 .. warning::
-    The DCCN slurm cluster is still in the preview/testing phase.  **DO NOT** rely on it for producing your data analysis results.
+    The DCCN slurm cluster is still in the preview/testing phase.
 
 What is the Slurm cluster?
 ==========================
