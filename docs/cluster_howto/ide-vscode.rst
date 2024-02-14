@@ -46,7 +46,7 @@ This step will setup and run the code CLI via an interactive job on the cluster.
       $ module load apptainer
       $ singularity exec /opt/singularity/images/code_cli.sif ./code tunnel
 
-  The idea of loading the vscode binary from within the singularity container is to provide the up-to-date glibc library required by the vscode server.  The containger ``/opt/singularity/images/code_cli.sif`` is a Ubuntu 22.04 with glibc 2.35.
+  The idea of loading the vscode binary from within the singularity container is to provide the up-to-date glibc library required by the vscode server.  The container image ``/opt/singularity/images/code_cli.sif`` provides glibc 2.35 via Ubuntu 22.04.
 
 4. Login with you github account:
 
