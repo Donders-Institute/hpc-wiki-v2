@@ -37,7 +37,7 @@ After the new version has been installed and tested successfully, the maintainer
 
 **maintaining the environment module for the software**
 
-Following installation of a software package, the maintainer should also provide a module file so that user can use the software by loading the module. Technical information on this can be found in :ref:`software-maintainer-module-howto`. The TG can support you to overcome initial technical hurdles.
+Following the installation of a software package, the maintainer should also provide a module file so that user can use the software by loading the module. Technical information on this can be found in :ref:`software-maintainer-module-howto`. The TG can support you to overcome initial technical hurdles.
 
 **supporting users on software-specific issues**
 
