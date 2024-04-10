@@ -111,6 +111,7 @@ Similarly you could also use the native Slurm command ``srun``, for example:
 If you intend to run graphical applications, the interactive job should be submitted with an additional ``--x11`` option.  For example,
 
 .. code-block:: bash
+
     $ srun --x11 --time=10:00:00 --mem=4gb -p interactive --pty bash -i
 
 Batch job
