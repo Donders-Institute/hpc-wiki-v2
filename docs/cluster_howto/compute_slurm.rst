@@ -92,15 +92,26 @@ Wrapper scripts, such as ``vncmanager``, ``matlab``, ``rstudio``, ``pycharm``, e
 Interactive job
 ===============
 
-Hereafter is an example command to start an interactive job with requirement of 1 hour walltime and 1 GB memory:
+The simplest way to submit an interactive job is using the ``sbash`` wrapper script as it takes care of the settings and options required for running graphical applications. 
+
+Hereafter is an example command to start an interactive job with requirement of 10 hour walltime and 4 GB memory:
 
 .. code-block:: bash
 
-    $ srun --time=01:00:00 --mem=1gb -p interactive --pty bash -i
+    $ sbash --time=10:00:00 --mem=4gb
 
 The terminal will be blocked until the job starts on the compute node.
 
-Alternatively, one can also use the wrapper script ``sbash`` to start an interactive job.
+Similarly you could also use the native Slurm command ``srun``, for example:
+
+.. code-block:: bash
+
+    $ srun --time=10:00:00 --mem=4gb -p interactive --pty bash -i
+
+If you intend to run graphical applications, the interactive job should be submitted with an additional ``--x11`` option.  For example,
+
+.. code-block:: bash
+    $ srun --x11 --time=10:00:00 --mem=4gb -p interactive --pty bash -i
 
 Batch job
 =========
