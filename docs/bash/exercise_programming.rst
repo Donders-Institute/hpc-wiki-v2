@@ -4,7 +4,7 @@ Exercise: the *if*-statement and *for*-loop
 Introduction
 ============
 
-In this exercise we will be extending ``script.sh`` by adding some BASH flow control constructions. We will be working with ``if`` and ``for``. The ``if``-statement and the ``for``-loop are probably the most common flow control tools in the bash hackers toolbox.
+In this exercise we will be extending ``logSearch.sh`` by adding some BASH flow control constructions. We will be working with ``if`` and ``for``. The ``if``-statement and the ``for``-loop are probably the most common flow control tools in the bash hackers toolbox.
 
 The overall goal of this lengthy exercise is to introduce ``for``-loops and ``if``-statements and show you a common use case in which they are put together with what you have learned in pervious sessions for actual works. As an example, we will show you how to search for a specific pattern in a collection of log files and print out certain information from the log files given a condition.
 
@@ -83,7 +83,7 @@ Start by downloading the :download:`log files <logs.tgz>` we'll be using. Move i
     $ wget https://github.com/Donders-Institute/hpc-wiki-v2/raw/master/docs/bash/logs.tgz
     $ tar xvf logs.tgz
 
-Now open ``script.sh`` and change your ``grep`` command to the one you see below. The ``-o`` option tells grep to print ONLY the matching pattern, and not the rest of the line around it. This will be useful later in the task and in general.
+Now open ``logSearch.sh`` and change your ``grep`` command to the one you see below. The ``-o`` option tells grep to print ONLY the matching pattern, and not the rest of the line around it. This will be useful later in the task and in general.
 
 .. code-block:: bash
 
