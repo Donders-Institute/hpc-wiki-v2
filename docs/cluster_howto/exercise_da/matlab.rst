@@ -52,10 +52,11 @@ Task 1: Using ``matlab_sub``
 Task 2: Using ``qsubcellfun``
 =============================
 
-#.  In your VNC session, start the Matlab desktop GUI
+#.  In your VNC session, start the Matlab desktop GUI like the commands below:
 
     .. code-block:: bash
 
+        $ cd ~/torque_exercise
         $ matlab
 
     In the popup dialog, you could specify the amount of resources you need.  In this exercise, we simply click through it.  It will submit an interactive job to run the Matlab desktop on a compute node.  Wait for the Matlab desktop to show up in your VNC session.
