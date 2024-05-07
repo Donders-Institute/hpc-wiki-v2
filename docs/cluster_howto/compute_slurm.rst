@@ -57,15 +57,17 @@ In the Slurm cluster, compute nodes are divided in partitions.
 Throttling policies for resource usage
 ---------------------------------------
 
-In the Slurm cluster at DCCN, throttle policies are applied to limit the amount of resources an user can allocate at the same time.  It is to avoid resources of the entire cluster being occupied by a single user.  The policies are defined per partition:
+In the Slurm cluster at DCCN, throttle policies are applied to limit the amount of resources an user can allocate at the same time.  It is to avoid resources of the entire cluster being occupied by a single user.  The limits per user per partition is shown below:
 
-+------------+---------------+-----------------+--------+-----------+
-| partition  | runnable jobs | queue-able jobs | memory | cpu cores |
-+============+===============+=================+========+===========+
-| batch      | 80            | 2000            | 512 GB | 64        |
-+------------+---------------+-----------------+--------+-----------+
-| interactive| 2             | 4               | 256 GB | 32        |
-+------------+---------------+-----------------+--------+-----------+
++------------+---------------+-----------------+--------+-----------+-------------+
+| partition  | runnable jobs | queue-able jobs | memory | cpu cores |    gpus     |
++============+===============+=================+========+===========+=============+
+| batch      | 80            | 2000            | 1024 GB| 80        | -           |
++------------+---------------+-----------------+--------+-----------+-------------+
+| interactive| 2             | 4               | 128 GB | 32        | -           |
++------------+---------------+-----------------+--------+-----------+-------------+
+| gpu        | -             | -               | -      | -         | 2           |
++------------+---------------+-----------------+--------+-----------+-------------+
 
 Job prioritisation
 ------------------
