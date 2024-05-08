@@ -59,7 +59,7 @@ In the Slurm cluster at DCCN, throttle policies are applied to limit the amount 
 Job limit
 ---------
 
-Job submitted to a partition is limited by a different max. walltime and memory limitation:
+Job is limited by a maximum amount of walltime and memory as shown below.  Job with resource requirement beyond the limit will be rejected for submission.
 
 +------------+-----------------------+---------------------+
 | partition  | max. walltime per job | max. memory per job |
