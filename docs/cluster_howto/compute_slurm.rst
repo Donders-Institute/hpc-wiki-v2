@@ -39,50 +39,60 @@ Migrating from Torque/PBS to SLURM
 Resource sharing and job prioritisation
 =======================================
 
-For optimising the utilisation of the computing resources, certain resource-sharing and job prioritisation policies are applied to jobs submitted to the Slurm cluster.  The implications to users can be seen from the three aspects: **cluster limit*, **job limit** and **job priority**.
+For optimising the utilisation of the computing resources, certain resource-sharing and job prioritisation policies are applied to jobs submitted to the Slurm cluster.  The implications to users can be seen from the three aspects: **cluster limits*, **job limits** and **job priority**.
 
-Cluster limit
--------------
+Cluster limits
+--------------
 
-In the Slurm cluster at DCCN, throttle policies are applied to limit the amount of resources an user can allocate at the same time.  It is to avoid resources of the entire cluster being occupied by a single user.  The limits per user per partition is shown below:
+There are cluster-wide limits on resource usage and job submission per user.  Those are: 
 
-+------------+---------------+-----------------+--------+-----------+-------------+
-| partition  | runnable jobs | queue-able jobs | memory | cpu cores |    gpus     |
-+============+===============+=================+========+===========+=============+
-| batch      | 80            | 2000            | 1024 GB| 80        |             |
-+------------+---------------+-----------------+--------+-----------+-------------+
-| interactive| 2             | 4               | 128 GB | 32        |             |
-+------------+---------------+-----------------+--------+-----------+-------------+
-| gpu        |               |                 |        |           | 2           |
-+------------+---------------+-----------------+--------+-----------+-------------+
++------------------------+---------+
+| number of running jobs | 80      |
++------------------------+---------+
+| number of queued jobs  | 2000    |
++------------------------+---------+
+| total memory           | 1024GB  |
++------------------------+---------+
+| total CPU cores        | 80      |
++------------------------+---------+
+| total GPUs             | 2       |
++------------------------+---------+
 
-Job limit
----------
+Beyond these limits, the user is allowed to run few high-priorty interactive jobs (i.e. jobs submitted to the *interactive* partition) with the following limits:
 
-Job is limited by a maximum amount of walltime and memory as shown below.  Job with resource requirement beyond the limit will be rejected for submission.
++------------+---------------+-------------+--------------+-----------------+
+| partition  | runnable jobs | queued jobs | total memory | total CPU cores |
++============+===============+=============+==============+=================+
+| interactive| 2             | 4           | 128 GB       | 32              |
++------------+---------------+-------------+--------------+-----------------+
 
-+------------+-----------------------+---------------------+
-| partition  | max. walltime per job | max. memory per job |
-+============+=======================+=====================+
-| batch      | 72 hours              | 256 GB              |
-+------------+-----------------------+---------------------+
-| interactive| 72 hours              | 64 GB               |
-+------------+-----------------------+---------------------+
-| gpu        | 72 hours              | 256 GB              |
-+------------+-----------------------+---------------------+
+Job limits
+----------
+
+Each job is limited by a maximum amount of walltime and memory.  Job with resource requirement beyond the limit will be rejected for submission.
+
++------------+---------------+-------------+
+| partition  | max. walltime | max. memory |
++============+===============+=============+
+| batch      | 72 hours      | 256 GB      |
++------------+---------------+-------------+
+| interactive| 72 hours      | 64 GB       |
++------------+---------------+-------------+
+| gpu        | 72 hours      | 256 GB      |
++------------+---------------+-------------+
 
 Job priority
 ------------
 
-+------------+--------------+
-| partition  | job priority |
-+============+==============+
-| batch      | normal       |
-+------------+--------------+
-| interactive| high         |
-+------------+--------------+
-| gpu        | normal       |
-+------------+--------------+
++------------+----------+
+| partition  | priority |
++============+==========+
+| batch      | normal   |
++------------+----------+
+| interactive| high     |
++------------+----------+
+| gpu        | normal   |
++------------+----------+
 
 Job priority determines the order of waiting jobs to start in the cluster. Job priority is calculated based on various factors.  In the cluster at DCCN, mainly the following two factors are considered.
 
