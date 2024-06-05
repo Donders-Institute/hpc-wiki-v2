@@ -48,7 +48,7 @@ There are cluster-wide limits on resource usage and job submission per user.  Th
 +------------------------+---------+
 | number of queued jobs  | 2000    |
 +------------------------+---------+
-| total memory           | 2560GB  |
+| total memory           | 2560 GB |
 +------------------------+---------+
 | total CPU cores        | 200     |
 +------------------------+---------+
