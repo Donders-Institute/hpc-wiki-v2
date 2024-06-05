@@ -44,7 +44,7 @@ Cluster limits
 There are cluster-wide limits on resource usage and job submission per user.  Those are: 
 
 +------------------------+---------+
-| number of running jobs | 80      |
+| number of running jobs | 200     |
 +------------------------+---------+
 | number of queued jobs  | 2000    |
 +------------------------+---------+
