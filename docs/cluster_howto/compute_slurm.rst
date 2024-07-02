@@ -318,9 +318,10 @@ Here we use ``-n`` to specify the amount of CPU cores we need; and ``-N`` to spe
 
 Currently we have two types of GPU's available the slurm environment:
 
-   * One node with 1x NVidia RTX A6000 48GB
-   * Two nodes with 4x NVidia A100 40GB each
-This sums up to 9 GPU's in total.
+   * One node with 1x NVidia RTX A6000 48GB (specify as nvidia_rtx_a6000:1)
+   * Three nodes with 1x NVidia A100 80GB each (specify as nvidia_a100_80gb_pcie:1)
+   * Two nodes with 4x NVidia A100 40GB each (specify as nvidia_a100-sxm4-40gb:1)
+This sums up to 12 GPU's in total.
 
 The ``--partition=gpu`` option is needed. Without this option the job will fail.
 
