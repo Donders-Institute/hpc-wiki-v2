@@ -16,7 +16,7 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
+import os
 # import sys
 # sys.path.insert(0, os.path.abspath('.'))
 from datetime import date
@@ -107,6 +107,15 @@ html_css_files = ['_static/theme_overrides.css']
 #        '_static/theme_overrides.css',
 #    ],
 #}
+
+# -- defining html_baseurl due to introduction of Read the Docs Addons
+# -- see: https://about.readthedocs.com/blog/2024/07/addons-by-default/
+# Set canonical URL from the Read the Docs Domain
+html_baseurl = os.environ.get("READTHEDOCS_CANONICAL_URL", "")
+
+# Tell Jinja2 templates the build is running on Read the Docs
+if os.environ.get("READTHEDOCS", "") == "True":
+    html_context["READTHEDOCS"] = True
 
 # -- Options for HTMLHelp output ------------------------------------------
 
