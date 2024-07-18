@@ -107,6 +107,7 @@ html_css_files = ['_static/theme_overrides.css']
 #        '_static/theme_overrides.css',
 #    ],
 #}
+html_context = {}
 
 # -- defining html_baseurl due to introduction of Read the Docs Addons
 # -- see: https://about.readthedocs.com/blog/2024/07/addons-by-default/
