@@ -191,11 +191,11 @@ You can even pass your script directly, using a so-called "Here" document (Hered
 Job status and information
 ==========================
 
-One can use the ``squeue`` to get an overview of running and pending jobs.
+One can use the ``squeue --me`` to get an overview of running and pending jobs.
 
 .. code-block:: bash
 
-    $ squeue
+    $ squeue --me
         JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
         951   batch     myfirstj   honlee  R       0:05      1 dccn-c079
 
