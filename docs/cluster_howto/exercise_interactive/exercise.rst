@@ -1,7 +1,7 @@
 Exercise: interactive job
 *************************
 
-In this exercise, you will start an interactive job in the Torque cluster.  When the interactive job starts, check the hostname of the computer node on which your interactive job runs.
+In this exercise, you will start an interactive job in the Slurm cluster.  When the interactive job starts, check the hostname of the computer node on which your interactive job runs.
 
 Tasks
 =====
@@ -13,7 +13,13 @@ Tasks
 
    .. code-block:: bash
    
-       $ qsub -I -N 'MyFirstJob' -l 'walltime=00:30:00,mem=256mb'
+       $ srun --job-name="MyFirstJob" --time=00:30:00 --mem=256MB --pty bash
+
+#. alternatively, use the 'sbash' wrapper script to start an interactive job and simplify the command. This will automatically start a bash session.
+
+   .. code-block:: bash
+
+       $ sbash --job-name=MyFirstJob --time=00:30:00 --mem=256MB
 
 #. note the prologue message when the job starts.
 
