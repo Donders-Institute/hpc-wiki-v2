@@ -42,13 +42,12 @@ Tasks
         Thu Oct 31 09:40:18 CET 2024: mentat006.dccn.nl falls asleep ...
         Thu Oct 31 09:40:19 CET 2024: mentat006.dccn.nl wakes up.
 
-
 #. submit a job to run the script
 
    .. code-block:: bash
 
-   $ sbatch $PWD/run_sleep.sh 60
-   Submitted batch job 46288492
+      	 $ sbatch $PWD/run_sleep.sh 60
+         Submitted batch job 46288492
 
 #. check the job status.  For example,
 
@@ -74,15 +73,9 @@ Tasks
 
    .. code-block:: bash
 
-       $ grep -E 'Job ID|Job Exit Code|Username|Compute nodes|Asked resources|Used resources' slurm-46288492.out
-        Username:        lenobl
-        Asked resources: walltime=10:00,nodes=1,cpus=1,mem=1G
-        Compute nodes:   dccn-c080
+       $ grep -E 'Job ID|Job Exit Code|Used resources' slurm-46288492.out
         Job ID:          46288492
         Job Exit Code:   0:0
-        Username:        lenobl
-        Compute nodes:   dccn-c080
-        Asked resources: walltime=10:00,nodes=1,cpus=1,mem=1G
         Used resources:  cputime=00:01:00,walltime=00:01:00,memory=0
 
 #. or retrieve information from the slurm job accounting database
@@ -104,7 +97,7 @@ Tasks
         Submitted batch job 46288593
 
    .. note::
-        Try to compare the command in step 3 and the job parameters in the run_sleep.sh script.  As we expect the job to run longer, the requirement on the job walltime must be extend to 1 hour and 10 minutes within the script to account for this.
+        Try to compare the command in step 3 and the job parameters in the ``run_sleep.sh`` script.  As we expect the job to run longer, the requirement on the job walltime must be extend to 1 hour and 10 minutes within the script to account for this.
 
 #. Ok, we don't want to wait for the 1-hour job to finish. Let's cancel the job.  For example,
 
