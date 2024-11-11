@@ -70,19 +70,13 @@ Tasks
 
     You should see the output file ``subject_0/photo.jpg`` when the analysis is done.
 
-#.  Let's test again on another subject with a torque job
+#.  Let's test again on subject 1 with a slurm job
 
     In the command below, we just make an arbitrary (but sufficient) resource requirement of 10 minutes walltime and 1 GB memory.
 
     .. code-block:: bash
 
-        [exercise] $ echo "$PWD/run_analysis.py 1" | qsub -l walltime=10:00,mem=1gb -N subject_1
-
-    .. note::
-        Think a bit the construction of the shell command above:
-
-        - what is the idea behind the command-line pipe (``|``)? 
-        - why prepending ``$PWD/`` in front of the script?
+        [exercise] $ sbatch --job-name subject_1 --time=10:00 --mem=1gb $PWD/run_analysis.py 1
 
     You should see the output file ``subject_1/photo.jpg`` when the analysis is done.  At this time, you also see the stdout/stderr files produced by the job.
 
@@ -96,6 +90,6 @@ Tasks
 
     .. code-block:: bash
 
-        [exercise] $ for id in {0..5}; do echo "$PWD/run_analysis.py $id" | qsub -l walltime=10:00,mem=1gb -N subject_$id; done
+        [exercise] $ for id in {0..5}; do sbatch --job-name subject_$id --time=10:00 --mem=1gb $PWD/run_analysis.py $id; done
 
     and check if you get outputs (photos) of all 6 subjects.
