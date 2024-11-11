@@ -6,7 +6,7 @@ Distributed data analysis with Matlab
 
 .. include:: preparation.rst
 
-Before you start, get into the directory of the ``torque_exercise`` and run
+Before you start, get into the directory of the ``hpc_exercise_slurm`` and run
 
 .. code-block:: bash
 
@@ -56,7 +56,7 @@ Task 2: Using ``qsubcellfun``
 
     .. code-block:: bash
 
-        $ cd ~/torque_exercise
+        $ cd ~/hpc_exercis_slurm
         $ matlab
 
     In the popup dialog, you could specify the amount of resources you need.  In this exercise, we simply click through it.  It will submit an interactive job to run the Matlab desktop on a compute node.  Wait for the Matlab desktop to show up in your VNC session.
@@ -64,11 +64,11 @@ Task 2: Using ``qsubcellfun``
     .. note::
         From this point on, we will work within the Matlab desktop GUI.  All commands in the following steps should be done within the command window of Matlab.
 
-#.  Change the current workding directory to the ``torque_exercise`` directory in the command window:
+#.  Change the current workding directory to the ``hpc_exercis_slurm`` directory in the command window:
 
     .. code-block:: matlab
 
-        >> cd ~/torque_exercise
+        >> cd ~/hpc_exercis_slurm
         >> ls
         clean.sh  run_analysis.m  subject_0	subject_1  subject_2  subject_3  subject_4  subject_5 ...
 
@@ -138,7 +138,7 @@ Instead of using ``qsubcellfun`` shown in Task 1.  We could also use the combina
 
     .. code-block:: matlab
     
-        >> cd ~/torque_exercise
+        >> cd ~/hpc_exercis_slurm
         >> addpath '/home/common/matlab/fieldtrip/qsub/'
 
 #.  Submit jobs to run the 6 subjects in parallel using ``qsubfeval``

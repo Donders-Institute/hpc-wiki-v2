@@ -1,14 +1,14 @@
 Preparation
 ===========
 
-Using the commands below to download :download:`the exercise package <torque_exercise.tgz>` and check its content.
+Using the commands below to download :download:`the exercise package <hpc_exercis_slurm.tgz>` and check its content.
 
 .. code-block:: bash
 
     $ cd
-    $ wget https://github.com/Donders-Institute/hpc-wiki-v2/raw/master/docs/cluster_howto/exercise_da/torque_exercise.tgz
-    $ tar xvzf torque_exercise.tgz
-    $ cd torque_exercise
+    $ wget https://github.com/Donders-Institute/hpc-wiki-v2/raw/master/docs/cluster_howto/exercise_da/hpc_exercise_slurm.tgz
+    $ tar xvzf hpc_exercise_slurm.tgz
+    $ cd hpc_exercise_slurm
     $ ls
     subject_0  subject_1  subject_2  subject_3  subject_4  subject_5 ...
 

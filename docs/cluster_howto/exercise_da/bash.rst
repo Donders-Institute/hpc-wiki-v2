@@ -9,7 +9,7 @@ Distributed data analysis with bash script
 Tasks
 =====
 
-#. before you start, get into the directory of the ``torque_exercise`` and run
+#. before you start, get into the directory of the ``hpc_exercis_slurm`` and run
 
    .. code-block:: bash
 

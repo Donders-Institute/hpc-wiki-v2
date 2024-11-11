@@ -20,11 +20,7 @@
 
            ## determin the root directory of the subject folders
            if [ -z $SUBJECT_DIR_ROOT ]; then
-               if [ -z $PBS_O_WORKDIR ]; then
-                   SUBJECT_DIR_ROOT=$PWD
-               else
-                   SUBJECT_DIR_ROOT=$PBS_O_WORKDIR
-               fi
+               SUBJECT_DIR_ROOT=$PWD
            fi
 
            subject_data="${SUBJECT_DIR_ROOT}/subject_${id}/data"
@@ -35,7 +31,7 @@
            if [ -f $subject_data ]; then
 
                ## decrypt the data and get URL to the subject's photo
-               url=$( openssl enc -aes-256-cbc -d -in $subject_data -k $decrypt_passwd )
+               url=$( openssl enc -aes-256-cbc -d -in $subject_data -pbkdf2 -k $decrypt_passwd )
 
                if [ $? == 0 ]; then
 
@@ -68,4 +64,4 @@
 
    .. code-block:: bash
 
-       $ for id in $( seq 1 5 ); do echo "$PWD/run_analysis.sh $id" | qsub -N "subject_$id" -l walltime=00:20:00,mem=1gb; done
+       $ for id in $( seq 1 5 ); do sbatch --job-name=subj_${id} --time=10:00 --mem=4gb $PWD/run_analysis.sh $id; done
