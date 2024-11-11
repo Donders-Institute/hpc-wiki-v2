@@ -161,11 +161,11 @@ Instead of using ``qsubcellfun`` shown in Task 1.  We could also use the combina
         >> load 'jobs.mat'
         >> for j = jobs
         jid = qsublist('getpbsid', j);
-        system(sprintf('qstat %s', jid));
+        system(sprintf('scontrol show job %s', jid));
         end
 
     .. tip::
-        The idea of the for loop above is to find the Torque job id from the job identifier returned from ``qsubfeval`` using the ``qsublist`` function.  With the Torque job id, the job status is retrieved by making a ``qstat`` system call.
+        The idea of the for loop above is to find the Slurm job id from the job identifier returned from ``qsubfeval`` using the ``qsublist`` function.  With the Slurm job id, the job detail is retrieved by making a ``scontrol show job`` system call.
 
         Since checking over jobs is a regular task, there is a small function called ``check_jobs.m`` in the exercise package.  Instead of typing the foor-loop everytime, you could also call:
 
