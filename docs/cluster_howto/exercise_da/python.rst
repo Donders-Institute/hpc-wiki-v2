@@ -70,7 +70,7 @@ Tasks
 
     You should see the output file ``subject_0/photo.jpg`` when the analysis is done.
 
-#.  Let's test again on subject 1 with a slurm job
+#.  Let's test again on another subject (i.e. subject 1) with a slurm job
 
     In the command below, we just make an arbitrary (but sufficient) resource requirement of 10 minutes walltime and 1 GB memory.
 
