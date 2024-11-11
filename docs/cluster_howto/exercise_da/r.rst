@@ -41,17 +41,14 @@ Tasks
 
         $ ./clean.sh
 
-#.  Let's test again on another subject with a torque job.
+#.  Let's test again on anoter subject (i.e. subject 3) with a slurm job.
 
     .. code-block:: bash
 
-        $ echo "Rscript $PWD/run_analysis.R 3" | qsub -l walltime=10:00,mem=1gb -N subject_3
+        $ sbatch --job-name=subject_3 --time=10:00 --mem=1gb --wrap="Rscript $PWD/run_analysis.R 3"
 
     .. note::
-        Think a bit the construction of the shell command above:
-
-        - what is the idea behind the command-line pipe (``|``)? 
-        - why prepending ``$PWD/`` in front of the script?
+        Note that we use the ``--wrap`` option of the ``sbatch`` command here.  It is needed becasue the executable ``Rscript`` is not really a (Bash or Python) script.
 
     Wait until the job to finish, and check if you get the output in ``subject_3`` directory.
 
@@ -69,6 +66,6 @@ Tasks
 
     .. code-block:: bash
 
-        $ for id in {0..5}; do echo "Rscript $PWD/run_analysis.R $id" | qsub -l walltime=10:00,mem=1gb -N subject_$id; done
+        $ for id in {0..5}; do sbatch --job-name=subject_$id --time=10:00 --mem=1gb --wrap="Rscript $PWD/run_analysis.R $id"; done
 
     and check if you get outputs (photos) of all 6 subjects.
