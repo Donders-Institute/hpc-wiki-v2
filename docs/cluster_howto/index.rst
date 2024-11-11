@@ -53,5 +53,5 @@ Exercises
 
     Interactive job <exercise_interactive/exercise.rst>
     Batch job <exercise_simple/exercise.rst>
-    Resource estimation <exercise_resource/exercise.rst>
     Data analysis in parallel <exercise_da/exercise.rst>
+    .. Resource estimation <exercise_resource/exercise.rst>
