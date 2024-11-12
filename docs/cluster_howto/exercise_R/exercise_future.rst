@@ -1,5 +1,8 @@
 .. _r-exercise-future:
 
+.. warning::
+     This page requires an update for the Slurm cluster.
+
 Exercise: distributed data analysis in R with `future` and `batchtools`
 **************************************************************************
 

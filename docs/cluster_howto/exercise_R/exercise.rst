@@ -1,5 +1,8 @@
 .. _r-exercise-simple:
 
+.. warning::
+     This page requires an update for the Slurm cluster.
+
 Exercise: distributed data analysis with R
 ******************************************
 

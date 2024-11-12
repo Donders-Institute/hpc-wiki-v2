@@ -1,5 +1,8 @@
 .. _r-exercise-brms:
 
+.. warning::
+     This page requires an update for the Slurm cluster.
+
 Exercise: distributed Bayesian regression modelling in R with `future` and `brms`
 ************************************************************************************
 
