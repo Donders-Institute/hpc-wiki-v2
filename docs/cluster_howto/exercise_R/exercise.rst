@@ -1,10 +1,10 @@
 .. _r-exercise-simple:
 
-.. warning::
-     This page requires an update for the Slurm cluster.
-
 Exercise: distributed data analysis with R
 ******************************************
+
+.. warning::
+     This page requires an update for the Slurm cluster.
 
 In this exercise, you will learn how to submit R jobs in the cluster using the ``Rscript``, the scripting front-end of R.
 

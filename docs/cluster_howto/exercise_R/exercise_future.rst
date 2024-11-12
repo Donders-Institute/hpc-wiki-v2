@@ -1,10 +1,10 @@
 .. _r-exercise-future:
 
+Exercise: distributed data analysis in R with `future` and `batchtools`
+***********************************************************************
+
 .. warning::
      This page requires an update for the Slurm cluster.
-
-Exercise: distributed data analysis in R with `future` and `batchtools`
-**************************************************************************
 
 In this exercise, you will learn how to submit R jobs in the cluster using the ``future`` and ``batchtools`` packages in R . This approach is different from vanilla Rscript approach shown in the :doc:`exercise` where you write an R script and submit it to the HPC with Bash. Here, you would submit the code to the cluster from within R through ``future``, using additional power provided by ``batchtools`` to parallelize your code and keep track of the running jobs. For this tutorial, we will use RStudio to run and edit the code.
 

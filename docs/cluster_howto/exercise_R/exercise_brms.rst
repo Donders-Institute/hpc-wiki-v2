@@ -1,10 +1,10 @@
 .. _r-exercise-brms:
 
+Exercise: distributed Bayesian regression modelling in R with `future` and `brms`
+*********************************************************************************
+
 .. warning::
      This page requires an update for the Slurm cluster.
-
-Exercise: distributed Bayesian regression modelling in R with `future` and `brms`
-************************************************************************************
 
 In this exercise, you will learn how to run Bayesian regression with `brms` in parallel on the HPC. This tutorial assumes that you already know what `brms` is and just want to learn how to speed it up with the HPC capabilities. We will do it using `future` package (see more about `future` in :doc:`exercise_future`).
 
