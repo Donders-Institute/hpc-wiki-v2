@@ -1,7 +1,7 @@
 Exercise: Running FreeSurfer jobs on the cluster
 ************************************************
 
-In this exercise we will construct a small script to run FreeSurfer's ``recon-all``, and use ``qsub`` to submit this script to the cluster for execution.
+In this exercise we will construct a small script to run FreeSurfer's ``recon-all``, and use ``sbatch`` to submit this script to the cluster for execution.
 
 Preparation
 ===========
@@ -27,12 +27,11 @@ Task 1: create the script
 
 #. Set the script to be executable
 
-#. Load the freesurfer module (an example of version 5.3)
+#. Load the freesurfer module
 
    .. code-block:: bash
    
-        $ module unload freesurfer
-        $ module load freesurfer/5.3
+        $ module load freesurfer
         
    .. tip:
         You could try to load a different version of freesurfer, using the ``module`` command.
@@ -41,19 +40,19 @@ Task 1: create the script
 
    .. code-block:: bash
 
-        $ echo "cd $PWD; ./runFreesurfer.sh" | qsub -l walltime=00:10:00,mem=1GB
+        $ sbatch --time=00:10:00 --mem=1gb $PWD/runFreesurfer.sh
 
 #. Verify the job is running with ``qstat``. You should see something like:
 
    .. code-block:: bash
 
-        $ qstat 11173851
-        Job ID                    Name             User            Time Use S Queue
-        +----------------------- ---------------- --------------- -------- - -----
-        11173851.dccn-l029         STDIN            dansha                 0 Q long
+        $ squeue --me
+          
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+          46540218     batch runFrees   honlee  R       2:19      1 dccn-c065
 
-#. Because we don't really want to run the analysis but rather test a script, kill the job with ``qdel``.  For example:
+#. Because we don't really want to run the analysis but rather test a script, kill the job with ``scancel``.  For example:
 
    .. code-block:: bash
 
-        $ qdel 11173851
+        $ scancel 46540218
