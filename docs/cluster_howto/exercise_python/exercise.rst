@@ -79,7 +79,7 @@ The setting in the shell for the conda environment will be transferred with the 
 
 .. code-block:: bash
 
-    $ qsub -I -l 'walltime=00:20:00,mem=1gb'
+    $ sbash --time=00:20:00 --mem=1gb
     
     $ which python
     ~/.conda/envs/demo/bin/python
