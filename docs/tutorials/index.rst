@@ -83,7 +83,7 @@ Other workshops
 
 .. toctree::
     :maxdepth: 1
-
+    2024, November <https://indico.dccn.nl/event/36/>
     2024, Slurm workshop <https://indico.dccn.nl/event/35/>
     2024, April <https://indico.dccn.nl/event/34/>
     2023, November <https://indico.dccn.nl/event/32/>
