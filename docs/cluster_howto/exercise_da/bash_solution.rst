@@ -60,7 +60,7 @@
 
        analyze_subject_data $1
 
-#. submit jobs to the torque cluster
+#. submit jobs to the slurm cluster
 
    .. code-block:: bash
 
