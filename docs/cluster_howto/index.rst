@@ -26,8 +26,8 @@ Using the cluster
 .. toctree::
     :maxdepth: 2
 
+    Slurm cluster <compute_slurm.rst>    
     Torque cluster <compute_torque.rst>
-    Slurm cluster <compute_slurm.rst>
     Using supported software <software-usage.rst>
     Using IDE for coding <ide-usage.rst>
     Using LLM for coding <genai-ollama.rst>
