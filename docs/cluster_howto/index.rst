@@ -30,7 +30,7 @@ Using the cluster
     Torque cluster <compute_torque.rst>
     Using supported software <software-usage.rst>
     Using IDE for coding <ide-usage.rst>
-    Using LLM for coding <genai-ollama.rst>
+    Using LLM for coding <genai/index.rst>
     Maintaining supported software <software-maintenance.rst>
     Best practices <best_practices.rst>
 
