@@ -5,7 +5,7 @@ Ollama
 
 `Ollama <https://ollama.com>`__ is an open-source platform for running the large-language models built upon `Llama <https://llama.com>`__.  It offers an opportunity to run an AI engine on-premises to avoid potential concerns on data security and privacy.
 
-This guide will show you how to start a ollama server serving the `codellama <https://ai.meta.com/blog/code-llama-large-language-model-coding/>`__ model, and use it as a coding assisstent.
+This guide will show you how to run a ollama server on the HPC cluster serving the `codellama <https://ai.meta.com/blog/code-llama-large-language-model-coding/>`__ model, and use it as a coding assisstent.
 
 Running Ollama server with a slurm job
 ======================================
@@ -28,6 +28,9 @@ The example below shows you the OLLAMA job ``46131868`` is started and listen on
     ...
     starting OLLAMA to listen on dccn-c083.dccn.nl:11434 ...
     ...
+
+.. note::
+    As the started server is capable for serving multiple clients at the same time, it is possible to use the same server endpoint in multiple clients as long as the client can access the DCCN network (e.g. via `eduVPN Trigon full access profile <https://intranet.donders.ru.nl/index.php?id=eduvpn>`__).  Please keep in mind that the data transferred between the server and the clients are not encrypted.
 
 Connecting clients to the OLLAMA server
 =======================================
