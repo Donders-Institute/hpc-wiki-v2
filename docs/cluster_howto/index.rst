@@ -30,6 +30,7 @@ Using the cluster
     Slurm cluster <compute_slurm.rst>
     Using supported software <software-usage.rst>
     Using IDE for coding <ide-usage.rst>
+    Using LLM for coding <genai-ollama.rst>
     Maintaining supported software <software-maintenance.rst>
     Best practices <best_practices.rst>
 
