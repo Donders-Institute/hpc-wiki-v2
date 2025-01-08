@@ -5,7 +5,7 @@ Ollama
 
 `Ollama <https://ollama.com>`__ is an open-source platform for running the large-language models built upon `Llama <https://llama.com>`__.  It offers an opportunity to run an AI engine on-premises to avoid potential concerns on data security and privacy.
 
-This guide will show you how to start a ollama server serving the `codalama <>`__ model, and use it as a coding assisstent.
+This guide will show you how to start a ollama server serving the `codellama <https://ai.meta.com/blog/code-llama-large-language-model-coding/>`__ model, and use it as a coding assisstent.
 
 Running Ollama server with a slurm job
 ======================================
