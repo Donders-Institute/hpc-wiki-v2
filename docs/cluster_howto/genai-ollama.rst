@@ -63,7 +63,7 @@ Connecting VSCode to the OLLAMA server
 
 On VSCode IDE, one can install the plugin `Continue <https://www.continue.dev/>`__ to connect to the OLLAMA server.
 
-After the installation, the Continue panel is accessible via the :kdb:`Ctrl/Cmd` + :kdb:`l` key-binding.  Before starting using it, one needs to configure the model provider endpoint as follows:
+After the installation, the Continue panel is accessible via the :kbd:`Ctrl/Cmd` + :kbd:`l` key-binding.  Before starting using it, one needs to configure the model provider endpoint as follows:
 
 #. open the Continue configuration file, see `this instruction <https://docs.continue.dev/customize/overview#editing-configjson>`__.
 
@@ -83,5 +83,5 @@ After the installation, the Continue panel is accessible via the :kdb:`Ctrl/Cmd`
             ...
         }
 
-After that, in the Continue chat pannel toggled with the :kdb:`Ctrl/Cmd` + :kdb:`l` key-binding, you can start chatting with the model.
+After that, in the Continue chat pannel toggled with the :kbd:`Ctrl/Cmd` + :kbd:`l` key-binding, you can start chatting with the model.
 
