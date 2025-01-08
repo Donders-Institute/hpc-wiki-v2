@@ -3,9 +3,9 @@
 Ollama
 ******
 
-`Ollama <https://ollama.com>`__ is an open-source platform for running the large-language models built upon `Llama <https://llama.com>`__.  It offers an opportunity to run an AI engine on-premises to avoid potential concerns on data security and privacy.
+`Ollama <https://ollama.com>`__ is an open-source GenAI engine for running the large-language models built upon `Llama <https://llama.com>`__.  It offers an opportunity to run GenAI engine on-premises to avoid data security and privacy concerns with Cloud-based engines.
 
-This guide will show you how to run a ollama server on the HPC cluster serving the `codellama <https://ai.meta.com/blog/code-llama-large-language-model-coding/>`__ model, and use it as a coding assisstent.
+This guide will show you how to run an ollama server on the HPC cluster serving the `codellama <https://ai.meta.com/blog/code-llama-large-language-model-coding/>`__ model, and use it as a coding assisstent.
 
 Running Ollama server with a slurm job
 ======================================
