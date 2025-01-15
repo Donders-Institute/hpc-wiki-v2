@@ -103,7 +103,7 @@ Follow the steps below:
 
    From the terminal output, you see two objects are saved into a **RData** file called ``magic_cal_2.out.RData``.  Later on, you can load the object from this file into R or a R script.  For example,
 
-   .. code-block:: R
+   .. code-block:: r
 
         > load("magic_cal_2.out.RData")
         > ls()
