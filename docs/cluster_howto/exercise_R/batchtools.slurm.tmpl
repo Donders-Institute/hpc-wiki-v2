@@ -1,0 +1,31 @@
+#!/bin/bash
+
+#SBATCH --job-name=<%= job.name %>
+#SBATCH --output=<%= log.file %>
+#SBATCH --time=<%= resources$time %>
+#SBATCH --mem=<%= resources$mem %>
+#SBATCH --partition=batch
+#SBATCH --ntasks=1          # Number of tasks (keep this consistent with your setup)
+#SBATCH --cpus-per-task=<%= resources$ncpus %>  # Set number of threads
+
+## Setup modules
+# Uncomment and load your required modules, e.g.:
+# module load R
+
+## Create our own temp dir (and clean it up later)
+# TMPDIR=/data/${USER}/${USER}-${SLURM_JOB_ID}
+# mkdir -p $TMPDIR
+# export TMPDIR
+
+<%= sprintf("export OMP_NUM_THREADS=%i", resources$omp.threads) -%>
+<%= sprintf("export OPENBLAS_NUM_THREADS=%i", resources$blas.threads) -%>
+<%= sprintf("export MKL_NUM_THREADS=%i", resources$blas.threads) -%>
+
+## Export value of DEBUGME environment variable to compute node
+# export DEBUGME=<%= Sys.getenv("DEBUGME") %>
+
+## Run R
+Rscript -e 'batchtools::doJobCollection("<%= uri %>")'
+
+## Cleanup
+# rm -rf $TMPDIR
