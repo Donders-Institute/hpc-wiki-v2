@@ -3,7 +3,7 @@ library(future.apply)
 library(future.batchtools)
 
 # Exercise 1: submit jobs to cluster via future
-plan(batchtools_torque, resources = list(walltime = '00:05:00', memory = '2Gb')) # specify that the PBS Torque cluster is used and the resources we want
+plan(batchtools_slurm, resources = list(walltime = '00:05:00', memory = '2Gb')) # specify that the PBS Torque cluster is used and the resources we want
 
 get_random_mean <- function(mu){ # a simple example function
   mean(rnorm(100, mean = mu))
@@ -21,8 +21,9 @@ resolve(res) # wait for the results
 library(batchtools)
 reg <- makeRegistry(file.dir = '.batch_registry', seed = 1) # creates a folder for a registry with all neccessary bookkeeping info
 
-reg$cluster.functions <- makeClusterFunctionsTORQUE() # use HPC
+reg$cluster.functions <- makeClusterFunctionsSlurm(template = "slurm") # use HPC
 # reg$cluster.functions = makeClusterFunctionsMulticore(4) # if you are trying this at home, you can also use Multicore instead of Torque to run the example at your own PC
+reg$default.resources = list(mem='2Gb', time='00:10:00', ncpus=1)
 
 get_random_mean2 <- function(mu, sigma, ...){ # a slightly more complicated example function
   mean(rnorm(100, mean = mu, sd = sigma))

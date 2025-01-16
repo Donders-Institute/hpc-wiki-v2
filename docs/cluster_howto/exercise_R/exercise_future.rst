@@ -89,7 +89,7 @@ This creates a folder ``.batch_registry`` where all the information about your j
 
 The previous step will cause the code to use a template file ``batchtools.slurm.tmpl``, which in our case is provided with the data for these exercises. If you copy over this template file to your home directory, and rename it into ``.batchtools.slurm.tmpl``, this template will be accessible to all future jobs (i.e. also outside this exercise). This template file has been written, such that - upon submission of the jobs - a set of predefined resources are passed to the template such that a well-formed job command for a slurm-job can be written. One way to achieve this is to specify for the registry the resources that your jobs require, this will then be used as default for the jobs, when executed::
 
-    reg$default.resources = list(mem='2Gb', time='00:10:00')
+    reg$default.resources = list(mem='2Gb', time='00:10:00', ncpus=1)
 
 As an example, we will again generate random numbers but this time we will set the population mean and standard deviation as function parameters and return both the sample mean and the sample standard deviation::
 
@@ -128,4 +128,8 @@ When the jobs are completed, the only thing you need to do is to collect the res
     4 -2     3    1      4 -1.905095
     5 -1     3    1      5  -1.03062
     6  0     3    1      6 0.4160899
+
+Don't forget to clean up::
+
+    removeRegistry()
 
