@@ -17,7 +17,7 @@ Follow the steps below to download :download:`the scripts for this exercise <r_f
     $ wget https://github.com/Donders-Institute/hpc-wiki-v2/raw/master/docs/cluster_howto/exercise_R/r_future_exercise.tgz
     $ tar xvzf r_future_exercise.tgz
     $ ls
-    batchtools.torque.tmpl hpc_example_r_batchtools_future.R
+    batchtools.slurm.tmpl hpc_example_r_batchtools_future.R
 
 Load RStudio. **Choose R version 4.3.3 and check "Load pre-installed R-packages" checkbox** as the packages needed are already included in the r-packages module on the HPC.
 

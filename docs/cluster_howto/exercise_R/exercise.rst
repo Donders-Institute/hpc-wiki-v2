@@ -19,8 +19,8 @@ Follow the steps below to download :download:`the prepared R scripts <R_exercise
 
     $ mkdir R_exercise
     $ cd R_exercise
-    $ wget https://github.com/Donders-Institute/hpc-wiki-v2/raw/master/docs/cluster_howto/exercise_R/R_exercise.tgz
-    $ tar xvzf R_exercise.tgz
+    $ wget https://github.com/Donders-Institute/hpc-wiki-v2/raw/master/docs/cluster_howto/exercise_R/r_exercise.tgz
+    $ tar xvzf r_exercise.tgz
     $ ls
     magic_cal_2.R  magic_cal_3.R  magic_cal.R
 
