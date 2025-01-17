@@ -40,7 +40,8 @@ On the access node, open a new terminal and run
 
 .. code-block:: bash
 
-    $ OLLAMA_HOST=dccn-c083.dccn.nl:11434 /opt/ollama/0.3.9/bin/ollama run codellama
+    $ module load ollama
+    $ OLLAMA_HOST=dccn-c083.dccn.nl:11434 ollama run codellama
 
 It can take a while when the server is loading the model.  Once succeeded, you should get a "chat" prompt back as below:
 
