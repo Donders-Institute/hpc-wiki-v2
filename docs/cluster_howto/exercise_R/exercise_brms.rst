@@ -35,6 +35,7 @@ Running `brms` on the cluster
     library(brms)
     library(future)
     library(future.apply)
+    library(future.batchtools)
 
 2. Load and set up the data::
 
