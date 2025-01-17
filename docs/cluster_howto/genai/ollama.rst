@@ -16,6 +16,7 @@ User can start a ollama server using the script `/opt/ollama/ollama_serve.sh` us
 
 .. code-block:: bash
 
+    $ module load ollama
     $ sbatch --time=1:00:00 /opt/ollama/ollama_serve.sh
 
 The job requests 1 CPU, 1GPU and 64GB memory resource to run on, and for 1 hour.  Once the job is started, check the output file ``ollama-gpu-{jobid}.out`` and find the server endpoint.
