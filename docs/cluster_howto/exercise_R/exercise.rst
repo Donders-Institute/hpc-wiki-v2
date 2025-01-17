@@ -3,9 +3,6 @@
 Exercise: distributed data analysis with R
 ******************************************
 
-.. warning::
-     This page requires an update for the Slurm cluster.
-
 In this exercise, you will learn how to submit R jobs in the cluster using the ``Rscript``, the scripting front-end of R.
 
 This exercise is divided into two tasks. The first task is to get you familiar with the flow of running R script as batch jobs in the HPC cluster. The second is more about bookkeeping outputs (R data files) produced by R jobs running concurrently in the cluster.
@@ -22,33 +19,32 @@ Follow the steps below to download :download:`the prepared R scripts <R_exercise
 
     $ mkdir R_exercise
     $ cd R_exercise
-    $ wget https://github.com/Donders-Institute/hpc-wiki-v2/raw/master/docs/cluster_howto/exercise_R/R_exercise.tgz
-    $ tar xvzf R_exercise.tgz
+    $ wget https://github.com/Donders-Institute/hpc-wiki-v2/raw/master/docs/cluster_howto/exercise_R/r_exercise.tgz
+    $ tar xvzf r_exercise.tgz
     $ ls
     magic_cal_2.R  magic_cal_3.R  magic_cal.R
 
 
-Load environment for R version 3.2.2.
+Load environment for R version 4.1.0 (or any other version >= 4.1.0, this exercise has been tested to work on)
 
 .. code-block:: bash
 
     $ module unload R
-    $ module load R/3.2.2
+    $ module load R/4.1.0
     $ which R
-    /opt/R/3.2.2/bin/R
+    /opt/R/4.1.0/bin/R
 
 Task 1: simple job
 ==================
 
-In this task, we use the script ``magic_cal.R``. This script uses the ``magic`` library to genera a magic matrix of a given dimension, and calculate the sum of its diagonal elements.  The matrix and the sum are both printed to the standard output.
+In this task, we use the script ``magic_cal.R``. This script uses the ``magic`` library to generate a magic matrix of a given dimension, and calculate the sum of its diagonal elements.  The matrix and the sum are both printed to the standard output. Note, that it is not guaranteed that the ``magic`` library is available on the R-version that is used (and has been installed). The ``magic_cal.R`` script contains some lines at the top of the script that evaluates the availability of the library on the file system, and - if not available - installs the library in a temporary folder.
 
-#. run the script interactively, for a matrix of dimention 8
+#. run the script interactively, for a matrix of dimension 5
 
    .. code-block:: bash
 
-        $ export R_LIBS=/opt/R/packages
         $ Rscript magic_cal.R 5
-        WARNING: ignoring environment value of R_HOME
+        ...<some stuff depending on your R-install>...
         Loading required package: abind
              [,1] [,2] [,3] [,4] [,5]
         [1,]    9    2   25   18   11
@@ -64,17 +60,22 @@ In this task, we use the script ``magic_cal.R``. This script uses the ``magic`` 
 
    .. code-block:: bash
 
-        $ echo "Rscript $PWD/magic_cal.R 5" | qsub -N "magic_cal" -l walltime=00:10:00,mem=256mb
-        11082769.dccn-l029.dccn.nl
+        $ sbatch --time=00:10:00 --mem=256mb --job-name=magic_R << EOF
+        #!/bin/bash
+        Rscript magic_cal.R 5
+        EOF
 
 #. wait the job to finish, and check the output of the job. Do you get same results as running interactively?
 
-#. run five batch jobs in parallel to run the ``magic_cal.R`` with matrices in dimention 5,6,7,8,9.
+#. run five batch jobs in parallel to run the ``magic_cal.R`` with matrices in dimension 5,6,7,8,9.
 
    .. code-block:: bash
 
-        $ for d in {5 .. 9}; do
-            echo "Rscript $PWD/magic_cal.R $d" | qsub -N "magic_cal_$d" -l walltime=00:10:00,mem=256mb;
+        $ for d in {5..9}; do
+        sbatch --time=00:10:00 --mem=256mb --job-name="magic_cal_$d" << EOF
+        #!/bin/bash
+        Rscript magic_cal.R $d
+        EOF
         done
 
 Task 2: job bookkeeping and saving output objects
@@ -82,7 +83,7 @@ Task 2: job bookkeeping and saving output objects
 
 In the previous task, data objects are just printed to the standard output, which are consequently captured as text in the output files of the jobs.  Data stored in this way is hardly be reused for following analyses. A better approach is to store the objects in a R data file (i.e. the **RData** files), using the ``save`` function of R.
 
-Given that batch jobs in the cluster will be executed at the same time, writing objects from different jobs into the same file is not recommanded as the concurrency issue may result in corrupted outputs. A better approach is to write outputs of each job to a seperate file. In implies that running batch jobs in parallel requires an additional bookkeeping strategy on the jobs as well as the output files produced from them.
+Given that batch jobs in the cluster will be executed at the same time, writing objects from different jobs into the same file is not recommended as the concurrency issue may result in corrupted outputs. A better approach is to write outputs of each job to a seperate file. In implies that running batch jobs in parallel requires an additional bookkeeping strategy on the jobs as well as the output files produced from them.
 
 In this exercise, we are going to use the script ``magic_cal_2.R`` in which functions are provided to
 

@@ -3,9 +3,6 @@
 Exercise: distributed data analysis in R with `future` and `batchtools`
 ***********************************************************************
 
-.. warning::
-     This page requires an update for the Slurm cluster.
-
 In this exercise, you will learn how to submit R jobs in the cluster using the ``future`` and ``batchtools`` packages in R . This approach is different from vanilla Rscript approach shown in the :doc:`exercise` where you write an R script and submit it to the HPC with Bash. Here, you would submit the code to the cluster from within R through ``future``, using additional power provided by ``batchtools`` to parallelize your code and keep track of the running jobs. For this tutorial, we will use RStudio to run and edit the code.
 
 Preparation
@@ -20,9 +17,9 @@ Follow the steps below to download :download:`the scripts for this exercise <r_f
     $ wget https://github.com/Donders-Institute/hpc-wiki-v2/raw/master/docs/cluster_howto/exercise_R/r_future_exercise.tgz
     $ tar xvzf r_future_exercise.tgz
     $ ls
-    batchtools.torque.tmpl hpc_example_r_batchtools_future.R
+    batchtools.slurm.tmpl hpc_example_r_batchtools_future.R
 
-Load RStudio. **Choose R version 4.1.0 and check "Load pre-installed R-packages" checkbox** as the packages needed are already included in the r-packages module on the HPC.
+Load RStudio. **Choose R version 4.3.3 and check "Load pre-installed R-packages" checkbox** as the packages needed are already included in the r-packages module on the HPC.
 
 .. code-block:: bash
 
@@ -45,12 +42,12 @@ These three packages do different things. ``future`` provides the basic framewor
 
 Then, indicate that you want to use our HPC (which uses PBS Torque to distribute jobs) by selecting the right job plan::
 
-        plan(batchtools_torque, resources = list(walltime = '00:05:00', memory = '2Gb'))
+        plan(batchtools_slurm, resources = list(time = '00:05:00', mem = '2Gb'))
 
-Note that you can also specify the resources you need like shown here. For this code to work, ``batchtools.torque.tmpl`` should be in the current working directory. ``future`` works with many different backends, so you can use ``plan(multiprocess)`` to run the code on different CPU cores on your desktop machine, for example.
+Note that you can also specify the resources you need like shown here. For this code to work, ``batchtools.slurm.tmpl`` should be in the current working directory. ``future`` works with many different backends, so you can use ``plan(multiprocess)`` to run the code on different CPU cores on your desktop machine, for example.
 
 .. note::
-    You can also rename the template to ``.batchtools.torque.tmpl`` with a dot at the beginning and put it in a home directory at the cluster, then you can use it in all scripts.
+    You can also rename the template to ``.batchtools.slurm.tmpl`` with a dot at the beginning and put it in your home directory at the cluster, then you can use it in all scripts.
 
 For this exercise, we will use a simple function that compute the mean of a random normal sample of 100 numbers with the true mean given as the function parameter::
 
@@ -62,7 +59,7 @@ To submit a job you can use the ``%<-%`` operator::
 
     single_result %<-% get_random_mean(50) # submit a single job
 
-That's it, the job is now sent to cluster. To check if it is completed, you can use ``resolved``::
+That's it, the job has now been sent to cluster. To check if it is completed, you can use ``resolved``::
 
     resolved(single_result) # check if it is completed
     single_result # wait until the job is finished and print the result
@@ -88,9 +85,11 @@ Task 2: using batchtools for better jobs management
 
 This creates a folder ``.batch_registry`` where all the information about your jobs will be saved. Then you need to specify the backend to be used::
 
-    reg$cluster.functions = makeClusterFunctionsTORQUE()
+    reg$cluster.functions = makeClusterFunctionsSlurm(template = "slurm")
 
-Again, this function looks for ``batchtools.torque.tmpl`` in the working directory or for ``.batchtools.torque.tmpl`` in the home directory.
+The previous step will cause the code to use a template file ``batchtools.slurm.tmpl``, which in our case is provided with the data for these exercises. If you copy over this template file to your home directory, and rename it into ``.batchtools.slurm.tmpl``, this template will be accessible to all future jobs (i.e. also outside this exercise). This template file has been written, such that - upon submission of the jobs - a set of predefined resources are passed to the template such that a well-formed job command for a slurm-job can be written. One way to achieve this is to specify for the registry the resources that your jobs require, this will then be used as default for the jobs, when executed::
+
+    reg$default.resources = list(mem='2Gb', time='00:10:00', ncpus=1)
 
 As an example, we will again generate random numbers but this time we will set the population mean and standard deviation as function parameters and return both the sample mean and the sample standard deviation::
 
@@ -129,4 +128,8 @@ When the jobs are completed, the only thing you need to do is to collect the res
     4 -2     3    1      4 -1.905095
     5 -1     3    1      5  -1.03062
     6  0     3    1      6 0.4160899
+
+Don't forget to clean up::
+
+    removeRegistry()
 

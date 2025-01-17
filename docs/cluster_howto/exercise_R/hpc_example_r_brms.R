@@ -1,8 +1,8 @@
 # Title     : Example of how to run brms in parallel on the cluster
 # Created by: Andrey Chetverikov
-# Created on: 15/11/2021
+# Created on: 15/11/2021, adjusted for slurm on 16/01/2024 by Jan-Mathijs Schoffelen
 #
-# This script assumes that you have a valid batchtools.torque.tmpl template in the working directory (or .batchtools.torque.tmpl in your home directory)
+# This script assumes that you have a valid batchtools.slurm.tmpl template in the working directory (or .batchtools.slurm.tmpl in your home directory)
 # This example is based on the "eight schools" example from the brm helpfile
 
 library(future)
@@ -18,8 +18,8 @@ p <- within(p, { # set the important variables to factors
 
 # create a parallelization plan for future
 plan(list(
-  tweak(batchtools_torque, resources = list(walltime = '00:20:00', memory = '6Gb', packages = c('brms'))), # first jobs are submitted for 20 minutes
-  tweak(batchtools_torque, resources = list(walltime = '00:05:00', memory = '6Gb', packages = c('brms')))  # the jobs created within these jobs are set to run with 5-minute limit
+  tweak(batchtools_slurm, resources = list(time = '00:20:00', mem = '6Gb', ncpus = 1, packages = c('brms'))), # first jobs are submitted for 20 minutes
+  tweak(batchtools_slurm, resources = list(time = '00:05:00', mem = '6Gb', ncpus = 1, packages = c('brms')))  # the jobs created within these jobs are set to run with 5-minute limit
 ), .cleanup = T) # two-level paralellization setup to compile on the cluster and then run the chains in parallel
 
 
