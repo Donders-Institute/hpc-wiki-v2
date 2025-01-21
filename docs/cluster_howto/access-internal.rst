@@ -17,7 +17,7 @@ Screenshots of the four steps are shown below:
    .. figure:: figures/start_putty.png
       :figwidth: 60%
 
-#. configure putty for connecting to, e.g., ``mentat001.dccn.nl``
+#. configure putty for connecting to, e.g., ``mentat006.dccn.nl``
 
    .. figure:: figures/putty_load_session.png
       :figwidth: 60%
