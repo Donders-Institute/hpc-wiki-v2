@@ -4,6 +4,9 @@ python:
    install:
      - requirements: docs/requirements.txt
 
+sphinx:
+   configuration: conf.py
+
 # Set the version of Python and other tools we may need
 build:
   os: ubuntu-22.04
