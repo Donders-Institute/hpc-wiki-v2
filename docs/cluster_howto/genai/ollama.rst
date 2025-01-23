@@ -31,7 +31,7 @@ The example below shows you the OLLAMA job ``46131868`` is started and listen on
     ...
 
 .. note::
-    As the started server is capable for serving multiple clients at the same time, it is possible to use the same server endpoint in multiple clients as long as the client can access the DCCN network (e.g. via `eduVPN Trigon full access profile <https://intranet.donders.ru.nl/index.php?id=eduvpn>`__).  Please keep in mind that the data transferred between the server and the clients are not encrypted.
+    As the started server is capable for serving multiple clients at the same time, it is possible to use the same server endpoint in multiple clients as long as the client can access the DCCN network (e.g. via `eduVPN Trigon full access profile <https://intranet.donders.ru.nl/index.php?id=eduvpn>`__).
 
 Connecting clients to the OLLAMA server
 =======================================
