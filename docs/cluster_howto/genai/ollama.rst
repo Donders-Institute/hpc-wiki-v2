@@ -10,16 +10,16 @@ This guide will show you how to run an ollama server on the HPC cluster serving 
 Running Ollama server with a slurm job
 ======================================
 
-In the HPC cluster, the binary `ollama` and a model for coding `codellama` are installed in `/opt/ollama`.
+In the HPC cluster, the program ``ollama`` and a model for coding ``codellama`` are installed in ``/opt/ollama``.
 
-User can start a ollama server using the script `/opt/ollama/ollama_serve.sh` using the command below:
+User can setup the runtime enviroment by loading the ``ollama`` module, and start a ollama server using the Slurm job script ``/opt/ollama/ollama_serve.sh`` using the commands below:
 
 .. code-block:: bash
 
     $ module load ollama
     $ sbatch --time=1:00:00 /opt/ollama/ollama_serve.sh
 
-The job requests 1 CPU, 1GPU and 64GB memory resource to run on, and for 1 hour.  Once the job is started, check the output file ``ollama-gpu-{jobid}.out`` and find the server endpoint.
+The job requests 1 CPU, 1 GPU and 64GB memory resource to run on, and for 1 hour.  Once the job is started, check the output file ``ollama-gpu-{jobid}.out`` and find the server endpoint.
 
 The example below shows you the OLLAMA job ``46131868`` is started and listen on endpoint ``dccn-c083.dccn.nl:11434``.
 
