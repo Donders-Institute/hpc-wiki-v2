@@ -43,6 +43,20 @@ On the access node, open a new terminal and run
     $ module load ollama
     $ OLLAMA_HOST=dccn-c083.dccn.nl:11434 ollama run codellama
 
+.. note::
+    The command above requests the Ollama server to load the model ``codellama``.  A list of available models can be found using the command below:
+
+    .. code-block:: bash
+
+        $ OLLAMA_HOST=dccn-c083.dccn.nl:11434 ollama list
+        NAME                ID              SIZE      MODIFIED     
+        deepseek-r1:14b     ea35dfe18182    9.0 GB    14 hours ago    
+        codellama:13b       9f438cb9cd58    7.4 GB    39 hours ago    
+        llama3.3:latest     a6eb4748fd29    42 GB     39 hours ago    
+        codellama:latest    8fdf8f752f6e    3.8 GB    4 months ago
+
+    When selecting a model, pay attention to the ``SIZE`` of the model.  It should fit in the total GPU memories (the GPU memory is part of the GPU model, it is **NOT** the ``--mem`` of the job request) of the job that starts the Ollama server.
+
 It can take a while when the server is loading the model.  Once succeeded, you should get a "chat" prompt back as below:
 
 .. code-block::
