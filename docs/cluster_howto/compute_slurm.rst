@@ -11,7 +11,7 @@ The DCCN HPC cluster is a pool of high-end computers (also referred to as comput
 Every job is submitted to the cluster with a set of resource requirement (e.g. duration of the computation, number of CPU/GPU cores, amount of RAM, etc.). Based on the requirement, jobs are arranged internally in job queues. The job scheduler of Slurm is responsible for prioritising jobs and assign them accordingly to compute nodes on which the job requirements are fulfilled. The system also guarantees dedicated resources for the job. Thus, interference between different computations is minimised, resulting in more predictable job completion time.
 
 .. note::
-    Computing resource (e.g. CPU, GPU, memory) required by a job is always allocated to the job exclusively.
+    Computing resource (e.g. the amount of CPU, GPU, memory) required by a job is always allocated to the job exclusively.
 
 Migrating from Torque/PBS to SLURM
 ==================================
