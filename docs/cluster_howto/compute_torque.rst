@@ -3,6 +3,9 @@
 Running computations on the Torque cluster
 ******************************************
 
+.. warning::
+    Information on this page is no longer up-to-date as the DCCN Technical Group is working toward phasing out the Torque cluster in 2025. Please migrate as soon as possible to the Slurm cluster.  See :ref:`run-computations-slurm`.
+
 What is the Torque cluster?
 ===========================
 
