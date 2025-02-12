@@ -6,10 +6,17 @@ Running computations on the Slurm cluster
 What is the Slurm cluster?
 ==========================
 
-Slurm is an open source, fault-tolerant, and highly scalable cluster management and job scheduling system for large and small Linux clusters. More about Slurm on `the official site <https://slurm.schedmd.com/overview.html>`_.
+The DCCN HPC cluster is a pool of high-end computers (also referred to as compute nodes) managed by a cluster manager called `Slurm <https://slurm.schedmd.com/overview.html>`_. Instead of allowing users to login to a computer and run computations freely, user submit their computations in forms of jobs to the Slurm cluster.
+
+Every job is submitted to the cluster with a set of resource requirement (e.g. duration of the computation, number of CPU/GPU cores, amount of RAM, etc.). Based on the requirement, jobs are arranged internally in job queues. The job scheduler of Slurm is responsible for prioritising jobs and assign them accordingly to compute nodes on which the job requirements are fulfilled. The system also guarantees dedicated resources for the job. Thus, interference between different computations is minimised, resulting in more predictable job completion time.
+
+.. note::
+    Computing resource (e.g. CPU, GPU, memory) required by a job is always allocated to the job exclusively.
 
 Migrating from Torque/PBS to SLURM
 ==================================
+
+For Torque/PBS user using Slurm the first time, the table below provides a simplified command-line mapping betwee Torque/PBS and Slurm.
 
 +------------------------------+----------------------------------+------------------------------------------+
 | Task                         | Torque/PBS                       | SLURM                                    |
