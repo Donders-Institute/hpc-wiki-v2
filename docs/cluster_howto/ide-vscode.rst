@@ -37,7 +37,7 @@ This step will setup and run the code CLI via an interactive job on the cluster.
 
   .. code-block:: bash
 
-      $ qsub -I -l walltime=12:00:00,mem=8gb
+      $ sbash
 
 3. At the prompt of the interactive job, start the VSCode tunnel through following command:
 
