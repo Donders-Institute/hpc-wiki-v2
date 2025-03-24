@@ -6,9 +6,9 @@ Running computations on the Slurm cluster
 What is the Slurm cluster?
 ==========================
 
-The DCCN HPC cluster is a pool of high-end computers (also referred to as compute nodes) managed by a cluster manager called `Slurm <https://slurm.schedmd.com/overview.html>`_. Instead of allowing users to login to a computer and run computations freely, user submit their computations in forms of jobs to the Slurm cluster.
+The DCCN HPC cluster is a pool of high-end computers (also referred to as compute nodes) managed by a cluster manager called `Slurm <https://slurm.schedmd.com/overview.html>`_. Instead of allowing users to login to a computer and run computations freely, user submits their computations in the form of jobs to the Slurm cluster.
 
-Every job is submitted to the cluster with a set of resource requirement (e.g. duration of the computation, number of CPU/GPU cores, amount of RAM, etc.). Based on the requirement, jobs are arranged internally in job queues. The job scheduler of Slurm is responsible for prioritising jobs and assign them accordingly to compute nodes on which the job requirements are fulfilled. The system also guarantees dedicated resources for the job. Thus, interference between different computations is minimised, resulting in more predictable job completion time.
+Every job is submitted to the cluster with a set of resource requirements (e.g. duration of the computation, number of CPU/GPU cores, amount of RAM, etc.). Based on the requirement, jobs are arranged internally in job queues. The job scheduler of Slurm is responsible for prioritizing jobs and assigning them accordingly to compute nodes on which the job requirements are fulfilled. The system also guarantees dedicated resources for the job. Thus, interference between different computations is minimized, resulting in a more predictable job completion time.
 
 .. note::
     Computing resource (e.g. the amount of CPU, GPU, memory) required by a job is always allocated to the job exclusively.
@@ -32,6 +32,7 @@ For Torque/PBS user using Slurm the first time, the table below provides a simpl
 | Show queue info              | qstat -q                         | sinfo                                    |
 +------------------------------+----------------------------------+------------------------------------------+
 | Show job details             | qstat -f 123                     | scontrol show job 123                    |
+|                              |                                  | sacct -j 123                             |
 +------------------------------+----------------------------------+------------------------------------------+
 | Show queue details           | qstat -Q -f <queue>              | scontrol show partition <partition_name> |
 +------------------------------+----------------------------------+------------------------------------------+
@@ -40,10 +41,10 @@ For Torque/PBS user using Slurm the first time, the table below provides a simpl
 | Show QoS details             | \- (mdiag -q <QoS> in Maui/Moab) | sacctmgr show qos <QoS>                  |
 +------------------------------+----------------------------------+------------------------------------------+
 
-Resource sharing and job prioritisation
+Resource sharing and job prioritization
 =======================================
 
-For optimising the utilisation of the computing resources, certain resource-sharing and job prioritisation policies are applied to jobs submitted to the Slurm cluster.  The implications to users can be seen from the three aspects: **cluster limits*, **job limits** and **job priority**.
+For optimizing the utilization of the computing resources, certain resource-sharing and job prioritization policies are applied to jobs submitted to the Slurm cluster. The implications to users can be seen from the three aspects: **cluster limits*, **job limits** and **job priority**.
 
 Cluster limits
 --------------
@@ -62,7 +63,7 @@ There are cluster-wide limits on resource usage and job submission per user.  Th
 | total GPUs             | 2       |
 +------------------------+---------+
 
-Beyond these limits, the user is allowed to run few high-priorty interactive jobs (i.e. jobs submitted to the *interactive* partition) with the following limits:
+Beyond these limits, the user is allowed to run a few high-priority interactive jobs (i.e. jobs submitted to the *interactive* partition) with the following limits:
 
 +------------+---------------+-------------+--------------+-----------------+
 | partition  | runnable jobs | queued jobs | total memory | total CPU cores |
@@ -73,7 +74,7 @@ Beyond these limits, the user is allowed to run few high-priorty interactive job
 Job limits
 ----------
 
-Each job is limited by a maximum amount of walltime and memory.  Job with resource requirement beyond the limit will be rejected for submission.
+Each job is limited by a maximum amount of walltime and memory.  Jobs with resource requirements beyond the limit will be rejected for submission.
 
 +------------+---------------+-------------+
 | partition  | max. walltime | max. memory |
@@ -106,7 +107,7 @@ Job priority determines the order of waiting jobs to start in the cluster. Job p
 
 The final job priority combining the two factors is used by the scheduler to order the waiting jobs accordingly. The first job on the ordered list is the next to start in the cluster.
 
-Note: Job priority calculation is dynamic and not complete transparent to users.  One should keep in mind that the cluster does not treat the jobs as "first-come first-serve".
+Note: Job priority calculation is dynamic and not completely transparent to users.  One should keep in mind that the cluster does not treat the jobs as "first-come first-serve".
 
 The `slurm` module
 ==================
@@ -122,7 +123,7 @@ Interactive job
 
 The simplest way to submit an interactive job is using the ``sbash`` wrapper script as it takes care of the settings and options required for running graphical applications. 
 
-Hereafter is an example command to start an interactive job with requirement of 10 hour walltime and 4 GB memory:
+Hereafter is an example command to start an interactive job with the requirement of 10 hour walltime and 4 GB memory:
 
 .. code-block:: bash
 
@@ -130,7 +131,7 @@ Hereafter is an example command to start an interactive job with requirement of 
 
 The terminal will be blocked until the job starts on the compute node.
 
-Similarly you could also use the native Slurm command ``srun``, for example:
+Similarly, you could also use the native Slurm command ``srun``, for example:
 
 .. code-block:: bash
 
@@ -151,7 +152,7 @@ If you additionally require a GPU, the interactive job should be submitted with 
 Batch job
 =========
 
-#. prepare a batch job script like one below and save it to a file, e.g. ``slurm_first_job.sh``:
+#. prepare a batch job script like the one below and save it to a file, e.g. ``slurm_first_job.sh``:
 
     .. code-block:: bash
 
@@ -206,7 +207,7 @@ One can use the ``squeue --me`` to get an overview of running and pending jobs.
         JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
         951   batch     myfirstj   honlee  R       0:05      1 dccn-c079
 
-To get job's detail information, one use the command ``scontrol``:
+To get the job's detailed information, one uses the command ``scontrol``:
 
 .. code-block:: bash
 
@@ -235,7 +236,7 @@ Once the job is completed, one should use the ``sacct`` command to get the infor
     951.batch         batch                    tg          1  CANCELLED     0:15
     951.extern       extern                    tg          1  COMPLETED      0:0
 
-``sacct`` has an option ``--json`` to dump the output in JSON format.  It can be used together with `jq <https://jqlang.github.io/jq/>`_ for further processing on the job information. For example, to get on which nodes resources were allocated for the job: 
+``sacct`` has an option ``--json`` to dump the output in JSON format.  It can be used together with `jq <https://jqlang.github.io/jq/>`_ for further processing of the job information. For example, to get on which nodes resources were allocated for the job: 
 
 .. code-block:: bash
 
@@ -256,10 +257,10 @@ To delete a running or pending job, one use the ``scancel`` command:
 Output streams of the job
 =========================
 
-On the compute node, the job itself is executed as a process in the system.  The default ``STDOUT`` and ``STDERR`` streams of the process are both redirected to a file named as ``slurm-<job_id>.out`` within the directory from which a job is submitted.  The file is available from the start of the job.
+On the compute node, the job itself is executed as a process in the system.  The default ``STDOUT`` and ``STDERR`` streams of the process are both redirected to a file named ``slurm-<job_id>.out`` within the directory from which a job is submitted.  The file is available from the start of the job.
 
-Specifying resource requirement
-===============================
+Specifying resource requirements
+================================
 
 Each job submitted to the cluster comes with a resource requirement. The job scheduler and resource manager of the cluster make sure that the needed resources are allocated for the job. To allow the job to complete successfully, it is important that a right and sufficient amount of resources are specified at the job submission time.
 
@@ -270,15 +271,15 @@ Each job submitted to the cluster comes with a resource requirement. The job sch
 
     $ sbatch -N 1 -c 1 --ntasks-per-node=1 --mem=4G --time=12:00:00 job.sh
 
-4 CPU cores on a single node, 12 hours wallclock time, and 4 gb memory
+4 CPU cores on a single node, 12 hours wallclock time, and 4 GB memory
 ----------------------------------------------------------------------
 
 .. code-block:: bash
 
     $ sbatch -N 1 -c 4 --ntasks-per-node=1 --mem=4G --time=12:00:00 job.sh
 
-1 CPU core, 500gb of free local "scratch" diskspace, 12 hours wallclock time, and 4 gb memory
----------------------------------------------------------------------------------------------
+1 CPU core, 500 GB of free local "scratch" diskspace, 12 hours wallclock time, and 4 GB memory
+----------------------------------------------------------------------------------------------
 
 .. code-block:: bash
 
@@ -293,7 +294,7 @@ Each job submitted to the cluster comes with a resource requirement. The job sch
 
 Here we ask the allocated CPU core to be on a node with GRES ``cpu:intel``.
 
-4 CPU cores distributed on 2 nodes, 12 hours wallclock time, and 4 gb memory per node.
+4 CPU cores distributed on 2 nodes, 12 hours wallclock time, and 4 GB memory per node.
 --------------------------------------------------------------------------------------
 
 .. code-block:: bash
@@ -302,22 +303,22 @@ Here we ask the allocated CPU core to be on a node with GRES ``cpu:intel``.
 
 Here we use ``-n`` to specify the amount of CPU cores we need; and ``-N`` to specify from how many compute nodes the CPU cores should be allocated.  In this scenario, the job (or the application the job runs) should take care of the communication between the processors distributed on many nodes.  This is typically for the `MPI <https://en.wikipedia.org/wiki/Message_Passing_Interface>`_-like applications.
 
-1 GPU interactive with 12 hours wallclock time, and 4 gb memory.
+1 GPU interactive with 12 hours wallclock time, and 4 GB memory.
 ----------------------------------------------------------------
 
 .. code-block:: bash
 
     $ srun --partition=gpu --gres=gpu:1 --mem=4G --time=12:00:00 --pty /bin/bash
 
-1 GPU interactive with specific GPU specification, 12 hours wallclock time, and 4gb memory.
--------------------------------------------------------------------------------------------
+1 GPU interactive with specific GPU specification, 12 hours wallclock time, and 4 GB memory.
+--------------------------------------------------------------------------------------------
 
 .. code-block:: bash
 
     $ srun --partition=gpu --gpus=nvidia_rtx_a6000:1 --mem=4G --time=12:00:00 --pty /bin/bash
 
-2 GPU's interactive with specific GPU specification, 12 hours wallclock time, and 4gb memory.
----------------------------------------------------------------------------------------------
+2 GPU's interactive with specific GPU specification, 12 hours wallclock time, and 4 GB memory.
+----------------------------------------------------------------------------------------------
 
 .. code-block:: bash
 
@@ -332,23 +333,23 @@ This sums up to 12 GPU's in total.
 
 The ``--partition=gpu`` option is needed. Without this option the job will fail.
 
-Estimating resource requirement
-===============================
+Estimating resource requirements
+================================
 
-As we have mentioned, every job has attributes specifying the required resources for its computation. Based on those attributes, the job scheduler allocates resources for jobs. The more precise these requirement attributes are given, the more efficient the resources are used. Therefore, we encourage all users to estimate the resource requirements before submitting massive jobs to the cluster.
+As we have mentioned, every job has attributes specifying the required resources for its computation. Based on those attributes, the job scheduler allocates resources for jobs. The more precise these requirement attributes are given, the more efficiently the resources are used. Therefore, we encourage all users to estimate the resource requirements before submitting massive jobs to the cluster.
 
 The **walltime** and **memory** requirements are the most essential ones amongst others. Hereafter are three different ways to make estimations of those two requirements.
 
 .. note::
-    Computing resources in the cluster are reserved for jobs in terms of size (e.g. amount of requested memory and CPU cores) and duration (e.g. the requested walltime). Under-estimating the requirement causes job to be killed before completion and thus the resources have been consumed by the job were wasted; while over-estimating blocks resources from being used efficiently.
+    Computing resources in the cluster are reserved for jobs in terms of size (e.g. amount of requested memory and CPU cores) and duration (e.g. the requested walltime). Under-estimating the requirement causes the job to be killed before completion and thus the resources consumed by the job were wasted; while over-estimating blocks resources from being used efficiently.
 
-#. Consult your colleages
+#. Consult your colleagues
 
    If your analysis tool (or script) is commonly used in your research field, consulting with your colleagues might be just an efficient way to get a general idea about the resource requirement of the tool.
 
 #. Monitor the resource consumption (with an interactive test job)
 
-   A good way of estimating the wall time and memory requirement is through monitoring the usage of them at run time. This approach is only feasible if you run the job interactively through a graphical interface. Nevertheless, it's encouraged to test your data analysis computation interactively once before submitting it to the cluster with a large amount of batch jobs. Through the interactive test, one could easily debug issues and measure the resource usage.
+   A good way of estimating the wall time and memory requirement is through monitoring the usage of them at run time. This approach is only feasible if you run the job interactively through a graphical interface. Nevertheless, it's encouraged to test your data analysis computation interactively once before submitting it to the cluster with a large number of batch jobs. Through the interactive test, one could easily debug issues and measure the resource usage.
 
    Upon the start of an interactive job, a resource consumption monitor is shown on the top-right corner of your VNC desktop.  An example is shown in the following screenshot:
 
