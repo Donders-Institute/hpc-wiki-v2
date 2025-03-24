@@ -32,6 +32,7 @@ For Torque/PBS user using Slurm the first time, the table below provides a simpl
 | Show queue info              | qstat -q                         | sinfo                                    |
 +------------------------------+----------------------------------+------------------------------------------+
 | Show job details             | qstat -f 123                     | scontrol show job 123                    |
+|                              |                                  |                                          |
 |                              |                                  | sacct -j 123                             |
 +------------------------------+----------------------------------+------------------------------------------+
 | Show queue details           | qstat -Q -f <queue>              | scontrol show partition <partition_name> |
