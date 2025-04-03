@@ -61,7 +61,7 @@ There are cluster-wide limits on resource usage and job submission per user.  Th
 +------------------------+---------+
 | total CPU cores        | 300     |
 +------------------------+---------+
-| total GPUs             | 2       |
+| total GPUs             | 4       |
 +------------------------+---------+
 
 Beyond these limits, the user is allowed to run a few high-priority interactive jobs (i.e. jobs submitted to the *interactive* partition) with the following limits:
