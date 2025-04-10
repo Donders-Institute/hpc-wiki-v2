@@ -26,14 +26,18 @@ Using the cluster
 .. toctree::
     :maxdepth: 2
 
-    Slurm cluster <compute_slurm.rst>    
-    Torque cluster <compute_torque.rst>
+    Slurm cluster <compute_slurm.rst>
     Using supported software <software-usage.rst>
     Using IDE for coding <ide-usage.rst>
     Using GenAI for coding <genai/index.rst>
     Maintaining supported software <software-maintenance.rst>
     Best practices <best_practices.rst>
 
+.. toctree::
+    :hidden:
+
+    Torque cluster <compute_torque.rst>
+    
 Application software
 ====================
 
