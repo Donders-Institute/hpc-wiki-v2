@@ -131,3 +131,11 @@ The **Traverse** role
 When granting user a role in a sub-directory, a minimum permission in upper-level directories should also be given to the user to "pass through" the directory tree.  This minimum permission is referred as the **Traverse** role.
 
 The traverse role is automatically managed by the ``prj_setacl`` and ``prj_delacl`` programs when managing the access in a sub-directory or a file within a project directory. See :ref:`Controlling access permission on sub-directories <project_storage_subdir>`.
+
+.. _project_storage_recursively:
+
+Note on (non-)recursive permission management and the DCCN project portal
+-------------------------------------------------------------------------
+
+The command line tool ``prj_setacl`` will by default modify permissions recursively. When modifying permissions via the DCCN project portal, these are by default **not** applied recursively. If there already are files/subfolders in the project folder and you add a (write) permission via the project portal, this can mean that subfolders/files are not editable for the added user. You can rectify this by running ``prj_setacl`` with the `f` (force) option, which will instruct it to (recursively) apply the permissions even though it the user already has permissions on the root-level project.
+
