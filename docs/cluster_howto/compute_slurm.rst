@@ -318,19 +318,23 @@ Here we use ``-n`` to specify the amount of CPU cores we need; and ``-N`` to spe
 
     $ srun --partition=gpu --gpus=nvidia_rtx_a6000:1 --mem=4G --time=12:00:00 --pty /bin/bash
 
-2 GPU's interactive with specific GPU specification, 12 hours wallclock time, and 4 GB memory.
-----------------------------------------------------------------------------------------------
+2 GPU's interactive with specific GPU model, 12 hours wallclock time, and 4 GB memory.
+--------------------------------------------------------------------------------------
 
 .. code-block:: bash
 
     $ srun --partition=gpu --gpus=nvidia_a100-sxm4-40gb:2 --mem=4G --time=12:00:00 --pty /bin/bash
 
-Currently we have three types of GPU's available the slurm environment:
+The command above requests 2 GPUs with specific model name ``nvidia_a100-sxm4-40gb``.  The following GPU models are available in the cluster:
 
-   * One node with 1x NVidia RTX A6000 48GB (specify as nvidia_rtx_a6000:1)
-   * Three nodes with 1x NVidia A100 80GB each (specify as nvidia_a100_80gb_pcie:1)
-   * Two nodes with 4x NVidia A100 40GB each (specify as nvidia_a100-sxm4-40gb:1)
-This sums up to 12 GPU's in total.
+   * 9x NVidia P100 16GB (model name ``tesla_p100-pcie-16gb``)
+   * 6x NVidia A100 40GB PCIe (model name ``nvidia_a100-pcie-40gb``)
+   * 1x NVidia A100 80GB (model name ``nvidia_a100_80gb_pcie``)
+   * 2x NVidia A100 80GB, each partitioned into 2x MIG instances (model name ``nvidia_a100_80gb_pcie_3g.39gb``)
+   * 8x NVidia A100 40GB SXM4 (model name ``nvidia_a100-sxm4-40gb``)
+   * 4x NVidia L40s 48GB (model name ``nvidia_l40s``)
+   * 4x NVidia A16  16GB (model name ``nvidia_a16``)
+   * 1x NVidia RTX A6000 48GB (model name ``nvidia_rtx_a6000``)
 
 The ``--partition=gpu`` option is needed. Without this option the job will fail.
 
