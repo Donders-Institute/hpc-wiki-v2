@@ -10,7 +10,7 @@ While generic and widely used software such as MATLAB, Python, Anaconda, etc. ar
 Introducing new software
 ========================
 
-As a HPC user, you may request new software to be installed, especially if you see potential benefit to the wider group of users of the HPC cluster. Please send your request and initiate a discussion with the TG by sending a `helpdesk ticket <mailto:helpdeskt@fcdonders.ru.nl>`_.
+As a HPC user, you may request new software to be installed, especially if you see potential benefit to the wider group of users of the HPC cluster. Please send your request and initiate a discussion with the TG by sending a `helpdesk ticket <mailto:helpdesk@donders.ru.nl>`_.
 
 If the request is approved, a maintainer needs to be identified. It can be the TG if the software is a generic tool/framework and if the TG feels capable to maintaine it on the longer term, or it can be a researcher (usually the person who makes the request).
 
