@@ -13,13 +13,13 @@ Every job is submitted to the cluster with a set of resource requirements (e.g. 
 .. note::
     Computing resource (e.g. the amount of CPU, GPU, memory) required by a job is always allocated to the job exclusively.
 
-Migrating from Torque/PBS to SLURM
+Migrating from Torque/PBS to Slurm 
 ==================================
 
 For Torque/PBS user using Slurm the first time, the table below provides a simplified command-line mapping betwee Torque/PBS and Slurm.
 
 +------------------------------+----------------------------------+------------------------------------------+
-| Task                         | Torque/PBS                       | SLURM                                    |
+| Task                         | Torque/PBS                       | Slurm                                    |
 +==============================+==================================+==========================================+
 | Submit a job                 | qsub myjob.sh                    | sbatch myjob.sh                          |
 +------------------------------+----------------------------------+------------------------------------------+
