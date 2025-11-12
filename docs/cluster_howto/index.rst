@@ -32,11 +32,6 @@ Using the cluster
     Using GenAI for coding <genai/index.rst>
     Maintaining supported software <software-maintenance.rst>
     Best practices <best_practices.rst>
-
-.. toctree::
-    :hidden:
-
-    Torque cluster <compute_torque.rst>
     
 Application software
 ====================
