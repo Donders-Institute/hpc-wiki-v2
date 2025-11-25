@@ -38,3 +38,14 @@ Avoid massive output to STDOUT
 It may be handy (and quick) to just print analysis result to the screen (or, in the other word, the standard output).  However, if the output is lengthy, it can results in very large STDOUT file produced by your compute jobs.  Multiplying the amount of parallel jobs you submitted to the system, it will ends up with filling up your home directory.  Things can easily go wrong when your home directory is full (i.e. out of quota), such as data loss.
 
 A good advicce is to output your analysis to a file with good data structure.  Most of analysis tools provides their own data structures, e.g. the ``.mat`` file of MATLAB or the ``.RData`` file of R.
+
+Calculate your carbon footprint
+===============================
+
+The GA4HPC: Green Algorithms for High Performance Computing has been integrated into the Donders HPC. This algorithm is commonly called a carbon tracker. It allows HPC users to know how much carbon was emitted by the jobs they ran on the cluster (amount of CO2 in kg) in the past two weeks (corresponding to the cluster memory). 
+
+The command to type in any terminal on the cluster is: ``myCarbonFootprint.sh``
+
+The output will display your footprint as well as some equivalents to better understand this number. The output also gives some details about how the HPC footprint is calculated. 
+
+For more information, see `the github page <https://github.com/GreenAlgorithms/GreenAlgorithms4HPC>`_.
