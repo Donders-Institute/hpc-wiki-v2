@@ -23,7 +23,7 @@ Central Storage
 
 The central storage provides a shared file system amongst the Windows desktops within DCCN and the computers in the HPC cluster.
 
-On the central storage, every user has a personal folder with a so-called office quota (20 gigabytes by default).  This personal folder is referred to as the ``M:\`` drive on the Windows desktops.
+On the central storage, every user has a personal folder with a so-called office quota (50 gigabytes by default).  This personal folder is referred to as the ``M:\`` drive on the Windows desktops.
 
 Storage spaces granted to research projects (following the `project proposal meeting(PPM) <http://intranet.donders.ru.nl/index.php?id=4502>`_) are also provided by the central storage.  The project folders are organised under the directory ``/project`` which is referred to as the ``P:\`` drive on the Windows desktops.
 
