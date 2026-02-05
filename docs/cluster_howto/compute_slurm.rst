@@ -347,7 +347,7 @@ The ``--partition=gpu`` option is needed. Without this option the job will fail.
 
     .. code-block:: bash
 
-        $ `srun --partition=gpu40g --gpus=1 --mem=4G --time=12:00:00 --pty /bin/bash`
+        $ srun --partition=gpu40g --gpus=1 --mem=4G --time=12:00:00 --pty /bin/bash
 
 Estimating resource requirements
 ================================
