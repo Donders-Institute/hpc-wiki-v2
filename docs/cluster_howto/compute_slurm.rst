@@ -86,6 +86,8 @@ Each job is limited by a maximum amount of walltime and memory.  Jobs with resou
 +------------+---------------+-------------+
 | gpu        | 72 hours      | 256 GB      |
 +------------+---------------+-------------+
+| gpu40g     | 72 hours      | 256 GB      |
++------------+---------------+-------------+
 
 Job priority
 ------------
@@ -98,6 +100,8 @@ Job priority
 | interactive| high     |
 +------------+----------+
 | gpu        | normal   |
++------------+----------+
+| gpu40g     | normal   |
 +------------+----------+
 
 Job priority determines the order of waiting jobs to start in the cluster. Job priority is calculated based on various factors.  In the cluster at DCCN, mainly the following two factors are considered.
@@ -337,6 +341,13 @@ The command above requests 2 GPUs with specific model name ``nvidia_a100-sxm4-40
    * 1x NVidia RTX A6000 48GB (model name ``nvidia_rtx_a6000``)
 
 The ``--partition=gpu`` option is needed. Without this option the job will fail.
+
+.. note::
+    For accessing any GPU with more than 40GB VRAM, it would be easier to use the partition `gpu40g`.  For example,
+
+    .. code-block:: bash
+
+        $ `srun --partition=gpu40g --gpus=1 --mem=4G --time=12:00:00 --pty /bin/bash`
 
 Estimating resource requirements
 ================================
