@@ -204,7 +204,9 @@ You can even pass your script directly, using a so-called "Here" document (Hered
 Job status and information
 ==========================
 
-One can use the ``squeue --me`` to get an overview of running and pending jobs.
+One can use the ``turm --me`` to get a `TUI overview <https://crates.io/crates/turm>`__ , which provides a convenient way to manage your cluster jobs.
+
+Alternatively, one can use the ``squeue --me`` to get an overview of running and pending jobs.
 
 .. code-block:: bash
 
