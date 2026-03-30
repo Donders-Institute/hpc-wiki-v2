@@ -10,8 +10,8 @@ Follow the instruction below to connect to the cluster's web interface:
 Requirements
 ============
 
-* having a modern web browser on your device, such as Firefox, Chrome or Safari
-* connecting your device to the DCCN Trigon network via the office LAN or eduVPN (full trigon access).
+* a modern web browser on your device, such as Firefox, Chrome or Safari
+* connection to the DCCN Trigon network via the office wired network or wirelessly with eduVPN (full trigon access), see :ref:`access-external-eduvpn`.
 
 Connect
 =======
@@ -26,7 +26,7 @@ After login, you will see two applications, the *HPC Terminal* and *HPC Desktop*
 HPC Terminal
 ============
 
-By clicking the application *HPC Terminal*, a terminal will be open on one of the HPC access (i.e. mentat) nodes.  It is a terminal with BASH shell.  You could run Linux commands or submit batch jobs further to the cluster compute nodes, see :ref:`access-external`.
+By clicking the application *HPC Terminal*, a terminal will be open on one of the HPC access (i.e. mentat) nodes.  It is a terminal with BASH shell.  You could run Linux commands or submit batch jobs further to the cluster compute nodes, see :ref:`run-computations-slurm`.
 
 HPC Desktop
 ===========

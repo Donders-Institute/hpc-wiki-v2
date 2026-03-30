@@ -1,3 +1,5 @@
+.. _access-external-eduvpn:
+
 Using eduVPN
 ************
 
