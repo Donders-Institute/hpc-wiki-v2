@@ -351,6 +351,13 @@ The ``--partition=gpu`` option is needed. Without this option the job will fail.
 
         $ srun --partition=gpu40g --gpus=1 --mem=4G --time=12:00:00 --pty /bin/bash
 
+.. note::
+    Some application, such as Matlab, do not support the Nvidia MIG (GPU partitioning) fully.  If you need to avoid job being assigned to a patitioned GPU, you could use the `--constraint=nomig`.  For example,
+
+    .. code-block:: bash
+
+        $ srun --partition=gpu40g --gpus=1 --constraint=nomig --mem=4G --time=12:00:00 --pty /bin/bash
+
 Estimating resource requirements
 ================================
 
