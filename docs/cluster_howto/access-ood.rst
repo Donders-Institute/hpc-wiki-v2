@@ -16,9 +16,9 @@ Requirements
 Connect
 =======
 
-Open the browser and go to the URL `https://compute.dccn.nl <https://compute.dccn.nl>`_. You will encounter a login page.  Please login with your DCCN account.
+Open the browser and go to the URL `https://compute.dccn.nl <https://compute.dccn.nl>`_. You will be asked to login with your DCCN account.
 
-After login, you will see two applications, the *HPC Terminal* and *HPC Desktop*.
+After logging in, you will see two main applications, the *HPC Terminal* and *HPC Desktop*.
 
 .. figure:: figures/ood_landing_page.png
     :figwidth: 60%
@@ -26,25 +26,23 @@ After login, you will see two applications, the *HPC Terminal* and *HPC Desktop*
 HPC Terminal
 ============
 
-By clicking the application *HPC Terminal*, a terminal will be open on one of the HPC access (i.e. mentat) nodes.  It is a terminal with BASH shell.  You could run Linux commands or submit batch jobs further to the cluster compute nodes, see :ref:`run-computations-slurm`.
+When you click on the *HPC Terminal* application, a terminal session will open on one of the HPC access nodes (e.g., mentat). This terminal runs a Bash shell, allowing you to execute Linux commands or submit batch jobs to the cluster’s compute nodes (see :ref:`run-computations-slurm`).
 
 HPC Desktop
 ===========
 
-By clicking the application *HPC Desktop*, you will encounter a job submission form.  You could use the form to specify the compute resources required for your full dekstop environment to run as a batch job.
+When you click on the *HPC Desktop* application, a job submission form will be presented. You can use this form to specify the compute resources required to run your full desktop environment as a batch job.
 
 .. figure:: figures/ood_hpc_desktop_form.png
     :figwidth: 60%
 
 .. note::
 
-    If you consider to run any computation or application in the same job of the HPC Desktop, make sure you specify sufficient resources for starting the HPC Desktop.  In this approach, the HPC Desktop environment will share the same job resource with your computation. 
+    If you plan to run computations or applications within the same job as the HPC Desktop, make sure to request sufficient resources when starting the desktop environment. In this setup, the HPC Desktop session shares the allocated resources with your computations.
 
-    Nevertheless, it is recommended that you make further job submission within your HPC Desktop.  In this approach, you HPC Desktop has dediciated job resource to operate (can result in better user experience); and you have more flexibility to use the same HPC Desktop for different computations having different requirements.
+    However, it is generally recommended to submit additional jobs from within the HPC Desktop. This way, the desktop session has dedicated resources for smoother operation, and you gain more flexibility to run multiple computations with different resource requirements.
 
-After clicking the *Launch* button the form, the browser will be redirected to the page *My Interactive Sessions* while a Slurm job is submitted to the high-priority *interactive* queue for starting a new VNC session on a compute node.
-
-After the job is started, a button *Launch HPC Desktop* will show up allowing you to open the started VNC session using the browser.
+After clicking the *Launch* button on the form, your browser will be redirected to the *My Interactive Sessions* page, while a Slurm job is submitted to the high-priority interactive queue to start a new VNC session on a compute node. Once the job has started, a *Launch HPC Desktop* button will appear, allowing you to open the VNC session in your browser.
 
 .. figure:: figures/ood_launch_hpc_desktop.png
     :figwidth: 60%
@@ -52,14 +50,14 @@ After the job is started, a button *Launch HPC Desktop* will show up allowing yo
 Disconnect the VNC
 ------------------
 
-After you close the browser or disconnect to the Internet, like a batch job, the VNC session will continue to run in the cluster until its resource limit.
+After you close the browser or lose your Internet connection, the VNC session will continue running on the cluster, just like a batch job, until it reaches its allocated resource limit.
 
-Since the VNC password is rotated everytime it is used, for re-connecting to a running VNC session, you should always go through the *My Interactive Sessions* of the `web site <https://compute.dccn.nl>`_ and use the *Launch HPC Desktop* button for the new VNC password.
+Since the VNC password is rotated each time it is used, you should always reconnect to a running VNC session via the *My Interactive Sessions* page on the `web site <https://compute.dccn.nl>`_. Clicking the *Launch HPC Desktop* button will automatically handle the password in the background.
 
 Logging out the VNC
 -------------------
 
-When the VNC session is no longer needed, you can close it by either logging out the desktop environment or terminating the job via the buttons highlighted in the screenshot below.
+When the VNC session is no longer needed, you can close it by either logging out of the desktop environment or terminating the job using the buttons highlighted in the screenshot below.
 
 .. figure:: figures/ood_terminate_hpc_desktop.png
     :figwidth: 60%
