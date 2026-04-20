@@ -7,6 +7,10 @@ Using the Visual Studio Code
 
 This tutorial provides instructions for using the Visual Studio Code Remote - a VSCode extension connecting your local VSCode to the cluster server.
 
+.. note::
+
+  This tutorial makes use of singularity container to run the VSCode server, which can be a limit if you want to access other cluster software next to the VSCode.  There are different methods to run VSCode server natively on the cluster compute node. [This document](https://github.com/predictive-clinical-neuroscience/PCNtoolkit/wiki/How-to-connect-to-the-Donders-HPC-cluster-via-VS-Code#vs-code-on-the-cluster) provides a comprehensive overview of those different methods.
+
 Prerequisites
 -------------
 Before proceeding, make sure you have the following:
