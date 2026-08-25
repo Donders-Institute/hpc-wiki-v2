@@ -7,12 +7,6 @@ The DCCN HPC cluster provides a Web-based interface, powered by `Open OnDemand <
 
 Follow the instruction below to connect to the cluster's web interface:
 
-Requirements
-============
-
-* a modern web browser on your device, such as Firefox, Chrome or Safari
-* connection to the DCCN Trigon network via the office wired network or wirelessly with eduVPN (full trigon access), see :ref:`access-external-eduvpn`.
-
 Connect
 =======
 
