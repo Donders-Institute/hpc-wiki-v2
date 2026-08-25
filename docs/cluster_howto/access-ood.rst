@@ -46,7 +46,7 @@ When you click on the *HPC Desktop* application, a job submission form will be p
 
 By switching the *Partion* option to *gpu* or *gpu40g*, you can request a GPU node to run your desktop environment.  Use the tickbox *No Nvidia Multi-Instance GPU (MIG)* to avoid GPU patitions created by `the Nvidia MIG <https://www.nvidia.com/en-us/technologies/multi-instance-gpu/>`_.  See example screenshot below for the *gpu* partition.
 
-.. figure:: figures/ood_hpc_desktop_gpu_form.png
+.. figure:: figures/ood_hpc_desktop_form_gpu.png
     :figwidth: 60%
 
 After clicking the *Launch* button on the form, your browser will be redirected to the *My Interactive Sessions* page, while a Slurm job is submitted to the high-priority interactive queue to start a new VNC session on a compute node. Once the job has started, a *Launch HPC Desktop* button will appear, allowing you to open the VNC session in your browser.
