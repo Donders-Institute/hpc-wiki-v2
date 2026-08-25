@@ -3,12 +3,25 @@
 Getting access to the HPC cluster
 *********************************
 
-Web access
-==========
+.. _requirement_hpc_cluster_access:
 
-The DCCN HPC cluster provides a Web-based interface, powered by `Open OnDemand <https://https://www.openondemand.org/>`_.   With this access method, you only need a modern web browser to access the terminal on the cluster's access node or run a full desktop environment on a compute node.
+Requirements
+============
 
-See :ref:`access-ood` for more details on how to use the web interface.
+For accessing the DCCN HPC cluster, you will need the following:
+
+* a DCCN ICT account issued by the `DCCN Helpdesk <mailto:helpdesk@dccn.nl>`_.
+* connection to the DCCN Trigon network via the office wired network or wirelessly with eduVPN (full trigon access), see :ref:`access-external-eduvpn`.
+
+
+.. include:: access-ood.rst
+
+.. Web access
+.. ==========
+
+.. The DCCN HPC cluster provides a Web-based interface, powered by `Open OnDemand <https://https://www.openondemand.org/>`_.   With this access method, you only need a modern web browser to access the terminal on the cluster's access node or run a full desktop environment on a compute node.
+
+.. See :ref:`access-ood` for more details on how to use the web interface.
 
 .. _terminal_access:
 
