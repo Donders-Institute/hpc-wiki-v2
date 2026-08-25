@@ -5,8 +5,8 @@ Requirements
 
 For accessing the DCCN HPC cluster, you will need the following:
 
-* a valid DCCN user account, see :ref:`obtain_cluster_account`.
-* connection to the DCCN Trigon network via the office wired network or wirelessly with eduVPN (full trigon access), see :ref:`access-external-eduvpn`.
+* a valid DCCN account, see :ref:`obtain_cluster_account`.
+* a computer connected to the DCCN Trigon network via the office wired network or with the eduVPN (full trigon access), see :ref:`access-external-eduvpn`.
 
 .. _access-external-eduvpn:
 
@@ -15,7 +15,7 @@ Setup eduVPN
 
 If you are at home or on travel, or connecting your personal laptop to the edurom network, you will need to use `eduVPN <https://eduvpn.org>`_ to connect to the DCCN network first.  This is because the DCCN HPC cluster is only accessible from within the DCCN network.
 
-Setting up eduVPN requires
+Setting up eduVPN requires:
 
 * a valid Radboud University Account (i.e. the account name is in email format with either ``@donders.ru.nl`` or ``@ru.nl`` in suffix)
 * the `Microsoft Authenticator application <https://www.microsoft.com/en-us/security/mobile-authenticator-app>`_ for the Multi-Factor Authentication (MFA).

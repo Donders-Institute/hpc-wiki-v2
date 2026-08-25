@@ -3,13 +3,13 @@ The HPC cluster
 
 .. _obtain_cluster_account:
 
-Obtaining an user account
-=========================
+Obtaining DCCN account
+======================
 
-You should receive a pair of username/password after following the `ICT check-in <https://intranet.donders.ru.nl/index.php?id=practicalitie>`_ at DCCN. If you do not have a account, ask the `TG helpdesk <mailto:helpdesk@donders.ru.nl>`_.
+You will receive a pair of username/password (the DCCN account) after completing the `DCCN registraion procedure (a.k.a. DCCN check-in) <https://intranet.donders.ru.nl/index.php?id=6900>`_.  If you do not have a account, ask the `TG helpdesk <mailto:helpdesk@donders.ru.nl>`_.
 
 .. note::
-    The user account here is **NOT** the account (e.g. u-number) given by the Radboud University.
+    The DCCN account is **NOT** the account issued by the Radboud University central IT.
 
 .. _accessing_the_hpc_cluster:
 
