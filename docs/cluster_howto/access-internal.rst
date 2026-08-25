@@ -17,13 +17,13 @@ One can connect to the HPC cluster via a terminal session on one of the access n
 
 On Linux or MacOS, you can use the built-in terminal application.  On Windows platform, you can use the built-in `Windows Terminal <https://learn.microsoft.com/en-us/windows/terminal/>`_.  Alternatively you could use `Putty <https://www.putty.org/>`_ (see :ref:`ssh_login_with_putty` for more details) if you prefer a dedicated SSH client application with graphical interface for SSH settings.
 
-In the terminal, you can connect to the cluster by issuing the following command:
+In the terminal, you can connect to the cluster by issuing the following command with the ``<username>`` replaced by your DCCN account username and ``<X>`` replaced by a access node number between ``001`` and ``007``:
 
 .. code-block:: bash
 
     $ ssh <username>@mentat<X>.dccn.nl
 
-You should replace the ``<username>`` with your DCCN account username and ``<X>`` a access node number between ``001`` and ``007``.  You will be prompted to enter your password for the account.
+You will be prompted to enter your password for the account.
 
 .. tip::
 
@@ -33,7 +33,7 @@ You should replace the ``<username>`` with your DCCN account username and ``<X>`
 
     You will not see any terminal feedback when typing your password in the terminal. This is a security feature to prevent others from seeing the length of your password.  Just type your password and press the :kbd:`Enter` key.
 
-After successful login, you will see a welcome message and a shell prompt.  You can then issue Linux commands to the system.  Such as `ls` to list the files in the current directory, or `cd` to change the current directory.  See :ref:`getting-started-with-linux` for more details on how to use the Linux shell.
+After successful login, you will see a welcome message and a shell prompt.  You can then issue Linux commands to the system.  Such as `ls` to list the files in the current directory, or `cd` to change the current directory.  See :ref:`linux-tutorial` for more details on how to use the Linux shell.
 
 To logout the system, you can either close the terminal window or type the command ``exit`` in the terminal.
 
