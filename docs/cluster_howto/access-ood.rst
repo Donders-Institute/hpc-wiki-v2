@@ -26,21 +26,28 @@ After logging in, you will see two main applications, the *HPC Terminal* and *HP
 HPC Terminal
 ============
 
+.. tip::
+
+    HPC Terminal provides a terminal session on a cluster's access node. It is suitable for running short command-line applications or submitting batch jobs to the cluster's compute nodes.
+
 When you click on the *HPC Terminal* application, a terminal session will open on one of the HPC access nodes (e.g., mentat). This terminal runs a Bash shell, allowing you to execute Linux commands or submit batch jobs to the cluster’s compute nodes (see :ref:`run-computations-slurm`).
 
 HPC Desktop
 ===========
+
+.. tip::
+
+    HPC Desktop is a full desktop environment running as a Slurm job on a compute node. Therefore, the resources allocated to the HPC Desktop session are shared with any computations or applications you run within the same job. It is suitable for running compute-intensive applications interactively, such as MATLAB, RStudio, or Jupyter Notebook, which require a graphical user interface (GUI) and significant computational resources.
 
 When you click on the *HPC Desktop* application, a job submission form will be presented. You can use this form to specify the compute resources required to run your full desktop environment as a batch job.
 
 .. figure:: figures/ood_hpc_desktop_form.png
     :figwidth: 60%
 
-.. note::
+By switching the *Partion* option to *gpu* or *gpu40g*, you can request a GPU node to run your desktop environment.  Use the tickbox *No Nvidia Multi-Instance GPU (MIG)* to avoid GPU patitions created by `the Nvidia MIG <https://www.nvidia.com/en-us/technologies/multi-instance-gpu/>`_.  See example screenshot below for the *gpu* partition.
 
-    If you plan to run computations or applications within the same job as the HPC Desktop, make sure to request sufficient resources when starting the desktop environment. In this setup, the HPC Desktop session shares the allocated resources with your computations.
-
-    However, it is generally recommended to submit additional jobs from within the HPC Desktop. This way, the desktop session has dedicated resources for smoother operation, and you gain more flexibility to run multiple computations with different resource requirements.
+.. figure:: figures/ood_hpc_desktop_gpu_form.png
+    :figwidth: 60%
 
 After clicking the *Launch* button on the form, your browser will be redirected to the *My Interactive Sessions* page, while a Slurm job is submitted to the high-priority interactive queue to start a new VNC session on a compute node. Once the job has started, a *Launch HPC Desktop* button will appear, allowing you to open the VNC session in your browser.
 

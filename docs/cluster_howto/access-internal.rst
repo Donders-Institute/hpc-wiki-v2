@@ -3,6 +3,11 @@
 Getting access to the HPC cluster
 *********************************
 
+Web access
+==========
+
+The DCCN HPC cluster provides a Web-based interface, powered by `Open OnDemand <https://https://www.openondemand.org/>`_.   With this access method, you only need a modern web browser to access the terminal on the cluster's access node or run a full desktop environment on a compute node.  See :ref:`access-ood` for more details on how to use the web interface.
+
 .. _ssh_login_with_putty:
 
 SSH login with Putty
