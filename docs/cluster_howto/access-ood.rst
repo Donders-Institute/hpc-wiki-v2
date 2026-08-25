@@ -54,6 +54,12 @@ After clicking the *Launch* button on the form, your browser will be redirected 
 .. figure:: figures/ood_launch_hpc_desktop.png
     :figwidth: 60%
 
+.. note::
+
+    If a browser is not touched for a while or the Internet connection is lost, the web session will be automatically logged out.  The VNC server will continue running on the cluster, just like a batch job, until it reaches its allocated resource limit.
+
+    You cannot reload the VNC session in the browser after the web session is logged out as the VNC password is rotated each time it is used.  You should always reconnect to a running VNC session via the *My Interactive Sessions* page on the `web site <https://compute.dccn.nl>`_. Clicking the *Launch HPC Desktop* button will automatically handle the password in the background.
+
 Disconnect the VNC
 ------------------
 
