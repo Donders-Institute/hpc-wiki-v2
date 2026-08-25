@@ -146,7 +146,7 @@ In the screenshots above, we have started a VNC server associated with a display
       :figwidth: 60%
 
 Disconnect VNC server
-=====================
+---------------------
 
 To disconnect the VNC server, simply close the TigerVNC-viewer window in which the graphical desktop is displayed. The VNC server will remain available, and can be reused (re-connected) when you need to use the graphical desktop again in the future.
 
@@ -154,7 +154,7 @@ To disconnect the VNC server, simply close the TigerVNC-viewer window in which t
     **DO NOT** logout the graphical desktop as it causes the VNC server become unaccessible afterwards.
 
 Terminate VNC server
-====================
+--------------------
 
 Since the graphical windows manager takes significant amount of resources from the system, it is strongly recommended to terminate the VNC server if you are not actively using it.  Terminating a VNC server can be done via the ``vncmanager`` command.  The steps are shown in the screenshots below:
 
