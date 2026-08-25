@@ -8,10 +8,35 @@ Web access
 
 The DCCN HPC cluster provides a Web-based interface, powered by `Open OnDemand <https://https://www.openondemand.org/>`_.   With this access method, you only need a modern web browser to access the terminal on the cluster's access node or run a full desktop environment on a compute node.  See :ref:`access-ood` for more details on how to use the web interface.
 
+.. _terminal_access:
+
+Terminal access
+===============
+
+One can connect to the HPC cluster via a terminal session on one of the access nodes.  This is done by using a terminal application that supports the SSH protocol.
+
+On Linux or MacOS, you can use the built-in terminal application.  On Windows platform, you can use the built-in `Windows Terminal <https://learn.microsoft.com/en-us/windows/terminal/>`_.  Alternatively you could use `Putty <https://www.putty.org/>`_ (see :ref:`ssh_login_with_putty` for more details) if you prefer a dedicated SSH client application with graphical interface for SSH settings.
+
+In the terminal, you can connect to the cluster by issuing the following command:
+
+.. code-block:: bash
+
+    $ ssh <username>@mentat001.dccn.nl
+
+where ``<username>`` is your DCCN account username.  You will be prompted to enter your password for the account.
+
+.. tip::
+
+    You will not see any terminal feedback when typing your password in the terminal. This is a security feature to prevent others from seeing the length of your password.  Just type your password and press the :kbd:`Enter` key.
+
+After successful login, you will see a welcome message and a shell prompt.  You can then issue Linux commands to the system.  Such as `ls` to list the files in the current directory, or `cd` to change the current directory.  See :ref:`getting-started-with-linux` for more details on how to use the Linux shell.
+
+To logout the system, you can either close the terminal window or type the command ``exit`` in the terminal.
+
 .. _ssh_login_with_putty:
 
 SSH login with Putty
-====================
+--------------------
 
 Follow the steps below to connect to one of the cluster's access nodes, using the SSH.
 
@@ -37,13 +62,10 @@ Screenshots of the four steps are shown below:
    .. figure:: figures/putty_login_success.png
       :figwidth: 60%
 
-SSH logout
-==========
+.. _desktop_access_vnc:
 
-You can logout the system by either closing the Putty window or typing the command ``exit`` in the virtual terminal.
-
-VNC for graphic desktop
-=======================
+VNC graphic desktop access
+==========================
 
 .. note::
     For the first-time user, type

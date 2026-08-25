@@ -8,10 +8,10 @@ Obtain a user account
 
 Please refer to :ref:`this guide <obtain_cluster_account>`.
 
-SSH login with Putty
-====================
+Terminal access with SSH
+========================
 
-Please refer to :ref:`this guide <ssh_login_with_putty>`.
+Please refer to :ref:`this guide <terminal_access>`.
 
 The prompt of the shell
 =======================
