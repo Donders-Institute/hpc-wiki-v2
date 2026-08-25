@@ -17,7 +17,10 @@ Accessing the cluster
 .. toctree::
    :maxdepth: 2
 
-   Inside DCCN <access-internal.rst>
+   Requirements <access-requirements.rst>
+   Web access <access-ood.rst>
+   Terminal access with SSH <access-ssh.rst>
+   Graphical desktop access with VNC <access-vnc.rst>
    Outside DCCN <access-external.rst>
 
 Using the cluster
