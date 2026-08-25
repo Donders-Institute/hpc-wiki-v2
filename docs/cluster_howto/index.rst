@@ -11,6 +11,8 @@ You should receive a pair of username/password after following the `ICT check-in
 .. note::
     The user account here is **NOT** the account (e.g. u-number) given by the Radboud University.
 
+.. _accessing_the_hpc_cluster:
+
 Accessing the cluster
 =====================
 
@@ -20,8 +22,9 @@ Accessing the cluster
    Requirements <access-requirements.rst>
    Web access <access-ood.rst>
    Terminal access with SSH <access-ssh.rst>
-   Graphical desktop access with VNC <access-vnc.rst>
-   Outside DCCN <access-external.rst>
+   Desktop access with VNC <access-vnc.rst>
+
+.. _using_the_hpc_cluster:
 
 Using the cluster
 =================

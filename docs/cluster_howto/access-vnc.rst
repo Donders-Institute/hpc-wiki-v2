@@ -5,16 +5,21 @@ Desktop access with VNC
 
 One can also connect to the HPC cluster via a graphical desktop environment on one of the access nodes. This is done by using a VNC client application that supports the VNC protocol.
 
-.. note::
-    For the first-time user, type
+To setup the VNC connection, you will need to connect to the cluster using SSH first.  See :ref:`terminal_access` for more details on how to connect to the cluster via SSH.
 
-    .. code-block:: bash
+Set VNC password
+================
 
-        $ vncpasswd
+You will need to set a VNC password to protect your VNC server from anonymous access. You only need to do it once for the first-time user.  Type the following command in the terminal:
 
-    in the putty terminal to protect your VNC server from anonymous access before following the instructions below.
+.. code-block:: bash
 
-Firstly, start the VNC server by typing the following command in the putty terminal.
+    $ vncpasswd
+
+Start new VNC server
+====================
+
+Firstly, start the VNC server by typing the following command in the terminal.
 
 .. code-block:: bash
 
@@ -51,6 +56,9 @@ Follow the step-by-step instructions on the screen to initiate a VNC server. See
 
    .. figure:: figures/vncmanager_startvnc_success.png
       :figwidth: 60%
+
+Connect VNC server
+==================
 
 In the screenshots above, we have started a VNC server associated with a display endpoint ``mentat002.dccn.nl:56``.  To connect to it, we use a VNC client called TigerVNC Viewer.  Follow the steps below to make the connection:
 

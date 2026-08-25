@@ -5,7 +5,10 @@ Terminal access with SSH
 
 One can connect to the HPC cluster via a terminal session on one of the access nodes.  This is done by using a terminal application that supports the SSH protocol.
 
-On Linux or MacOS, you can use the built-in terminal application.  On Windows platform, you can use the built-in `Windows Terminal <https://learn.microsoft.com/en-us/windows/terminal/>`_.  Alternatively you could use `Putty <https://www.putty.org/>`_ (see :ref:`ssh_login_with_putty` for more details) if you prefer a dedicated SSH client application with graphical interface for SSH settings.
+Use system terminal
+====================
+
+On Linux or MacOS, you can use the built-in terminal application.  On Windows platform, you can use the built-in `Windows Terminal <https://learn.microsoft.com/en-us/windows/terminal/>`_.  Alternatively you could use `PUTTY <https://www.putty.org/>`_ (see :ref:`ssh_login_with_putty` for more details) if you prefer a dedicated SSH client application with graphical interface for SSH settings.
 
 In the terminal, you can connect to the cluster by issuing the following command with the ``<username>`` replaced by your DCCN account username and ``<X>`` replaced by a access node number between ``001`` and ``007``:
 
@@ -29,19 +32,19 @@ To logout the system, you can either close the terminal window or type the comma
 
 .. _ssh_login_with_putty:
 
-SSH login with Putty
-====================
+Use PUTTY
+=========
 
 Follow the steps below to connect to one of the cluster's access nodes, using the SSH.
 
 Screenshots of the four steps are shown below:
 
-#. start putty on on the Windows desktop
+#. start PUTTY on on the Windows desktop
 
    .. figure:: figures/start_putty.png
       :figwidth: 60%
 
-#. configure putty for connecting to, e.g., ``mentat006.dccn.nl``
+#. configure PUTTY for connecting to, e.g., ``mentat006.dccn.nl``
 
    .. figure:: figures/putty_load_session.png
       :figwidth: 60%
