@@ -10,8 +10,8 @@ The DCCN HPC cluster provides a Web-based interface, powered by `Open OnDemand <
 
 .. _terminal_access:
 
-Terminal access
-===============
+Terminal access with SSH
+========================
 
 One can connect to the HPC cluster via a terminal session on one of the access nodes.  This is done by using a terminal application that supports the SSH protocol.
 
@@ -21,9 +21,13 @@ In the terminal, you can connect to the cluster by issuing the following command
 
 .. code-block:: bash
 
-    $ ssh <username>@mentat001.dccn.nl
+    $ ssh <username>@mentat<X>.dccn.nl
 
-where ``<username>`` is your DCCN account username.  You will be prompted to enter your password for the account.
+You should replace the ``<username>`` with your DCCN account username and ``<X>`` a access node number between ``001`` and ``007``.  You will be prompted to enter your password for the account.
+
+.. tip::
+
+    For the first-time connection, you will be asked to confirm the authenticity of the host.  You should type ``yes`` and press the :kbd:`Enter` key to continue.
 
 .. tip::
 
@@ -64,8 +68,10 @@ Screenshots of the four steps are shown below:
 
 .. _desktop_access_vnc:
 
-VNC graphic desktop access
-==========================
+Desktop access with VNC
+=======================
+
+One can also connect to the HPC cluster via a graphical desktop environment on one of the access nodes. This is done by using a VNC client application that supports the VNC protocol.
 
 .. note::
     For the first-time user, type
