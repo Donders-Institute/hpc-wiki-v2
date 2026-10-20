@@ -24,10 +24,12 @@ HPC Cluster
 
 The HPC cluster at DCCN consists of two groups of computers, they are:
 
-* **access nodes**: ``mentat001`` ~ ``mentat005`` as login nodes.
+* **access nodes**: ``mentat001`` ~ ``mentat007`` as login nodes.
 * **compute nodes**: a pool of powerful computers with more than 1000 CPU cores.
 
-Computer nodes are managed by the `Slurm <https://slurm.schedmd.com/overview.html>`_ job scheduler.  While the access nodes can be accessed via either a SSH terminal or a VNC session, compute nodes are only accessible by submiting computational jobs.
+Computer nodes are managed by the `Slurm <https://slurm.schedmd.com/overview.html>`_ job scheduler.
+
+While SSH login and running VNC sessions on the access nodes aresupported, users are encouraged to use [the web interface](https://compute.dccn.nl) for a more modern and user-friendly experience.
 
 Central Storage
 ===============
@@ -46,9 +48,13 @@ Identity Manager
 The identity manager maintains information for authenticating users accessing to the HPC cluster. It is also used to check users' identity when logging into the Windows desktops at DCCN. In fact, the user account received from `the DCCN check-in proceduer <https://intranet.donders.ru.nl/index.php?id=4465>`_ is managed secretely by this identity manager.
 
 .. note::
-    The user account concerned here (and throughout the entire wiki) is the one received via the DCCN check-in procedure.  It is, in most of cases, a combination of **the first three letters of your first name and the first three letters of your last name**.  It is **NOT** the account (i.e. U/Z/S-number) from the Radboud University.
+    The user account concerned here (and throughout the entire wiki) is the one received via the DCCN check-in procedure.  It is, in most of cases, a combination of **the first three letters of your first name and the first three letters of your last name**.  It is **NOT** the account from the Radboud University or Radboudumc.
 
 Supported Software
 ==================
 
-A list of supported software can be found `here <http://intranet.donders.ru.nl/index.php?id=torque-software>`_.
+Commonly used software/tools for neuroimaging data processing and analysis are installed on the central storage and accessible to users in the HPC cluster. One can list the available software/tools using the following [Environment Modules](https://modules.readthedocs.io/en/latest/) commands:
+
+.. code-block:: bash
+
+    module avail
