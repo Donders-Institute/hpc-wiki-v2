@@ -276,7 +276,7 @@
           <mxGeometry x="40" y="228" width="140" height="20" as="geometry" />
         </mxCell>
         <mxCell id="Kq-ZkUOXvw6SwSMEi6Nv-27" value="&lt;font style=&quot;font-size: 16px&quot;&gt;Internet (edurom, home, etc.)&lt;/font&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=18;fontColor=#333333;fontStyle=1" vertex="1" parent="Kq-ZkUOXvw6SwSMEi6Nv-1">
-          <mxGeometry x="40" y="20" width="260" height="20" as="geometry" />
+          <mxGeometry x="40" y="170" width="260" height="20" as="geometry" />
         </mxCell>
         <mxCell id="Kq-ZkUOXvw6SwSMEi6Nv-28" value="" style="endArrow=none;html=1;strokeColor=#CCCCCC;strokeWidth=2;fontSize=16;fontColor=#333333;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;rounded=0;opacity=70;" edge="1" parent="Kq-ZkUOXvw6SwSMEi6Nv-1" source="Kq-ZkUOXvw6SwSMEi6Nv-20" target="Kq-ZkUOXvw6SwSMEi6Nv-3">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
