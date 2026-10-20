@@ -29,7 +29,7 @@ The HPC cluster at DCCN consists of two groups of computers, they are:
 
 Computer nodes are managed by the `Slurm <https://slurm.schedmd.com/overview.html>`_ job scheduler.
 
-While SSH login and running VNC sessions on the access nodes aresupported, users are encouraged to use [the web interface](https://compute.dccn.nl) for a more modern and user-friendly experience.
+While SSH login and running VNC sessions on the access nodes aresupported, users are encouraged to use `the web interface <https://compute.dccn.nl>`_ for a more modern and user-friendly experience.
 
 Central Storage
 ===============
@@ -53,7 +53,7 @@ The identity manager maintains information for authenticating users accessing to
 Supported Software
 ==================
 
-Commonly used software/tools for neuroimaging data processing and analysis are installed on the central storage and accessible to users in the HPC cluster. One can list the available software/tools using the following [Environment Modules](https://modules.readthedocs.io/en/latest/) commands:
+Commonly used software/tools for neuroimaging data processing and analysis are installed on the central storage and accessible to users in the HPC cluster. One can list the available software/tools using the following `Environment Modules <https://modules.readthedocs.io/en/latest/>`_ commands:
 
 .. code-block:: bash
 
