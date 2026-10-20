@@ -2,18 +2,18 @@ High Performance Computing for Neuroimaging Research
 ****************************************************
 
 .. list-table::
-   :widths: 50 50
+   :widths: 45 45
    :align: center
 
    * - .. figure:: DCCN_HPC_architecture.svg
-          :scale: 45%
+          :scale: 40%
           :alt: DCCN HPC environment with SSH/VNC
           :align: center
 
           DCCN HPC environment with clients using SSH/VNC access
 
      - .. figure:: DCCN_HPC_architecture-ood.svg
-          :scale: 45%
+          :scale: 40%
           :alt: DCCN HPC environment with Open OnDemand
           :align: center
 
