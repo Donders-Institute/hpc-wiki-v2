@@ -3,7 +3,7 @@ High Performance Computing for Neuroimaging Research
 
 .. list-table::
    :widths: 50 50
-   :align: left
+   :align: center
 
    * - .. figure:: DCCN_HPC_architecture.svg
           :scale: 60%
