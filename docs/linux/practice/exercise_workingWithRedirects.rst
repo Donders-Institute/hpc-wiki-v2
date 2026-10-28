@@ -9,23 +9,23 @@ Your Task
 
 #. Either make a new directory or go to an existing directory that you made in the previous exercise. Take a few minutes to try each of these three redirects with arbitrary commands to improve your understanding of their functionality.
 
-.. Hint::
-    Try some commands like these shown below. Experiment with other commands you learned about in the slides this morning, or come of the commands on your cheat sheet. Notice that you can stack redirects multiple times, as in the first example. 
+   .. Hint::
+       Try some commands like these shown below. Experiment with other commands you learned about in the slides this morning, or come of the commands on your cheat sheet. Notice that you can stack redirects multiple times, as in the first example. 
 
     
-.. code-block:: bash
+   .. code-block:: bash
 
-    $ ls /home | sort > file.txt
-    $ cat file.txt
-    $ echo hello > file.txt
-    $ cat file.txt
-    $ echo hello >> file.txt
-    $ cat file.txt
+       $ ls /home | sort > file.txt
+       $ cat file.txt
+       $ echo hello > file.txt
+       $ cat file.txt
+       $ echo hello >> file.txt
+       $ cat file.txt
 
 #. Count tht total number of files and directories under your homw directory, using the pipe and a command `wc`.  You may check the manual of the command `wc` to get an idea what it can do for you:
 
-.. code-block:: bash
+   .. code-block:: bash
 
-    $ ls ~ | wc -l
-    $ ls ~ | wc -l > counter.txt
-    $ cat counter.txt
+       $ ls ~ | wc -l
+       $ ls ~ | wc -l > counter.txt
+       $ cat counter.txt
