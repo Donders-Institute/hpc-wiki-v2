@@ -16,5 +16,8 @@ Your Task
 .. code-block:: bash
 
     $ ls /home | sort > file.txt
+    $ cat file.txt
     $ echo hello > file.txt
+    $ cat file.txt
     $ echo hello >> file.txt
+    $ cat file.txt
