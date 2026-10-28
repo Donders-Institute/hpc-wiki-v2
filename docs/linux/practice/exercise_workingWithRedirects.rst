@@ -21,3 +21,11 @@ Your Task
     $ cat file.txt
     $ echo hello >> file.txt
     $ cat file.txt
+
+#. Count tht total number of files and directories under your homw directory, using the pipe and a command `wc`.  You may check the manual of the command `wc` to get an idea what it can do for you:
+
+.. code-block:: bash
+
+    $ ls ~ | wc -l
+    $ ls ~ | wc -l > counter.txt
+    $ cat counter.txt
